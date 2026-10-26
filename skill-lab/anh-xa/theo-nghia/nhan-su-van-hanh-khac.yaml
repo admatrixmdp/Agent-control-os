@@ -1,0 +1,1326 @@
+nhom: nhan-su-van-hanh-khac
+mang: [nhan-su, van-hanh, mua-hang-kho-van, cong-nghe, hanh-chinh, xuat-nhap-khau]
+tong: 141
+dem: {trung: 4, bo-sung: 6, moi: 85, loai: 46}
+ghi_chu_chung: >
+  Lô 290 (tiền tố hr-/ops-/it-/log-/proc-/data-) ngắn ~100 dòng, có bảng gọn nhưng mục "Tích Hợp Web Bên Ngoài
+  (MCP-first + API fallback)" là khuôn chung, chứa endpoint bịa (vd legal-log.internal) và số liệu không nguồn
+  (vd "DN thua >60%", "tiết kiệm 25-40%") — khi lấy phải cắt bỏ. Lô update (tên tiếng Việt) dài hơn, nhiều biểu mẫu
+  điền sẵn, ít bịa số hơn nhưng có lỗi pháp lý (vd xu-ly-ky-luat ghi "3 trường hợp sa thải" trong khi Đ.125 BLLĐ 2019
+  có 6 trường hợp). Mọi skill có căn cứ pháp lý phải rà lại trước khi dùng (BLLĐ 2019, NĐ 145/2020, NĐ 13/2023 và
+  Luật Bảo vệ dữ liệu cá nhân 2025). Khi chọn bản tốt hơn trong cụm trùng, ưu tiên bản lô update vì ít code giả.
+skills:
+  # ===================== NHÂN SỰ =====================
+  - ten: tuyen-dung
+    lo: lo-update
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: cao
+    ly_do: "Quy trình tuyển dụng + viết JD cho SME; nội bộ chỉ có phần tuyển sale trong 20-xay-phong-kinh-doanh."
+    lay_gi: "Toàn bộ quy trình tuyển 7 bước + mẫu JD + kênh đăng tuyển VN; gộp phần Success Metrics từ hr-jd-writer"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-jd-writer]
+    ban_tot_hon: true
+  - ten: hr-jd-writer
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng tuyen-dung; chỉ giữ ý Success Metrics trong JD để gộp vào bản tốt hơn."
+    trung_trong_kho: [tuyen-dung]
+    ban_tot_hon: false
+  - ten: phong-van
+    lo: lo-update
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: cao
+    ly_do: "Kịch bản phỏng vấn, bộ câu hỏi STAR, phiếu đánh giá ứng viên, bài test; khái niệm chưa có nội bộ."
+    lay_gi: "Kịch bản phỏng vấn theo vòng + ngân hàng câu hỏi + phiếu chấm; gộp rubric 5 điểm từ hr-candidate-scorecard"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-interview-question-bank, hr-candidate-scorecard]
+    ban_tot_hon: true
+  - ten: hr-interview-question-bank
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng phong-van, mỏng hơn; ngân hàng câu hỏi chung chung."
+    trung_trong_kho: [phong-van, hr-candidate-scorecard]
+    ban_tot_hon: false
+  - ten: hr-candidate-scorecard
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: vua
+    ly_do: "20-xay-phong-kinh-doanh có bước tuyển sale nhưng thiếu rubric chấm khách quan; bản này có rubric 5 điểm theo năng lực."
+    lay_gi: "Rubric 5 điểm theo competency + quy tắc chấm độc lập trước khi họp hội đồng → references/ của 20-xay-phong-kinh-doanh"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [phong-van, hr-interview-question-bank]
+    ban_tot_hon: false
+  - ten: hr-offer-letter-generator
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Thư mời nhận việc có gross/net, BHXH/BHYT/BHTN, thuế TNCN; hay dùng nhưng phải kiểm lại tỷ lệ đóng hiện hành."
+    lay_gi: "Khung offer letter + bảng quy đổi gross–net (tính lại theo mức đóng hiện hành)"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hop-dong-lao-dong]
+    ban_tot_hon: false
+  - ten: hop-dong-lao-dong
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Mẫu HĐLĐ thử việc, xác định/không xác định thời hạn, phụ lục; nhu cầu thường xuyên của SME, nội bộ chưa có."
+    lay_gi: "4 mẫu HĐLĐ + checklist điều khoản bắt buộc theo BLLĐ 2019; rà lại căn cứ trước khi dùng"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-offer-letter-generator]
+    ban_tot_hon: true
+  - ten: onboarding-nhan-vien
+    lo: lo-update
+    nhan: moi
+    ung_vien: [14-huan-luyen-doi-sale]
+    gia_tri: cao
+    ly_do: "Checklist onboarding, kế hoạch tuần đầu, đánh giá thử việc; nội bộ chỉ có onboarding 6 tuần cho sale."
+    lay_gi: "Checklist onboarding + kế hoạch tuần đầu + phiếu đánh giá thử việc; gộp khung mốc 30-60-90 từ hr-onboarding-30-60-90"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-onboarding-30-60-90, it-onboarding-it-checklist]
+    ban_tot_hon: true
+  - ten: hr-onboarding-30-60-90
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng onboarding-nhan-vien; chỉ khung mốc 30-60-90 đáng gộp vào bản tốt hơn."
+    trung_trong_kho: [onboarding-nhan-vien]
+    ban_tot_hon: false
+  - ten: danh-gia-nhan-vien
+    lo: lo-update
+    nhan: moi
+    ung_vien: [18-chuan-hanh-vi-sale, ke-hoach-okr]
+    gia_tri: cao
+    ly_do: "Hệ thống đánh giá hiệu suất: phiếu KPI, 360 độ, tự đánh giá, calibration; nội bộ chỉ có chấm hành vi sale."
+    lay_gi: "Phiếu đánh giá KPI + năng lực, quy trình calibration, mẫu 360; gắn với KR từ ke-hoach-okr"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-perf-review-template, hr-360-feedback-tool]
+    ban_tot_hon: true
+  - ten: hr-perf-review-template
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng danh-gia-nhan-vien, mỏng hơn."
+    trung_trong_kho: [danh-gia-nhan-vien, hr-360-feedback-tool]
+    ban_tot_hon: false
+  - ten: hr-360-feedback-tool
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Đã nằm trong danh-gia-nhan-vien; SME dưới 50 người ít dùng 360 riêng."
+    trung_trong_kho: [danh-gia-nhan-vien, hr-perf-review-template]
+    ban_tot_hon: false
+  - ten: xu-ly-ky-luat
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Quy trình kỷ luật, biên bản họp, PIP, chấm dứt HĐLĐ; rủi ro pháp lý cao nên đáng có, nhưng có lỗi luật cần sửa."
+    lay_gi: "Quy trình 5 bước + biên bản họp + mẫu PIP + thủ tục chấm dứt; SỬA: Đ.125 có 6 căn cứ sa thải, không phải 3"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-disciplinary-letter, hr-pip-builder]
+    ban_tot_hon: true
+  - ten: hr-disciplinary-letter
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng xu-ly-ky-luat; có số bịa (DN thua >60%), endpoint giả, thời hiệu tính sai mốc. Chỉ lấy mẫu quyết định kỷ luật."
+    trung_trong_kho: [xu-ly-ky-luat, hr-pip-builder]
+    ban_tot_hon: false
+  - ten: hr-pip-builder
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "PIP đã có trong xu-ly-ky-luat; bản này không thêm gì đáng kể."
+    trung_trong_kho: [xu-ly-ky-luat, hr-disciplinary-letter]
+    ban_tot_hon: false
+  - ten: chinh-sach-noi-bo
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Nội quy lao động và chính sách công ty theo BLLĐ 2019; là gốc để kỷ luật hợp lệ, nội bộ chưa có skill soạn."
+    lay_gi: "Khung nội quy lao động + các chính sách lương thưởng, phép, làm việc từ xa; gộp mục lục sổ tay từ hr-employee-handbook"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-employee-handbook]
+    ban_tot_hon: true
+  - ten: hr-employee-handbook
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng chinh-sach-noi-bo; chỉ có mục lục 8–10 phần, nội dung mỏng."
+    trung_trong_kho: [chinh-sach-noi-bo]
+    ban_tot_hon: false
+  - ten: quan-ly-nghi-phep
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Quy định nghỉ phép, tính phép còn lại, biểu mẫu xin nghỉ theo BLLĐ; tác vụ lặp lại, hợp cho agent."
+    lay_gi: "Bảng các loại nghỉ theo luật + công thức tính phép + mẫu đơn; gộp bảng phép từ hr-leave-policy"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-leave-policy]
+    ban_tot_hon: true
+  - ten: hr-leave-policy
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-nghi-phep, ngắn hơn."
+    trung_trong_kho: [quan-ly-nghi-phep]
+    ban_tot_hon: false
+  - ten: hr-payroll-input-checker
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: cao
+    ly_do: "Soát dữ liệu chấm công, OT, BHXH, thuế TNCN trước khi trả lương; sai lương là lỗi tốn kém, nội bộ chưa có."
+    lay_gi: "Checklist soát input lương theo nhóm lỗi + bảng đối chiếu; bỏ phần code mẫu"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-comp-band-builder
+    lo: lo-290
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: cao
+    ly_do: "Khung lương band/level, compa-ratio cho toàn công ty; nội bộ chỉ có thang lương cho phòng sale."
+    lay_gi: "Bảng band × level, công thức Min/Mid/Max theo P50, quy tắc compa-ratio; bỏ ví dụ lương cụ thể chưa có nguồn"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-bonus-plan-design
+    lo: lo-290
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: cao
+    ly_do: "Thiết kế thưởng cuối năm: lương 13, thưởng KPI, chia lợi nhuận, quỹ thưởng theo xếp loại; SME nào cũng cần."
+    lay_gi: "Cấu trúc quỹ thưởng + ma trận xếp loại × hệ số; bỏ các tỷ lệ % không nguồn"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-headcount-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh, ke-hoach-business-goal]
+    gia_tri: cao
+    ly_do: "Kế hoạch định biên năm gắn kế hoạch kinh doanh và ngân sách lương; cầu nối giữa Business Goal và tài chính."
+    lay_gi: "Bảng định biên theo phòng × quý, giả định nghỉ việc, thay thế vs tuyển mới, tổng quỹ lương"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ke-hoach-dao-tao
+    lo: lo-update
+    nhan: moi
+    ung_vien: [14-huan-luyen-doi-sale]
+    gia_tri: vua
+    ly_do: "Phân tích nhu cầu đào tạo, kế hoạch năm, chương trình nội bộ, đánh giá hiệu quả; nội bộ chỉ có đào tạo sale."
+    lay_gi: "Quy trình TNA + kế hoạch đào tạo năm + đánh giá Kirkpatrick 4 cấp (gộp từ hr-training-curriculum)"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-training-needs-analysis, hr-training-curriculum]
+    ban_tot_hon: true
+  - ten: hr-training-needs-analysis
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "TNA đã nằm trong ke-hoach-dao-tao."
+    trung_trong_kho: [ke-hoach-dao-tao, hr-training-curriculum]
+    ban_tot_hon: false
+  - ten: hr-training-curriculum
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng ke-hoach-dao-tao; chỉ khung module và Kirkpatrick đáng gộp."
+    trung_trong_kho: [ke-hoach-dao-tao, hr-training-needs-analysis]
+    ban_tot_hon: false
+  - ten: hr-elearning-script
+    lo: lo-290
+    nhan: moi
+    ung_vien: [04-script-video]
+    gia_tri: vua
+    ly_do: "Kịch bản khóa e-learning 20–40 phút có voice-over, quiz; dùng được cho AI Native Academy và đào tạo nội bộ."
+    lay_gi: "Khung kịch bản theo màn: voice-over, chữ trên màn hình, quiz, tương tác"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [ke-hoach-dao-tao]
+    ban_tot_hon: false
+  - ten: hr-okr-employee-coaching
+    lo: lo-290
+    nhan: trung
+    ung_vien: [ke-hoach-okr, okr, ke-hoach-phan-ra-muc-tieu]
+    gia_tri: thap
+    ly_do: "OKR cá nhân và căn chỉnh theo cấp đã có trong ke-hoach-okr và ke-hoach-phan-ra-muc-tieu."
+    trung_trong_kho: [ops-okr-rollup-ops]
+    ban_tot_hon: false
+  - ten: hr-org-chart-generator
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-raci]
+    gia_tri: vua
+    ly_do: "Sinh sơ đồ tổ chức từ bảng nhân sự, đo span of control, vị trí trống; agent làm được bằng Mermaid."
+    lay_gi: "Quy tắc span of control + cấu trúc dữ liệu đầu vào; xuất Mermaid thay vì code mẫu"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-promotion-package
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Hồ sơ đề bạt trình hội đồng; hữu ích ở công ty có cấp bậc rõ, SME nhỏ ít dùng."
+    lay_gi: "Khung hồ sơ 4 phần: thành tích, tác động, sẵn sàng lãnh đạo, vai trò mới"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-engagement-survey
+    lo: lo-290
+    nhan: moi
+    ung_vien: [13-do-luong-trai-nghiem]
+    gia_tri: vua
+    ly_do: "Khảo sát gắn kết có eNPS và 8–12 yếu tố, ra kế hoạch theo phòng; tương tự NPS bên khách hàng."
+    lay_gi: "Bộ câu hỏi eNPS + yếu tố gắn kết + mẫu kế hoạch hành động; gộp phân tích giá trị tuyên bố vs thực tế từ hr-culture-survey-analyzer"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-culture-survey-analyzer]
+    ban_tot_hon: true
+  - ten: hr-culture-survey-analyzer
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Gần trùng hr-engagement-survey; chỉ ý so khoảng cách giá trị tuyên bố và thực tế đáng gộp."
+    trung_trong_kho: [hr-engagement-survey]
+    ban_tot_hon: false
+  - ten: hr-exit-interview-template
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phỏng vấn nghỉ việc lấy lý do thật, gom chủ đề theo quý; đầu vào để giảm nghỉ việc."
+    lay_gi: "Bộ câu hỏi exit interview + mẫu báo cáo quý theo chủ đề"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [bao-cao-nhan-su]
+    ban_tot_hon: false
+  - ten: bao-cao-nhan-su
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Báo cáo biến động, chi phí nhân sự, tuyển dụng, tỷ lệ nghỉ việc; dashboard HR tháng/quý."
+    lay_gi: "Bộ chỉ số HR có công thức (turnover, time-to-hire, chi phí/đầu người) + mẫu báo cáo"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hr-employer-branding-content
+    lo: lo-290
+    nhan: moi
+    ung_vien: [01-lich-noi-dung, 26-thought-leadership-content]
+    gia_tri: vua
+    ly_do: "Nội dung thương hiệu nhà tuyển dụng; dùng lại khung lịch nội dung marketing nhưng đối tượng là ứng viên."
+    lay_gi: "Các dạng bài employer branding (nhân viên chia sẻ, hậu trường, ngày làm việc) + cột nội dung"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  # ===================== VẬN HÀNH / SẢN XUẤT =====================
+  - ten: ops-incident-rca
+    lo: lo-290
+    nhan: moi
+    ung_vien: [cai-tien-dmaic, 03-danh-gia-hieu-suat]
+    gia_tri: cao
+    ly_do: "Phân tích nguyên nhân gốc 5 Why + xương cá + Pareto cho sự cố đơn lẻ; DMAIC quá nặng cho việc này."
+    lay_gi: "Quy trình RCA 3 công cụ + mẫu xương cá 6M + Pareto; đặt là cai-tien-rca cạnh cai-tien-dmaic"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ops-5why-builder]
+    ban_tot_hon: true
+  - ten: ops-5why-builder
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Tập con của ops-incident-rca."
+    trung_trong_kho: [ops-incident-rca]
+    ban_tot_hon: false
+  - ten: cai-tien-lien-tuc-kaizen
+    lo: lo-update
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: cao
+    ly_do: "Kaizen: 7 lãng phí, phiếu sáng kiến, vòng PDCA; Company-suite-os đã định có mảng Kaizen/Lean nhưng chưa có skill."
+    lay_gi: "Bảng 7 muda + phiếu sáng kiến + vòng PDCA; thêm bảng 8 lãng phí TIMWOODS từ ops-waste-reduction-plan"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ops-waste-reduction-plan, ops-just-in-time-setup]
+    ban_tot_hon: true
+  - ten: ops-waste-reduction-plan
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng cai-tien-lien-tuc-kaizen; chỉ bảng TIMWOODS đáng gộp."
+    trung_trong_kho: [cai-tien-lien-tuc-kaizen]
+    ban_tot_hon: false
+  - ten: ops-just-in-time-setup
+    lo: lo-290
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: thap
+    ly_do: "JIT/Kanban sản xuất, takt, heijunka; chỉ hợp nhà máy, ít khách MQ là sản xuất."
+    lay_gi: "Tóm tắt khái niệm JIT vào tài liệu tham khảo Lean"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [cai-tien-lien-tuc-kaizen, ops-cycle-time-analyzer]
+    ban_tot_hon: false
+  - ten: ops-cycle-time-analyzer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: thap
+    ly_do: "Đo cycle time, so takt time, cân bằng chuyền; dùng được cho cả quy trình dịch vụ nhưng hẹp."
+    lay_gi: "Công thức takt/cycle time + bảng tìm nút thắt → tài liệu tham khảo Lean"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ops-just-in-time-setup, quan-ly-cong-suat]
+    ban_tot_hon: false
+  - ten: ops-sop-writer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-raci]
+    gia_tri: cao
+    ly_do: "SOP chuẩn Input–Bước–Output–RACI–KPI cho mọi quy trình; nền của tầng thực thi và đóng gói tri thức."
+    lay_gi: "Khung SOP 5 phần + checklist; gộp kiểm soát thay đổi quy trình từ kiem-soat-quy-trinh-san-xuat; đặt là thuc-thi-sop"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [kiem-soat-quy-trinh-san-xuat, ops-process-flowchart]
+    ban_tot_hon: true
+  - ten: kiem-soat-quy-trinh-san-xuat
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "SOP bản sản xuất, trùng ops-sop-writer; chỉ phần kiểm soát thay đổi quy trình đáng gộp."
+    trung_trong_kho: [ops-sop-writer]
+    ban_tot_hon: false
+  - ten: ops-process-flowchart
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Sinh sơ đồ quy trình Mermaid từ mô tả, đánh dấu điểm quyết định, vòng lặp; agent dùng ngay được."
+    lay_gi: "Quy tắc ký hiệu + mẫu Mermaid + cách chỉ ra nút thắt; dùng kèm thuc-thi-sop"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ops-sop-writer]
+    ban_tot_hon: false
+  - ten: ops-okr-rollup-ops
+    lo: lo-290
+    nhan: trung
+    ung_vien: [ke-hoach-phan-ra-muc-tieu, ke-hoach-okr]
+    gia_tri: thap
+    ly_do: "Tổng hợp OKR từ đội lên cấp trên đã có trong Hoshin Kanri/catchball của ke-hoach-phan-ra-muc-tieu."
+    trung_trong_kho: [hr-okr-employee-coaching]
+    ban_tot_hon: false
+  - ten: ops-kanban-board-setup
+    lo: lo-290
+    nhan: trung
+    ung_vien: [linear-mentor, linear-task]
+    gia_tri: thap
+    ly_do: "Cột, WIP limit, nhãn, tự động hoá đã có trong linear-mentor; MQ dùng Linear/Lark, không Trello."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-rpa-opportunity-scout
+    lo: lo-290
+    nhan: moi
+    ung_vien: [21-doi-sale-co-agent]
+    gia_tri: cao
+    ly_do: "Quét quy trình tìm việc nên tự động hoá, chấm ROI, chọn n8n/Make; khớp hướng AI agent của MQ và tư vấn SME."
+    lay_gi: "Bảng chấm cơ hội tự động hoá (tần suất, thời gian, lỗi, độ ổn định quy tắc) + công thức ROI; thêm lựa chọn GoClaw agent"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [chuyen-doi-so]
+    ban_tot_hon: false
+  - ten: ops-store-audit-template
+    lo: lo-290
+    nhan: moi
+    ung_vien: [shop-audit]
+    gia_tri: cao
+    ly_do: "Audit cửa hàng bán lẻ 100 mục theo 6P hàng tháng; shop-audit chỉ soát cấu hình Pancake, không soát cửa hàng thật."
+    lay_gi: "Bảng 100 mục chấm theo 6P + thang điểm + mẫu báo cáo theo cửa hàng"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-store-opening-checklist
+    lo: lo-290
+    nhan: moi
+    ung_vien: [pancake-shop-setup]
+    gia_tri: vua
+    ly_do: "Checklist mở cửa hàng mới từ 90 ngày trước khai trương; bổ trợ cho việc chuẩn hoá setup shop bán lẻ."
+    lay_gi: "Lịch ngược 90-60-30-7-0 ngày + đầu việc theo nhóm (pháp lý, mặt bằng, nhân sự, hàng, marketing)"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-shift-handover-template
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Mẫu bàn giao ca cho cửa hàng, kho, F&B; đơn giản, dễ đưa vào Lark/Zalo cho agent nhắc."
+    lay_gi: "Mẫu biên bản giao ca (tình trạng, đơn tồn, sự cố, việc tiếp) + quy tắc ký nhận"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-quality-incident-report
+    lo: lo-290
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: vua
+    ly_do: "Báo cáo 8D theo chuẩn khách nước ngoài; cần cho DN gia công, xuất khẩu."
+    lay_gi: "Mẫu 8D D1–D8 + tiêu chí đóng từng bước"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [xu-ly-loi-san-pham]
+    ban_tot_hon: false
+  - ten: xu-ly-loi-san-pham
+    lo: lo-update
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: vua
+    ly_do: "Nhận dạng, cách ly, xử lý sản phẩm không phù hợp và CAPA; gốc của mọi hệ chất lượng."
+    lay_gi: "Quy trình NCR → cách ly → quyết định xử lý → CAPA + phiếu theo dõi"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-quality-incident-report]
+    ban_tot_hon: true
+  - ten: quan-ly-chat-luong-qc
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Hệ QC/QA: tiêu chuẩn sản phẩm, kiểm tra trong chuyền và thành phẩm, báo cáo chất lượng."
+    lay_gi: "Khung tiêu chuẩn chất lượng + kế hoạch kiểm tra; gộp bảng AQL/cỡ mẫu từ ops-quality-checklist"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-quality-checklist]
+    ban_tot_hon: true
+  - ten: ops-quality-checklist
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-chat-luong-qc; chỉ bảng AQL đáng gộp."
+    trung_trong_kho: [quan-ly-chat-luong-qc]
+    ban_tot_hon: false
+  - ten: ke-hoach-san-xuat
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "MPS, cân đối năng lực, NVL, lịch ca; chỉ hợp DN sản xuất, không phải trọng tâm MQ."
+    lay_gi: "Mẫu MPS tuần/tháng + bảng cân đối năng lực–nhu cầu"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-capacity-planning, quan-ly-cong-suat]
+    ban_tot_hon: true
+  - ten: ops-capacity-planning
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng ke-hoach-san-xuat và quan-ly-cong-suat."
+    trung_trong_kho: [ke-hoach-san-xuat, quan-ly-cong-suat]
+    ban_tot_hon: false
+  - ten: quan-ly-cong-suat
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng ke-hoach-san-xuat; ý tự làm vs thuê ngoài có thể gộp."
+    trung_trong_kho: [ke-hoach-san-xuat, ops-capacity-planning]
+    ban_tot_hon: false
+  - ten: quan-ly-nguyen-vat-lieu
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Định mức NVL, MRP, theo dõi hao hụt; cần cho sản xuất và F&B, gắn giá vốn."
+    lay_gi: "Mẫu định mức + quy trình MRP + bảng theo dõi hao hụt; gộp BOM đa cấp từ ops-bom-builder"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-bom-builder]
+    ban_tot_hon: true
+  - ten: ops-bom-builder
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-nguyen-vat-lieu; chỉ cấu trúc BOM đa cấp đáng gộp."
+    trung_trong_kho: [quan-ly-nguyen-vat-lieu]
+    ban_tot_hon: false
+  - ten: bao-tri-thiet-bi
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Lịch bảo trì phòng ngừa, xử lý sự cố máy, KPI MTBF/MTTR; chỉ hợp nhà máy."
+    lay_gi: "Mẫu lịch PM + KPI bảo trì"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-maintenance-schedule]
+    ban_tot_hon: true
+  - ten: ops-maintenance-schedule
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng bao-tri-thiet-bi."
+    trung_trong_kho: [bao-tri-thiet-bi]
+    ban_tot_hon: false
+  - ten: bao-cao-san-xuat
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Báo cáo ca/ngày/tháng, KPI sản xuất, OEE; hẹp ngành sản xuất."
+    lay_gi: "Mẫu báo cáo ca + bộ KPI; gộp công thức OEE = A × P × Q từ ops-oee-tracker"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-oee-tracker]
+    ban_tot_hon: true
+  - ten: ops-oee-tracker
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "OEE nên là một mục trong bao-cao-san-xuat; phần dashboard thời gian thực là code giả."
+    trung_trong_kho: [bao-cao-san-xuat]
+    ban_tot_hon: false
+  - ten: ops-energy-cost-audit
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Audit điện theo máy cho nhà máy; nhiều số % tiết kiệm không nguồn, xa trọng tâm MQ."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-haccp-checklist
+    lo: lo-290
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "HACCP cho F&B; chỉ cần khi có khách F&B/thực phẩm, nên đặt cạnh checklist tuân thủ."
+    lay_gi: "Bảng mối nguy sinh–hoá–lý + xác định CCP + kế hoạch giám sát; rà theo quy định ATTP hiện hành"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ops-iso9001-readiness
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Gap assessment ISO 9001:2015 theo 10 điều khoản; chỉ DN cần chứng nhận mới dùng."
+    lay_gi: "Bảng gap theo điều khoản 4–10 + thang mức sẵn sàng"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [ops-vendor-audit-plan]
+    ban_tot_hon: false
+  - ten: an-toan-lao-dong-san-xuat
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng noi-quy-an-toan; phần nhận dạng nguy cơ sản xuất có thể gộp."
+    trung_trong_kho: [noi-quy-an-toan, an-toan-kho-bai]
+    ban_tot_hon: false
+  # ===================== MUA HÀNG / KHO VẬN =====================
+  - ten: log-warehouse-stock-alert
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [stock-alert]
+    gia_tri: cao
+    ly_do: "stock-alert đã cảnh báo tồn thấp, hàng chết; bản này có công thức SS/ROP/EOQ và 6 mức cảnh báo rõ ngưỡng."
+    lay_gi: "Công thức SS/ROP/EOQ + 6 quy tắc cảnh báo (LOW, CRITICAL, OVERSTOCK, DEAD, NEGATIVE, EXPIRY) → references/ của stock-alert; bỏ code KiotViet"
+    dat_vao: pancake-suite
+    trung_trong_kho: [quan-ly-ton-kho-mua-hang, quan-ly-hang-ton-kho]
+    ban_tot_hon: true
+  - ten: quan-ly-ton-kho-mua-hang
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [stock-alert]
+    gia_tri: cao
+    ly_do: "Có ma trận ABC-XYZ, quy trình xử lý tồn chậm 5 mức và bảng KPI tồn kho mà stock-alert chưa có."
+    lay_gi: "Ma trận ABC-XYZ 9 ô + thang xử lý tồn chậm 5 mức + bảng KPI tồn kho → references/ của stock-alert"
+    dat_vao: pancake-suite
+    trung_trong_kho: [log-warehouse-stock-alert, quan-ly-hang-ton-kho]
+    ban_tot_hon: false
+  - ten: quan-ly-hang-ton-kho
+    lo: lo-update
+    nhan: loai
+    ung_vien: [stock-alert]
+    gia_tri: thap
+    ly_do: "Trùng hai bản trên và stock-alert, không thêm gì."
+    trung_trong_kho: [log-warehouse-stock-alert, quan-ly-ton-kho-mua-hang]
+    ban_tot_hon: false
+  - ten: bao-cao-kho-van
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [monthly]
+    gia_tri: vua
+    ly_do: "monthly đã có phần tồn kho; bản này có bảng KPI kho vận và giao hàng có ngưỡng mục tiêu."
+    lay_gi: "Dashboard KPI kho vận (chính xác tồn ≥99%, giao đúng hạn, chi phí logistics/doanh thu) → references/ của monthly"
+    dat_vao: pancake-suite
+    trung_trong_kho: [bao-cao-mua-hang]
+    ban_tot_hon: false
+  - ten: kiem-ke-kho
+    lo: lo-update
+    nhan: moi
+    ung_vien: [stock-alert]
+    gia_tri: vua
+    ly_do: "Kế hoạch kiểm kê định kỳ/đột xuất, biên bản, xử lý chênh lệch; Pancake có API kiểm kho nhưng chưa có skill."
+    lay_gi: "Quy trình kiểm kê + phân công + biên bản + cách xử lý chênh lệch; nối với pos_stocktaking"
+    dat_vao: pancake-suite
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: theo-doi-don-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [daily, customer-360]
+    gia_tri: cao
+    ly_do: "Theo dõi vòng đời đơn, xử lý giao trễ/thất bại, tỷ lệ hoàn; nỗi đau lớn của shop COD Việt Nam."
+    lay_gi: "Sơ đồ trạng thái đơn + quy trình xử lý đơn trễ/thất bại + báo cáo tỷ lệ giao thành công/hoàn"
+    dat_vao: pancake-suite
+    trung_trong_kho: [xuat-kho-va-van-chuyen]
+    ban_tot_hon: false
+  - ten: xu-ly-hang-huy-hang-loi
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Quy trình nhận hàng hoàn, phân loại tái nhập, biên bản hủy, ghi nhận kế toán; shop TMĐT nào cũng cần."
+    lay_gi: "Quy trình hàng hoàn + phiếu tiếp nhận + biên bản hủy hàng; nối kế toán hủy hàng với Company-finance-accountant-os"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: xuat-kho-va-van-chuyen
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phiếu xuất kho, picking–packing, chọn đơn vị vận chuyển; nền vận hành kho."
+    lay_gi: "Quy trình picking–packing + phiếu xuất + checklist đóng gói"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [theo-doi-don-hang]
+    ban_tot_hon: false
+  - ten: nhap-kho-va-kiem-tra-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phiếu nhập kho, checklist kiểm hàng đầu vào, xử lý hàng không đạt; cặp đôi với xuất kho."
+    lay_gi: "Phiếu nhập + checklist kiểm hàng + quy trình hàng không đạt"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [kiem-soat-chat-luong-hang-nhap]
+    ban_tot_hon: true
+  - ten: ops-warehouse-layout
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Bố trí kho theo FIFO/FEFO và ABC, tối ưu đường nhặt hàng; dùng khi shop mở rộng kho."
+    lay_gi: "Quy tắc xếp vị trí theo ABC + FIFO/FEFO; bỏ con số giảm quãng đường 30-50% không nguồn"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: an-toan-kho-bai
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng noi-quy-an-toan; phần PCCC kho gộp vào bản đó."
+    trung_trong_kho: [noi-quy-an-toan, an-toan-lao-dong-san-xuat]
+    ban_tot_hon: false
+  - ten: log-shipping-cost-optimizer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [channel-roi]
+    gia_tri: cao
+    ly_do: "So sánh cước, thời gian, COD giữa GHN, GHTK, Viettel Post, J&T theo tuyến; ảnh hưởng thẳng biên lợi nhuận shop."
+    lay_gi: "Bảng tiêu chí chọn hãng theo vùng/loại đơn + phương pháp so cước; giá cước phải tra lại, không dùng số trong skill"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [toi-uu-chi-phi-logistics, quan-ly-nha-cung-cap-logistics]
+    ban_tot_hon: true
+  - ten: toi-uu-chi-phi-logistics
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng log-shipping-cost-optimizer; phần phân tích cấu trúc chi phí logistics có thể gộp."
+    trung_trong_kho: [log-shipping-cost-optimizer, quan-ly-nha-cung-cap-logistics]
+    ban_tot_hon: false
+  - ten: quan-ly-nha-cung-cap-logistics
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng log-shipping-cost-optimizer và quan-ly-nha-cung-cap; KPI nhà vận chuyển gộp vào bản tốt hơn."
+    trung_trong_kho: [log-shipping-cost-optimizer, quan-ly-nha-cung-cap]
+    ban_tot_hon: false
+  - ten: quy-trinh-mua-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [kiem-toan-noi-bo]
+    gia_tri: cao
+    ly_do: "Đề nghị mua → PO → đối chiếu 3 bên → phê duyệt; kiểm soát chi cốt lõi, nối kế toán và kiểm toán nội bộ."
+    lay_gi: "Quy trình PR–PO–nhận hàng–hoá đơn, đối chiếu 3 bên, ma trận phê duyệt theo hạn mức; gộp mẫu PO từ proc-po-template"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [mua-sam-va-dau-thau, proc-po-template]
+    ban_tot_hon: true
+  - ten: proc-po-template
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Mẫu PO là một phần của quy-trinh-mua-hang."
+    trung_trong_kho: [quy-trinh-mua-hang, mua-sam-va-dau-thau]
+    ban_tot_hon: false
+  - ten: mua-sam-va-dau-thau
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Bản hành chính trùng quy-trinh-mua-hang và dau-thau-va-rfq."
+    trung_trong_kho: [quy-trinh-mua-hang, dau-thau-va-rfq]
+    ban_tot_hon: false
+  - ten: dau-thau-va-rfq
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Soạn RFQ/RFP, chấm thầu, chọn nhà cung cấp; dùng cho mua sắm giá trị lớn."
+    lay_gi: "Mẫu RFQ + bảng chấm thầu có trọng số; gộp tiêu chí sàng lọc từ proc-vendor-shortlist-scoring"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [proc-rfq-builder, proc-vendor-shortlist-scoring, mua-sam-va-dau-thau]
+    ban_tot_hon: true
+  - ten: proc-rfq-builder
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng dau-thau-va-rfq."
+    trung_trong_kho: [dau-thau-va-rfq]
+    ban_tot_hon: false
+  - ten: proc-vendor-shortlist-scoring
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng dau-thau-va-rfq và quan-ly-nha-cung-cap; bảng chấm 5 tiêu chí đáng gộp."
+    trung_trong_kho: [dau-thau-va-rfq, quan-ly-nha-cung-cap, ops-supplier-scorecard]
+    ban_tot_hon: false
+  - ten: quan-ly-nha-cung-cap
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Tìm, đánh giá, phân loại, scorecard và phát triển nhà cung cấp; shop bán lẻ phụ thuộc nguồn hàng."
+    lay_gi: "Scorecard NCC + phân loại chiến lược; gộp 4 trục PQDS từ ops-supplier-scorecard"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [ops-supplier-scorecard, proc-vendor-shortlist-scoring, quan-ly-nha-cung-cap-logistics, quan-ly-nha-cung-cap-nuoc-ngoai, quan-ly-nha-cung-cap-it]
+    ban_tot_hon: true
+  - ten: ops-supplier-scorecard
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng quan-ly-nha-cung-cap; chỉ khung PQDS đáng gộp."
+    trung_trong_kho: [quan-ly-nha-cung-cap, proc-vendor-shortlist-scoring]
+    ban_tot_hon: false
+  - ten: ops-vendor-audit-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Audit NCC tại nhà máy theo ISO 9001; chỉ cần khi mua gia công/OEM."
+    lay_gi: "Checklist audit tại chỗ + xếp hạng rủi ro NCC"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [ops-iso9001-readiness]
+    ban_tot_hon: false
+  - ten: dam-phan-mua-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [15-dam-phan-ban-hang]
+    gia_tri: vua
+    ly_do: "Đàm phán ở vai người mua: phân tích giá–chi phí, điều khoản mua; tái dùng khung BATNA/ZOPA của 15-dam-phan-ban-hang."
+    lay_gi: "Phân tích cấu trúc giá NCC + danh mục điều khoản mua; dùng lại canvas 15 ô của 15-dam-phan-ban-hang"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: chien-luoc-mua-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phân tích danh mục chi tiêu, chiến lược nguồn cung, kế hoạch mua năm; tầng chiến lược của mảng mua hàng."
+    lay_gi: "Spend analysis + ma trận phân loại danh mục mua + kế hoạch procurement năm"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: hop-dong-mua-hang
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng quan-ly-hop-dong; điều khoản riêng của hợp đồng mua có thể gộp làm một phụ lục."
+    trung_trong_kho: [quan-ly-hop-dong, hop-dong-ngoai-thuong]
+    ban_tot_hon: false
+  - ten: bao-cao-mua-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Dashboard mua hàng, báo cáo tiết kiệm, hiệu suất NCC; chỉ cần khi có phòng mua hàng riêng."
+    lay_gi: "Bộ KPI mua hàng có công thức + mẫu báo cáo savings"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: [bao-cao-kho-van]
+    ban_tot_hon: false
+  - ten: mua-hang-dich-vu
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Mua dịch vụ gián tiếp (tư vấn, marketing, IT, thuê ngoài); hữu ích nhưng hẹp."
+    lay_gi: "Checklist mua dịch vụ + tiêu chí nghiệm thu dịch vụ"
+    dat_vao: repo-moi:mua-hang-kho-van
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mua-hang-ben-vung
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Mua hàng xanh/ESG chung chung, ít giá trị thực cho SME Việt Nam hiện tại."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: so-hoa-mua-hang
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Chọn phần mềm procurement/e-procurement chung chung; đã bao trong chuyen-doi-so."
+    trung_trong_kho: [chuyen-doi-so, quan-ly-phan-mem-ung-dung]
+    ban_tot_hon: false
+  # ===================== CÔNG NGHỆ / DỮ LIỆU =====================
+  - ten: data-cohort-analysis
+    lo: lo-290
+    nhan: moi
+    ung_vien: [13-phan-tich-du-lieu, 13-do-luong-trai-nghiem]
+    gia_tri: cao
+    ly_do: "Phân tích cohort giữ chân và doanh thu theo tháng có khách, tính LTV; đúng lõi phân tích bán lẻ của Bluecore."
+    lay_gi: "Định nghĩa cohort + SQL bảng cohort + heatmap + LTV từ cohort; viết lại theo bảng chuẩn Bluecore"
+    dat_vao: repo-moi:du-lieu
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: data-customer-segmentation
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang, customer-360]
+    gia_tri: cao
+    ly_do: "Phân khúc RFM 11 nhóm kèm hành động; nội bộ chỉ có BCG cho khách B2B, chưa có RFM cho bán lẻ."
+    lay_gi: "SQL tính điểm RFM + bảng 11 phân khúc và hành động theo kênh Zalo/SMS/email"
+    dat_vao: repo-moi:du-lieu
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: data-kpi-dictionary
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-bsc]
+    gia_tri: vua
+    ly_do: "Từ điển KPI có định nghĩa, công thức, chủ sở hữu, nguồn; Bluecore MCP đã có chuẩn số, skill này dùng cho khách ngoài."
+    lay_gi: "Mẫu 1 dòng metric (định nghĩa, công thức, chủ, độ chi tiết, nguồn) + quy trình duyệt thay đổi"
+    dat_vao: repo-moi:du-lieu
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: data-dashboard-builder
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [ke-chuyen-du-lieu]
+    gia_tri: vua
+    ly_do: "ke-chuyen-du-lieu đã có chọn biểu đồ; bản này thêm bước hỏi câu hỏi kinh doanh trước và checklist bố cục, drill-down."
+    lay_gi: "Question-first workshop + checklist bố cục/lọc/drill-down → references/ của ke-chuyen-du-lieu"
+    dat_vao: ke-chuyen-du-lieu (skill cấp tài khoản)
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: data-etl-pipeline-design
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Thiết kế ELT nhẹ: nguồn, staging, mart, kiểm chất lượng dữ liệu; dùng cho đội dữ liệu Bluecore hơn là khách SME."
+    lay_gi: "Quy ước tầng dbt + checklist kiểm chất lượng dữ liệu"
+    dat_vao: repo-moi:du-lieu
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: data-sql-query-helper
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Viết và tối ưu SQL chung chung, mô hình đã tự làm tốt; không đặc thù MQ."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: chuyen-doi-so
+    lo: lo-update
+    nhan: moi
+    ung_vien: [hoach-dinh-chien-luoc]
+    gia_tri: cao
+    ly_do: "Đánh giá mức số hoá, lộ trình, chọn công cụ, đo ROI; khớp tư vấn SME của FounderX và AI Native Academy."
+    lay_gi: "Thang đánh giá mức số hoá + lộ trình theo giai đoạn + bảng ROI; bổ sung tầng AI agent"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [ops-rpa-opportunity-scout, so-hoa-mua-hang]
+    ban_tot_hon: true
+  - ten: dao-tao-ky-nang-so
+    lo: lo-update
+    nhan: moi
+    ung_vien: [ke-hoach-dao-tao]
+    gia_tri: vua
+    ly_do: "Đánh giá năng lực số và chương trình đào tạo công cụ cho nhân viên; hữu ích khi triển khai AI cho khách."
+    lay_gi: "Khung đánh giá năng lực số theo cấp + mẫu kế hoạch đào tạo công cụ"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [ke-hoach-dao-tao]
+    ban_tot_hon: false
+  - ten: bao-mat-thong-tin
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Chính sách bảo mật, phân quyền, xử lý sự cố, NĐ 13/2023; MQ xử lý dữ liệu khách nên cần, phải cập nhật Luật BVDLCN 2025."
+    lay_gi: "Chính sách bảo mật + ma trận phân quyền + quy trình sự cố; gộp chính sách mật khẩu/BYOD từ it-it-policy-writer"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-it-policy-writer, it-incident-response-playbook]
+    ban_tot_hon: true
+  - ten: it-it-policy-writer
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng bao-mat-thong-tin; chính sách mật khẩu, BYOD, sử dụng chấp nhận được gộp vào bản đó."
+    trung_trong_kho: [bao-mat-thong-tin]
+    ban_tot_hon: false
+  - ten: it-incident-response-playbook
+    lo: lo-290
+    nhan: moi
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: vua
+    ly_do: "Playbook ứng cứu sự cố theo NIST 6 pha cho phishing, ransomware, lộ dữ liệu, chiếm tài khoản."
+    lay_gi: "6 pha NIST + playbook rút gọn cho 5 loại sự cố"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [bao-mat-thong-tin]
+    ban_tot_hon: false
+  - ten: sao-luu-phuc-hoi-du-lieu
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Backup 3-2-1, RPO/RTO, kiểm thử khôi phục; cần cho dữ liệu khách và hạ tầng agent."
+    lay_gi: "Quy tắc 3-2-1 + bảng RPO/RTO theo hệ thống + lịch test khôi phục; gộp bảng từ it-data-backup-policy"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-data-backup-policy]
+    ban_tot_hon: true
+  - ten: it-data-backup-policy
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng sao-luu-phuc-hoi-du-lieu."
+    trung_trong_kho: [sao-luu-phuc-hoi-du-lieu]
+    ban_tot_hon: false
+  - ten: it-offboarding-it-checklist
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Thu hồi tài khoản, thiết bị, chuyển quyền Drive khi nhân viên nghỉ; chặn rò rỉ dữ liệu."
+    lay_gi: "Checklist thu hồi theo hệ thống (email, Lark, Drive, MCP token, thiết bị) + mốc thời gian"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-onboarding-it-checklist]
+    ban_tot_hon: true
+  - ten: it-onboarding-it-checklist
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Cấp tài khoản, MFA, thiết bị cho nhân viên mới; nên gộp cùng offboarding thành một skill vòng đời tài khoản."
+    lay_gi: "Checklist cấp phát ngày đầu; gộp với it-offboarding-it-checklist"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-offboarding-it-checklist, onboarding-nhan-vien]
+    ban_tot_hon: false
+  - ten: it-vendor-saas-audit
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Kiểm kê SaaS đang dùng: chi phí, số seat, mức dùng thật, trùng tính năng; MQ dùng nhiều SaaS/AI."
+    lay_gi: "Bảng kiểm kê SaaS + tiêu chí cắt/giữ; gộp quy trình đàm phán gia hạn từ it-saas-cost-optimizer; bỏ % tiết kiệm không nguồn"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-saas-cost-optimizer, quan-ly-phan-mem-ung-dung, quan-ly-nha-cung-cap-it]
+    ban_tot_hon: true
+  - ten: it-saas-cost-optimizer
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng it-vendor-saas-audit; hứa tiết kiệm 25-40% không căn cứ."
+    trung_trong_kho: [it-vendor-saas-audit]
+    ban_tot_hon: false
+  - ten: it-shadow-it-detector
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phát hiện công cụ nhân viên tự dùng, đặc biệt AI cá nhân đưa dữ liệu công ty ra ngoài; rủi ro thật."
+    lay_gi: "Danh sách nguồn phát hiện (hoàn tiền thẻ, extension, OAuth) + chính sách xử lý"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [bao-mat-thong-tin]
+    ban_tot_hon: false
+  - ten: quan-ly-phan-mem-ung-dung
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Chọn phần mềm ERP/CRM, quản lý license, vòng đời ứng dụng; phần lớn trùng it-vendor-saas-audit."
+    lay_gi: "Bảng tiêu chí chọn phần mềm có trọng số"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [it-vendor-saas-audit]
+    ban_tot_hon: false
+  - ten: quan-ly-nha-cung-cap-it
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-nha-cung-cap và it-vendor-saas-audit."
+    trung_trong_kho: [quan-ly-nha-cung-cap, it-vendor-saas-audit]
+    ban_tot_hon: false
+  - ten: quan-ly-du-an-it
+    lo: lo-update
+    nhan: trung
+    ung_vien: [product-dev-router, linear-task, ke-hoach-so-rui-ro]
+    gia_tri: thap
+    ly_do: "Lập kế hoạch, phạm vi, tiến độ, rủi ro dự án IT đã có trong product-dev-os và sổ rủi ro."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ho-tro-ky-thuat-it
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Helpdesk IT, SLA theo mức ưu tiên, lỗi thường gặp; chỉ cần khi có đội IT nội bộ."
+    lay_gi: "Bảng SLA theo mức ưu tiên + quy trình tiếp nhận yêu cầu"
+    dat_vao: repo-moi:it
+    trung_trong_kho: [cham-soc-khach-hang-noi-bo]
+    ban_tot_hon: true
+  - ten: quan-ly-ha-tang-it
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-tai-san và it-asset-inventory; phần mạng nội bộ chung chung."
+    trung_trong_kho: [it-asset-inventory, quan-ly-tai-san]
+    ban_tot_hon: false
+  - ten: it-asset-inventory
+    lo: lo-290
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Trùng quan-ly-tai-san (sổ tài sản, cấp phát, khấu hao)."
+    trung_trong_kho: [quan-ly-tai-san, quan-ly-ha-tang-it]
+    ban_tot_hon: false
+  - ten: bao-cao-it
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Báo cáo KPI IT chung chung, SME ít có bộ phận IT riêng."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  # ===================== HÀNH CHÍNH =====================
+  - ten: quan-ly-hop-dong
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Sổ theo dõi hợp đồng, checklist ký, phụ lục, thanh lý, cảnh báo hết hạn; agent nhắc gia hạn rất hợp."
+    lay_gi: "Sổ hợp đồng + checklist ký + mẫu phụ lục/thanh lý + quy tắc cảnh báo 60/30/7 ngày; gộp điều khoản mua từ hop-dong-mua-hang"
+    dat_vao: repo-moi:hanh-chinh
+    trung_trong_kho: [hop-dong-mua-hang]
+    ban_tot_hon: true
+  - ten: quan-ly-van-ban
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Soạn công văn, quyết định, thông báo, tờ trình và hệ thống số hiệu, lưu trữ; việc lặp lại, agent làm tốt."
+    lay_gi: "Mẫu 5 loại văn bản + quy tắc đánh số, lưu trữ, kiểm soát phiên bản"
+    dat_vao: repo-moi:hanh-chinh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: quan-ly-lich-hop
+    lo: lo-update
+    nhan: moi
+    ung_vien: [16-kham-pha-nhu-cau]
+    gia_tri: vua
+    ly_do: "Lịch họp, thư mời, biên bản họp, theo dõi việc sau họp; dùng cho mọi phòng ban và agent ghi biên bản."
+    lay_gi: "Mẫu biên bản họp + bảng theo dõi hành động sau họp"
+    dat_vao: repo-moi:hanh-chinh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: quan-ly-tai-san
+    lo: lo-update
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: vua
+    ly_do: "Sổ tài sản, phiếu bàn giao, khấu hao, kiểm kê, thanh lý; gắn kế toán TSCĐ."
+    lay_gi: "Sổ tài sản + phiếu bàn giao + quy trình kiểm kê/thanh lý; khấu hao phải khớp chính sách trong ho-so-ke-toan"
+    dat_vao: repo-moi:hanh-chinh
+    trung_trong_kho: [it-asset-inventory, quan-ly-ha-tang-it]
+    ban_tot_hon: true
+  - ten: noi-quy-an-toan
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: vua
+    ly_do: "Nội quy an toàn lao động, PCCC, sơ cứu theo luật; là nghĩa vụ tuân thủ nên đặt cạnh checklist 84 mục."
+    lay_gi: "Khung nội quy ATVSLĐ + PCCC + sơ cứu; gộp phần kho và sản xuất từ an-toan-kho-bai, an-toan-lao-dong-san-xuat"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [an-toan-kho-bai, an-toan-lao-dong-san-xuat]
+    ban_tot_hon: true
+  - ten: bao-cao-hanh-chinh
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Báo cáo chi phí hành chính chung chung, không có khung đặc thù."
+    trung_trong_kho: [quan-ly-van-phong]
+    ban_tot_hon: false
+  - ten: quan-ly-van-phong
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Văn phòng phẩm, cơ sở vật chất; giá trị thấp, phần tài sản đã có ở quan-ly-tai-san."
+    trung_trong_kho: [quan-ly-tai-san, bao-cao-hanh-chinh]
+    ban_tot_hon: false
+  - ten: to-chuc-su-kien
+    lo: lo-update
+    nhan: moi
+    ung_vien: [28-community-building]
+    gia_tri: thap
+    ly_do: "Kế hoạch sự kiện nội bộ (tất niên, team building); có thể tái dùng cho sự kiện cộng đồng FounderX."
+    lay_gi: "Checklist sự kiện theo mốc + mẫu ngân sách sự kiện"
+    dat_vao: repo-moi:hanh-chinh
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: cham-soc-khach-hang-noi-bo
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Tiếp nhận yêu cầu nội bộ; trùng ho-tro-ky-thuat-it và onboarding, nội dung chung chung."
+    trung_trong_kho: [ho-tro-ky-thuat-it]
+    ban_tot_hon: false
+  # ===================== XUẤT NHẬP KHẨU =====================
+  - ten: thu-tuc-nhap-khau
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Hồ sơ, khai hải quan, kiểm tra chuyên ngành, thông quan hàng nhập; shop bán lẻ nhập hàng Trung Quốc cần."
+    lay_gi: "Checklist hồ sơ nhập + quy trình thông quan theo luồng; rà lại theo văn bản hải quan hiện hành"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [thu-tuc-xuat-khau]
+    ban_tot_hon: false
+  - ten: thue-xnk-va-hai-quan
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Tra HS code, tính thuế NK/GTGT, ưu đãi FTA, hoàn thuế; tác động thẳng giá vốn hàng nhập."
+    lay_gi: "Cấu trúc mã HS + bảng FTA và mẫu C/O + quy trình hoàn thuế; thuế suất phải tra lại, không dùng số trong skill"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [tuan-thu-phap-luat-xnk]
+    ban_tot_hon: true
+  - ten: tuan-thu-phap-luat-xnk
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "Hàng cấm/hạn chế, giấy phép chuyên ngành, xuất xứ, vi phạm hải quan; nên thành một nhóm trong checklist tuân thủ."
+    lay_gi: "Danh mục kiểm tra tuân thủ XNK → nhóm mục mới trong tuan-thu-doanh-nghiep"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [thue-xnk-va-hai-quan]
+    ban_tot_hon: false
+  - ten: thu-tuc-xuat-khau
+    lo: lo-update
+    nhan: moi
+    ung_vien: [29-xuat-khau-b2b]
+    gia_tri: vua
+    ly_do: "Hồ sơ, chứng từ, C/O, thông quan xuất khẩu; 29-xuat-khau-b2b chỉ lo marketing, thiếu phần thủ tục."
+    lay_gi: "Bộ chứng từ xuất khẩu + quy trình xin C/O + thông quan; liên kết từ 29-xuat-khau-b2b"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [thu-tuc-nhap-khau]
+    ban_tot_hon: false
+  - ten: hop-dong-ngoai-thuong
+    lo: lo-update
+    nhan: moi
+    ung_vien: [29-xuat-khau-b2b]
+    gia_tri: vua
+    ly_do: "Hợp đồng mua bán quốc tế, Incoterms 2020, điều khoản thanh toán và bảo vệ quyền lợi."
+    lay_gi: "Danh sách điều khoản bắt buộc + bảng chọn Incoterms + điều khoản thanh toán an toàn"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [hop-dong-mua-hang, thanh-toan-quoc-te]
+    ban_tot_hon: false
+  - ten: thanh-toan-quoc-te
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "So sánh L/C, T/T, D/P, D/A và quản lý rủi ro thanh toán; cần khi giao dịch với đối tác mới nước ngoài."
+    lay_gi: "Bảng so sánh 4 phương thức theo rủi ro bên mua/bán + checklist L/C"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [hop-dong-ngoai-thuong]
+    ban_tot_hon: false
+  - ten: van-tai-quoc-te
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "So sánh đường biển/hàng không/bộ, làm việc với forwarder, theo dõi lô hàng; hữu ích nhưng hẹp."
+    lay_gi: "Bảng chọn phương thức vận tải + checklist làm việc với forwarder"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: quan-ly-nha-cung-cap-nuoc-ngoai
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Tìm và đánh giá NCC quốc tế (1688, Alibaba), đa dạng hoá nguồn; sát nhu cầu shop nhập hàng."
+    lay_gi: "Checklist thẩm định NCC nước ngoài + chiến lược đa nguồn; dùng chung scorecard với quan-ly-nha-cung-cap"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [quan-ly-nha-cung-cap]
+    ban_tot_hon: false
+  - ten: kiem-soat-chat-luong-hang-nhap
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Kiểm hàng nhập khẩu, lấy mẫu, khiếu nại NCC; phần lớn trùng nhap-kho-va-kiem-tra-hang."
+    lay_gi: "Quy trình khiếu nại NCC nước ngoài + lấy mẫu kiểm nghiệm"
+    dat_vao: repo-moi:xuat-nhap-khau
+    trung_trong_kho: [nhap-kho-va-kiem-tra-hang]
+    ban_tot_hon: false
+  - ten: bao-cao-xnk
+    lo: lo-update
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Dashboard kim ngạch XNK chung chung, không có khung đặc thù."
+    trung_trong_kho: []
+    ban_tot_hon: false
