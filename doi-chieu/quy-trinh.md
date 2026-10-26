@@ -4,12 +4,12 @@
 
 ## Nguyên tắc chỗ chứa
 
-**290 skill thô không đặt trong repo này.** Repo này được mọi agent đọc lúc khởi động — phải nhỏ, ổn định, tin cậy cao. Kho thô đặt ở repo riêng `skill-lab` (đề xuất), với 3 luật:
+Kho thô đặt ở thư mục `skill-lab/` **trong repo này** (Quân chốt 2026-10-26), cách ly bằng 3 luật:
 1. Không có `marketplace.json` / manifest plugin → không bao giờ được cài.
 2. Toàn bộ ở tầng tri thức **"thu thập, chưa kiểm chứng"**.
-3. Chỉ agent đối chiếu đọc; không đưa vào ngữ cảnh khởi động của agent khác.
+3. Chỉ agent đối chiếu đọc; `AGENTS.md` cấm agent khác đọc khi làm việc thường.
 
-Repo này chỉ giữ: quy trình (file này), mẫu phiếu (`mau-phieu.yaml`), và kết quả đã chốt (cập nhật vào `danh-muc/skills.yaml` + `DECISIONS.md`).
+Chi tiết: `skill-lab/README.md`. Kết quả đã chốt cập nhật vào `danh-muc/skills.yaml` + `DECISIONS.md`.
 
 ## 7 bước
 
@@ -27,7 +27,7 @@ Tri thức chỉ lên tầng **"thu thập, đã kiểm chứng"** sau khi qua b
 
 ## Nhịp làm
 
-Lô 30 skill / tuần, ưu tiên mảng có nhiều skill nội bộ nhất (marketing, sale) vì đối chiếu ở đó có giá trị cao nhất. Ước tính 10 tuần cho 290 skill.
+Bước 1–3 đã chạy cho cả kho (510 skill) — xem `skill-lab/anh-xa/TONG-HOP.md`. Bước 4–7 làm theo lô 30 skill / tuần, ưu tiên skill "bổ sung" giá trị cao ở mảng đã có repo (marketing, sale, tài chính, quản trị).
 
 ## Ví dụ
 

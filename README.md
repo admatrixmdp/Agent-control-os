@@ -14,7 +14,8 @@ Repo này **không chứa skill nghiệp vụ**. Skill nghiệp vụ nằm ở c
 | `danh-muc/` | `skills.yaml` — sổ đăng ký toàn bộ skill trong hệ | Tìm skill, kiểm trùng, xem độ phủ eval |
 | `may-cham/` | Máy chấm eval dùng chung + kiểm thử | Sửa skill, gắn CI, chạy vòng cải tiến |
 | `vong-lap/` | Vòng A (thực thi) và vòng B (tiến hoá); skill `cham-phien`; thiết kế bảng LarkBase | Sau mỗi phiên, cron ban đêm |
-| `doi-chieu/` | Quy trình đối chiếu skill bên ngoài (290 skill) với skill nội bộ | Có skill mới cần xét |
+| `doi-chieu/` | Quy trình đối chiếu skill bên ngoài với skill nội bộ | Có skill mới cần xét |
+| `skill-lab/` | Kho cách ly 510 skill bên ngoài + kết quả kiểm dịch, vân tay, đối chiếu | **Chỉ khi đối chiếu** — không đọc khi làm việc thường |
 | `mcp/` | Thiết kế điểm nối tới MQ Knowledge MCP cho agent đám mây | Đưa tri thức vào Duet, Dots, Muse, Grok Bot |
 | `tham-khao/` | Ghi chú tri thức bên ngoài đã xét (vd pstack) | Tra nguồn gốc một ý tưởng |
 | `DECISIONS.md` | Nhật ký quyết định kiến trúc | Trước khi đề xuất thay đổi lớn |
@@ -40,5 +41,5 @@ python may-cham/tests/kiem_thu.py
 | Sổ đăng ký skill | v1 |
 | Eval trong các repo skill | 12 repo có eval; 7 PR `evals-v1` đang chờ duyệt |
 | Vòng B tự động (cron) | Thiết kế, chưa dựng |
-| Đối chiếu 290 skill | Quy trình xong; chờ nguồn 290 skill |
+| Đối chiếu kho bên ngoài | 510 skill đã vào `skill-lab/`; bước 1–3 xong; bước 4–7 theo lô |
 | MCP cho agent đám mây | Thiết kế, chưa dựng |

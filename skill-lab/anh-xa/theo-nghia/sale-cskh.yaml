@@ -1,0 +1,1084 @@
+nhom: sale-cskh
+mang: [sale, cham-soc-khach-hang]
+tong: 102
+dem: {trung: 24, bo-sung: 36, moi: 39, loai: 3}
+ghi_chu: >
+  Lô 290 (80 skill): khung ngắn ~100 dòng, thiên B2B SaaS doanh nghiệp lớn kiểu Mỹ, nhiều số hứa bịa
+  ("tăng win rate 35%", "cứu 40-60% deal"), đường dẫn máy cá nhân /Users/nguyenkiem, mục "Tích hợp web" kèm code
+  Python gọi API Gong/Salesforce/Shopee — khi trích phải bỏ hết những phần đó. Lô update (22 skill): mẫu tiếng Việt
+  cho SME, dài hơn, thực dụng hơn nhưng nhiều chỗ để trống [X]. Nội bộ sale-suite-os là B2B; mảng CSKH vận hành
+  (ticket, SLA, KB, chatbot, đổi trả, bảo hành) chưa có repo → đề xuất repo-moi:cskh. Căn cứ pháp lý trong các skill
+  đổi trả/hợp đồng phải kiểm lại trước khi dùng (vd NĐ 52/2013 đã được sửa bởi NĐ 85/2021).
+skills:
+
+  # ===================== CSKH — lô 290 =====================
+  - ten: cs-call-center-script
+    lo: lo-290
+    nhan: moi
+    ung_vien: [06-goi-dien-b2b]
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ có gọi điện B2B để hẹn gặp; chưa có kịch bản tổng đài inbound/outbound CSKH và KPI AHT/FCR."
+    lay_gi: "Phân loại cuộc gọi inbound/outbound, khung script 5 phần, định nghĩa AHT/FCR → gộp vào skill kịch bản tư vấn CSKH"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [kich-ban-tu-van-khach-hang, cs-livechat-playbook, kich-ban-ban-hang]
+    ban_tot_hon: false
+
+  - ten: cs-canned-response-library
+    lo: lo-290
+    nhan: moi
+    ung_vien: [hot-leads]
+    gia_tri: cao
+    ly_do: "Chưa có thư viện câu trả lời mẫu có biến số; dùng ngay cho Pancake Chat, ZAgent, agent trả lời tự động."
+    lay_gi: "Danh mục 30+ tình huống, cấu trúc template có biến {ten_kh} {ma_don}, quy tắc tone và pháp lý"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [kich-ban-tu-van-khach-hang]
+    ban_tot_hon: true
+
+  - ten: cs-chatbot-script-designer
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có skill thiết kế intent, entity, luồng, fallback và chuyển người thật cho chatbot Messenger/Zalo OA."
+    lay_gi: "Khung liệt kê intent, luồng top 10 intent, quy tắc fallback và handover sang người → nền cho bot CSKH của ZAgent/GoClaw"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-canned-response-library]
+    ban_tot_hon: false
+
+  - ten: cs-complaint-response-template
+    lo: lo-290
+    nhan: trung
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: thap
+    ly_do: "HEARD trùng khung 4 bước của 12-xu-ly-su-co; bản xu-ly-khieu-nai-kho có kịch bản tiếng Việt cụ thể hơn."
+    trung_trong_kho: [xu-ly-khieu-nai-kho, cs-customer-apology-letter]
+    ban_tot_hon: false
+
+  - ten: cs-csat-survey
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem]
+    gia_tri: thap
+    ly_do: "13-do-luong-trai-nghiem có NPS; bản này thêm thời điểm và kênh gửi CSAT/CES sau đóng ticket."
+    lay_gi: "Bảng chọn loại khảo sát theo thời điểm (sau ticket/sau giao hàng) và kênh gửi email/SMS/Zalo → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [do-luong-hai-long-khach-hang]
+    ban_tot_hon: false
+
+  - ten: cs-customer-apology-letter
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: vua
+    ly_do: "12-xu-ly-su-co có nhắc viết email xin lỗi nhưng chưa có thang mức nghiêm trọng và năm yếu tố bắt buộc."
+    lay_gi: "Thang 4 mức nghiêm trọng, 5 yếu tố bắt buộc của thư xin lỗi, mẫu L4 sự cố diện rộng do CEO ký → references/ của 12-xu-ly-su-co"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-complaint-response-template, xu-ly-khieu-nai-kho]
+    ban_tot_hon: false
+
+  - ten: cs-customer-success-onboarding
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: cao
+    ly_do: "Chưa có onboarding 30/60/90 ngày, time-to-value; cần cho sản phẩm SaaS của hệ MQ như Bluecore, GoClaw, ZAgent."
+    lay_gi: "Hành trình 0-90 ngày, checklist onboarding cho khách, healthcheck và cảnh báo sớm → một skill mới ban giao + onboarding cùng sales-postsale-handover"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-postsale-handover]
+    ban_tot_hon: false
+
+  - ten: cs-escalation-matrix
+    lo: lo-290
+    nhan: moi
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: cao
+    ly_do: "12-xu-ly-su-co chỉ có nguyên tắc không để leo thang; chưa có ma trận mức độ × cấp × thời gian cho đội CSKH."
+    lay_gi: "Bảng 4 mức S1-S4, ma trận leo thang theo thời gian lên TL/Manager/CEO, mẫu tin nhắn escalate có deadline"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [quy-trinh-tiep-nhan-khieu-nai, xu-ly-khieu-nai-kho]
+    ban_tot_hon: true
+
+  - ten: cs-faq-knowledge-base
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có skill dựng knowledge base CSKH; đồng thời là nguồn tri thức cho chatbot và vault GoClaw."
+    lay_gi: "Quy trình thu câu hỏi nguồn từ ticket, cấu trúc KB theo danh mục-tag-phiên bản, mẫu article chuẩn"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-knowledge-base-article, quan-ly-ticket-ho-tro]
+    ban_tot_hon: true
+
+  - ten: cs-feedback-loop-product
+    lo: lo-290
+    nhan: moi
+    ung_vien: [product-dev-router]
+    gia_tri: vua
+    ly_do: "Chưa có vòng phản hồi từ ticket CSKH về đội sản phẩm; hợp với product-dev-os cho các sản phẩm phần mềm MQ."
+    lay_gi: "Phân loại insight bug/feature request, gộp và xếp ưu tiên, bước báo lại cho khách khi đã ship → references/ của product-dev-router"
+    dat_vao: admatrixmdp/product-dev-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: cs-knowledge-base-article
+    lo: lo-290
+    nhan: moi
+    ung_vien: [05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "Cấu trúc bài Problem-Steps-Verify-Related đáng giữ nhưng nên gộp vào skill knowledge base, không tách riêng."
+    lay_gi: "Cấu trúc article 5 phần và cách chọn đề tài từ dữ liệu ticket → gộp vào skill KB từ cs-faq-knowledge-base"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-faq-knowledge-base]
+    ban_tot_hon: false
+
+  - ten: cs-livechat-playbook
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có SOP chat trực tiếp cho agent CSKH: phản hồi nhanh, xử lý nhiều cuộc song song, phép lịch sự."
+    lay_gi: "Quy tắc lời chào soạn sẵn, cách quản lý nhiều cuộc chat song song, etiquette và KPI chat → gộp vào skill kịch bản tư vấn"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [kich-ban-tu-van-khach-hang, cs-call-center-script]
+    ban_tot_hon: false
+
+  - ten: cs-refund-policy-writer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: vua
+    ly_do: "Có bước đối chiếu Luật BVQLNTD 2023 đáng lấy, nhưng căn cứ cũ (NĐ 52/2013 đã sửa) phải kiểm lại."
+    lay_gi: "Danh sách 7 mục bắt buộc của chính sách và bước đối chiếu pháp lý (sau khi kiểm căn cứ) → gộp vào skill đổi trả từ chinh-sach-doi-tra-hang"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [chinh-sach-doi-tra-hang]
+    ban_tot_hon: false
+
+  - ten: cs-renewal-risk-alert
+    lo: lo-290
+    nhan: loai
+    ung_vien: [13-do-luong-trai-nghiem]
+    gia_tri: thap
+    ly_do: "Trùng trong kho: tín hiệu rủi ro đã có ở sales-churn-risk-detector, mốc 90/60/30 đã có ở sales-renewal-playbook."
+    trung_trong_kho: [sales-churn-risk-detector, sales-renewal-playbook, sales-customer-health-score]
+    ban_tot_hon: false
+
+  - ten: cs-review-response-shopee
+    lo: lo-290
+    nhan: moi
+    ung_vien: [shopee-shop-analyzer]
+    gia_tri: cao
+    ly_do: "Chưa có mẫu trả lời đánh giá 1-5 sao trên Shopee/Lazada/Google; cần cho các shop bán lẻ trong hệ."
+    lay_gi: "Template theo từng mức sao, lưu ý chính sách từng sàn, mẹo SEO local cho Google review"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [xu-ly-khieu-nai-kho]
+    ban_tot_hon: false
+
+  - ten: cs-social-media-listening
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [15-social-listening]
+    gia_tri: vua
+    ly_do: "15-social-listening đã giám sát và phát hiện khủng hoảng; bản này thêm phân tuyến cho CSKH và SLA theo sắc thái."
+    lay_gi: "Bảng phân loại mention theo ưu tiên và SLA phản hồi theo tích cực/tiêu cực/cần xử lý → references/ của 15-social-listening"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: cs-ticket-tagging-automation
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có taxonomy tag và luật tự gắn nhãn ticket bằng rule + AI; hợp trực tiếp với agent phân tuyến ZAgent."
+    lay_gi: "Cách xây taxonomy tag, luật auto-tag theo từ khoá, ngưỡng chuyển AI cho ca khó, đo độ chính xác"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [quan-ly-ticket-ho-tro]
+    ban_tot_hon: false
+
+  - ten: cs-ticket-trend-report
+    lo: lo-290
+    nhan: moi
+    ung_vien: [07-bao-cao-marketing]
+    gia_tri: vua
+    ly_do: "Chưa có báo cáo xu hướng ticket CSKH; phần phân tích nguyên nhân gốc top 3 bổ sung tốt cho bao-cao-cskh."
+    lay_gi: "Công thức chỉ số ticket chuẩn và bước RCA top 3 vấn đề → gộp vào skill báo cáo CSKH từ bao-cao-cskh"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [bao-cao-cskh, quan-ly-ticket-ho-tro]
+    ban_tot_hon: false
+
+  - ten: cs-vip-customer-care
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: vua
+    ly_do: "Phân hạng VIP và touchpoint theo dịp nên gộp vào skill loyalty; 11-quan-ly-khach-hang chỉ phủ B2B."
+    lay_gi: "Lịch touchpoint theo dịp (sinh nhật, kỷ niệm, lễ), quy định agent riêng và SLA ưu tiên → gộp vào skill loyalty"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [xay-dung-loyalty-program]
+    ban_tot_hon: false
+
+  - ten: cs-warranty-claim-processor
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có quy trình bảo hành: form, SLA, kiểm điều kiện, chuyển kho/kỹ thuật; cần cho shop bán hàng có bảo hành."
+    lay_gi: "Form yêu cầu bảo hành chuẩn, workflow 5 bước có SLA, checklist kiểm điều kiện bảo hành"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [chinh-sach-doi-tra-hang]
+    ban_tot_hon: false
+
+  # ===================== SALE — lô 290 =====================
+  - ten: sales-account-plan
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: thap
+    ly_do: "Phần lớn trùng sales-key-account-strategy; riêng phân tích white space là đáng lấy."
+    lay_gi: "Ma trận white space (sản phẩm × đơn vị của khách) → cùng file references/ key-account của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-key-account-strategy]
+    ban_tot_hon: false
+
+  - ten: sales-bant-qualifier
+    lo: lo-290
+    nhan: trung
+    ung_vien: [03-cham-diem-lead, 16-kham-pha-nhu-cau]
+    gia_tri: thap
+    ly_do: "03-cham-diem-lead đã chấm theo Need-Authority-Budget-Willingness; ZAgent cũng đã có thuật toán BANT."
+    trung_trong_kho: [phan-tich-khach-hang-tiem-nang, sales-lead-scoring-engine, sales-mql-sql-criteria]
+    ban_tot_hon: false
+
+  - ten: sales-case-study-pitch
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [07-xay-dung-niem-tin, 17-de-xuat-giai-phap]
+    gia_tri: vua
+    ly_do: "07 có trust signal, 17 có phần bằng chứng; chưa có cách ghép đúng case study với ngành, vai trò, nỗi đau."
+    lay_gi: "Ma trận ghép case study × ngành × persona × nỗi đau, quy tắc xin phép và làm mới case → references/ của 07-xay-dung-niem-tin"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-challenger-script
+    lo: lo-290
+    nhan: moi
+    ung_vien: [16-kham-pha-nhu-cau, 17-de-xuat-giai-phap]
+    gia_tri: vua
+    ly_do: "Chưa có Challenger Sale (Teach-Tailor-Take Control); hợp bán giải pháp dữ liệu/AI cần dạy khách góc nhìn mới."
+    lay_gi: "Cách dựng commercial insight, bước Tailor theo vai trò, Take Control định khung deal; bỏ phần 5 profile kèm số liệu không nguồn"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-channel-partner-recruit
+    lo: lo-290
+    nhan: moi
+    ung_vien: [01-phan-khuc-chan-dung]
+    gia_tri: cao
+    ly_do: "Chưa có skill tuyển đại lý/nhà phân phối/reseller; cần cho bán sỉ B2B và mở kênh đối tác cho sản phẩm MQ."
+    lay_gi: "Chân dung đối tác lý tưởng, 6 điểm kiểm thẩm định đối tác, khung điều khoản thương mại → skill mới kenh-dai-ly gộp cùng sales-distributor-onboarding"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-distributor-onboarding]
+    ban_tot_hon: true
+
+  - ten: sales-churn-risk-detector
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem, 11-quan-ly-khach-hang]
+    gia_tri: cao
+    ly_do: "13 đo churn sau khi xảy ra; bản này có tín hiệu cảnh báo sớm có trọng số và playbook can thiệp theo mức."
+    lay_gi: "12 tín hiệu rủi ro 4 nhóm, chấm trọng số ra 4 vùng màu, playbook can thiệp theo vùng, theo dõi kết quả 30/60/90 → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-renewal-risk-alert, sales-customer-health-score, sales-renewal-playbook]
+    ban_tot_hon: true
+
+  - ten: sales-cold-call-script
+    lo: lo-290
+    nhan: trung
+    ung_vien: [06-goi-dien-b2b]
+    gia_tri: thap
+    ly_do: "06-goi-dien-b2b đã có kịch bản gọi hẹn, vượt gatekeeper và xử lý phản đối trong cuộc gọi."
+    trung_trong_kho: [kich-ban-telesales, kich-ban-ban-hang]
+    ban_tot_hon: false
+
+  - ten: sales-cold-email-writer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-tiep-can-da-kenh]
+    gia_tri: thap
+    ly_do: "04-tiep-can-da-kenh đã có cold email cá nhân hoá, hook và follow-up 5 mốc khi khách im lặng."
+    trung_trong_kho: [email-sales, sales-followup-cadence, sales-prospecting-sequence-multichannel]
+    ban_tot_hon: false
+
+  - ten: sales-commission-calculator
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: vua
+    ly_do: "20 có thiết kế hoa hồng; bản này thêm cơ chế tăng tốc/giảm tốc, thưởng nóng, thu hồi và bảng sao kê từng người."
+    lay_gi: "Các thành phần plan (base, accelerator, decelerator, SPIF, clawback, cap), luồng tính payout, mẫu sao kê → references/ của 20-xay-phong-kinh-doanh; bỏ số USD"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-contract-redline
+    lo: lo-290
+    nhan: moi
+    ung_vien: [15-dam-phan-ban-hang, tuan-thu-doanh-nghiep]
+    gia_tri: vua
+    ly_do: "Chưa có rà hợp đồng tìm điều khoản rủi ro; danh sách red flag theo luật Mỹ phải viết lại theo luật Việt Nam."
+    lay_gi: "Khung quét 12 nhóm điều khoản rủi ro (trách nhiệm, sở hữu trí tuệ, chấm dứt, luật áp dụng) và mẫu đề xuất sửa → viết lại theo Bộ luật Dân sự, Luật Thương mại"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [hop-dong-don-hang]
+    ban_tot_hon: false
+
+  - ten: sales-crm-data-cleaner
+    lo: lo-290
+    nhan: moi
+    ung_vien: [03-cham-diem-lead]
+    gia_tri: vua
+    ly_do: "Chưa có skill làm sạch dữ liệu CRM (trùng, định dạng số điện thoại, email); cần cho ZAgent, Pancake, Bluecore."
+    lay_gi: "Điểm chất lượng dữ liệu, luật gộp trùng, chuẩn hoá định dạng (số điện thoại theo chuẩn 84), luật kiểm khi nhập"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-pipeline-cleanup]
+    ban_tot_hon: false
+
+  - ten: sales-cross-sell-mapper
+    lo: lo-290
+    nhan: trung
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: thap
+    ly_do: "11-quan-ly-khach-hang đã có upsell, cross-sell theo nhóm khách; ma trận bán chéo quá chung."
+    trung_trong_kho: [sales-upsell-script, cham-soc-sau-ban-hang]
+    ban_tot_hon: false
+
+  - ten: sales-customer-health-score
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem, 11-quan-ly-khach-hang]
+    gia_tri: cao
+    ly_do: "Nội bộ có NPS, churn, CLV nhưng chưa có điểm sức khoẻ khách hàng tổng hợp để ưu tiên chăm sóc."
+    lay_gi: "4 trục sức khoẻ 25 điểm/trục, cách lượng hoá từng tiểu mục, 4 ngưỡng phân lớp kèm hành động mặc định → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-churn-risk-detector, cs-renewal-risk-alert]
+    ban_tot_hon: false
+
+  - ten: sales-deal-review-template
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [18-chuan-hanh-vi-sale, 14-huan-luyen-doi-sale]
+    gia_tri: vua
+    ly_do: "18 có coaching 1:1 theo hành vi; chưa có bộ câu hỏi duyệt deal đang mở và thẻ điểm deal."
+    lay_gi: "Checklist AE chuẩn bị, 12 câu manager hỏi, thẻ điểm deal 0-3, mẫu action plan tuần → references/ của 18-chuan-hanh-vi-sale"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-demo-script
+    lo: lo-290
+    nhan: moi
+    ung_vien: [16-kham-pha-nhu-cau, 09-chot-sale]
+    gia_tri: cao
+    ly_do: "Chưa có kịch bản demo sản phẩm; các sản phẩm phần mềm MQ (Bluecore, GoClaw, ZAgent) bán chủ yếu qua demo."
+    lay_gi: "Khung demo 30 phút Tell-Show-Tell, recap discovery đầu buổi, 3 use case theo persona, trial close và chốt bước tiếp"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-discounting-policy
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [15-dam-phan-ban-hang, dinh-gia-san-pham]
+    gia_tri: vua
+    ly_do: "15 có Quid Pro Quo; chưa có chính sách bậc chiết khấu, cấp duyệt và điều kiện đổi lại cho cả đội."
+    lay_gi: "Cấu trúc bậc chiết khấu × cấp duyệt × SLA × điều kiện đổi lại, luồng duyệt, nhật ký kiểm → references/ của 15-dam-phan-ban-hang; bỏ các mức % cứng"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-discovery-call-template
+    lo: lo-290
+    nhan: trung
+    ung_vien: [16-kham-pha-nhu-cau]
+    gia_tri: thap
+    ly_do: "16-kham-pha-nhu-cau đã có meeting objective, agenda gửi trước, bộ câu hỏi 5-3-2 và recap 24 giờ."
+    trung_trong_kho: [sales-spin-selling-coach, sales-meddic-template, sales-bant-qualifier]
+    ban_tot_hon: false
+
+  - ten: sales-distributor-onboarding
+    lo: lo-290
+    nhan: moi
+    ung_vien: [14-huan-luyen-doi-sale]
+    gia_tri: cao
+    ly_do: "Chưa có onboarding đại lý mới 30-60-90; cần cho mô hình bán sỉ qua nhà phân phối của SME."
+    lay_gi: "Lộ trình 3 giai đoạn 30-60-90, hệ chứng nhận đại lý, ramp chỉ tiêu → skill mới kenh-dai-ly gộp cùng sales-channel-partner-recruit"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-channel-partner-recruit]
+    ban_tot_hon: false
+
+  - ten: sales-executive-briefing
+    lo: lo-290
+    nhan: trung
+    ung_vien: [pyramid-principle]
+    gia_tri: thap
+    ly_do: "Briefing 3 slide cho lãnh đạo là ứng dụng hẹp của pyramid-principle; không có gì mới."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-followup-cadence
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-tiep-can-da-kenh]
+    gia_tri: thap
+    ly_do: "04-tiep-can-da-kenh đã có warm-up đa kênh và lịch follow-up 5 mốc."
+    trung_trong_kho: [sales-prospecting-sequence-multichannel, sales-cold-email-writer, email-sales]
+    ban_tot_hon: false
+
+  - ten: sales-icp-builder
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [01-phan-khuc-chan-dung]
+    gia_tri: vua
+    ly_do: "01 đã có ICP và persona; bản này thêm phương pháp rút ICP từ khách tốt/tệ và anti-ICP để loại lead."
+    lay_gi: "Quy trình soi 20 khách tốt nhất + 10 khách tệ nhất theo 6 chiều, danh sách red flag anti-ICP, thẻ điểm fit 0-3 → references/ của 01-phan-khuc-chan-dung"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-key-account-strategy
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: vua
+    ly_do: "11 xếp khách theo BCG; chưa có lớp quản trị khách lớn: thị phần ví, kế hoạch kinh doanh chung, quản trị cấp lãnh đạo."
+    lay_gi: "Chọn top 20 theo Pareto, phân tích wallet share, mẫu Joint Business Plan, nhịp quản trị cấp lãnh đạo → references/ của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-account-plan]
+    ban_tot_hon: true
+
+  - ten: sales-late-stage-rescue
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [09-chot-sale, 10-xu-ly-tu-choi]
+    gia_tri: cao
+    ly_do: "09 nêu triệu chứng gặp mãi không chốt nhưng chưa có chẩn đoán deal kẹt và các nước cứu theo nguyên nhân."
+    lay_gi: "8 câu chẩn đoán deal kẹt, 6 nước cứu theo nguyên nhân gốc, kịch bản hỏi lại champion, mutual deadline có lý do thật → references/ của 09-chot-sale; bỏ số 'cứu 40-60%'"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-lead-list-builder
+    lo: lo-290
+    nhan: trung
+    ung_vien: [02-tim-kiem-lead]
+    gia_tri: thap
+    ly_do: "02-tim-kiem-lead đã có chọn kênh và research lead; bản này dựa vào Apollo/Lusha ít dùng ở Việt Nam."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-lead-scoring-engine
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [03-cham-diem-lead]
+    gia_tri: vua
+    ly_do: "03 chấm theo 4 tiêu chí thang 10; bản này thêm ma trận Fit × Intent, điểm âm để loại và luật phân tuyến."
+    lay_gi: "Ma trận 2x2 Fit × Intent, danh sách điểm âm loại lead, luật phân tuyến theo điểm → references/ của 03-cham-diem-lead"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [phan-tich-khach-hang-tiem-nang, sales-bant-qualifier, sales-mql-sql-criteria]
+    ban_tot_hon: true
+
+  - ten: sales-linkedin-prospecting
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-tiep-can-da-kenh, 31-linkedin-growth]
+    gia_tri: thap
+    ly_do: "Nhắn LinkedIn đã nằm trong 04-tiep-can-da-kenh; 31-linkedin-growth phủ phần hồ sơ và tương tác."
+    trung_trong_kho: [sales-prospecting-sequence-multichannel]
+    ban_tot_hon: false
+
+  - ten: sales-meddic-template
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [03-cham-diem-lead, 16-kham-pha-nhu-cau, 15-dam-phan-ban-hang]
+    gia_tri: cao
+    ly_do: "ZAgent đã chấm MEDDICC nhưng sale-suite chưa có bộ câu hỏi; deal lớn cần đánh giá sâu hơn 4 tiêu chí."
+    lay_gi: "Câu hỏi từng chữ MEDDPICC, tiêu chí champion thật = Power + Pain + Plan, red flag chưa gặp người ký sau demo → references/meddpicc.md của 03-cham-diem-lead"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-bant-qualifier, sales-stakeholder-map]
+    ban_tot_hon: false
+
+  - ten: sales-meeting-followup-summary
+    lo: lo-290
+    nhan: trung
+    ung_vien: [16-kham-pha-nhu-cau]
+    gia_tri: thap
+    ly_do: "16-kham-pha-nhu-cau đã có meeting note và email recap trong 24 giờ."
+    trung_trong_kho: [sales-thank-you-email]
+    ban_tot_hon: true
+
+  - ten: sales-meeting-prep-research
+    lo: lo-290
+    nhan: trung
+    ung_vien: [02-tim-kiem-lead, 04-tiep-can-da-kenh]
+    gia_tri: thap
+    ly_do: "Research 15-20 phút trước khi gọi và checklist chuẩn bị đã có ở 02 và 04."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-mql-sql-criteria
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [03-cham-diem-lead]
+    gia_tri: vua
+    ly_do: "Phễu MQL/SQL có ở ZAgent nhưng sale-suite chưa có định nghĩa chung và SLA bàn giao marketing–sale."
+    lay_gi: "Định nghĩa 3 giai đoạn MQL/SAL/SQL, ma trận chủ sở hữu và SLA giữa marketing và sale, nhịp hiệu chỉnh → references/ của 03-cham-diem-lead"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-lead-scoring-engine, sales-sdr-handover]
+    ban_tot_hon: false
+
+  - ten: sales-multithreading-template
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [15-dam-phan-ban-hang]
+    gia_tri: thap
+    ly_do: "Phần lớn trùng sales-stakeholder-map; chỉ dấu hiệu rủi ro đơn luồng là đáng lấy."
+    lay_gi: "Danh sách dấu hiệu rủi ro single-thread và quy tắc phối hợp nhiều đầu mối → cùng file references/ stakeholder của 15-dam-phan-ban-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-stakeholder-map]
+    ban_tot_hon: false
+
+  - ten: sales-mutual-action-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: [09-chot-sale]
+    gia_tri: cao
+    ly_do: "Chưa có kế hoạch hành động chung hai bên; 09 kết bằng một cam kết nhưng chưa có lộ trình mốc có chủ hai phía."
+    lay_gi: "Quy tắc đồng soạn với champion, 8 mốc phổ biến, bảng 2 cột chủ phía khách/phía mình, luật trễ mốc phải leo thang → references/ của 09-chot-sale"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-negotiation-playbook
+    lo: lo-290
+    nhan: trung
+    ung_vien: [15-dam-phan-ban-hang]
+    gia_tri: thap
+    ly_do: "15-dam-phan-ban-hang đã có BATNA, ZOPA, give-take, Quid Pro Quo; bản này mỏng hơn và có chiến thuật thao túng."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-objection-handling
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [10-xu-ly-tu-choi]
+    gia_tri: vua
+    ly_do: "10 chẩn đoán loại phản bác; thiếu thư viện phản đối có sẵn câu trả lời để luyện nhanh."
+    lay_gi: "Bảng 20 phản đối chia 5 nhóm (giá, thời gian, thẩm quyền, nhu cầu, niềm tin) + cấu trúc trả lời 4 câu LAER → references/ của 10-xu-ly-tu-choi"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [xu-ly-tu-choi]
+    ban_tot_hon: true
+
+  - ten: sales-one-pager
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [17-de-xuat-giai-phap, 30-thiet-ke-master]
+    gia_tri: thap
+    ly_do: "Proposal và thiết kế đã có; chỉ bố cục one-pager A4 để lại sau buổi gặp là đáng lấy."
+    lay_gi: "Bố cục A4 7 phần và 3 biến thể theo mục đích (gửi email, để lại, sự kiện) → references/ của 17-de-xuat-giai-phap"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-sales-deck-builder]
+    ban_tot_hon: false
+
+  - ten: sales-pipeline-cleanup
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [03-cham-diem-lead, 18-chuan-hanh-vi-sale]
+    gia_tri: vua
+    ly_do: "03 dựng pipeline nhưng chưa có quy trình dọn deal chết và luật vệ sinh pipeline định kỳ."
+    lay_gi: "Bảng phân loại 'bệnh' deal (quá hạn, không bước tiếp, ngâm lâu), hành động tương ứng, SLA cập nhật → references/ của 03-cham-diem-lead"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-crm-data-cleaner]
+    ban_tot_hon: true
+
+  - ten: sales-pipeline-forecast
+    lo: lo-290
+    nhan: moi
+    ung_vien: [19-ke-hoach-ban-hang]
+    gia_tri: vua
+    ly_do: "Chưa có dự báo theo pipeline có trọng số giai đoạn và 3 mức Commit/Best/Pipeline."
+    lay_gi: "Xác suất theo giai đoạn, 3 mức dự báo Commit/Best/Pipe, bước manager điều chỉnh và kiểm hợp lý → gộp vào skill dự báo từ du-bao-doanh-so"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [du-bao-doanh-so]
+    ban_tot_hon: false
+
+  - ten: sales-pitch-deck-investor-style
+    lo: lo-290
+    nhan: loai
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Trùng sales-sales-deck-builder, thiên deck enterprise kiểu Mỹ; pitch deck gọi vốn đã có ở repo đầu tư."
+    trung_trong_kho: [sales-sales-deck-builder, sales-one-pager]
+    ban_tot_hon: false
+
+  - ten: sales-postsale-handover
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: cao
+    ly_do: "Chưa có quy trình bàn giao sale sang chăm sóc sau ký; cam kết miệng hay bị rơi khi đổi người phụ trách."
+    lay_gi: "Agenda họp bàn giao nội bộ 45 phút, hồ sơ bàn giao 2 trang (gồm cam kết miệng), kickoff với khách, 30 ngày sale kèm → skill mới ban-giao gộp cùng cs-customer-success-onboarding"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-customer-success-onboarding, sales-sdr-handover]
+    ban_tot_hon: true
+
+  - ten: sales-proposal-writer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "17-de-xuat-giai-phap đã có khung 6 phần bán giá trị, tốt hơn khung 9 phần chung chung này."
+    trung_trong_kho: [de-xuat-bao-gia, sales-quote-generator]
+    ban_tot_hon: false
+
+  - ten: sales-prospecting-sequence-multichannel
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-tiep-can-da-kenh]
+    gia_tri: thap
+    ly_do: "Chuỗi đa kênh và follow-up đã có ở 04-tiep-can-da-kenh; video Loom và A/B không đủ đáng tách."
+    trung_trong_kho: [sales-followup-cadence, sales-cold-email-writer, sales-linkedin-prospecting]
+    ban_tot_hon: false
+
+  - ten: sales-qbr-deck-builder
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang, 13-do-luong-trai-nghiem]
+    gia_tri: vua
+    ly_do: "Chưa có buổi rà soát kinh doanh hàng quý với khách; cần để giữ chân và mở rộng khách SaaS/dịch vụ."
+    lay_gi: "Khung 11 slide, cách trình bày giá trị đã mang lại, câu chuyện mở rộng nhẹ nhàng, checklist chuẩn bị → references/ của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-quota-planner
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [19-ke-hoach-ban-hang, 20-xay-phong-kinh-doanh]
+    gia_tri: vua
+    ly_do: "19 quy đổi ngược doanh thu ra định mức; chưa có cân bằng top-down với bottom-up và ramp cho người mới."
+    lay_gi: "Bước cân bằng chỉ tiêu từ trên xuống với tiềm năng từ dưới lên, bảng ramp chỉ tiêu người mới, khớp với hoa hồng → references/ của 19-ke-hoach-ban-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: sales-quote-generator
+    lo: lo-290
+    nhan: trung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Báo giá đã nằm trong 17; phần tự điền từ CRM phụ thuộc công cụ, không phải tri thức."
+    trung_trong_kho: [de-xuat-bao-gia, sales-proposal-writer]
+    ban_tot_hon: false
+
+  - ten: sales-renewal-playbook
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: vua
+    ly_do: "11 có giữ chân khách nhưng chưa có nhịp gia hạn hợp đồng theo mốc và cách tăng giá khi tái ký."
+    lay_gi: "Nhịp gia hạn 4 mốc 90/60/30/0 ngày, healthcheck trước gia hạn, chiến lược tăng giá khi tái ký → references/ của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-renewal-risk-alert, sales-churn-risk-detector]
+    ban_tot_hon: false
+
+  - ten: sales-retail-shelf-audit
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Audit kệ hàng FMCG (share of shelf, planogram) chưa có nhưng xa với trọng tâm hiện tại của hệ MQ."
+    lay_gi: "10-15 mục audit tại điểm bán, chỉ số tuân thủ trưng bày, hành động khắc phục → để dành cho mảng trade marketing"
+    dat_vao: "repo-moi:trade-marketing"
+    trung_trong_kho: [sales-trade-promotion-plan]
+    ban_tot_hon: false
+
+  - ten: sales-rfp-response-writer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Trả lời hồ sơ mời thầu chưa có; nhưng đấu thầu ở Việt Nam theo Luật Đấu thầu 2023, khung Mỹ phải viết lại."
+    lay_gi: "Thư viện câu trả lời tái sử dụng, win theme và điểm khác biệt → gộp vào skill đấu thầu cùng sales-rfp-scoring"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-rfp-scoring]
+    ban_tot_hon: false
+
+  - ten: sales-rfp-scoring
+    lo: lo-290
+    nhan: moi
+    ung_vien: [03-cham-diem-lead]
+    gia_tri: vua
+    ly_do: "Chưa có chấm điểm có nên dự thầu hay không; tránh tốn công cho hồ sơ không có cửa thắng."
+    lay_gi: "10 tiêu chí chấm 0-3, ngưỡng Go/No-go, mẫu memo quyết định 1 trang, cách từ chối dự thầu lịch sự"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-rfp-response-writer]
+    ban_tot_hon: true
+
+  - ten: sales-roadshow-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: [02-tim-kiem-lead]
+    gia_tri: thap
+    ly_do: "Roadshow gặp đại lý các tỉnh chưa có; hữu ích khi mở kênh phân phối nhưng chưa phải ưu tiên."
+    lay_gi: "Tiêu chí chọn thành phố, agenda mỗi điểm dừng, checklist hậu cần, KPI theo dõi → để dành cho skill kênh đại lý"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-trade-promotion-plan, sales-distributor-onboarding]
+    ban_tot_hon: false
+
+  - ten: sales-roi-business-case
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: vua
+    ly_do: "17 có Business Impact và chi phí không hành động; bản này có cách định lượng nỗi đau và payback/NPV."
+    lay_gi: "Bước định lượng chi phí hiện trạng, lợi ích giải pháp, tổng đầu tư, ROI/payback/NPV, bảng giả định và rủi ro → references/ của 17-de-xuat-giai-phap"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-tco-calculator]
+    ban_tot_hon: true
+
+  - ten: sales-sales-deck-builder
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Mạch Pain-Reframe-Solution-Proof gần 17; riêng khung 12 slide và biến thể theo persona đáng lấy."
+    lay_gi: "Khung 12 slide Pain → Reframe → Solution → Proof → Pricing → Close và speaker note 2-3 dòng/slide → references/ của 17-de-xuat-giai-phap"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-pitch-deck-investor-style, sales-one-pager]
+    ban_tot_hon: true
+
+  - ten: sales-sdr-handover
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [03-cham-diem-lead, 21-doi-sale-co-agent]
+    gia_tri: vua
+    ly_do: "Chưa có form bàn giao lead từ người/agent tìm lead sang người chốt; hữu ích khi agent làm SDR."
+    lay_gi: "Form bàn giao 10 trường bắt buộc, SLA 24 giờ người nhận xác nhận, xử lý khách không đến hẹn, vòng phản hồi chất lượng → references/ của 21-doi-sale-co-agent"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-mql-sql-criteria, sales-postsale-handover]
+    ban_tot_hon: false
+
+  - ten: sales-spin-selling-coach
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [16-kham-pha-nhu-cau]
+    gia_tri: vua
+    ly_do: "16 đã có khung 5T và câu hỏi 5-3-2; ngân hàng câu hỏi SPIN giúp đào hậu quả sâu hơn."
+    lay_gi: "Ngân hàng câu hỏi theo 4 loại S-P-I-N và mẫu xếp SPIN trong buổi 30 phút → references/ của 16-kham-pha-nhu-cau"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-discovery-call-template]
+    ban_tot_hon: true
+
+  - ten: sales-stakeholder-map
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [15-dam-phan-ban-hang, 01-phan-khuc-chan-dung]
+    gia_tri: cao
+    ly_do: "15 có đọc vị DMU khi đàm phán; chưa có bản đồ quyền lực toàn deal và kế hoạch tiếp cận từng người."
+    lay_gi: "8 vai trò trong hội đồng mua, chấm Power/Interest/Sentiment/Relationship, ma trận 2x2 kèm cách tiếp cận từng ô, tiêu chí champion thật → references/ của 15-dam-phan-ban-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-multithreading-template, sales-meddic-template]
+    ban_tot_hon: true
+
+  - ten: sales-tco-calculator
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Gần sales-roi-business-case; riêng danh sách chi phí ẩn và phân tích độ nhạy đáng gộp."
+    lay_gi: "7 thành phần TCO, so sánh 3 kịch bản, phân tích độ nhạy → cùng file references/ business case của 17-de-xuat-giai-phap"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-roi-business-case]
+    ban_tot_hon: false
+
+  - ten: sales-territory-planner
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: thap
+    ly_do: "20 có định biên đội; chia vùng theo địa lý/ngành và cân tải chỉ cần khi đội đủ lớn."
+    lay_gi: "Các chiều chia vùng, cân tải giữa người bán, luật ngoại lệ khi chồng vùng → references/ của 20-xay-phong-kinh-doanh"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-quota-planner]
+    ban_tot_hon: false
+
+  - ten: sales-thank-you-email
+    lo: lo-290
+    nhan: trung
+    ung_vien: [16-kham-pha-nhu-cau]
+    gia_tri: thap
+    ly_do: "Email recap sau buổi gặp đã có ở 16-kham-pha-nhu-cau."
+    trung_trong_kho: [sales-meeting-followup-summary]
+    ban_tot_hon: false
+
+  - ten: sales-trade-promotion-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có khuyến mãi kênh phân phối (sell-in/sell-out); cần khi khách bán sỉ qua nhà phân phối, đại lý."
+    lay_gi: "6 cơ chế khuyến mãi kênh, phân bổ ngân sách, lịch khuyến mãi, đo sell-in vs sell-out, mẫu thông báo nhà phân phối"
+    dat_vao: "repo-moi:trade-marketing"
+    trung_trong_kho: [sales-retail-shelf-audit, sales-roadshow-plan]
+    ban_tot_hon: true
+
+  - ten: sales-upsell-script
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: vua
+    ly_do: "11 có upsell theo nhóm BCG; chưa có upsell kích hoạt theo tín hiệu sử dụng, cột mốc, khoảng trống tính năng."
+    lay_gi: "Bảng trigger upsell (usage, milestone, feature gap) và kịch bản theo từng trigger → references/ của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-cross-sell-mapper]
+    ban_tot_hon: true
+
+  - ten: sales-win-loss-analyzer
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [14-huan-luyen-doi-sale, 18-chuan-hanh-vi-sale]
+    gia_tri: cao
+    ly_do: "14 rút kinh nghiệm từng deal thua; chưa có phân tích thắng/thua cấp danh mục để tìm quy luật."
+    lay_gi: "Phân tích quy luật 6 chiều (lý do, giai đoạn kẹt, nguồn lead, người bán, ngành, đối thủ), phỏng vấn khách không để người bán tự hỏi → references/ của 14-huan-luyen-doi-sale"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  # ===================== CSKH — lô update =====================
+  - ten: bao-cao-cskh
+    lo: lo-update
+    nhan: moi
+    ung_vien: [07-bao-cao-marketing]
+    gia_tri: vua
+    ly_do: "Chưa có báo cáo hiệu suất phòng CSKH; mẫu tuần/tháng/quý và mẫu trình BGĐ tiếng Việt dùng được ngay."
+    lay_gi: "Mẫu báo cáo tuần, tháng, dashboard KPI quý và mẫu trình bày BGĐ"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-ticket-trend-report, quan-ly-ticket-ho-tro]
+    ban_tot_hon: true
+
+  - ten: cham-soc-sau-ban-hang
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [11-quan-ly-khach-hang, hot-leads]
+    gia_tri: cao
+    ly_do: "11 chỉ phủ khách B2B; bán lẻ cần lịch follow-up sau mua, kịch bản win-back khách cũ bằng tiếng Việt."
+    lay_gi: "Lịch follow-up sau bán theo mốc, kịch bản gọi chăm sóc, chiến lược tái kích hoạt khách cũ → references/ nhánh bán lẻ của 11-quan-ly-khach-hang"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cham-soc-khach-hang]
+    ban_tot_hon: true
+
+  - ten: chinh-sach-doi-tra-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Chưa có mẫu chính sách đổi trả, form yêu cầu, xử lý ca đặc biệt; cần cho mọi shop bán lẻ trong hệ."
+    lay_gi: "Mẫu chính sách đổi trả đầy đủ, form yêu cầu đổi trả, bảng phân chia phí ship, xử lý tình huống đặc biệt; bổ sung căn cứ pháp lý đã kiểm"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-refund-policy-writer, cs-warranty-claim-processor]
+    ban_tot_hon: true
+
+  - ten: dao-tao-ky-nang-cskh
+    lo: lo-update
+    nhan: moi
+    ung_vien: [14-huan-luyen-doi-sale]
+    gia_tri: vua
+    ly_do: "14 chỉ huấn luyện đội sale; chưa có giáo trình onboarding CSKH, bài tình huống và tiêu chí chấm chất lượng."
+    lay_gi: "Chương trình onboarding nhân viên CSKH, bài tập tình huống, tiêu chí đánh giá chất lượng CSKH, kế hoạch đào tạo tháng"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: do-luong-hai-long-khach-hang
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem]
+    gia_tri: vua
+    ly_do: "13 có NPS, churn, CLV; bản này thêm so sánh NPS/CSAT/CES và phiếu khảo sát CSAT tiếng Việt hoàn chỉnh."
+    lay_gi: "Bảng so sánh 3 chỉ số NPS/CSAT/CES theo thời điểm dùng, phiếu CSAT tiếng Việt nhiều mục → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-csat-survey]
+    ban_tot_hon: true
+
+  - ten: kich-ban-tu-van-khach-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [06-goi-dien-b2b, assp-sales-call-script]
+    gia_tri: cao
+    ly_do: "Chưa có kịch bản tư vấn và chốt đơn bán lẻ qua tổng đài/chat; nội bộ chỉ có gọi B2B và kịch bản ASSP."
+    lay_gi: "Kịch bản tổng đài inbound, mẫu trả lời nhanh qua chat, nguyên tắc tone of voice → nền cho skill kịch bản tư vấn CSKH"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [cs-call-center-script, cs-livechat-playbook, cs-canned-response-library, kich-ban-ban-hang]
+    ban_tot_hon: true
+
+  - ten: quan-ly-ticket-ho-tro
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có hệ ticket hỗ trợ: vòng đời, phiếu, bảng SLA theo loại yêu cầu; là xương sống của repo CSKH."
+    lay_gi: "Vòng đời ticket 6 trạng thái, mẫu phiếu ticket, bảng SLA phản hồi/giải quyết/leo thang theo loại yêu cầu, mẫu báo cáo helpdesk"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [quy-trinh-tiep-nhan-khieu-nai, cs-ticket-tagging-automation, bao-cao-cskh]
+    ban_tot_hon: true
+
+  - ten: quy-trinh-tiep-nhan-khieu-nai
+    lo: lo-update
+    nhan: moi
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: vua
+    ly_do: "12 xử lý khiếu nại B2B từng ca; chưa có SOP tiếp nhận đa kênh, phiếu ghi nhận và SLA theo kênh."
+    lay_gi: "SOP tiếp nhận 5 bước, bảng phân loại mức độ, phiếu ghi nhận khiếu nại, kênh tiếp nhận kèm SLA → gộp vào skill ticket từ quan-ly-ticket-ho-tro"
+    dat_vao: "repo-moi:cskh"
+    trung_trong_kho: [quan-ly-ticket-ho-tro, cs-escalation-matrix]
+    ban_tot_hon: false
+
+  - ten: xay-dung-loyalty-program
+    lo: lo-update
+    nhan: moi
+    ung_vien: [18-referral-program, 11-quan-ly-khach-hang]
+    gia_tri: cao
+    ly_do: "Có referral nhưng chưa có chương trình thành viên tích điểm, phân hạng; cần cho bán lẻ và cấu hình hạng khách Pancake."
+    lay_gi: "Khung hạng thành viên và quyền lợi, quy trình tích/đổi điểm, nâng/hạ hạng, lịch truyền thông, chỉ số đo hiệu quả loyalty"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [cs-vip-customer-care]
+    ban_tot_hon: true
+
+  - ten: xu-ly-khieu-nai-kho
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: cao
+    ly_do: "12 có quy trình 4 bước; bản này có kịch bản tiếng Việt cho ca khó bán lẻ và điều kiện bắt buộc leo thang."
+    lay_gi: "3 kịch bản (giao trễ, đòi hoàn tiền không đủ điều kiện, dọa đăng Facebook), mẫu trả lời bình luận tiêu cực, danh sách điều kiện phải leo thang → references/ của 12-xu-ly-su-co"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [cs-complaint-response-template, cs-customer-apology-letter, cs-review-response-shopee]
+    ban_tot_hon: true
+
+  # ===================== SALE — lô update =====================
+  - ten: bao-cao-sales-thang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [monthly, 19-ke-hoach-ban-hang]
+    gia_tri: thap
+    ly_do: "Báo cáo tháng của pancake-suite đã có doanh thu, kênh và hiệu suất người; bản này chỉ có khung chung."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: cham-diem-nhan-vien-sales
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [20-xay-phong-kinh-doanh, 18-chuan-hanh-vi-sale]
+    gia_tri: vua
+    ly_do: "18 chấm hành vi, 20 có KPI 3P; bản này có thẻ điểm kết quả 100 điểm có hệ số và quy trình PIP."
+    lay_gi: "Bộ KPI 100 điểm 4 nhóm, hệ số theo % đạt chỉ tiêu, bảng xếp hạng, quy trình PIP khi dưới chuẩn 2 kỳ → references/ của 20-xay-phong-kinh-doanh"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: cham-soc-khach-hang
+    lo: lo-update
+    nhan: loai
+    ung_vien: [11-quan-ly-khach-hang]
+    gia_tri: thap
+    ly_do: "Trùng trong kho với cham-soc-sau-ban-hang (bản đầy đủ hơn, có win-back và kịch bản gọi)."
+    trung_trong_kho: [cham-soc-sau-ban-hang]
+    ban_tot_hon: false
+
+  - ten: de-xuat-bao-gia
+    lo: lo-update
+    nhan: trung
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "17-de-xuat-giai-phap đã có proposal bán giá trị; gói giá theo bậc đã có ở dinh-gia-san-pham."
+    trung_trong_kho: [sales-proposal-writer, sales-quote-generator]
+    ban_tot_hon: true
+
+  - ten: du-bao-doanh-so
+    lo: lo-update
+    nhan: moi
+    ung_vien: [19-ke-hoach-ban-hang, 10-tinh-kpi-nguoc]
+    gia_tri: cao
+    ly_do: "Chưa có dự báo doanh số từ dữ liệu lịch sử, 3 kịch bản và phân tích gap; hợp SME và dữ liệu bán lẻ Bluecore."
+    lay_gi: "Các phương pháp dự báo, 3 kịch bản, phân tích gap mục tiêu vs dự báo, dự báo theo tháng/quý/năm; gộp thêm weighted pipeline từ sales-pipeline-forecast"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-pipeline-forecast]
+    ban_tot_hon: true
+
+  - ten: email-sales
+    lo: lo-update
+    nhan: trung
+    ung_vien: [04-tiep-can-da-kenh, 14-email-marketing]
+    gia_tri: thap
+    ly_do: "Cold email và chuỗi follow-up đã có ở 04-tiep-can-da-kenh; email chăm sóc đã có ở 14-email-marketing."
+    trung_trong_kho: [sales-cold-email-writer, sales-followup-cadence]
+    ban_tot_hon: true
+
+  - ten: hop-dong-don-hang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: vua
+    ly_do: "Chưa có mẫu hợp đồng mua bán/dịch vụ, đơn đặt hàng, phụ lục, biên bản nghiệm thu cho SME; cần luật sư soát."
+    lay_gi: "Cấu trúc hợp đồng chuẩn theo điều, mẫu đơn đặt hàng, phụ lục và biên bản nghiệm thu; giữ cảnh báo chỉ để tham khảo"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [sales-contract-redline]
+    ban_tot_hon: true
+
+  - ten: kich-ban-ban-hang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [assp-sales-call-script, 06-goi-dien-b2b, 09-chot-sale]
+    gia_tri: thap
+    ly_do: "Khung chung chung; kịch bản gọi và chốt đã có ở ASSP, 06, 09; bán lẻ qua chat do kich-ban-tu-van-khach-hang phủ."
+    trung_trong_kho: [kich-ban-tu-van-khach-hang, kich-ban-telesales]
+    ban_tot_hon: false
+
+  - ten: kich-ban-telesales
+    lo: lo-update
+    nhan: trung
+    ung_vien: [06-goi-dien-b2b]
+    gia_tri: thap
+    ly_do: "06-goi-dien-b2b đã có gọi hẹn, vượt gatekeeper, đánh giá lead qua điện thoại."
+    trung_trong_kho: [sales-cold-call-script, kich-ban-ban-hang]
+    ban_tot_hon: true
+
+  - ten: phan-tich-khach-hang-tiem-nang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [03-cham-diem-lead]
+    gia_tri: thap
+    ly_do: "Chấm điểm lead nóng/ấm/lạnh, BANT và follow-up theo loại đã có ở 03-cham-diem-lead."
+    trung_trong_kho: [sales-lead-scoring-engine, sales-bant-qualifier]
+    ban_tot_hon: false
+
+  - ten: quy-trinh-ban-hang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [03-cham-diem-lead, 19-ke-hoach-ban-hang, 20-xay-phong-kinh-doanh]
+    gia_tri: thap
+    ly_do: "Pipeline, kế hoạch bán và cấu trúc phòng kinh doanh đã có ở 03, 19, 20; bản này chỉ có quy trình chung."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: xu-ly-tu-choi
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [10-xu-ly-tu-choi]
+    gia_tri: vua
+    ly_do: "10 có chẩn đoán và kỹ thuật; bản này có câu mẫu tiếng Việt tự nhiên cho 10 tình huống phổ biến."
+    lay_gi: "Câu mẫu tiếng Việt cho 10 tình huống (đắt, để suy nghĩ, hỏi vợ/sếp, mua chỗ khác...) và mẫu đầu ra phân tích từ chối thật hay thoái thác → references/ của 10-xu-ly-tu-choi"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [sales-objection-handling]
+    ban_tot_hon: false

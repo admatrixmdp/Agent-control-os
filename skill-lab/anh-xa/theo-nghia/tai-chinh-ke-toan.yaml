@@ -1,0 +1,614 @@
+nhom: tai-chinh-ke-toan
+mang: [tai-chinh, ke-toan]
+tong: 51
+dem: {trung: 0, bo-sung: 3, moi: 41, loai: 7}
+ghi_chu_chung: >-
+  Nội bộ mới có 3 skill tài chính – kế toán (ho-so-ke-toan, ho-so-tai-chinh, kiem-toan-noi-bo); phần lớn khái niệm
+  đã có tên trong docs/ban-do-skill.md của Company-finance-accountant-os nhưng trạng thái 'chua' → gắn 'moi', ghi skill dự kiến trong lay_gi.
+  Lỗi chung cả nhóm: (1) mục 'Bước 4 Tích hợp Web (MCP-first + API fallback)' ở lô 290 dùng endpoint bịa
+  (api.misa.vn/sme/v1/..., openapi.vietcombank.com.vn, api.gdt.gov.vn/nnt, api.misa.vn/tax/v1/classify) → không lấy;
+  (2) căn cứ pháp lý lỗi thời: TT200/2014 (thay bằng TT99/2025 từ 01/01/2026), NĐ218/2013 + TT78/2014 (thay theo Luật TNDN 2025),
+  NĐ123/2020 chưa cập nhật NĐ70/2025, ngưỡng thanh toán không dùng tiền mặt 20 triệu (nay 5 triệu theo Luật GTGT 2024),
+  giảm trừ gia cảnh 11/4,4 triệu (từ 2026: 15,5/6,2 triệu). Mọi đoạn lấy về phải viết lại có mã điều khoản [[...]] theo src/phap-ly.
+  Tên trùng trong kho (bao-cao-tai-chinh, lap-ke-hoach-tai-chinh, phan-tich-tai-chinh, quan-ly-cong-no) phân biệt bằng duong_dan.
+skills:
+  # ===================== LÔ 290 =====================
+  - ten: fin-ap-payment-runner
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-ap-payment-runner
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Nội bộ chưa có lịch trả nhà cung cấp; thuật toán ưu tiên theo hạn, quan hệ, tiền sẵn có dùng được cho SME."
+    lay_gi: "Thuật toán xếp ưu tiên trả NCC (hạn, chiến lược, chiết khấu trả sớm) + bảng lịch trả tuần → references của ke-hoach-dong-tien / mua-hang-ton-kho (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-cong-no]
+    ban_tot_hon: false
+
+  - ten: fin-ar-aging-report
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-ar-aging-report
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Tuổi nợ phải thu, DSO, cảnh báo quá hạn là nhu cầu lõi SME; nội bộ mới có tên ban-chiu-cong-no, chưa có nội dung."
+    lay_gi: "Bảng tuổi nợ 0-30/31-60/61-90/>90 + action plan thu hồi theo nhóm → ban-chiu-cong-no (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-cong-no]
+    ban_tot_hon: false
+
+  - ten: fin-audit-prep
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-audit-prep
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chuẩn bị kiểm toán độc lập cuối năm chưa có trong bản đồ skill; PBC list theo chu trình và data room là khung tốt."
+    lay_gi: "PBC list 10 chu trình + cây thư mục data room + lead schedule + danh mục thư xác nhận → references của lap-bctc (dự kiến) hoặc skill mới chuan-bi-kiem-toan"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-balance-sheet-explainer
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-balance-sheet-explainer
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: vua
+    ly_do: "Giải thích BCTC cho CEO không nền tài chính hợp đối tượng FounderX/SME; nội bộ chưa có, gần kham-suc-khoe-tai-chinh dự kiến."
+    lay_gi: "Tóm 3 báo cáo bằng 3 câu + ẩn dụ đời thường + 10 chỉ số cho CEO → references của kham-suc-khoe-tai-chinh (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [bao-cao-tai-chinh, phan-tich-tai-chinh]
+    ban_tot_hon: false
+
+  - ten: fin-bank-reconciliation
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-bank-reconciliation
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Đối soát sổ – sao kê là việc tháng nào cũng làm, hợp agent tầng xanh; khớp skill dự kiến doi-soat."
+    lay_gi: "Luật matching (số tiền, ngày ±n, nội dung) + mẫu bảng điều chỉnh chênh lệch → doi-soat (dự kiến); bỏ API Vietcombank bịa"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-budget-vs-actual
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-budget-vs-actual
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phân tích chênh lệch kế hoạch – thực tế khớp phan-tich-bien-dong dự kiến; ngưỡng lệch >10% và lời giải thích tự động dùng được."
+    lay_gi: "Phân loại chênh lệch thuận/bất lợi + mẫu bình luận nguyên nhân → phan-tich-bien-dong (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-ngan-sach, ngan-sach-va-kiem-soat-chi-phi]
+    ban_tot_hon: false
+
+  - ten: fin-capex-approval-pack
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-capex-approval-pack
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Hồ sơ duyệt chi đầu tư NPV/IRR/hoàn vốn/độ nhạy cho HĐQT; nội bộ chỉ có dòng 'kế hoạch đầu tư' trong von-luu-dong-va-vay-tra."
+    lay_gi: "Khung business case + dòng tiền dự án + bảng NPV/IRR/payback + độ nhạy → von-luu-dong-va-vay-tra (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-von-va-dau-tu]
+    ban_tot_hon: true
+
+  - ten: fin-cashflow-forecast-13week
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-cashflow-forecast-13week
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Dự báo dòng tiền 13 tuần rolling là công cụ sống còn SME; khớp ke-hoach-dong-tien dự kiến; cấu trúc dòng vào/ra và cờ cảnh báo rõ."
+    lay_gi: "Mô hình 13 tuần 5 khối + cờ đỏ/đen theo ngưỡng tồn quỹ + 4 hành động cứu thanh khoản → ke-hoach-dong-tien (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [bao-cao-dong-tien, quan-ly-dong-tien]
+    ban_tot_hon: true
+
+  - ten: fin-cogs-breakdown
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-cogs-breakdown
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Lãi lỗ theo SKU/kênh/khách bằng ABC costing rất hợp bán lẻ đa kênh (Bluecore, TMQ); nội bộ chưa có."
+    lay_gi: "Phân bổ chi phí ABC + bảng lợi nhuận SKU xếp Star/Marginal/Cut + phân tích 80-20 khách và kênh → pl-quan-tri (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-comps-valuation
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-comps-valuation
+    nhan: moi
+    ung_vien: [dt-00-ho-so, ma-00-ho-so]
+    gia_tri: vua
+    ly_do: "Định giá so sánh EV/EBITDA, P/E chưa có skill; theo quy ước Quân, định giá đặt ở repo investment, không ở repo kế toán."
+    lay_gi: "Quy trình chọn peer group + bảng bội số trading/transaction comps + chiết khấu thanh khoản → skill định giá trong dau-tu-suite"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: [fin-dcf-valuation]
+    ban_tot_hon: false
+
+  - ten: fin-cost-of-goods-builder
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-cost-of-goods-builder
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Tính giá thành sản xuất BOM + nhân công + chung chưa có; hữu ích cho khách sản xuất nhưng không phải lõi MQ."
+    lay_gi: "Khung BOM + phân bổ chi phí sản xuất chung, job vs process costing → skill mới gia-thanh-san-xuat trong ke-toan-suite"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-credit-application-pack
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-credit-application-pack
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Hồ sơ vay ngân hàng là nhu cầu SME thường xuyên; bản này đủ nhất (bộ tài liệu, phương án vay, câu hỏi RM)."
+    lay_gi: "Danh mục hồ sơ vay + dàn ý phương án vay + bộ câu hỏi RM hay hỏi → von-luu-dong-va-vay-tra (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [lap-ke-hoach-tai-chinh, quan-ly-von-va-dau-tu]
+    ban_tot_hon: true
+
+  - ten: fin-dcf-valuation
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-dcf-valuation
+    nhan: moi
+    ung_vien: [dt-00-ho-so]
+    gia_tri: vua
+    ly_do: "DCF (FCFF, WACC, giá trị cuối) chưa có skill; repo investment đã có tri thức nguồn HHD về định giá để đối chiếu."
+    lay_gi: "Khung FCFF 5-10 năm + công thức WACC + bước EV sang equity value → skill định giá dau-tu-suite; kiểm số liệu beta/rf bằng nguồn VN"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: [fin-comps-valuation]
+    ban_tot_hon: true
+
+  - ten: fin-expense-policy-builder
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-expense-policy-builder
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Quy chế công tác phí theo cấp bậc hữu ích, nhưng bịa 'định mức tiếp khách theo TT', ngưỡng 200k và NĐ218/TT78 lỗi thời."
+    lay_gi: "Chỉ lấy khung bảng định mức theo cấp + ma trận duyệt theo số tiền + quy trình hoàn ứng; bỏ mọi căn cứ thuế → ke-hoach-ngan-sach (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-finance-ops-automation
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-finance-ops-automation
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Chung chung Make/Zapier, hứa tiết kiệm 50-70% không căn cứ, API bịa; MQ đã đi hướng agent GoClaw/MCP."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-financial-model-3statement
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-financial-model-3statement
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Mô hình 3 báo cáo liên kết theo driver khớp mo-hinh-tai-chinh dự kiến; phần liên kết BS–CF là chỗ hay sai, đáng lấy."
+    lay_gi: "Cấu trúc tab model + P&L theo driver + quy tắc liên kết BS–CF và kiểm cân → mo-hinh-tai-chinh (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [lap-ke-hoach-tai-chinh]
+    ban_tot_hon: true
+
+  - ten: fin-fixed-asset-register
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-fixed-asset-register
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Sổ TSCĐ và khấu hao tháng là việc khoá sổ; TT45/2013 còn hiệu lực (sửa bởi TT147/2016, TT28/2017) nhưng cần đối chiếu TT99."
+    lay_gi: "Mẫu sổ TSCĐ + bảng khấu hao tháng + quy trình kiểm kê → khoa-so-thang / kiem-ke-danh-gia-lai (dự kiến), gắn [[TT45...]]"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-fx-exposure-report
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-fx-exposure-report
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Rủi ro tỷ giá chỉ cần cho doanh nghiệp xuất nhập khẩu; hệ MQ hiện ít dùng, để dành."
+    lay_gi: "Bảng net exposure theo ngoại tệ + độ nhạy ±% tỷ giá → references của von-luu-dong-va-vay-tra khi có khách XNK"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-grant-application-writer
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-grant-application-writer
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Viết hồ sơ xin tài trợ NATIF/quỹ quốc tế là nguồn vốn không hoàn lại; giá trị thấp, tiêu chí quỹ phải tra lại nguồn gốc."
+    lay_gi: "Dàn ý hồ sơ grant + đối chiếu tiêu chí chấm điểm → tri-thuc-dau-tu (tài trợ vốn)"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-internal-control-soc1
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-internal-control-soc1
+    nhan: bo-sung
+    ung_vien: [kiem-toan-noi-bo]
+    gia_tri: cao
+    ly_do: "Nội bộ kiem-toan-noi-bo mạnh phần báo cáo phát hiện, thiếu ma trận rủi ro – kiểm soát và cỡ mẫu kiểm thử."
+    lay_gi: "Risk-Control Matrix theo chu trình P2P/O2C/R2R + bảng cỡ mẫu TOE theo tần suất (ngày 25, tuần 15, tháng 5, quý 2) + 3 mức kết luận → references/ của kiem-toan-noi-bo"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [kiem-toan-noi-bo]
+    ban_tot_hon: true
+
+  - ten: fin-inventory-valuation
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-inventory-valuation
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Tính giá xuất kho FIFO/bình quân và dự phòng giảm giá HTK theo NRV khớp kiem-ke-danh-gia-lai dự kiến."
+    lay_gi: "Ví dụ tính FIFO vs bình quân + công thức dự phòng NRV → kiem-ke-danh-gia-lai (dự kiến), gắn căn cứ TT48/2019"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-hang-ton-kho]
+    ban_tot_hon: false
+
+  - ten: fin-investor-cap-table
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-investor-cap-table
+    nhan: moi
+    ung_vien: [dt-00-ho-so]
+    gia_tri: vua
+    ly_do: "Cap table, pha loãng pre/post money, SAFE, ESOP chưa có skill; repo investment đã có tri thức nguồn cap table để đối chiếu."
+    lay_gi: "Bảng mô phỏng vòng gọi vốn + chuyển đổi SAFE/convertible + ESOP pool → dau-tu-suite; lưu ý SAFE chưa có khung pháp lý VN"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-loan-amortization
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-loan-amortization
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Lịch trả gốc lãi (trả đều, gốc cố định) khớp mục 'lịch vay trả' của von-luu-dong-va-vay-tra dự kiến."
+    lay_gi: "Công thức 3 phương án trả + bảng so sánh tổng lãi → von-luu-dong-va-vay-tra (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-monthly-closing-checklist
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-monthly-closing-checklist
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: cao
+    ly_do: "Lộ trình khoá sổ 10 ngày, 4 cụm, có đối chiếu doanh thu sàn TMĐT; khớp khoa-so-thang dự kiến. Căn cứ TT200 phải đổi sang TT99."
+    lay_gi: "Checklist 4 cụm theo ngày (tiền – doanh thu/AR – chi phí/AP – báo cáo) + bảng task 5 trường → khoa-so-thang (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-payroll-cost-analyzer
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-payroll-cost-analyzer
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Phân tích quỹ lương theo phòng ban, tỷ lệ lương/doanh thu hữu ích cho CFO; nội bộ chưa có."
+    lay_gi: "Bảng phân tích đa chiều quỹ lương + ngưỡng cảnh báo lương/doanh thu → phan-tich-bien-dong (dự kiến); benchmark thị trường phải ghi nguồn"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-petty-cash-control
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-petty-cash-control
+    nhan: moi
+    ung_vien: [kiem-toan-noi-bo]
+    gia_tri: vua
+    ly_do: "Quy trình quỹ tạm ứng cố định, chi, kiểm kê quỹ chống thất thoát; nội bộ chưa có quy trình vận hành này."
+    lay_gi: "Mô hình imprest + quy trình chi + biên bản kiểm kê quỹ → doi-soat / kiem-ke-danh-gia-lai (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [kiem-toan-noi-bo, lap-phieu-thu-chi]
+    ban_tot_hon: false
+
+  - ten: fin-pricing-margin-simulator
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-pricing-margin-simulator
+    nhan: bo-sung
+    ung_vien: [dinh-gia-san-pham, 10-tinh-kpi-nguoc]
+    gia_tri: cao
+    ly_do: "dinh-gia-san-pham có hoà vốn, Van Westendorp nhưng thiếu thác biên lợi nhuận có phí sàn, voucher, ship và bảng độ nhạy chiết khấu × sản lượng."
+    lay_gi: "Margin waterfall (giá niêm yết → KM → voucher sàn → phí sàn/thanh toán/ship → COGS → CM → OP) + bảng độ nhạy 2 chiều + giá hoà vốn → references/ của dinh-gia-san-pham"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-revenue-recognition-asc606
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-revenue-recognition-asc606
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Theo US GAAP/IFRS 15, không phải chuẩn bắt buộc của SME Việt Nam (VAS/TT99); dễ gây áp sai chuẩn."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: fin-tax-cit-estimator
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-tax-cit-estimator
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Bịa thuế suất TNDN (17% DT ≤3 tỷ, 15% ≤200tr, 0% 4 năm); 'TT 132' thật ra NĐ132/2020; căn cứ NĐ218/TT78 hết hiệu lực; API MISA bịa."
+    trung_trong_kho: [thue-doanh-nghiep, ke-khai-thue]
+    ban_tot_hon: false
+
+  - ten: fin-tax-vat-summary
+    lo: lo-290
+    duong_dan: raw/lo-290/fin-tax-vat-summary
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Ngưỡng tiền mặt 20 triệu lỗi thời (nay 5 triệu), điều kiện hoàn 12 tháng âm đã bỏ từ 2016; thue-gtgt phải viết từ luật gốc."
+    trung_trong_kho: [ke-khai-thue, thue-doanh-nghiep]
+    ban_tot_hon: false
+
+  # ===================== LÔ UPDATE — ke-toan-skills =====================
+  - ten: bao-cao-dong-tien
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/bao-cao-dong-tien
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Lưu chuyển tiền tệ và kế hoạch tiền mặt; phần phân tích nguyên nhân thiếu tiền và chỉ số dòng tiền dùng được."
+    lay_gi: "Bảng nguyên nhân thiếu tiền + chỉ số dòng tiền cần theo dõi → ke-hoach-dong-tien (dự kiến); mẫu B03-DN phải đối chiếu lại TT99"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-cashflow-forecast-13week, quan-ly-dong-tien]
+    ban_tot_hon: false
+
+  - ten: bao-cao-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/bao-cao-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: vua
+    ly_do: "Lập BCTC khớp lap-bctc dự kiến; bản này đầy hơn bản taichinh nhưng dựa TT200/TT133, phải chuyển sang TT99."
+    lay_gi: "Khung giải thích từng chỉ tiêu BCĐKT/KQKD + checklist phân tích → lap-bctc (dự kiến), viết lại mã chỉ tiêu theo TT99"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [bao-cao-tai-chinh, fin-balance-sheet-explainer]
+    ban_tot_hon: true
+
+  - ten: ke-khai-thue
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/ke-khai-thue
+    nhan: loai
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "Căn cứ lỗi thời: chi quảng cáo trần 15% đã bỏ từ 2015, ngưỡng 20 triệu, giảm trừ cũ, hạn nộp TNDN sai; lịch thuế đã có ở compliance-vn."
+    trung_trong_kho: [thue-doanh-nghiep, fin-tax-vat-summary, fin-tax-cit-estimator]
+    ban_tot_hon: false
+
+  - ten: lap-ke-hoach-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/lap-ke-hoach-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: vua
+    ly_do: "Kế hoạch tài chính 3-5 năm và hồ sơ vay; trùng mo-hinh-tai-chinh dự kiến, kém fin-financial-model-3statement phần liên kết."
+    lay_gi: "Dàn ý kế hoạch tài chính 3-5 năm cho nhà đầu tư/ngân hàng → mo-hinh-tai-chinh (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [lap-ke-hoach-tai-chinh, fin-financial-model-3statement, fin-credit-application-pack]
+    ban_tot_hon: false
+
+  - ten: lap-phieu-thu-chi
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/lap-phieu-thu-chi
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: vua
+    ly_do: "Soạn phiếu thu/chi, giấy đề nghị thanh toán kèm định khoản; mẫu 01-TT/02-TT theo TT200 hết hiệu lực, phải đối chiếu TT99."
+    lay_gi: "Mẫu giấy đề nghị thanh toán + định khoản phổ biến cho thu/chi → hach-toan (dự kiến), mẫu chứng từ viết lại theo TT99"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [ke-toan-va-so-sach]
+    ban_tot_hon: true
+
+  - ten: phan-tich-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/phan-tich-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: cao
+    ly_do: "Hệ chỉ số DuPont + scorecard sức khoẻ 100 điểm khớp kham-suc-khoe-tai-chinh dự kiến; bản này đầy hơn bản taichinh."
+    lay_gi: "Scorecard sức khoẻ tài chính 100 điểm + cây DuPont → kham-suc-khoe-tai-chinh (dự kiến); mốc chuẩn ngành phải ghi nguồn"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [phan-tich-tai-chinh, fin-balance-sheet-explainer]
+    ban_tot_hon: true
+
+  - ten: quan-ly-cong-no
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/quan-ly-cong-no
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Đủ cả phải thu lẫn phải trả, có biên bản đối chiếu công nợ và quy trình thu hồi quá hạn; khớp ban-chiu-cong-no và doi-soat."
+    lay_gi: "Mẫu biên bản đối chiếu công nợ + quy trình thu hồi nợ quá hạn theo mốc → ban-chiu-cong-no / doi-soat (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-cong-no, fin-ar-aging-report, fin-ap-payment-runner]
+    ban_tot_hon: true
+
+  - ten: quan-ly-hang-ton-kho
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/quan-ly-hang-ton-kho
+    nhan: moi
+    ung_vien: [stock-alert]
+    gia_tri: vua
+    ly_do: "Phiếu nhập/xuất, thẻ kho, kiểm kê, vòng quay HTK; stock-alert chỉ cảnh báo vận hành. Mẫu 01-VT/02-VT theo TT200 cần cập nhật."
+    lay_gi: "Quy trình kiểm kê + chỉ số vòng quay/số ngày tồn → mua-hang-ton-kho / kiem-ke-danh-gia-lai (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-inventory-valuation]
+    ban_tot_hon: true
+
+  - ten: quan-ly-ngan-sach
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/quan-ly-ngan-sach
+    nhan: moi
+    ung_vien: [10-tinh-kpi-nguoc]
+    gia_tri: vua
+    ly_do: "Quy trình lập ngân sách năm, phân bổ phòng ban, theo dõi thực hiện; khớp ke-hoach-ngan-sach dự kiến (đã có nguồn khoá học riêng)."
+    lay_gi: "Phân loại ngân sách + mẫu bảng ngân sách tổng hợp → đối chiếu với quy trình 6 bước của ke-hoach-ngan-sach (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [ngan-sach-va-kiem-soat-chi-phi, fin-budget-vs-actual]
+    ban_tot_hon: true
+
+  - ten: tinh-luong-thuong
+    lo: lo-update
+    duong_dan: raw/lo-update/ke-toan-skills/tinh-luong-thuong
+    nhan: loai
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Căn cứ lỗi thời: giảm trừ 11/4,4 triệu, lương tối thiểu vùng cũ, Luật BHXH 2014; trần BHTN tính sai. Tính lương phải dựng lại từ luật gốc."
+    trung_trong_kho: [fin-payroll-cost-analyzer]
+    ban_tot_hon: false
+
+  # ===================== LÔ UPDATE — taichinh-skills =====================
+  - ten: bao-cao-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/bao-cao-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: thap
+    ly_do: "Bản ngắn hơn của ke-toan-skills/bao-cao-tai-chinh, cũng dựa TT200; chỉ dùng để đối chiếu."
+    lay_gi: "Không lấy riêng; gộp với bản ke-toan-skills khi dựng lap-bctc"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [bao-cao-tai-chinh]
+    ban_tot_hon: false
+
+  - ten: bao-cao-tai-chinh-cho-bgd
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/bao-cao-tai-chinh-cho-bgd
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: cao
+    ly_do: "CFO dashboard tháng + bridge analysis cho BGĐ, đúng vai agent cfo chỉ đọc; khớp pl-quan-tri và tóm tắt 1 trang."
+    lay_gi: "Bố cục CFO dashboard tháng + phân tích cầu nối lợi nhuận (bridge) + rolling forecast → pl-quan-tri (dự kiến) và agent cfo"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ke-toan-va-so-sach
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/ke-toan-va-so-sach
+    nhan: moi
+    ung_vien: [ho-so-ke-toan]
+    gia_tri: vua
+    ly_do: "Định khoản nghiệp vụ phổ biến và bộ chứng từ khớp hach-toan/hoa-don dự kiến; TT200 và 'biên bản huỷ hoá đơn' lỗi thời theo NĐ70/2025."
+    lay_gi: "Danh sách nghiệp vụ phổ biến cần định khoản + bộ chứng từ theo loại nghiệp vụ → hach-toan (dự kiến), tài khoản viết lại theo TT99"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [lap-phieu-thu-chi]
+    ban_tot_hon: false
+
+  - ten: kiem-toan-noi-bo
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/kiem-toan-noi-bo
+    nhan: bo-sung
+    ung_vien: [kiem-toan-noi-bo]
+    gia_tri: vua
+    ly_do: "Trùng tên nội bộ; nội bộ mạnh hơn phần báo cáo, nhưng bản ngoài có checklist kiểm tra tháng và dấu hiệu gian lận đáng lấy."
+    lay_gi: "Checklist KTNB tháng 4 nhóm (tiền, công nợ, kho, lương) + 4 cặp phân tách nhiệm vụ + dấu hiệu cảnh báo gian lận → references/ của kiem-toan-noi-bo"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-internal-control-soc1, fin-petty-cash-control]
+    ban_tot_hon: false
+
+  - ten: lap-ke-hoach-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/lap-ke-hoach-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: thap
+    ly_do: "Bản ngắn hơn, trùng bản ke-toan-skills; phần hoà vốn đã có nguồn khoá học riêng cho diem-hoa-von."
+    lay_gi: "Không lấy riêng; chỉ đối chiếu khi dựng mo-hinh-tai-chinh"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [lap-ke-hoach-tai-chinh, fin-financial-model-3statement]
+    ban_tot_hon: false
+
+  - ten: ngan-sach-va-kiem-soat-chi-phi
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/ngan-sach-va-kiem-soat-chi-phi
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Trùng quan-ly-ngan-sach phần lập ngân sách; riêng mục kiểm soát và cắt giảm chi phí là phần thêm."
+    lay_gi: "Danh mục cơ hội cắt giảm chi phí vận hành → tham-dinh-ngan-sach / phan-tich-bien-dong (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-ngan-sach, fin-budget-vs-actual]
+    ban_tot_hon: false
+
+  - ten: phan-tich-tai-chinh
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/phan-tich-tai-chinh
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: thap
+    ly_do: "Bản ngắn hơn của ke-toan-skills/phan-tich-tai-chinh, cùng DuPont và benchmark; chỉ dùng đối chiếu."
+    lay_gi: "Không lấy riêng; gộp vào kham-suc-khoe-tai-chinh cùng bản ke-toan-skills"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [phan-tich-tai-chinh]
+    ban_tot_hon: false
+
+  - ten: quan-ly-cong-no
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/quan-ly-cong-no
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Có chính sách tín dụng bán hàng và trích dự phòng nợ khó đòi đúng TT48/2019; bổ sung cho bản ke-toan-skills."
+    lay_gi: "Khung chính sách tín dụng bán hàng (hạn mức, điều kiện) + bậc trích dự phòng 30/50/70/100% → ban-chiu-cong-no (dự kiến), gắn [[TT48...]]"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [quan-ly-cong-no, fin-ar-aging-report]
+    ban_tot_hon: false
+
+  - ten: quan-ly-dong-tien
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/quan-ly-dong-tien
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Kế hoạch thu chi tuần/tháng, vòng quay tiền (CCC) và xử lý thiếu thanh khoản; khớp ke-hoach-dong-tien và von-luu-dong-va-vay-tra."
+    lay_gi: "Phân tích và tối ưu vòng quay tiền CCC + kịch bản xử lý thiếu hụt thanh khoản → von-luu-dong-va-vay-tra (dự kiến)"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-cashflow-forecast-13week, bao-cao-dong-tien]
+    ban_tot_hon: false
+
+  - ten: quan-ly-von-va-dau-tu
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/quan-ly-von-va-dau-tu
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "ROI/NPV/IRR, WACC, hồ sơ vay đều mỏng và trùng fin-capex-approval-pack, fin-credit-application-pack."
+    lay_gi: "Không lấy riêng; chỉ đối chiếu phần cơ cấu vốn/WACC khi dựng von-luu-dong-va-vay-tra"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-capex-approval-pack, fin-credit-application-pack, fin-dcf-valuation]
+    ban_tot_hon: false
+
+  - ten: thue-doanh-nghiep
+    lo: lo-update
+    duong_dan: raw/lo-update/taichinh-skills/thue-doanh-nghiep
+    nhan: loai
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "Sai/lỗi thời: DN ≤3 tỷ 'không ưu đãi' trái Luật TNDN 2025 (15%), hiểu sai quỹ KH&CN 10%, gán thời hạn thanh tra cho NĐ126, giảm trừ cũ."
+    trung_trong_kho: [ke-khai-thue, fin-tax-cit-estimator, fin-tax-vat-summary]
+    ban_tot_hon: false

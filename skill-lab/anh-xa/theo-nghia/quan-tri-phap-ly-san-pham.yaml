@@ -1,0 +1,858 @@
+nhom: quan-tri-phap-ly-san-pham
+mang: [quan-tri, phap-ly, san-pham]
+tong: 80
+dem: {trung: 18, bo-sung: 18, moi: 43, loai: 1}
+ghi_chu: >-
+  Lô 290 (ceo-*, legal-*) là khung mỏng ~80-100 dòng, cùng một mẫu, đoạn "Tích hợp web" lặp và đường dẫn lưu file máy tác giả;
+  lô update dày hơn, có bảng và mẫu điền. Nhiều skill pháp lý viện dẫn văn bản đã bị thay trong 2025-2026
+  (NĐ 13/2023 đã bị Luật Bảo vệ dữ liệu cá nhân 2025 thay thế từ 1/1/2026, TAND cấp huyện đã bỏ, Sở KH&ĐT đã sáp nhập,
+  lệ phí môn bài đã bãi bỏ từ 2026, NĐ 01/2021 về đăng ký DN đã được thay) — mọi phần lấy về phải viết lại theo văn bản hiện hành.
+  Số tham chiếu không nguồn (hệ số EBITDA theo ngành, phí ISO, "giảm 20-40%") không được lấy.
+skills:
+
+  # ===================== lo-290 · quan-tri =====================
+  - ten: ceo-1on1-template
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-hanh-dong]
+    gia_tri: vua
+    ly_do: "Chưa có skill họp 1-1 cấp quản lý; agenda 5 khối và 15 câu hỏi dùng được cho nhịp điều hành tầng thực thi."
+    lay_gi: "Agenda 5 khối + 15 câu hỏi 1-1 + mẫu ghi action → skill nhịp điều hành mới (hop-1-1)"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-acquisition-screening
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [ma-00-ho-so]
+    gia_tri: vua
+    ly_do: "ma-00-ho-so mở hồ sơ thương vụ nhưng chưa có bước sàng lọc target trước đó; bảng chấm 5 tiêu chí đáng lấy."
+    lay_gi: "Khung tiêu chí mua (strategic/financial/cultural) + bảng chấm điểm shortlist 5 tiêu chí → references/sang-loc-target.md của ma-00-ho-so"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: [mua-ban-sap-nhap]
+    ban_tot_hon: false
+
+  - ten: ceo-annual-report
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Báo cáo thường niên ít dùng với SME chưa có cổ đông ngoài; khung 25-35 trang và thư CEO chỉ cần khi gọi vốn."
+    lay_gi: "Cấu trúc báo cáo năm + khung thư CEO → mẫu tham khảo trong skill quản trị công ty"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-board-deck]
+    ban_tot_hon: false
+
+  - ten: ceo-board-deck
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-bsc]
+    gia_tri: vua
+    ly_do: "Chưa có mẫu deck báo cáo HĐQT/hội đồng cố vấn quý; hữu ích cho hệ nhiều công ty cùng chủ của MQ."
+    lay_gi: "Cấu trúc 15-20 slide HĐQT (tóm tắt, tài chính, OKR, rủi ro, đề nghị) + quy tắc trình bày → skill quản trị công ty"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [hop-bgd-va-quan-tri-cong-ty, ceo-annual-report]
+    ban_tot_hon: false
+
+  - ten: ceo-business-model-canvas
+    lo: lo-290
+    nhan: trung
+    ung_vien: [bmc, lean-startup]
+    gia_tri: thap
+    ly_do: "strategy-frameworks:bmc đã có 9 ô và Value Proposition Canvas; bản ngoài mỏng hơn."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-cash-position-dashboard
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: cao
+    ly_do: "Chưa có skill dự báo tiền 13 tuần; ho-so-tai-chinh chỉ đặt ngưỡng. Dòng tiền là sống còn với SME."
+    lay_gi: "Dự báo tiền 13 tuần (vào/ra/tích luỹ, tuần đáy) + 5 chỉ số và ngưỡng cảnh báo → skill dong-tien-13-tuan"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [fin-cashflow-forecast-13week, quan-ly-dong-tien, ceo-financial-snapshot]
+    ban_tot_hon: false
+
+  - ten: ceo-comp-philosophy
+    lo: lo-290
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ có thang lương cho phòng kinh doanh; triết lý lương thưởng toàn công ty chưa có."
+    lay_gi: "5 nguyên tắc triết lý lương + khung salary band theo cấp + nguyên tắc chia cổ phần → skill lương thưởng"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-comp-band-builder, hr-bonus-plan-design]
+    ban_tot_hon: false
+
+  - ten: ceo-competitor-monitor
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [08-nghien-cuu-doi-thu, 15-social-listening]
+    gia_tri: vua
+    ly_do: "08-nghien-cuu-doi-thu phân tích một lần; bản ngoài thêm nhịp theo dõi tuần và so snapshot."
+    lay_gi: "Watchlist 6 tín hiệu (tuyển dụng, giá, tính năng, gọi vốn, lãnh đạo, PR) + so với snapshot tuần trước + báo cáo 1 trang → references/theo-doi-dinh-ky.md của 08-nghien-cuu-doi-thu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ceo-news-radar, mkt-trend-watcher, phan-tich-thi-truong-va-canh-tranh]
+    ban_tot_hon: true
+
+  - ten: ceo-crisis-playbook
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [12-xu-ly-su-co, 15-social-listening]
+    gia_tri: vua
+    ly_do: "12-xu-ly-su-co lo khủng hoảng niềm tin với khách; chưa có phân cấp khủng hoảng toàn công ty."
+    lay_gi: "Phân loại 3 cấp (vận hành/PR/tài chính) + checklist 24 giờ đầu + mẫu thông cáo nội bộ/bên ngoài → references/khung-hoang-cap-cong-ty.md của 12-xu-ly-su-co"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [mkt-pr-crisis-response, truyen-thong-khung-hoang]
+    ban_tot_hon: false
+
+  - ten: ceo-culture-deck
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có skill văn hoá; deck 25 slide kiểu Netflix dùng cho tuyển dụng và onboarding."
+    lay_gi: "Cấu trúc 25 slide văn hoá + quy tắc kể chuyện → gộp vào skill van-hoa-doanh-nghiep"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [xay-dung-van-hoa-doanh-nghiep, hr-employer-branding-content, ceo-vision-mission-writer]
+    ban_tot_hon: false
+
+  - ten: ceo-customer-letter
+    lo: lo-290
+    nhan: trung
+    ung_vien: [12-xu-ly-su-co, 14-email-marketing]
+    gia_tri: thap
+    ly_do: "Thư xin lỗi đã có trong 12-xu-ly-su-co; thư thông báo/cảm ơn quá đơn giản để tách skill."
+    trung_trong_kho: [cs-customer-apology-letter]
+    ban_tot_hon: false
+
+  - ten: ceo-daily-briefing
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có trong sổ; phân loại 5 nhóm thông tin sáng hợp agent trợ lý điều hành. Cần đối chiếu skill morning cấp tài khoản."
+    lay_gi: "5 nhóm phân loại thông tin + định dạng briefing 1 trang đọc 5 phút → skill trợ lý điều hành"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-weekly-review]
+    ban_tot_hon: false
+
+  - ten: ceo-decision-log
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-hanh-dong]
+    gia_tri: cao
+    ly_do: "Chưa có skill sổ quyết định; khung 7 trường + phân loại đảo ngược được/không + rà định kỳ tạo trí nhớ tổ chức cho agent."
+    lay_gi: "Khung 7 trường bắt buộc + 4 loại quyết định + nhịp rà tháng/quý/năm → skill so-quyet-dinh"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-departmental-scorecard
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [ke-hoach-bsc]
+    gia_tri: vua
+    ly_do: "ke-hoach-bsc lập thẻ điểm công ty; thiếu bước chấm và xếp hạng phòng ban hằng tháng có phản hồi."
+    lay_gi: "Chấm 5 chiều mỗi phòng + thang xếp hạng A-F + mẫu phản hồi cụ thể → references/cham-diem-phong-ban.md của ke-hoach-bsc"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-exec-search-brief
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Brief headhunter cho vị trí C-level ít dùng; thuộc mảng tuyển dụng chưa có repo."
+    lay_gi: "Khung brief vai trò + tiêu chí thành công + gói đãi ngộ → skill tuyển dụng"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-jd-writer, tuyen-dung]
+    ban_tot_hon: false
+
+  - ten: ceo-financial-snapshot
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ho-so-tai-chinh]
+    gia_tri: vua
+    ly_do: "ho-so-tai-chinh khai chỉ số và ngưỡng nhưng chưa có báo cáo nhanh 1 trang so 3 mốc."
+    lay_gi: "10 chỉ số cốt lõi + so 3 mốc (tháng trước, cùng kỳ, kế hoạch) + cảnh báo → skill bao-cao-nhanh-tai-chinh, đọc ngưỡng từ ho-so-tai-chinh"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: [bao-cao-tai-chinh-cho-bgd, ceo-cash-position-dashboard, ceo-weekly-review]
+    ban_tot_hon: false
+
+  - ten: ceo-fundraising-deck
+    lo: lo-290
+    nhan: moi
+    ung_vien: [dt-00-ho-so]
+    gia_tri: cao
+    ly_do: "investment-MA-os chưa có skill pitch deck gọi vốn; 12 slide chuẩn VC Việt Nam/SEA khớp mảng gọi vốn của repo."
+    lay_gi: "12 slide chuẩn + quy tắc thiết kế slide + danh sách tư liệu cần thu → skill goi-von-pitch-deck"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: [sales-pitch-deck-investor-style]
+    ban_tot_hon: true
+
+  - ten: ceo-hiring-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: [20-xay-phong-kinh-doanh]
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ định biên phòng kinh doanh; kế hoạch tuyển toàn công ty quy ngược từ doanh thu chưa có."
+    lay_gi: "Quy ngược headcount từ mục tiêu doanh thu + phân bổ theo phòng + ưu tiên vai trò và thời gian tuyển → skill ke-hoach-tuyen-dung"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-headcount-plan]
+    ban_tot_hon: false
+
+  - ten: ceo-investor-update
+    lo: lo-290
+    nhan: moi
+    ung_vien: [dt-00-ho-so]
+    gia_tri: cao
+    ly_do: "Chưa có mẫu thư cập nhật nhà đầu tư hằng tháng; cấu trúc Tốt/Xấu/Đề nghị trung thực, hợp luật không thổi phồng."
+    lay_gi: "8 số cốt lõi (chỉnh cho bán lẻ, không chỉ SaaS) + cấu trúc thư TL;DR/Tốt/Xấu/Tiếp theo/Đề nghị + quy tắc giọng → skill cap-nhat-nha-dau-tu"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-leadership-feedback-360
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Phản hồi 360 cho lãnh đạo thuộc mảng nhân sự chưa có repo; SME ít dùng."
+    lay_gi: "Thiết kế câu hỏi 360 + quy trình ẩn danh + tổng hợp thành kế hoạch coaching → skill danh-gia-360"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-360-feedback-tool]
+    ban_tot_hon: false
+
+  - ten: ceo-linkedin-thought-leader
+    lo: lo-290
+    nhan: trung
+    ung_vien: [31-linkedin-growth, 26-thought-leadership-content]
+    gia_tri: thap
+    ly_do: "Nội bộ đã có lộ trình LinkedIn và nội dung dài 3 cấu trúc; bản ngoài nêu 'thuật toán 2026' không có căn cứ."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-market-entry
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [hoach-dinh-chien-luoc, ansoff-matrix]
+    gia_tri: vua
+    ly_do: "Nội bộ có Ansoff nhưng chưa so phương thức vào thị trường và cửa go/no-go có P&L 3 năm."
+    lay_gi: "So 4 phương thức vào thị trường (tự làm/liên doanh/M&A/đại lý) + mẫu go/no-go → references/vao-thi-truong-moi.md của hoach-dinh-chien-luoc"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [mo-rong-thi-truong]
+    ban_tot_hon: false
+
+  - ten: ceo-meeting-summarizer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ke-hoach-hanh-dong, linear-task]
+    gia_tri: cao
+    ly_do: "Chưa có skill biên bản họp từ transcript; định dạng TL;DR, quyết định, việc có người và hạn hợp nối sang Linear."
+    lay_gi: "Cấu trúc biên bản (TL;DR 3 dòng, quyết định, việc-người-hạn, parking lot) + quy tắc tóm tắt → skill bien-ban-hop, đẩy việc qua linear-task"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [sales-meeting-followup-summary]
+    ban_tot_hon: true
+
+  - ten: ceo-monthly-allhands-deck
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Deck họp toàn công ty hằng tháng; khung đơn giản, giá trị thấp nhưng chưa có."
+    lay_gi: "Cấu trúc 22 slide (thắng lợi, con số, tiếp theo, hỏi đáp) → mẫu trong skill truyền thông nội bộ"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [trinh-bay-va-giao-tiep-lanh-dao]
+    ban_tot_hon: false
+
+  - ten: ceo-news-radar
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [chien-luoc-pestel, 15-social-listening]
+    gia_tri: vua
+    ly_do: "chien-luoc-pestel phân tích một lần; thêm nhịp quét tin ngành và chính sách hằng ngày giúp PESTEL sống."
+    lay_gi: "Cấu hình watchlist + quét hằng ngày + tóm 5-7 tin theo tác động → lệnh quét định kỳ trong chien-luoc-pestel"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-competitor-monitor, mkt-trend-watcher]
+    ban_tot_hon: false
+
+  - ten: ceo-okr-tracker
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [ke-hoach-okr]
+    gia_tri: vua
+    ly_do: "ke-hoach-okr lập OKR; bản ngoài thêm bước theo dõi giữa quý: đỏ/vàng/xanh và hành động cứu KR."
+    lay_gi: "Quy tắc tô màu theo % KR so tiến độ thời gian + gợi ý hành động cứu KR trễ → references/theo-doi-okr.md của ke-hoach-okr"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [okr-va-kpi, ops-okr-rollup-ops, hr-okr-employee-coaching]
+    ban_tot_hon: false
+
+  - ten: ceo-perf-review-rollup
+    lo: lo-290
+    nhan: moi
+    ung_vien: [18-chuan-hanh-vi-sale]
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ đánh giá đội sale; tổng hợp đánh giá năm, phân phối và cân chỉnh giữa phòng ban chưa có."
+    lay_gi: "Phân tích phân phối điểm + cân chỉnh (calibration) giữa phòng + đề xuất thưởng/thăng chức theo ngân sách → skill danh-gia-hieu-suat"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-perf-review-template, danh-gia-nhan-vien, hr-promotion-package]
+    ban_tot_hon: false
+
+  - ten: ceo-personal-okr
+    lo: lo-290
+    nhan: trung
+    ung_vien: [okr]
+    gia_tri: thap
+    ly_do: "Chỉ là OKR áp vào 3 trục cá nhân; strategy-frameworks:okr đủ dùng."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-press-release
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Marketing nội bộ chưa có skill PR báo chí; khung 5W1H, quote, boilerplate theo báo Việt Nam dùng được."
+    lay_gi: "Cấu trúc thông cáo (tít, lead 5W1H, 3 đoạn, quote, boilerplate) + quy tắc báo chí VN → skill thong-cao-bao-chi"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [quan-he-bao-chi, mkt-pr-pitch-writer, mkt-press-kit-builder]
+    ban_tot_hon: false
+
+  - ten: ceo-pricing-strategy
+    lo: lo-290
+    nhan: trung
+    ung_vien: [dinh-gia-san-pham, 17-pricing-strategy-global]
+    gia_tri: thap
+    ly_do: "dinh-gia-san-pham đã có cây chọn chiến lược giá, hoà vốn, Van Westendorp; bản ngoài mỏng hơn."
+    trung_trong_kho: [fin-pricing-margin-simulator, Chiến Lược Giá cho TMĐT Việt Nam]
+    ban_tot_hon: false
+
+  - ten: ceo-public-speech
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [26-thought-leadership-content]
+    gia_tri: thap
+    ly_do: "Nội bộ có nội dung dài cho personal brand nhưng chưa có quy tắc viết để nói và kịch bản có canh giờ."
+    lay_gi: "Cấu trúc kiểu TED + quy tắc viết bài nói khác bài viết + speaker notes có timing → references/bai-noi.md của 26-thought-leadership-content"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [trinh-bay-va-giao-tiep-lanh-dao]
+    ban_tot_hon: false
+
+  - ten: ceo-quarter-priorities
+    lo: lo-290
+    nhan: trung
+    ung_vien: [ke-hoach-moscow, ke-hoach-okr]
+    gia_tri: thap
+    ly_do: "Xếp hạng ưu tiên quý và gắn OKR đã có trong ke-hoach-moscow và ke-hoach-okr."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: ceo-risk-register
+    lo: lo-290
+    nhan: trung
+    ung_vien: [ke-hoach-so-rui-ro]
+    gia_tri: thap
+    ly_do: "ke-hoach-so-rui-ro đã có sổ 5x5 tiếng Việt, tự quét 6 nguồn; bản ngoài không hơn."
+    trung_trong_kho: [quan-ly-rui-ro-doanh-nghiep, quan-ly-rui-ro-phap-ly]
+    ban_tot_hon: false
+
+  - ten: ceo-strategic-roadmap
+    lo: lo-290
+    nhan: trung
+    ung_vien: [ke-hoach-gantt, hoach-dinh-chien-luoc]
+    gia_tri: thap
+    ly_do: "Roadmap 3 tầng và Gantt phụ thuộc đã có ở ke-hoach-gantt và hoach-dinh-chien-luoc."
+    trung_trong_kho: [quan-ly-du-an-chien-luoc]
+    ban_tot_hon: false
+
+  - ten: ceo-swot-analysis
+    lo: lo-290
+    nhan: trung
+    ung_vien: [chien-luoc-swot-tows, swot-pestel]
+    gia_tri: thap
+    ly_do: "chien-luoc-swot-tows có trọng số, IFE/EFE/TOWS — sâu hơn bản ngoài."
+    trung_trong_kho: [hoach-dinh-chien-luoc]
+    ban_tot_hon: false
+
+  - ten: ceo-team-org-chart
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Sơ đồ tổ chức kèm chỉ số span of control, vị trí trống; tiện nhưng đơn giản."
+    lay_gi: "Chỉ số tổ chức (headcount theo phòng, vị trí trống, span of control) + xuất sơ đồ → skill so-do-to-chuc"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hr-org-chart-generator]
+    ban_tot_hon: false
+
+  - ten: ceo-vendor-renegotiation
+    lo: lo-290
+    nhan: moi
+    ung_vien: [15-dam-phan-ban-hang]
+    gia_tri: vua
+    ly_do: "15-dam-phan-ban-hang ở vai bên bán; đàm phán lại phía mua (SaaS, agency) chưa có. Bỏ lời hứa 'giảm 20-40%'."
+    lay_gi: "Audit hợp đồng hiện tại + BATNA và chi phí chuyển đổi + lịch 5 bước 90→15 ngày trước gia hạn → skill dam-phan-lai-nha-cung-cap"
+    dat_vao: repo-moi:mua-hang
+    trung_trong_kho: [dam-phan-mua-hang]
+    ban_tot_hon: false
+
+  - ten: ceo-vendor-shortlist
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có skill chọn nhà cung cấp; RFI, long list và chấm 5 tiêu chí dùng cho mua SaaS/agency."
+    lay_gi: "RFI brief + long list 15-30 + chấm 5 tiêu chí mỗi tiêu chí /20 → skill chon-nha-cung-cap"
+    dat_vao: repo-moi:mua-hang
+    trung_trong_kho: [proc-vendor-shortlist-scoring, quan-ly-nha-cung-cap]
+    ban_tot_hon: false
+
+  - ten: ceo-vision-mission-writer
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [ke-hoach-muc-tieu-chien-luoc, 32-nen-tang-thuong-hieu]
+    gia_tri: vua
+    ly_do: "ke-hoach-muc-tieu-chien-luoc lập hồ sơ định hướng nhưng thiếu bài kiểm chất lượng câu tầm nhìn/sứ mệnh."
+    lay_gi: "Câu hỏi phỏng vấn founder + bài test chất lượng ('5 năm sau còn đúng?', không sáo rỗng) → references/kiem-tam-nhin-su-menh.md của ke-hoach-muc-tieu-chien-luoc"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [xay-dung-van-hoa-doanh-nghiep, hoach-dinh-chien-luoc, ceo-culture-deck]
+    ban_tot_hon: false
+
+  - ten: ceo-weekly-review
+    lo: lo-290
+    nhan: moi
+    ung_vien: [07-bao-cao-marketing]
+    gia_tri: vua
+    ly_do: "Có báo cáo tuần bán hàng/marketing nhưng chưa có báo cáo điều hành tuần gộp mọi phòng ban."
+    lay_gi: "Bộ KPI chuẩn theo phòng + 3 nhận định chiến lược + báo cáo 1 trang có xu hướng → skill bao-cao-dieu-hanh-tuan"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-daily-briefing, ceo-financial-snapshot]
+    ban_tot_hon: false
+
+  # ===================== lo-290 · phap-ly =====================
+  - ten: legal-board-resolution
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có skill soạn nghị quyết HĐQT/HĐTV; cần cho hệ nhiều pháp nhân. Phải cập nhật Luật DN sửa đổi 2025."
+    lay_gi: "Kiểm thủ tục triệu tập + tỷ lệ biểu quyết theo loại hình + cấu trúc nghị quyết 8 phần → skill nghi-quyet-hdqt"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [hop-bgd-va-quan-tri-cong-ty]
+    ban_tot_hon: false
+
+  - ten: legal-cease-and-desist
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có; thư yêu cầu chấm dứt vi phạm nhãn hiệu/bản quyền hữu ích cho thương hiệu bán lẻ bị nhái."
+    lay_gi: "Phân loại vi phạm + cơ sở pháp lý + gói bằng chứng + cấu trúc thư 7 phần → gộp vào skill so-huu-tri-tue"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [bao-ve-quyen-so-huu-tri-tue, so-huu-tri-tue, xu-ly-tranh-chap]
+    ban_tot_hon: false
+
+  - ten: legal-compliance-checklist
+    lo: lo-290
+    nhan: trung
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "tuan-thu-doanh-nghiep 84 mục, cập nhật 2025-2026 vượt xa; bản ngoài còn NĐ 13/2023, kê khai môn bài đã bãi bỏ."
+    trung_trong_kho: [tuan-thu-phap-luat-lao-dong, tuan-thu-thue-va-ke-toan]
+    ban_tot_hon: false
+
+  - ten: legal-contract-review
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có skill rà hợp đồng; 10 red flag và mẫu comment kèm điều luật dùng hằng ngày. Bản update đầy đủ hơn."
+    lay_gi: "Phân loại hợp đồng → luật áp dụng + mẫu comment [RỦI RO CAO] kèm đề xuất sửa → gộp vào skill ra-soat-hop-dong"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [kiem-tra-phap-ly-hop-dong, sales-contract-redline, quan-ly-hop-dong]
+    ban_tot_hon: false
+
+  - ten: legal-employment-contract-vn
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ rà HĐLĐ trong checklist tuân thủ, chưa soạn; bản này bám BLLĐ Đ.20, Đ.21."
+    lay_gi: "Chọn loại HĐLĐ + 10 nội dung bắt buộc + điều khoản đặc biệt theo vị trí → skill hop-dong-lao-dong"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [hop-dong-lao-dong]
+    ban_tot_hon: true
+
+  - ten: legal-nda-template
+    lo: lo-290
+    nhan: moi
+    ung_vien: [ma-00-ho-so]
+    gia_tri: cao
+    ly_do: "NDA song ngữ cần cho đối tác, M&A, gọi vốn; nội bộ chưa có mẫu."
+    lay_gi: "Chọn loại NDA (1 chiều/2 chiều) + 8 thông tin bắt buộc + bố cục song ngữ 2 cột → skill nda"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: legal-privacy-policy
+    lo: lo-290
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Nội bộ rà mục dữ liệu cá nhân nhưng chưa soạn chính sách cho web/app. Phải viết lại theo Luật BVDLCN 2025, không theo NĐ 13."
+    lay_gi: "Cấu trúc chính sách 12 mục + bảng loại dữ liệu/nguồn/mục đích/cơ sở + phần cookie → templates/chinh-sach-quyen-rieng-tu.md của tuan-thu-doanh-nghiep"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [bao-ve-du-lieu-ca-nhan]
+    ban_tot_hon: true
+
+  - ten: legal-terms-of-service
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có; cần cho SaaS (Bluecore, GoClaw). Viện dẫn NĐ 52/2013 cũ và 'toà cấp huyện' đã bỏ, phải sửa."
+    lay_gi: "Phân loại mô hình + 15 điều khoản bắt buộc + điều khoản riêng SaaS (SLA, xuất dữ liệu khi chấm dứt) → skill dieu-khoan-dich-vu"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: legal-trademark-search
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Tra nhãn hiệu IPVN và WIPO trước khi đặt tên thương hiệu; nội bộ chưa có."
+    lay_gi: "Chuẩn hoá đối tượng tra + tra IPVN + tra WIPO Global Brand Database → bước 1 của skill so-huu-tri-tue"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [bao-ve-quyen-so-huu-tri-tue, so-huu-tri-tue]
+    ban_tot_hon: false
+
+  - ten: legal-vendor-contract
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Hợp đồng với nhà cung cấp có 12 điều khoản và 5 phụ lục; nội bộ chưa có skill soạn hợp đồng."
+    lay_gi: "4 mô hình hợp đồng + 5 phụ lục (spec, nghiệm thu, SLA, giá, danh mục) + 12 điều khoản → gộp vào skill soan-hop-dong"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [soan-thao-hop-dong, hop-dong-mua-hang]
+    ban_tot_hon: false
+
+  # ===================== lo-update · quan-tri =====================
+  - ten: hoach-dinh-chien-luoc
+    lo: lo-update
+    nhan: trung
+    ung_vien: [hoach-dinh-chien-luoc, chien-luoc-swot-tows]
+    gia_tri: thap
+    ly_do: "Trùng cả tên lẫn khái niệm với skill nội bộ 6 bước; bản ngoài chỉ là SWOT/PEST và mẫu trống."
+    trung_trong_kho: [ceo-swot-analysis, ceo-strategic-roadmap, ceo-vision-mission-writer]
+    ban_tot_hon: false
+
+  - ten: hop-bgd-va-quan-tri-cong-ty
+    lo: lo-update
+    nhan: moi
+    ung_vien: [ke-hoach-raci]
+    gia_tri: vua
+    ly_do: "ke-hoach-raci phân vai theo KR; ma trận uỷ quyền phê duyệt chi, agenda/biên bản BGĐ, tài liệu quản trị chưa có."
+    lay_gi: "Ma trận uỷ quyền phê duyệt (DOA, ngưỡng để người dùng điền) + agenda họp BGĐ 90 phút + danh mục tài liệu quản trị → skill quan-tri-cong-ty"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-board-deck, legal-board-resolution]
+    ban_tot_hon: true
+
+  - ten: mo-rong-thi-truong
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [hoach-dinh-chien-luoc, ansoff-matrix, 29-xuat-khau-b2b]
+    gia_tri: vua
+    ly_do: "Nội bộ có Ansoff, thiếu bảng chấm thị trường có trọng số và mẫu GTM chi phí 3 tháng đầu."
+    lay_gi: "Bảng chấm thị trường mới 6 tiêu chí có trọng số + ngưỡng quyết định + mẫu GTM (chi phí 3 tháng, mốc 30-60-90) → references/vao-thi-truong-moi.md của hoach-dinh-chien-luoc"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-market-entry]
+    ban_tot_hon: true
+
+  - ten: mua-ban-sap-nhap
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [ma-00-ho-so]
+    gia_tri: vua
+    ly_do: "Checklist thẩm định và cờ đỏ dùng được; bảng hệ số EBITDA theo ngành không có nguồn, không được lấy."
+    lay_gi: "Checklist thẩm định 3 mảng (tài chính, pháp lý, vận hành) + 5 cờ đỏ + 4 giai đoạn thương vụ → references/tham-dinh-co-ban.md của ma-00-ho-so"
+    dat_vao: admatrixmdp/investment-MA-os
+    trung_trong_kho: [ceo-acquisition-screening]
+    ban_tot_hon: true
+
+  - ten: okr-va-kpi
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [ke-hoach-okr, ke-hoach-bsc]
+    gia_tri: vua
+    ly_do: "Phần OKR trùng; bộ KPI chuẩn theo phòng ban đáng lấy. Không lấy phần gắn OKR vào thưởng (trái nguyên tắc OKR)."
+    lay_gi: "Bộ KPI chuẩn 5 phòng (kinh doanh, marketing, nhân sự, tài chính, vận hành) + định dạng bảng KPI → references/kpi-theo-phong-ban.md của ke-hoach-bsc"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-okr-tracker, ops-okr-rollup-ops, hr-okr-employee-coaching]
+    ban_tot_hon: true
+
+  - ten: phan-tich-thi-truong-va-canh-tranh
+    lo: lo-update
+    nhan: trung
+    ung_vien: [porter, 08-nghien-cuu-doi-thu]
+    gia_tri: thap
+    ly_do: "5 Forces và ma trận đối thủ đã có ở porter và 08-nghien-cuu-doi-thu, sâu hơn."
+    trung_trong_kho: [ceo-competitor-monitor]
+    ban_tot_hon: false
+
+  - ten: quan-ly-du-an-chien-luoc
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [ke-hoach-gantt, ke-hoach-hanh-dong]
+    gia_tri: vua
+    ly_do: "Nội bộ có Gantt và kế hoạch hành động nhưng thiếu project charter, earned value và luật portfolio."
+    lay_gi: "Project charter + báo cáo trạng thái có EVM (SPI, CPI) + nguyên tắc portfolio (giới hạn số dự án chạy song song, dừng sớm) → references/du-an-chien-luoc.md của ke-hoach-gantt"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-strategic-roadmap]
+    ban_tot_hon: true
+
+  - ten: quan-ly-rui-ro-doanh-nghiep
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [ke-hoach-so-rui-ro]
+    gia_tri: vua
+    ly_do: "Sổ 5x5 trùng; 4 chiến lược đối phó và kế hoạch kinh doanh liên tục (BCP) chưa có ở nội bộ."
+    lay_gi: "4 chiến lược đối phó (tránh/giảm/chuyển/chấp nhận) kèm ví dụ + khung BCP → references/doi-pho-va-bcp.md của ke-hoach-so-rui-ro"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [ceo-risk-register, quan-ly-rui-ro-phap-ly]
+    ban_tot_hon: true
+
+  - ten: trinh-bay-va-giao-tiep-lanh-dao
+    lo: lo-update
+    nhan: trung
+    ung_vien: [pyramid-principle, ke-chuyen-du-lieu]
+    gia_tri: thap
+    ly_do: "Minto/SCQA và storytelling đã có ở pyramid-principle, ke-chuyen-du-lieu; mẫu thư lãnh đạo chung chung."
+    trung_trong_kho: [ceo-public-speech, ceo-monthly-allhands-deck]
+    ban_tot_hon: true
+
+  - ten: xay-dung-van-hoa-doanh-nghiep
+    lo: lo-update
+    nhan: moi
+    ung_vien: [ke-hoach-muc-tieu-chien-luoc]
+    gia_tri: vua
+    ly_do: "Chưa có skill văn hoá; quy trình giá trị cốt lõi → hành vi, eNPS, lịch hoạt động dùng được. Gallup Q12 có bản quyền, chỉ dẫn nguồn."
+    lay_gi: "Quy trình giá trị cốt lõi 3 bước + mẫu giá trị–hành vi + eNPS + lịch hoạt động văn hoá tuần/tháng/quý → skill van-hoa-doanh-nghiep"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: [ceo-culture-deck, hr-culture-survey-analyzer, hr-engagement-survey]
+    ban_tot_hon: true
+
+  # ===================== lo-update · phap-ly =====================
+  - ten: bao-cao-phap-che
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "Báo cáo phòng pháp chế tháng/quý/năm; SME của MQ hiếm có phòng pháp chế riêng."
+    lay_gi: "Mẫu báo cáo pháp chế tháng 7 mục + KPI pháp chế quý → mẫu trong repo pháp lý"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: bao-ve-du-lieu-ca-nhan
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Nội bộ rà nhóm DL; bản ngoài có quy trình xử lý rò rỉ và mẫu chính sách. Căn cứ NĐ 13/2023 đã bị Luật BVDLCN 2025 thay."
+    lay_gi: "Quy trình xử lý sự cố rò rỉ dữ liệu + 7 nguyên tắc kèm ví dụ thực tế → templates/xu-ly-ro-ri-du-lieu.md của tuan-thu-doanh-nghiep, viết lại theo Luật BVDLCN 2025"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [legal-privacy-policy]
+    ban_tot_hon: false
+
+  - ten: bao-ve-quyen-so-huu-tri-tue
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Nội bộ chỉ có mục SH trong checklist; quy trình đăng ký nhãn hiệu, bản quyền, xử lý vi phạm chưa có."
+    lay_gi: "Quy trình đăng ký nhãn hiệu 5 bước + đăng ký bản quyền + chọn biện pháp xử lý vi phạm + checklist bảo vệ thương hiệu → skill so-huu-tri-tue"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [so-huu-tri-tue, legal-trademark-search, legal-cease-and-desist]
+    ban_tot_hon: true
+
+  - ten: kiem-tra-phap-ly-hop-dong
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Checklist 8 phần, ma trận rủi ro, 5 điều khoản đỏ, thư đề nghị sửa — đầy đủ nhất trong kho. Sửa tên 'Bộ luật Thương mại'."
+    lay_gi: "Checklist rà 8 phần + ma trận rủi ro 10 dòng + 5 điều khoản đỏ + thư đề nghị chỉnh sửa → skill ra-soat-hop-dong"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [legal-contract-review, sales-contract-redline, quan-ly-hop-dong]
+    ban_tot_hon: true
+
+  - ten: quan-ly-rui-ro-phap-ly
+    lo: lo-update
+    nhan: trung
+    ung_vien: [tuan-thu-doanh-nghiep, ke-hoach-so-rui-ro]
+    gia_tri: thap
+    ly_do: "Ma trận P0-P4 của tuan-thu-doanh-nghiep và sổ rủi ro nội bộ đã phủ; bản ngoài dựa NĐ 13 cũ."
+    trung_trong_kho: [quan-ly-rui-ro-doanh-nghiep, ceo-risk-register]
+    ban_tot_hon: false
+
+  - ten: soan-thao-hop-dong
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: cao
+    ly_do: "Chưa có skill soạn hợp đồng; có mẫu hợp đồng dịch vụ đầy đủ và cấu trúc 8 phần chuẩn VN."
+    lay_gi: "Cấu trúc hợp đồng 8 phần + mẫu hợp đồng dịch vụ + mua bán rút gọn + điều khoản đặc biệt → skill soan-hop-dong"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [legal-vendor-contract, hop-dong-mua-hang, hop-dong-don-hang]
+    ban_tot_hon: true
+
+  - ten: thanh-lap-doanh-nghiep
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: vua
+    ly_do: "Nội bộ lo nghĩa vụ sau thành lập, chưa có thủ tục đăng ký/thay đổi. Phải cập nhật: Sở KH&ĐT đã sáp nhập, bỏ đăng bố cáo, nghị định đăng ký mới."
+    lay_gi: "So sánh loại hình DN + hồ sơ TNHH + thủ tục thay đổi đăng ký thường gặp → references/thanh-lap-va-thay-doi.md của tuan-thu-doanh-nghiep"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: tuan-thu-phap-luat-lao-dong
+    lo: lo-update
+    nhan: trung
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: thap
+    ly_do: "Nhóm LD, AT, BH trong 84 mục và kịch bản theo biến cố của nội bộ đã phủ, cập nhật hơn."
+    trung_trong_kho: [legal-compliance-checklist]
+    ban_tot_hon: false
+
+  - ten: tuan-thu-thue-va-ke-toan
+    lo: lo-update
+    nhan: trung
+    ung_vien: [tuan-thu-doanh-nghiep, ho-so-ke-toan]
+    gia_tri: thap
+    ly_do: "Nhóm TH, HD nội bộ có 12 khoản chi bị loại, thời hiệu, thay đổi 2025-2026; bản ngoài cũ hơn."
+    trung_trong_kho: [ke-khai-thue, thue-doanh-nghiep, legal-compliance-checklist]
+    ban_tot_hon: false
+
+  - ten: xu-ly-tranh-chap
+    lo: lo-update
+    nhan: moi
+    ung_vien: [12-xu-ly-su-co]
+    gia_tri: vua
+    ly_do: "Chưa có quy trình tranh chấp hợp đồng/lao động và thư đòi nợ. Sửa 'TAND cấp huyện' (đã bỏ từ 7/2025)."
+    lay_gi: "Chọn phương thức theo giá trị tranh chấp + quy trình 4 bước + thư yêu cầu thanh toán + quy trình tranh chấp lao động → skill xu-ly-tranh-chap"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [legal-cease-and-desist, quy-trinh-tiep-nhan-khieu-nai]
+    ban_tot_hon: false
+
+  # ===================== lo-update · san-pham =====================
+  - ten: bao-cao-rd
+    lo: lo-update
+    nhan: moi
+    ung_vien: [product-dev-router]
+    gia_tri: thap
+    ly_do: "Báo cáo R&D và pipeline sản phẩm cho BGĐ; nội bộ thiên phần mềm, ít nhu cầu báo cáo R&D riêng."
+    lay_gi: "KPI R&D 4 lớp (đầu vào, quá trình, đầu ra, tác động) + bảng pipeline theo stage → references/ của product-dev-router"
+    dat_vao: admatrixmdp/product-dev-os
+    trung_trong_kho: [phan-tich-du-lieu-san-pham]
+    ban_tot_hon: false
+
+  - ten: kiem-soat-chat-luong-rd
+    lo: lo-update
+    nhan: moi
+    ung_vien: [cai-tien-dmaic]
+    gia_tri: thap
+    ly_do: "Spec kỹ thuật, kế hoạch kiểm nghiệm và phiếu thay đổi (ECN) cho sản phẩm vật lý; chưa có, nhu cầu hẹp."
+    lay_gi: "Mẫu tiêu chuẩn kỹ thuật sản phẩm + kế hoạch kiểm nghiệm + phiếu ECN → skill chất lượng sản phẩm"
+    dat_vao: repo-moi:van-hanh
+    trung_trong_kho: [quan-ly-chat-luong-qc, ops-quality-checklist]
+    ban_tot_hon: false
+
+  - ten: nghien-cuu-khach-hang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [09-insight-khach-hang, jtbd, 16-kham-pha-nhu-cau]
+    gia_tri: thap
+    ly_do: "Persona, hành trình, JTBD và câu hỏi khai thác đã có ở 09-insight-khach-hang, jtbd, 16-kham-pha-nhu-cau."
+    trung_trong_kho: [mkt-customer-persona-builder, mkt-customer-journey-mapper, mkt-survey-design]
+    ban_tot_hon: false
+
+  - ten: phan-tich-du-lieu-san-pham
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [product-dev-router, 19-ab-test-setup]
+    gia_tri: vua
+    ly_do: "product-dev-os chưa có khâu đo sau ra mắt: AARRR, North Star, PMF. Bỏ đường dẫn máy tính A/B lạ (stats.idolblog.com)."
+    lay_gi: "Bộ KPI sản phẩm AARRR + chọn North Star Metric + khảo sát PMF Sean Ellis (ngưỡng 40%) → references/do-luong-sau-ra-mat.md của product-dev-router"
+    dat_vao: admatrixmdp/product-dev-os
+    trung_trong_kho: [bao-cao-rd, mkt-ab-test-planner]
+    ban_tot_hon: false
+
+  - ten: quan-ly-danh-muc-san-pham
+    lo: lo-update
+    nhan: trung
+    ung_vien: [bcg-matrix]
+    gia_tri: thap
+    ly_do: "BCG và vòng đời sản phẩm đã có ở strategy-frameworks:bcg-matrix; roadmap mẫu trống."
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  - ten: quy-trinh-phat-trien-san-pham
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [product-dev-router]
+    gia_tri: vua
+    ly_do: "product-dev-router lo vòng đời phần mềm; Stage-Gate có tiêu chí qua cổng và checklist ra mắt hợp sản phẩm vật lý/dịch vụ."
+    lay_gi: "Stage-Gate 5 giai đoạn kèm tiêu chí từng cổng + checklist ra mắt → references/stage-gate.md của product-dev-router (nhánh sản phẩm không phải phần mềm)"
+    dat_vao: admatrixmdp/product-dev-os
+    trung_trong_kho: [mkt-product-launch-checklist]
+    ban_tot_hon: false
+
+  - ten: sang-kien-va-doi-moi
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [cai-tien-dmaic, design-thinking, lean-startup]
+    gia_tri: thap
+    ly_do: "Design Thinking, Lean Startup đã có; chỉ quy trình chương trình sáng kiến nội bộ là mới."
+    lay_gi: "Quy trình sáng kiến nội bộ 5 bước + phiếu đề xuất sáng kiến → references/chuong-trinh-sang-kien.md của cai-tien-dmaic"
+    dat_vao: admatrixorg/Company-suite-os
+    trung_trong_kho: [cai-tien-lien-tuc-kaizen]
+    ban_tot_hon: false
+
+  - ten: so-huu-tri-tue
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Cùng khái niệm với bao-ve-quyen-so-huu-tri-tue (bản đầy đủ hơn); riêng phần sáng chế/giải pháp hữu ích đáng gộp."
+    lay_gi: "So sánh sáng chế vs giải pháp hữu ích + bí mật kinh doanh + kênh khiếu nại vi phạm → gộp vào skill so-huu-tri-tue"
+    dat_vao: repo-moi:phap-ly
+    trung_trong_kho: [bao-ve-quyen-so-huu-tri-tue, legal-trademark-search]
+    ban_tot_hon: false
+
+  - ten: tich-hop-cong-nghe-vao-san-pham
+    lo: lo-update
+    nhan: loai
+    ung_vien: [product-dev-router]
+    gia_tri: thap
+    ly_do: "Quá chung chung (bảng use case AI phổ thông, ROI để trống); hệ MQ đã đi sâu hơn nhiều về AI agent."
+    trung_trong_kho: [chuyen-doi-so]
+    ban_tot_hon: false
+
+  - ten: tieu-chuan-va-chung-nhan-san-pham
+    lo: lo-update
+    nhan: moi
+    ung_vien: [tuan-thu-doanh-nghiep]
+    gia_tri: cao
+    ly_do: "Chưa có tuân thủ cấp sản phẩm (công bố, hợp quy, nhãn, TPCN, ISO, chứng nhận xuất khẩu) — sát nhu cầu shop bán lẻ, TPCN. Bỏ số phí ISO không nguồn."
+    lay_gi: "Bảng chứng nhận bắt buộc theo ngành + quy trình đạt ISO 7 bước + chứng nhận theo thị trường xuất khẩu → skill tuan-thu-san-pham"
+    dat_vao: admatrixmdp/compliance-vn
+    trung_trong_kho: [ops-iso9001-readiness, ops-haccp-checklist]
+    ban_tot_hon: false

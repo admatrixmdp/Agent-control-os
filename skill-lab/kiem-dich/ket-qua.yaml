@@ -1,0 +1,3555 @@
+tong: 510
+co_van_de: 288
+skills:
+- ten: ceo-1on1-template
+  duong_dan: raw/lo-290/ceo-1on1-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ceo-acquisition-screening
+  duong_dan: raw/lo-290/ceo-acquisition-screening
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-annual-report
+  duong_dan: raw/lo-290/ceo-annual-report
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-board-deck
+  duong_dan: raw/lo-290/ceo-board-deck
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-business-model-canvas
+  duong_dan: raw/lo-290/ceo-business-model-canvas
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-cash-position-dashboard
+  duong_dan: raw/lo-290/ceo-cash-position-dashboard
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-comp-philosophy
+  duong_dan: raw/lo-290/ceo-comp-philosophy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-competitor-monitor
+  duong_dan: raw/lo-290/ceo-competitor-monitor
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ceo-crisis-playbook
+  duong_dan: raw/lo-290/ceo-crisis-playbook
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ceo-culture-deck
+  duong_dan: raw/lo-290/ceo-culture-deck
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-customer-letter
+  duong_dan: raw/lo-290/ceo-customer-letter
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-daily-briefing
+  duong_dan: raw/lo-290/ceo-daily-briefing
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-decision-log
+  duong_dan: raw/lo-290/ceo-decision-log
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ceo-departmental-scorecard
+  duong_dan: raw/lo-290/ceo-departmental-scorecard
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-exec-search-brief
+  duong_dan: raw/lo-290/ceo-exec-search-brief
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-financial-snapshot
+  duong_dan: raw/lo-290/ceo-financial-snapshot
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-fundraising-deck
+  duong_dan: raw/lo-290/ceo-fundraising-deck
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-hiring-plan
+  duong_dan: raw/lo-290/ceo-hiring-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-investor-update
+  duong_dan: raw/lo-290/ceo-investor-update
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-leadership-feedback-360
+  duong_dan: raw/lo-290/ceo-leadership-feedback-360
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-linkedin-thought-leader
+  duong_dan: raw/lo-290/ceo-linkedin-thought-leader
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-market-entry
+  duong_dan: raw/lo-290/ceo-market-entry
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-meeting-summarizer
+  duong_dan: raw/lo-290/ceo-meeting-summarizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ceo-monthly-allhands-deck
+  duong_dan: raw/lo-290/ceo-monthly-allhands-deck
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ceo-news-radar
+  duong_dan: raw/lo-290/ceo-news-radar
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-okr-tracker
+  duong_dan: raw/lo-290/ceo-okr-tracker
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ceo-perf-review-rollup
+  duong_dan: raw/lo-290/ceo-perf-review-rollup
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-personal-okr
+  duong_dan: raw/lo-290/ceo-personal-okr
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ceo-press-release
+  duong_dan: raw/lo-290/ceo-press-release
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-pricing-strategy
+  duong_dan: raw/lo-290/ceo-pricing-strategy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-public-speech
+  duong_dan: raw/lo-290/ceo-public-speech
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-quarter-priorities
+  duong_dan: raw/lo-290/ceo-quarter-priorities
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-risk-register
+  duong_dan: raw/lo-290/ceo-risk-register
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-strategic-roadmap
+  duong_dan: raw/lo-290/ceo-strategic-roadmap
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-swot-analysis
+  duong_dan: raw/lo-290/ceo-swot-analysis
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-team-org-chart
+  duong_dan: raw/lo-290/ceo-team-org-chart
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-vendor-renegotiation
+  duong_dan: raw/lo-290/ceo-vendor-renegotiation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-vendor-shortlist
+  duong_dan: raw/lo-290/ceo-vendor-shortlist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ceo-vision-mission-writer
+  duong_dan: raw/lo-290/ceo-vision-mission-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ceo-weekly-review
+  duong_dan: raw/lo-290/ceo-weekly-review
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: cs-call-center-script
+  duong_dan: raw/lo-290/cs-call-center-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-canned-response-library
+  duong_dan: raw/lo-290/cs-canned-response-library
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-chatbot-script-designer
+  duong_dan: raw/lo-290/cs-chatbot-script-designer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: cs-complaint-response-template
+  duong_dan: raw/lo-290/cs-complaint-response-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-csat-survey
+  duong_dan: raw/lo-290/cs-csat-survey
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-customer-apology-letter
+  duong_dan: raw/lo-290/cs-customer-apology-letter
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - ceo@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-customer-success-onboarding
+  duong_dan: raw/lo-290/cs-customer-success-onboarding
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-escalation-matrix
+  duong_dan: raw/lo-290/cs-escalation-matrix
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-faq-knowledge-base
+  duong_dan: raw/lo-290/cs-faq-knowledge-base
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-feedback-loop-product
+  duong_dan: raw/lo-290/cs-feedback-loop-product
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-knowledge-base-article
+  duong_dan: raw/lo-290/cs-knowledge-base-article
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: cs-livechat-playbook
+  duong_dan: raw/lo-290/cs-livechat-playbook
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-refund-policy-writer
+  duong_dan: raw/lo-290/cs-refund-policy-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-renewal-risk-alert
+  duong_dan: raw/lo-290/cs-renewal-risk-alert
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-review-response-shopee
+  duong_dan: raw/lo-290/cs-review-response-shopee
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-social-media-listening
+  duong_dan: raw/lo-290/cs-social-media-listening
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-ticket-tagging-automation
+  duong_dan: raw/lo-290/cs-ticket-tagging-automation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  dinh_dang: []
+- ten: cs-ticket-trend-report
+  duong_dan: raw/lo-290/cs-ticket-trend-report
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - agent@co.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: cs-vip-customer-care
+  duong_dan: raw/lo-290/cs-vip-customer-care
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: cs-warranty-claim-processor
+  duong_dan: raw/lo-290/cs-warranty-claim-processor
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: data-cohort-analysis
+  duong_dan: raw/lo-290/data-cohort-analysis
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: data-customer-segmentation
+  duong_dan: raw/lo-290/data-customer-segmentation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: data-dashboard-builder
+  duong_dan: raw/lo-290/data-dashboard-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: data-etl-pipeline-design
+  duong_dan: raw/lo-290/data-etl-pipeline-design
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: data-kpi-dictionary
+  duong_dan: raw/lo-290/data-kpi-dictionary
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: data-sql-query-helper
+  duong_dan: raw/lo-290/data-sql-query-helper
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-ap-payment-runner
+  duong_dan: raw/lo-290/fin-ap-payment-runner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-ar-aging-report
+  duong_dan: raw/lo-290/fin-ar-aging-report
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-audit-prep
+  duong_dan: raw/lo-290/fin-audit-prep
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-balance-sheet-explainer
+  duong_dan: raw/lo-290/fin-balance-sheet-explainer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: fin-bank-reconciliation
+  duong_dan: raw/lo-290/fin-bank-reconciliation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-budget-vs-actual
+  duong_dan: raw/lo-290/fin-budget-vs-actual
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-capex-approval-pack
+  duong_dan: raw/lo-290/fin-capex-approval-pack
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-cogs-breakdown
+  duong_dan: raw/lo-290/fin-cogs-breakdown
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 3
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-comps-valuation
+  duong_dan: raw/lo-290/fin-comps-valuation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-cost-of-goods-builder
+  duong_dan: raw/lo-290/fin-cost-of-goods-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-credit-application-pack
+  duong_dan: raw/lo-290/fin-credit-application-pack
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-dcf-valuation
+  duong_dan: raw/lo-290/fin-dcf-valuation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-expense-policy-builder
+  duong_dan: raw/lo-290/fin-expense-policy-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-finance-ops-automation
+  duong_dan: raw/lo-290/fin-finance-ops-automation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 3
+    vi_du:
+    - fetch(
+    - requests.post
+  dinh_dang: []
+- ten: fin-financial-model-3statement
+  duong_dan: raw/lo-290/fin-financial-model-3statement
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-fixed-asset-register
+  duong_dan: raw/lo-290/fin-fixed-asset-register
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-fx-exposure-report
+  duong_dan: raw/lo-290/fin-fx-exposure-report
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-grant-application-writer
+  duong_dan: raw/lo-290/fin-grant-application-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-internal-control-soc1
+  duong_dan: raw/lo-290/fin-internal-control-soc1
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-inventory-valuation
+  duong_dan: raw/lo-290/fin-inventory-valuation
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-investor-cap-table
+  duong_dan: raw/lo-290/fin-investor-cap-table
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-loan-amortization
+  duong_dan: raw/lo-290/fin-loan-amortization
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-monthly-closing-checklist
+  duong_dan: raw/lo-290/fin-monthly-closing-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-payroll-cost-analyzer
+  duong_dan: raw/lo-290/fin-payroll-cost-analyzer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-petty-cash-control
+  duong_dan: raw/lo-290/fin-petty-cash-control
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-pricing-margin-simulator
+  duong_dan: raw/lo-290/fin-pricing-margin-simulator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: fin-revenue-recognition-asc606
+  duong_dan: raw/lo-290/fin-revenue-recognition-asc606
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: fin-tax-cit-estimator
+  duong_dan: raw/lo-290/fin-tax-cit-estimator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: fin-tax-vat-summary
+  duong_dan: raw/lo-290/fin-tax-vat-summary
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: so-dien-thoai
+    so_lan: 1
+    vi_du:
+    - 0312345678
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: it-asset-inventory
+  duong_dan: raw/lo-290/it-asset-inventory
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: it-data-backup-policy
+  duong_dan: raw/lo-290/it-data-backup-policy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: it-incident-response-playbook
+  duong_dan: raw/lo-290/it-incident-response-playbook
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: it-it-policy-writer
+  duong_dan: raw/lo-290/it-it-policy-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: it-offboarding-it-checklist
+  duong_dan: raw/lo-290/it-offboarding-it-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - nam@company.vn
+  dinh_dang: []
+- ten: it-onboarding-it-checklist
+  duong_dan: raw/lo-290/it-onboarding-it-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 2
+    vi_du:
+    - firstname.lastname@company.vn
+    - nam.nguyen@company.vn
+  dinh_dang: []
+- ten: it-saas-cost-optimizer
+  duong_dan: raw/lo-290/it-saas-cost-optimizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: it-shadow-it-detector
+  duong_dan: raw/lo-290/it-shadow-it-detector
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: it-vendor-saas-audit
+  duong_dan: raw/lo-290/it-vendor-saas-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: legal-board-resolution
+  duong_dan: raw/lo-290/legal-board-resolution
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-cease-and-desist
+  duong_dan: raw/lo-290/legal-cease-and-desist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: legal-compliance-checklist
+  duong_dan: raw/lo-290/legal-compliance-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-contract-review
+  duong_dan: raw/lo-290/legal-contract-review
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-employment-contract-vn
+  duong_dan: raw/lo-290/legal-employment-contract-vn
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-nda-template
+  duong_dan: raw/lo-290/legal-nda-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-privacy-policy
+  duong_dan: raw/lo-290/legal-privacy-policy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-terms-of-service
+  duong_dan: raw/lo-290/legal-terms-of-service
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: legal-trademark-search
+  duong_dan: raw/lo-290/legal-trademark-search
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: legal-vendor-contract
+  duong_dan: raw/lo-290/legal-vendor-contract
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: so-dien-thoai
+    so_lan: 1
+    vi_du:
+    - 0312345678
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: log-shipping-cost-optimizer
+  duong_dan: raw/lo-290/log-shipping-cost-optimizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: log-warehouse-stock-alert
+  duong_dan: raw/lo-290/log-warehouse-stock-alert
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: mkt-ab-test-planner
+  duong_dan: raw/lo-290/mkt-ab-test-planner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-abandoned-cart-email
+  duong_dan: raw/lo-290/mkt-abandoned-cart-email
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-affiliate-program-design
+  duong_dan: raw/lo-290/mkt-affiliate-program-design
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-banner-prompt-midjourney
+  duong_dan: raw/lo-290/mkt-banner-prompt-midjourney
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-blog-article-writer
+  duong_dan: raw/lo-290/mkt-blog-article-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-brand-name-generator
+  duong_dan: raw/lo-290/mkt-brand-name-generator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-brand-voice-guide
+  duong_dan: raw/lo-290/mkt-brand-voice-guide
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-case-study-writer
+  duong_dan: raw/lo-290/mkt-case-study-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-cobranding-proposal
+  duong_dan: raw/lo-290/mkt-cobranding-proposal
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-competitor-ads-spy
+  duong_dan: raw/lo-290/mkt-competitor-ads-spy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-content-calendar-multi-channel
+  duong_dan: raw/lo-290/mkt-content-calendar-multi-channel
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-content-repurpose-pipeline
+  duong_dan: raw/lo-290/mkt-content-repurpose-pipeline
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-content-scorer
+  duong_dan: raw/lo-290/mkt-content-scorer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-conversion-funnel-audit
+  duong_dan: raw/lo-290/mkt-conversion-funnel-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-customer-journey-mapper
+  duong_dan: raw/lo-290/mkt-customer-journey-mapper
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-customer-persona-builder
+  duong_dan: raw/lo-290/mkt-customer-persona-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-email-campaign-writer
+  duong_dan: raw/lo-290/mkt-email-campaign-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - hi@taki.vn
+  dinh_dang: []
+- ten: mkt-event-launch-plan
+  duong_dan: raw/lo-290/mkt-event-launch-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-facebook-ads-manager
+  duong_dan: raw/lo-290/mkt-facebook-ads-manager
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-faq-generator
+  duong_dan: raw/lo-290/mkt-faq-generator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-ga4-report-reader
+  duong_dan: raw/lo-290/mkt-ga4-report-reader
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-google-ads-optimizer
+  duong_dan: raw/lo-290/mkt-google-ads-optimizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-hashtag-research
+  duong_dan: raw/lo-290/mkt-hashtag-research
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-influencer-outreach
+  duong_dan: raw/lo-290/mkt-influencer-outreach
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-instagram-reel-script
+  duong_dan: raw/lo-290/mkt-instagram-reel-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-landing-page-copy
+  duong_dan: raw/lo-290/mkt-landing-page-copy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-linkedin-company-page
+  duong_dan: raw/lo-290/mkt-linkedin-company-page
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-localization-asia
+  duong_dan: raw/lo-290/mkt-localization-asia
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-loyalty-program-design
+  duong_dan: raw/lo-290/mkt-loyalty-program-design
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-marketing-budget-planner
+  duong_dan: raw/lo-290/mkt-marketing-budget-planner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-meta-pixel-audit
+  duong_dan: raw/lo-290/mkt-meta-pixel-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - test@x.vn
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-newsletter-weekly
+  duong_dan: raw/lo-290/mkt-newsletter-weekly
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-nps-analyzer
+  duong_dan: raw/lo-290/mkt-nps-analyzer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-podcast-pitch-writer
+  duong_dan: raw/lo-290/mkt-podcast-pitch-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-podcast-show-notes
+  duong_dan: raw/lo-290/mkt-podcast-show-notes
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-positioning-statement
+  duong_dan: raw/lo-290/mkt-positioning-statement
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-pr-crisis-response
+  duong_dan: raw/lo-290/mkt-pr-crisis-response
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-pr-pitch-writer
+  duong_dan: raw/lo-290/mkt-pr-pitch-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-press-kit-builder
+  duong_dan: raw/lo-290/mkt-press-kit-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-product-description-shopify
+  duong_dan: raw/lo-290/mkt-product-description-shopify
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-product-launch-checklist
+  duong_dan: raw/lo-290/mkt-product-launch-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-referral-program
+  duong_dan: raw/lo-290/mkt-referral-program
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-review-acquisition
+  duong_dan: raw/lo-290/mkt-review-acquisition
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-roi-calculator-campaign
+  duong_dan: raw/lo-290/mkt-roi-calculator-campaign
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-seo-backlink-prospecting
+  duong_dan: raw/lo-290/mkt-seo-backlink-prospecting
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-seo-keyword-research
+  duong_dan: raw/lo-290/mkt-seo-keyword-research
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-seo-on-page-audit
+  duong_dan: raw/lo-290/mkt-seo-on-page-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-survey-design
+  duong_dan: raw/lo-290/mkt-survey-design
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-tagline-generator
+  duong_dan: raw/lo-290/mkt-tagline-generator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-testimonial-collector
+  duong_dan: raw/lo-290/mkt-testimonial-collector
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-tiktok-content-planner
+  duong_dan: raw/lo-290/mkt-tiktok-content-planner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-trade-show-plan
+  duong_dan: raw/lo-290/mkt-trade-show-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-trend-watcher
+  duong_dan: raw/lo-290/mkt-trend-watcher
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-twitter-thread-writer
+  duong_dan: raw/lo-290/mkt-twitter-thread-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-ugc-collection-campaign
+  duong_dan: raw/lo-290/mkt-ugc-collection-campaign
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: mkt-utm-builder
+  duong_dan: raw/lo-290/mkt-utm-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-webinar-followup-sequence
+  duong_dan: raw/lo-290/mkt-webinar-followup-sequence
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-webinar-script
+  duong_dan: raw/lo-290/mkt-webinar-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 2
+    vi_du:
+    - /Users/nguyenkiem
+    - /users/me
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: mkt-welcome-email-flow
+  duong_dan: raw/lo-290/mkt-welcome-email-flow
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: mkt-youtube-script-writer
+  duong_dan: raw/lo-290/mkt-youtube-script-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-5why-builder
+  duong_dan: raw/lo-290/ops-5why-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-bom-builder
+  duong_dan: raw/lo-290/ops-bom-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-capacity-planning
+  duong_dan: raw/lo-290/ops-capacity-planning
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-cycle-time-analyzer
+  duong_dan: raw/lo-290/ops-cycle-time-analyzer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-energy-cost-audit
+  duong_dan: raw/lo-290/ops-energy-cost-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-haccp-checklist
+  duong_dan: raw/lo-290/ops-haccp-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: ops-incident-rca
+  duong_dan: raw/lo-290/ops-incident-rca
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-iso9001-readiness
+  duong_dan: raw/lo-290/ops-iso9001-readiness
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-just-in-time-setup
+  duong_dan: raw/lo-290/ops-just-in-time-setup
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-kanban-board-setup
+  duong_dan: raw/lo-290/ops-kanban-board-setup
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-maintenance-schedule
+  duong_dan: raw/lo-290/ops-maintenance-schedule
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - maintenance@co.vn
+  dinh_dang: []
+- ten: ops-oee-tracker
+  duong_dan: raw/lo-290/ops-oee-tracker
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: ops-okr-rollup-ops
+  duong_dan: raw/lo-290/ops-okr-rollup-ops
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-process-flowchart
+  duong_dan: raw/lo-290/ops-process-flowchart
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-quality-checklist
+  duong_dan: raw/lo-290/ops-quality-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-quality-incident-report
+  duong_dan: raw/lo-290/ops-quality-incident-report
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: ops-rpa-opportunity-scout
+  duong_dan: raw/lo-290/ops-rpa-opportunity-scout
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-shift-handover-template
+  duong_dan: raw/lo-290/ops-shift-handover-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-sop-writer
+  duong_dan: raw/lo-290/ops-sop-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-store-audit-template
+  duong_dan: raw/lo-290/ops-store-audit-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-store-opening-checklist
+  duong_dan: raw/lo-290/ops-store-opening-checklist
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: ops-supplier-scorecard
+  duong_dan: raw/lo-290/ops-supplier-scorecard
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-vendor-audit-plan
+  duong_dan: raw/lo-290/ops-vendor-audit-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - qa@ncc.com.vn
+  dinh_dang: []
+- ten: ops-warehouse-layout
+  duong_dan: raw/lo-290/ops-warehouse-layout
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: ops-waste-reduction-plan
+  duong_dan: raw/lo-290/ops-waste-reduction-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: proc-po-template
+  duong_dan: raw/lo-290/proc-po-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: proc-rfq-builder
+  duong_dan: raw/lo-290/proc-rfq-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: proc-vendor-shortlist-scoring
+  duong_dan: raw/lo-290/proc-vendor-shortlist-scoring
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-account-plan
+  duong_dan: raw/lo-290/sales-account-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-bant-qualifier
+  duong_dan: raw/lo-290/sales-bant-qualifier
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-case-study-pitch
+  duong_dan: raw/lo-290/sales-case-study-pitch
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-challenger-script
+  duong_dan: raw/lo-290/sales-challenger-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-channel-partner-recruit
+  duong_dan: raw/lo-290/sales-channel-partner-recruit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-churn-risk-detector
+  duong_dan: raw/lo-290/sales-churn-risk-detector
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-cold-call-script
+  duong_dan: raw/lo-290/sales-cold-call-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-cold-email-writer
+  duong_dan: raw/lo-290/sales-cold-email-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 2
+    vi_du:
+    - /Users/nguyenkiem
+    - /users/me
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-commission-calculator
+  duong_dan: raw/lo-290/sales-commission-calculator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-contract-redline
+  duong_dan: raw/lo-290/sales-contract-redline
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-crm-data-cleaner
+  duong_dan: raw/lo-290/sales-crm-data-cleaner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-cross-sell-mapper
+  duong_dan: raw/lo-290/sales-cross-sell-mapper
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-customer-health-score
+  duong_dan: raw/lo-290/sales-customer-health-score
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-deal-review-template
+  duong_dan: raw/lo-290/sales-deal-review-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-demo-script
+  duong_dan: raw/lo-290/sales-demo-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 2
+    vi_du:
+    - /Users/nguyenkiem
+    - /users/me
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-discounting-policy
+  duong_dan: raw/lo-290/sales-discounting-policy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-discovery-call-template
+  duong_dan: raw/lo-290/sales-discovery-call-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-distributor-onboarding
+  duong_dan: raw/lo-290/sales-distributor-onboarding
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-executive-briefing
+  duong_dan: raw/lo-290/sales-executive-briefing
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-followup-cadence
+  duong_dan: raw/lo-290/sales-followup-cadence
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-icp-builder
+  duong_dan: raw/lo-290/sales-icp-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-key-account-strategy
+  duong_dan: raw/lo-290/sales-key-account-strategy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-late-stage-rescue
+  duong_dan: raw/lo-290/sales-late-stage-rescue
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-lead-list-builder
+  duong_dan: raw/lo-290/sales-lead-list-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: sales-lead-scoring-engine
+  duong_dan: raw/lo-290/sales-lead-scoring-engine
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-linkedin-prospecting
+  duong_dan: raw/lo-290/sales-linkedin-prospecting
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-meddic-template
+  duong_dan: raw/lo-290/sales-meddic-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-meeting-followup-summary
+  duong_dan: raw/lo-290/sales-meeting-followup-summary
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-meeting-prep-research
+  duong_dan: raw/lo-290/sales-meeting-prep-research
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-mql-sql-criteria
+  duong_dan: raw/lo-290/sales-mql-sql-criteria
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-multithreading-template
+  duong_dan: raw/lo-290/sales-multithreading-template
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-mutual-action-plan
+  duong_dan: raw/lo-290/sales-mutual-action-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-negotiation-playbook
+  duong_dan: raw/lo-290/sales-negotiation-playbook
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-objection-handling
+  duong_dan: raw/lo-290/sales-objection-handling
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-one-pager
+  duong_dan: raw/lo-290/sales-one-pager
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-pipeline-cleanup
+  duong_dan: raw/lo-290/sales-pipeline-cleanup
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-pipeline-forecast
+  duong_dan: raw/lo-290/sales-pipeline-forecast
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-pitch-deck-investor-style
+  duong_dan: raw/lo-290/sales-pitch-deck-investor-style
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-postsale-handover
+  duong_dan: raw/lo-290/sales-postsale-handover
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-proposal-writer
+  duong_dan: raw/lo-290/sales-proposal-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-prospecting-sequence-multichannel
+  duong_dan: raw/lo-290/sales-prospecting-sequence-multichannel
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-qbr-deck-builder
+  duong_dan: raw/lo-290/sales-qbr-deck-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-quota-planner
+  duong_dan: raw/lo-290/sales-quota-planner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-quote-generator
+  duong_dan: raw/lo-290/sales-quote-generator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-renewal-playbook
+  duong_dan: raw/lo-290/sales-renewal-playbook
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-retail-shelf-audit
+  duong_dan: raw/lo-290/sales-retail-shelf-audit
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-rfp-response-writer
+  duong_dan: raw/lo-290/sales-rfp-response-writer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-rfp-scoring
+  duong_dan: raw/lo-290/sales-rfp-scoring
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-roadshow-plan
+  duong_dan: raw/lo-290/sales-roadshow-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-roi-business-case
+  duong_dan: raw/lo-290/sales-roi-business-case
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-sales-deck-builder
+  duong_dan: raw/lo-290/sales-sales-deck-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-sdr-handover
+  duong_dan: raw/lo-290/sales-sdr-handover
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-spin-selling-coach
+  duong_dan: raw/lo-290/sales-spin-selling-coach
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-stakeholder-map
+  duong_dan: raw/lo-290/sales-stakeholder-map
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.get
+  dinh_dang: []
+- ten: sales-tco-calculator
+  duong_dan: raw/lo-290/sales-tco-calculator
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-territory-planner
+  duong_dan: raw/lo-290/sales-territory-planner
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-thank-you-email
+  duong_dan: raw/lo-290/sales-thank-you-email
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 2
+    vi_du:
+    - /Users/nguyenkiem
+    - /users/me
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 1
+    vi_du:
+    - requests.post
+  dinh_dang: []
+- ten: sales-trade-promotion-plan
+  duong_dan: raw/lo-290/sales-trade-promotion-plan
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: sales-upsell-script
+  duong_dan: raw/lo-290/sales-upsell-script
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  - muc: thong-tin
+    ma: goi-api
+    so_lan: 2
+    vi_du:
+    - requests.get
+    - requests.post
+  dinh_dang: []
+- ten: sales-win-loss-analyzer
+  duong_dan: raw/lo-290/sales-win-loss-analyzer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: duong-dan-ca-nhan
+    so_lan: 1
+    vi_du:
+    - /Users/nguyenkiem
+  dinh_dang: []
+- ten: dao-tao-ky-nang-so
+  duong_dan: raw/lo-update/it-skills/dao-tao-ky-nang-so
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - it-support@company.com
+  dinh_dang: []
+- ten: Framework A/B Testing Toàn Diện
+  duong_dan: raw/lo-update/marketing/ecom-ab-testing
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - sales@shop.com
+  dinh_dang:
+  - name 'Framework A/B Testing Toàn Diện' khác tên thư mục 'ecom-ab-testing'
+- ten: Affiliate Marketing & Quản Lý KOL/KOC TMĐT VN
+  duong_dan: raw/lo-update/marketing/ecom-affiliate-kol
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Affiliate Marketing & Quản Lý KOL/KOC TMĐT VN' khác tên thư mục 'ecom-affiliate-kol'
+- ten: ecom-brand-builder
+  duong_dan: raw/lo-update/marketing/ecom-brand-builder
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 2
+    vi_du:
+    - hello@brand.vn
+    - support@brand.vn
+  dinh_dang: []
+- ten: Chatbot & Bán Hàng Tự Động TMĐT
+  duong_dan: raw/lo-update/marketing/ecom-chatbot-sales
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: so-dien-thoai
+    so_lan: 8
+    vi_du:
+    - 0812345678
+    - 0912345678
+    - 0987654321
+  - muc: canh-bao
+    ma: email
+    so_lan: 2
+    vi_du:
+    - support@pang.vn
+  dinh_dang:
+  - name 'Chatbot & Bán Hàng Tự Động TMĐT' khác tên thư mục 'ecom-chatbot-sales'
+- ten: Tối Ưu Checkout & Giảm Bỏ Giỏ
+  duong_dan: raw/lo-update/marketing/ecom-checkout-optimizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: so-dien-thoai
+    so_lan: 1
+    vi_du:
+    - 0912345678
+  dinh_dang:
+  - name 'Tối Ưu Checkout & Giảm Bỏ Giỏ' khác tên thư mục 'ecom-checkout-optimizer'
+- ten: Xây dựng Cộng đồng Khách hàng TMĐT Việt Nam
+  duong_dan: raw/lo-update/marketing/ecom-community-building
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Xây dựng Cộng đồng Khách hàng TMĐT Việt Nam' khác tên thư mục 'ecom-community-building'
+- ten: Thư Viện 50+ Công Thức Copywriting
+  duong_dan: raw/lo-update/marketing/ecom-copywriting-formulas
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Thư Viện 50+ Công Thức Copywriting' khác tên thư mục 'ecom-copywriting-formulas'
+- ten: CRM, Chăm sóc khách hàng & Chương trình Loyalty TMĐT
+  duong_dan: raw/lo-update/marketing/ecom-crm-loyalty
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 4
+    vi_du:
+    - a@gmail.com
+    - support@yoursite.com
+  dinh_dang:
+  - name 'CRM, Chăm sóc khách hàng & Chương trình Loyalty TMĐT' khác tên thư mục 'ecom-crm-loyalty'
+- ten: Thư Viện 150+ CTA Chiến Lược
+  duong_dan: raw/lo-update/marketing/ecom-cta-library
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: so-dien-thoai
+    so_lan: 1
+    vi_du:
+    - 0912345678
+  dinh_dang:
+  - name 'Thư Viện 150+ CTA Chiến Lược' khác tên thư mục 'ecom-cta-library'
+- ten: Phân Tích Dữ Liệu & Dashboard TMĐT
+  duong_dan: raw/lo-update/marketing/ecom-data-analytics
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Phân Tích Dữ Liệu & Dashboard TMĐT' khác tên thư mục 'ecom-data-analytics'
+- ten: Báo cáo Tài chính & Unit Economics cho TMĐT
+  duong_dan: raw/lo-update/marketing/ecom-financial-dashboard
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Báo cáo Tài chính & Unit Economics cho TMĐT' khác tên thư mục 'ecom-financial-dashboard'
+- ten: Chiến Lược Hashtag Chuyên Sâu
+  duong_dan: raw/lo-update/marketing/ecom-hashtag-strategy
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Chiến Lược Hashtag Chuyên Sâu' khác tên thư mục 'ecom-hashtag-strategy'
+- ten: Swipe File 200+ Headline & Hook
+  duong_dan: raw/lo-update/marketing/ecom-headline-hook-swipe
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Swipe File 200+ Headline & Hook' khác tên thư mục 'ecom-headline-hook-swipe'
+- ten: Chiến lược Instagram Marketing TMĐT Việt Nam
+  duong_dan: raw/lo-update/marketing/ecom-instagram-strategy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - contact@brand.com
+  dinh_dang:
+  - name 'Chiến lược Instagram Marketing TMĐT Việt Nam' khác tên thư mục 'ecom-instagram-strategy'
+- ten: Marketing Automation Đa Kênh
+  duong_dan: raw/lo-update/marketing/ecom-marketing-automation
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Marketing Automation Đa Kênh' khác tên thư mục 'ecom-marketing-automation'
+- ten: Tối ưu Gian Hàng TMĐT - Shopee, Lazada, TikTok Shop
+  duong_dan: raw/lo-update/marketing/ecom-marketplace-optimizer
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 1
+    vi_du:
+    - support@xyzbeauty.com
+  dinh_dang:
+  - name 'Tối ưu Gian Hàng TMĐT - Shopee, Lazada, TikTok Shop' khác tên thư mục 'ecom-marketplace-optimizer'
+- ten: Chiến Lược Giá cho TMĐT Việt Nam
+  duong_dan: raw/lo-update/marketing/ecom-pricing-strategy
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Chiến Lược Giá cho TMĐT Việt Nam' khác tên thư mục 'ecom-pricing-strategy'
+- ten: Chiến Lược Retargeting Đa Kênh
+  duong_dan: raw/lo-update/marketing/ecom-retargeting-strategy
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Chiến Lược Retargeting Đa Kênh' khác tên thư mục 'ecom-retargeting-strategy'
+- ten: ecom-seasonal-holiday
+  duong_dan: raw/lo-update/marketing/ecom-seasonal-holiday
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - 'frontmatter lỗi YAML: mapping values are not allowed here'
+  - thiếu description
+- ten: Chiến lược SMS Marketing TMĐT Việt Nam
+  duong_dan: raw/lo-update/marketing/ecom-sms-marketing
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Chiến lược SMS Marketing TMĐT Việt Nam' khác tên thư mục 'ecom-sms-marketing'
+- ten: Bán Hàng Qua Chat & Inbox Chuyên Sâu
+  duong_dan: raw/lo-update/marketing/ecom-social-selling
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Bán Hàng Qua Chat & Inbox Chuyên Sâu' khác tên thư mục 'ecom-social-selling'
+- ten: Chiến lược YouTube & YouTube Shorts TMĐT Việt Nam
+  duong_dan: raw/lo-update/marketing/ecom-youtube-strategy
+  ket_luan: canh-bao
+  dau_hieu:
+  - muc: canh-bao
+    ma: email
+    so_lan: 2
+    vi_du:
+    - contact@brand.com
+  dinh_dang:
+  - name 'Chiến lược YouTube & YouTube Shorts TMĐT Việt Nam' khác tên thư mục 'ecom-youtube-strategy'
+- ten: Zalo Marketing Toàn Diện cho TMĐT
+  duong_dan: raw/lo-update/marketing/ecom-zalo-marketing
+  ket_luan: sach
+  dau_hieu: []
+  dinh_dang:
+  - name 'Zalo Marketing Toàn Diện cho TMĐT' khác tên thư mục 'ecom-zalo-marketing'
