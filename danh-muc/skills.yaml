@@ -1,0 +1,1699 @@
+# Sổ đăng ký skill của hệ MQ — xem danh-muc/README.md để biết ý nghĩa từng trường
+cap_nhat: 2026-10-26
+tong_skill: 138
+theo_repo:
+  admatrixmdp/marketing-business-skill: 69
+  admatrixmdp/sale-suite-os: 22
+  admatrixmdp/meta-suite-os: 1
+  admatrixmdp/google-marketing-os: 6
+  admatrixmdp/tiktok-suite-os: 1
+  admatrixmdp/Company-finance-accountant-os: 3
+  admatrixmdp/investment-MA-os: 2
+  admatrixorg/Company-suite-os: 16
+  admatrixmdp/compliance-vn: 1
+  admatrixmdp/product-dev-os: 9
+  admatrixmdp/webmaster-suite-os: 6
+  admatrixmdp/shopee-suite-os: 2
+co_eval: 137
+chua_eval: 1
+skills:
+
+  # ---- admatrixmdp/marketing-business-skill (69)
+  - ten: "00-ke-hoach-mkt"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/00-ke-hoach-mkt
+    mang: marketing
+    mo_ta_ngan: "Kế hoạch marketing tổng thể: chiến lược, nội dung, triển khai, hiệu suất, timeline; gọi skill con"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 00-marketing-plan-global."
+  - ten: "01-lich-noi-dung"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/01-lich-noi-dung
+    mang: marketing
+    mo_ta_ngan: "Lịch nội dung tháng đa kênh: tỷ lệ phễu, content pillar, ma trận tái sử dụng, chấm tiêu chí"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 01-content-calendar-global."
+  - ten: "02-brief-chien-dich"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/02-brief-chien-dich
+    mang: marketing
+    mo_ta_ngan: "Brief chiến dịch 9 phần: context đến rủi ro, creative direction, RACI, ngân sách theo phase"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 02-campaign-brief-global."
+  - ten: "03-danh-gia-hieu-suat"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/03-danh-gia-hieu-suat
+    mang: quang-cao
+    mo_ta_ngan: "Đánh giá hiệu suất ads và organic: chẩn đoán nguyên nhân gốc, action plan 48h, checklist tuần"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 03-performance-eval-global."
+  - ten: "04-script-video"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/04-script-video
+    mang: marketing
+    mo_ta_ngan: "Script video ngắn TikTok/Reels/Shorts: 2 bản A/B, hook, CTA, hướng dẫn quay"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 04-script-video-global."
+  - ten: "05-copy-quang-cao"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/05-copy-quang-cao
+    mang: quang-cao
+    mo_ta_ngan: "6 biến thể copy quảng cáo theo TOFU/MOFU/BOFU, tuân thủ chính sách, CTA theo nền tảng"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 05-ad-copy-global."
+  - ten: "06-brief-ugc-egc"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/06-brief-ugc-egc
+    mang: marketing
+    mo_ta_ngan: "Brief UGC/EGC/KOC: hướng dẫn quay, do/don't, quyền sử dụng, quản lý batch"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 06-ugc-egc-brief-global."
+  - ten: "07-bao-cao-marketing"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/07-bao-cao-marketing
+    mang: marketing
+    mo_ta_ngan: "Báo cáo marketing đọc 5 phút: nhận định trước, số liệu minh hoạ, đề xuất có hạn và người phụ trách"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 07-marketing-report-global."
+  - ten: "08-nghien-cuu-doi-thu"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/08-nghien-cuu-doi-thu
+    mang: marketing
+    mo_ta_ngan: "Phân tích đối thủ 3 tầng: định vị, SWOT, benchmark nội dung, khoảng trống thị trường"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 08-competitor-research-global."
+  - ten: "09-insight-khach-hang"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/09-insight-khach-hang
+    mang: marketing
+    mo_ta_ngan: "Chân dung khách hàng sâu: Consumer vs Shopper, JTBD, hành trình mua, kiểm chứng insight"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 09-customer-insight-global."
+  - ten: "10-tinh-kpi-nguoc"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/10-tinh-kpi-nguoc
+    mang: marketing
+    mo_ta_ngan: "Tính KPI ngược từ doanh thu về ngân sách và xuôi lại: 3 kịch bản, độ nhạy, hoà vốn, phân bổ"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 10-reverse-kpi-global."
+  - ten: "11-thiet-lap-kenh"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/11-thiet-lap-kenh
+    mang: marketing
+    mo_ta_ngan: "Thiết lập kênh marketing A-Z: TikTok, Zalo OA, Facebook Page, email, TikTok Shop, Google Business"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 11-channel-setup-global."
+  - ten: "12-brief-landing-page"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/12-brief-landing-page
+    mang: marketing
+    mo_ta_ngan: "Brief landing page chuyển đổi: 7 section, 1 trang 1 mục tiêu 1 CTA, mobile-first"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 12-landing-page-brief-global."
+  - ten: "13-phan-tich-du-lieu"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/13-phan-tich-du-lieu
+    mang: marketing
+    mo_ta_ngan: "Đọc data marketing thô thành insight hành động theo kênh, chiến dịch, creative, đối tượng, thời gian"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 13-data-analysis-global."
+  - ten: "14-email-marketing"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/14-email-marketing
+    mang: marketing
+    mo_ta_ngan: "Email marketing: welcome, nurture, khuyến mãi, re-engage, tối ưu cho thị trường Việt Nam"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 14-email-marketing-global."
+  - ten: "15-social-listening"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/15-social-listening
+    mang: marketing
+    mo_ta_ngan: "Giám sát thương hiệu, đối thủ, xu hướng trên mạng xã hội; phát hiện sớm khủng hoảng"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 15-social-listening-global."
+  - ten: "16-marketing-psychology"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/16-marketing-psychology
+    mang: marketing
+    mo_ta_ngan: "Áp dụng tâm lý học vào marketing: cảm xúc, khẩn cấp, niềm tin, thuyết phục mua"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 16-marketing-psychology-global."
+  - ten: "18-referral-program"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/18-referral-program
+    mang: marketing
+    mo_ta_ngan: "Thiết kế chương trình giới thiệu, affiliate, truyền miệng"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 18-referral-program-global."
+  - ten: "19-ab-test-setup"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/19-ab-test-setup
+    mang: quang-cao
+    mo_ta_ngan: "Thiết lập A/B test cho ads, landing page, email, sản phẩm"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 19-ab-test-setup-global."
+  - ten: "20-brief-client-intake"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/20-brief-client-intake
+    mang: marketing
+    mo_ta_ngan: "Form thu thập thông tin đầu vào của khách cho agency để lập kế hoạch marketing"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 20-client-intake-brief-global."
+  - ten: "21-audit-ads-performance"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/21-audit-ads-performance
+    mang: quang-cao
+    mo_ta_ngan: "Audit tài khoản quảng cáo: Health Score 0-100, quick win, vi phạm quality gate, action plan"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 21-ads-audit-global."
+  - ten: "22-personal-brand-context"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/22-personal-brand-context
+    mang: marketing
+    mo_ta_ngan: "Tài liệu gốc personal brand: định vị, niche, story arc, content pillar, khán giả"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 22-personal-brand-context-global."
+  - ten: "23-personal-brand-strategy"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/23-personal-brand-strategy
+    mang: marketing
+    mo_ta_ngan: "Chiến lược personal brand 12 tháng: niche, định vị, story arc 3 chương, 4 cột nội dung"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 23-personal-brand-strategy-global."
+  - ten: "24-ai-avatar-production"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/24-ai-avatar-production
+    mang: marketing
+    mo_ta_ngan: "Pipeline sản xuất video AI avatar: 3 tầng công cụ, 4 workflow, batch production"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 24-ai-avatar-production-global."
+  - ten: "25-voice-clone-podcast"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/25-voice-clone-podcast
+    mang: marketing
+    mo_ta_ngan: "Audio AI cho personal brand: voice clone, podcast, audiobook, voiceover"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 25-voice-clone-podcast-global."
+  - ten: "26-thought-leadership-content"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/26-thought-leadership-content
+    mang: marketing
+    mo_ta_ngan: "Nội dung dài cho personal brand theo 3 cấu trúc (founder, coach, creator); khác ad copy"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 26-thought-leadership-content-global."
+  - ten: "27-personal-brand-monetize"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/27-personal-brand-monetize
+    mang: marketing
+    mo_ta_ngan: "Funnel kiếm tiền từ personal brand: 3 phiên bản funnel, offer ladder Free đến High"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 27-personal-brand-monetize-global."
+  - ten: "28-community-building"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/28-community-building
+    mang: marketing
+    mo_ta_ngan: "Xây cộng đồng quanh personal brand (Zalo, Telegram, FB Group, Skool, Discord), blueprint 3 lớp"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 28-community-building-global."
+  - ten: "29-xuat-khau-b2b"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/29-xuat-khau-b2b
+    mang: marketing
+    mo_ta_ngan: "Marketing xuất khẩu B2B: hồ sơ nhà xuất khẩu, kế hoạch thị trường nước ngoài, pitch deck"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "30-thiet-ke-master"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/30-thiet-ke-master
+    mang: marketing
+    mo_ta_ngan: "Skill thiết kế tổng: 8 loại thiết kế từ personal brand, logo đến visual chiến dịch, infographic"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 30-design-master-global."
+  - ten: "31-linkedin-growth"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/31-linkedin-growth
+    mang: marketing
+    mo_ta_ngan: "Lộ trình tăng LinkedIn cá nhân 0 đến 10.000 follower: audit hồ sơ, comment 4 lớp, 90 ngày"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: 31-linkedin-growth-global."
+  - ten: "32-nen-tang-thuong-hieu"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/32-nen-tang-thuong-hieu
+    mang: marketing
+    mo_ta_ngan: "Nền tảng thương hiệu: chẩn đoán vòng đời bằng 5 chỉ số tài chính, chọn công cụ từ 25 mô hình"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "dinh-gia-san-pham"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/dinh-gia-san-pham
+    mang: marketing
+    mo_ta_ngan: "Định giá sản phẩm/dịch vụ 6 bước: cây chọn chiến lược giá, hoà vốn, Van Westendorp"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: ["17-pricing-strategy-global"]
+    ghi_chu: "Dùng chung tri thức pricing-core với 17-pricing-strategy-global."
+  - ten: "product-marketing-context"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/product-marketing-context
+    mang: marketing
+    mo_ta_ngan: "Tài liệu gốc về sản phẩm, khách hàng, định vị; skill nền cho cụm VN"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản song song global: product-marketing-context-global."
+  - ten: "viet-tu-nhien"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/vn/skills/viet-tu-nhien
+    mang: khac
+    mo_ta_ngan: "Viết lại văn tiếng Việt do AI sinh cho tự nhiên, theo 46 mẫu (12 mẫu riêng tiếng Việt)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: ["humanizer"]
+    ghi_chu: "Cùng khái niệm với humanizer (bản tiếng Anh), khác bộ mẫu."
+  - ten: "00-marketing-plan-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/00-marketing-plan-global
+    mang: marketing
+    mo_ta_ngan: "Kế hoạch marketing 7 phần cho thị trường quốc tế: chiến lược, đối tượng, định vị, kênh, KPI, ngân sách"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "01-content-calendar-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/01-content-calendar-global
+    mang: marketing
+    mo_ta_ngan: "Lịch nội dung tháng đa kênh cho thị trường quốc tế: tỷ lệ phễu, pillar, tái sử dụng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "02-campaign-brief-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/02-campaign-brief-global
+    mang: marketing
+    mo_ta_ngan: "Brief chiến dịch 9 phần cho thị trường quốc tế"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "03-performance-eval-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/03-performance-eval-global
+    mang: quang-cao
+    mo_ta_ngan: "Chẩn đoán hiệu suất marketing quốc tế: nguyên nhân gốc, 5-Whys, action plan 48h, 4 biến thể vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "04-script-video-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/04-script-video-global
+    mang: marketing
+    mo_ta_ngan: "Script video ngắn cho thị trường quốc tế: 2 bản A/B, 6 công thức hook, hướng dẫn quay"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "05-ad-copy-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/05-ad-copy-global
+    mang: quang-cao
+    mo_ta_ngan: "6 biến thể ad copy TOFU/MOFU/BOFU cho Meta, Google, TikTok; có nhánh dropshipping"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "06-ugc-egc-brief-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/06-ugc-egc-brief-global
+    mang: marketing
+    mo_ta_ngan: "Brief UGC/EGC/KOC cho thị trường quốc tế: hướng dẫn quay, quyền sử dụng, batch"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "07-marketing-report-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/07-marketing-report-global
+    mang: marketing
+    mo_ta_ngan: "Báo cáo marketing đọc 5 phút cho thị trường quốc tế: insight trước, đề xuất có hạn"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "08-competitor-research-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/08-competitor-research-global
+    mang: marketing
+    mo_ta_ngan: "Phân tích đối thủ 3 tầng cho thị trường quốc tế: định vị, SWOT, benchmark, khoảng trống"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "09-customer-insight-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/09-customer-insight-global
+    mang: marketing
+    mo_ta_ngan: "Chân dung khách hàng sâu: Consumer vs Shopper, JTBD, hành trình mua (bản quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "10-reverse-kpi-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/10-reverse-kpi-global
+    mang: marketing
+    mo_ta_ngan: "Tính KPI ngược từ mục tiêu doanh thu ra ngân sách, tiền tệ theo vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "11-channel-setup-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/11-channel-setup-global
+    mang: marketing
+    mo_ta_ngan: "Chọn và thiết lập kênh marketing quốc tế, checklist từng nền tảng, 4 biến thể vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "12-landing-page-brief-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/12-landing-page-brief-global
+    mang: marketing
+    mo_ta_ngan: "Brief landing page chuyển đổi 7 section, 1 trang 1 CTA; có mẫu single-product (quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "13-data-analysis-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/13-data-analysis-global
+    mang: marketing
+    mo_ta_ngan: "Biến data marketing thô thành insight: mô tả, chẩn đoán, dự báo, đề xuất (quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "14-email-marketing-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/14-email-marketing-global
+    mang: marketing
+    mo_ta_ngan: "Email automation quốc tế: welcome, nurture, re-engage, giao dịch; pháp lý theo vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "15-social-listening-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/15-social-listening-global
+    mang: marketing
+    mo_ta_ngan: "Giám sát thương hiệu, đối thủ, xu hướng trên mạng xã hội (bản quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "16-marketing-psychology-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/16-marketing-psychology-global
+    mang: marketing
+    mo_ta_ngan: "7 nguyên tắc Cialdini áp dụng cho marketing quốc tế"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "17-pricing-strategy-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/17-pricing-strategy-global
+    mang: marketing
+    mo_ta_ngan: "Chiến lược giá quốc tế: value-based, anchor, charm, decoy; tâm lý tiền tệ theo vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: ["dinh-gia-san-pham"]
+    ghi_chu: "Dùng chung pricing-core với dinh-gia-san-pham."
+  - ten: "18-referral-program-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/18-referral-program-global
+    mang: marketing
+    mo_ta_ngan: "Thiết kế chương trình giới thiệu quốc tế: 1 hay 2 chiều, ưu đãi, chống gian lận, attribution"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "19-ab-test-setup-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/19-ab-test-setup-global
+    mang: quang-cao
+    mo_ta_ngan: "Thiết kế A/B test hợp lệ: giả thuyết, cỡ mẫu, ý nghĩa thống kê, multi-arm (quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "20-client-intake-brief-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/20-client-intake-brief-global
+    mang: marketing
+    mo_ta_ngan: "Form intake 11 phần cho agency quốc tế: doanh nghiệp, đối tượng, marketing hiện tại"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "21-ads-audit-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/21-ads-audit-global
+    mang: quang-cao
+    mo_ta_ngan: "Audit ads Meta/Google/TikTok: Health Score 0-100, 84 điểm kiểm trên 6 chiều"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "22-personal-brand-context-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/22-personal-brand-context-global
+    mang: marketing
+    mo_ta_ngan: "Skill nền cụm personal brand quốc tế: tạo file context theo vùng"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "23-personal-brand-strategy-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/23-personal-brand-strategy-global
+    mang: marketing
+    mo_ta_ngan: "Chiến lược personal brand 12 tháng cho thị trường quốc tế: Ikigai, định vị, story arc"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "24-ai-avatar-production-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/24-ai-avatar-production-global
+    mang: marketing
+    mo_ta_ngan: "Pipeline AI avatar cho thị trường quốc tế: 3 tầng công cụ, 4 workflow, voice"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "25-voice-clone-podcast-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/25-voice-clone-podcast-global
+    mang: marketing
+    mo_ta_ngan: "Audio AI cho personal brand quốc tế: voice clone, podcast, audiobook, voiceover"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "26-thought-leadership-content-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/26-thought-leadership-content-global
+    mang: marketing
+    mo_ta_ngan: "Nội dung dài cho personal brand quốc tế theo 3 cấu trúc; khác ad copy"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "27-personal-brand-monetize-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/27-personal-brand-monetize-global
+    mang: marketing
+    mo_ta_ngan: "Kiếm tiền từ personal brand quốc tế: 3 funnel, offer ladder, định giá"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "28-community-building-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/28-community-building-global
+    mang: marketing
+    mo_ta_ngan: "Xây cộng đồng quốc tế (Skool, Discord, Circle, Slack), blueprint 3 lớp"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "29-dropshipping-mastery-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/29-dropshipping-mastery-global
+    mang: thuong-mai-dien-tu
+    mo_ta_ngan: "Pipeline dropshipping US/EU: nghiên cứu sản phẩm thắng, nguồn hàng, cửa hàng, quảng cáo"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "30-design-master-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/30-design-master-global
+    mang: marketing
+    mo_ta_ngan: "Skill thiết kế tổng 8 loại (personal brand, logo, visual chiến dịch, infographic, web mockup)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "31-linkedin-growth-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/31-linkedin-growth-global
+    mang: marketing
+    mo_ta_ngan: "Lộ trình tăng LinkedIn cá nhân 0 đến 10.000 follower, 90 ngày (bản quốc tế)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "humanizer"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/humanizer
+    mang: khac
+    mo_ta_ngan: "Viết lại văn tiếng Anh nghe như AI cho tự nhiên, theo 35 mẫu Signs of AI writing"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: ["viet-tu-nhien"]
+    ghi_chu: ""
+  - ten: "product-marketing-context-global"
+    repo: admatrixmdp/marketing-business-skill
+    duong_dan: plugins/global/skills/product-marketing-context-global
+    mang: marketing
+    mo_ta_ngan: "Skill nền cụm global: tạo file context sản phẩm theo vùng (tiền tệ, pháp lý, kênh)"
+    ngon_ngu: en
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+
+  # ---- admatrixmdp/sale-suite-os (22)
+  - ten: "00-context-ban-hang"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/00-context-ban-hang
+    mang: sale
+    mo_ta_ngan: "Thiết lập context bán hàng B2B một lần cho project; sinh .agents/sales-context.md cho mọi skill"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill tài khoản cũ b2b-foundation (ngoài các repo đã quét) cùng vai trò nền bán hàng B2B — xem mục Nghi trùng."
+  - ten: "01-phan-khuc-chan-dung"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/01-phan-khuc-chan-dung
+    mang: sale
+    mo_ta_ngan: "Phân khúc khách B2B (Firmographic, BCG, 7 mức gắn kết) và vẽ chân dung người mua"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "02-tim-kiem-lead"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/02-tim-kiem-lead
+    mang: sale
+    mo_ta_ngan: "Kế hoạch tìm và thu hút lead B2B: chọn kênh, research lead 15-20 phút, nuôi lead lạnh"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "03-cham-diem-lead"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/03-cham-diem-lead
+    mang: sale
+    mo_ta_ngan: "Chấm điểm lead B2B Hot/Warm/Cool/Ice theo 4 tiêu chí, thang 10, dựng pipeline theo dõi"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "04-tiep-can-da-kenh"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/04-tiep-can-da-kenh
+    mang: sale
+    mo_ta_ngan: "Kế hoạch tiếp cận một khách B2B: warm-up 5 ngày đa kênh, hook 10 giây, follow-up 5 mốc"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "05-elevator-pitch"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/05-elevator-pitch
+    mang: sale
+    mo_ta_ngan: "Viết elevator pitch B2B 30 giây: Lợi ích, Cho ai, Bao lâu, Bằng cách nào, kết bằng lời mời"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "06-goi-dien-b2b"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/06-goi-dien-b2b
+    mang: sale
+    mo_ta_ngan: "Kịch bản gọi điện B2B để hẹn gặp hoặc đánh giá lead; Call Day 20 cuộc, vượt gatekeeper"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "07-xay-dung-niem-tin"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/07-xay-dung-niem-tin
+    mang: sale
+    mo_ta_ngan: "Kế hoạch tạo niềm tin với khách B2B: 6 nguyên tắc Cialdini, chuẩn 3T, 7 Trust Signals"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "08-phan-tich-tinh-cach"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/08-phan-tich-tinh-cach
+    mang: sale
+    mo_ta_ngan: "Nhận diện tính cách khách theo Lửa-Khí-Nước-Đất và chỉnh cách kết nối, chốt, chăm sóc"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "09-chot-sale"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/09-chot-sale
+    mang: sale
+    mo_ta_ngan: "Chuẩn bị chốt deal B2B: quy trình 6 bước, tín hiệu mua, 13 kỹ thuật chốt, kết bằng cam kết"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "10-xu-ly-tu-choi"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/10-xu-ly-tu-choi
+    mang: sale
+    mo_ta_ngan: "Xử lý từ chối trong deal B2B: chẩn đoán loại phản bác, tìm nỗi sợ rủi ro, chọn kỹ thuật"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "11-quan-ly-khach-hang"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/11-quan-ly-khach-hang
+    mang: sale
+    mo_ta_ngan: "Quản lý và chăm sóc khách B2B sau bán theo ma trận BCG, biến khách thành người giới thiệu"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "12-xu-ly-su-co"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/12-xu-ly-su-co
+    mang: sale
+    mo_ta_ngan: "Xử lý sự cố, khiếu nại khách B2B theo 4 bước, lắng nghe 3 cấp, khủng hoảng niềm tin trên mạng"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "13-do-luong-trai-nghiem"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/13-do-luong-trai-nghiem
+    mang: sale
+    mo_ta_ngan: "Đo trải nghiệm khách B2B bằng NPS, Churn, CLV: công thức, khảo sát, dashboard"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "14-huan-luyen-doi-sale"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/14-huan-luyen-doi-sale
+    mang: sale
+    mo_ta_ngan: "Chương trình huấn luyện đội sale B2B: 6 bài tập, onboarding 6 tuần, rút kinh nghiệm deal thua"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "15-dam-phan-ban-hang"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/15-dam-phan-ban-hang
+    mang: sale
+    mo_ta_ngan: "Sales Negotiation Canvas 15 ô cho một deal B2B: BATNA, ZOPA, give-take, D.E.A.L"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "16-kham-pha-nhu-cau"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/16-kham-pha-nhu-cau
+    mang: sale
+    mo_ta_ngan: "Dẫn buổi khai thác nhu cầu B2B theo khung 5T, bộ câu hỏi 5-3-2, recap trong 24 giờ"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "17-de-xuat-giai-phap"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/17-de-xuat-giai-phap
+    mang: sale
+    mo_ta_ngan: "Viết proposal B2B 6 phần: hiện trạng, nỗi đau, tác động, giải pháp, bằng chứng, thiệt hơn"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "18-chuan-hanh-vi-sale"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/18-chuan-hanh-vi-sale
+    mang: sale
+    mo_ta_ngan: "Đánh giá đội sale theo bộ tiêu chuẩn hành vi 10 nhóm có ngưỡng đo cụ thể"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "19-ke-hoach-ban-hang"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/19-ke-hoach-ban-hang
+    mang: sale
+    mo_ta_ngan: "Kế hoạch bán hàng B2B một trang: quy đổi ngược doanh thu ra định mức tuần, tổ hợp kênh, 30-60-90"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "20-xay-phong-kinh-doanh"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/20-xay-phong-kinh-doanh
+    mang: sale
+    mo_ta_ngan: "Xây/tái cấu trúc phòng kinh doanh: định biên, thang lương, RACI, KPI 3P, hoa hồng, tuyển"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "21-doi-sale-co-agent"
+    repo: admatrixmdp/sale-suite-os
+    duong_dan: plugins/sale-suite/skills/21-doi-sale-co-agent
+    mang: sale
+    mo_ta_ngan: "Thiết kế đội sale B2B có AI agent phụ trợ: phân vai, 7 điều cấm, KPI người và agent, lộ trình"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+
+  # ---- admatrixmdp/meta-suite-os (1)
+  - ten: "analyzer"
+    repo: admatrixmdp/meta-suite-os
+    duong_dan: claude/meta-ads/skills/analyzer
+    mang: quang-cao
+    mo_ta_ngan: "Audit và tối ưu Meta Ads (ROAS, CPA, creative mệt, scale ngân sách), thị trường VN; ghi thật chỉ khi xác nhận"
+    ngon_ngu: en
+    nen_tang: [claude-code, chatgpt]
+    co_eval: false
+    so_tinh_huong: 0
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Nguồn sửa: core/skills/analyzer.SKILL.md (thư mục claude/ do tools/sync.js sinh). Trùng TÊN với analyzer của google-marketing-os. Chưa có evals."
+
+  # ---- admatrixmdp/google-marketing-os (6)
+  - ten: "ad-copy"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/ad-copy
+    mang: quang-cao
+    mo_ta_ngan: "Viết quảng cáo RSA cho Google Ads, tuân thủ quy định quảng cáo VN và chính sách Google"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 6
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "analyzer"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/analyzer
+    mang: quang-cao
+    mo_ta_ngan: "Đọc dữ liệu, audit, chẩn đoán tài khoản Google Ads qua MCP; ghi thật chỉ khi xác nhận"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 10
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Trùng TÊN với analyzer của meta-suite-os."
+  - ten: "architect"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/architect
+    mang: quang-cao
+    mo_ta_ngan: "Kiến trúc tổng thể tài khoản Google Ads: bán lẻ vs B2B, brand, chia/gộp chiến dịch"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "measurement"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/measurement
+    mang: quang-cao
+    mo_ta_ngan: "Audit theo dõi chuyển đổi Google Ads: 4 nhãn đo, kênh chốt đơn VN; không cần MCP"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 6
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "negative-keyword"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/negative-keyword
+    mang: quang-cao
+    mo_ta_ngan: "Quản lý từ khoá loại trừ Google Ads từ cấp tài khoản xuống nhóm quảng cáo"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+  - ten: "negative-placement"
+    repo: admatrixmdp/google-marketing-os
+    duong_dan: claude/google-ads/skills/negative-placement
+    mang: quang-cao
+    mo_ta_ngan: "Quản lý vị trí hiển thị loại trừ Google Ads từ cấp tài khoản xuống nhóm quảng cáo"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: ""
+
+  # ---- admatrixmdp/tiktok-suite-os (1)
+  - ten: "tiktok-ads"
+    repo: admatrixmdp/tiktok-suite-os
+    duong_dan: tiktok-ads-analyzer
+    mang: quang-cao
+    mo_ta_ngan: "Trợ lý media buyer TikTok Ads qua MCP: đọc số, chẩn đoán, Smart+/GMV Max, ghi thật chỉ khi xác nhận"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 27
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Thư mục tiktok-ads-analyzer, name trong frontmatter là tiktok-ads. Repo không có .claude-plugin; cài dạng thư mục skill/zip."
+
+  # ---- admatrixmdp/Company-finance-accountant-os (3)
+  - ten: "ho-so-ke-toan"
+    repo: admatrixmdp/Company-finance-accountant-os
+    duong_dan: src/skills/ho-so-ke-toan
+    mang: ke-toan
+    mo_ta_ngan: "Thiết lập hồ sơ kế toán pháp nhân VN: năm tài chính, chế độ TT99/TT200 có căn cứ, chính sách kế toán"
+    ngon_ngu: vi
+    nen_tang: [claude-code, goclaw]
+    co_eval: true
+    so_tinh_huong: 6
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nền ke-toan-suite. plugins/ke-toan-suite là bản dựng từ src/. Có mô tả riêng cho GoClaw trong meta.yaml."
+  - ten: "ho-so-tai-chinh"
+    repo: admatrixmdp/Company-finance-accountant-os
+    duong_dan: src/skills/ho-so-tai-chinh
+    mang: tai-chinh
+    mo_ta_ngan: "Thiết lập hồ sơ tài chính pháp nhân: mô hình kinh doanh, nguồn vốn, kỳ báo cáo quản trị, chỉ số, ngưỡng cảnh báo"
+    ngon_ngu: vi
+    nen_tang: [claude-code, goclaw]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nền tai-chinh-suite; cần ho-so-ke-toan trước."
+  - ten: "kiem-toan-noi-bo"
+    repo: admatrixmdp/Company-finance-accountant-os
+    duong_dan: src/skills/kiem-toan-noi-bo
+    mang: tai-chinh
+    mo_ta_ngan: "Soạn nháp báo cáo kiểm toán nội bộ: phát hiện 9 trường, xếp hạng rủi ro, tóm tắt HĐQT, theo dõi kiến nghị"
+    ngon_ngu: vi
+    nen_tang: [claude-code, goclaw]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Thuộc tai-chinh-suite."
+
+  # ---- admatrixmdp/investment-MA-os (2)
+  - ten: "dt-00-ho-so"
+    repo: admatrixmdp/investment-MA-os
+    duong_dan: src/skills/dt-00-ho-so
+    mang: dau-tu
+    mo_ta_ngan: "Hồ sơ đầu tư và danh mục: tỷ trọng NAV, luận điểm, 3 kịch bản, Kill Criteria, exit, tiền mặt, đòn bẩy"
+    ngon_ngu: vi
+    nen_tang: [claude-code, goclaw]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nền dau-tu-suite; cần ma-00-ho-so trước."
+  - ten: "ma-00-ho-so"
+    repo: admatrixmdp/investment-MA-os
+    duong_dan: src/skills/ma-00-ho-so
+    mang: dau-tu
+    mo_ta_ngan: "Mở hồ sơ thương vụ M&A: loại tài sản, cấu trúc, cơ chế giá, độc quyền, pháp lý sở hữu, điều kiện dừng"
+    ngon_ngu: vi
+    nen_tang: [claude-code, goclaw]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nền ma-suite."
+
+  # ---- admatrixorg/Company-suite-os (16)
+  - ten: "hoach-dinh-chien-luoc"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/hoach-dinh-chien-luoc
+    mang: quan-tri
+    mo_ta_ngan: "Điều phối 6 bước hoạch định chiến lược tầng 1 (có bản rút gọn 5 Forces, BCG)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "chien-luoc-pestel"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/chien-luoc-pestel
+    mang: quan-tri
+    mo_ta_ngan: "PESTEL 3 tầng theo chuỗi giá trị, chấm điểm ròng tác động 0-1"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "chien-luoc-swot-tows"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/chien-luoc-swot-tows
+    mang: quan-tri
+    mo_ta_ngan: "SWOT có trọng số, IFE/EFE/IE, TOWS, ưu tiên chiến lược theo quý"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-business-goal"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-business-goal
+    mang: quan-tri
+    mo_ta_ngan: "Điều phối quy trình Business Goal 9 bước trong 2 buổi; nạp, kiểm dữ liệu thật; gói bàn giao"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 7
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-muc-tieu-chien-luoc"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-muc-tieu-chien-luoc
+    mang: quan-tri
+    mo_ta_ngan: "Hồ sơ định hướng và bảng kỳ vọng có số (bước B1 Business Goal)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 6
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-bsc"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-bsc
+    mang: quan-tri
+    mo_ta_ngan: "Bản đồ chiến lược và thẻ điểm cân bằng: mục tiêu, thước đo, chỉ tiêu, sáng kiến"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 8
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-okr"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-okr
+    mang: quan-tri
+    mo_ta_ngan: "Goal đến KR quý có số, Task và KPI (bước B3)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-phan-ra-muc-tieu"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-phan-ra-muc-tieu
+    mang: quan-tri
+    mo_ta_ngan: "Phân rã mục tiêu năm-quý-tháng, công ty-bộ phận-cá nhân theo Hoshin Kanri (ma trận X, catchball)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 9
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-hanh-dong"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-hanh-dong
+    mang: quan-tri
+    mo_ta_ngan: "Kế hoạch hành động có người, tiền, mốc (bước B4)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-raci"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-raci
+    mang: quan-tri
+    mo_ta_ngan: "Ma trận RACI người theo KR, mỗi KR đúng một A"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-gantt"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-gantt
+    mang: quan-tri
+    mo_ta_ngan: "Gantt 5 nhịp, quý 12 tuần 4 giai đoạn; cầu nối sang tầng thực thi"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-moscow"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-moscow
+    mang: quan-tri
+    mo_ta_ngan: "Ưu tiên MoSCoW kèm thanh đánh đổi"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-ban-do-nhan-su"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-ban-do-nhan-su
+    mang: quan-tri
+    mo_ta_ngan: "Bản đồ các bên liên quan 2 trục, 4 nhóm, kế hoạch truyền thông; file CEO giữ"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-so-rui-ro"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-so-rui-ro
+    mang: quan-tri
+    mo_ta_ngan: "Sổ rủi ro 5x5 tiếng Việt, tự quét 6 nguồn rủi ro"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "ke-hoach-6-dieu-kien-thuc-thi"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/ke-hoach-6-dieu-kien-thuc-thi
+    mang: quan-tri
+    mo_ta_ngan: "Cửa kiểm 6 điều kiện trước khi chuyển kế hoạch sang thực thi"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+  - ten: "cai-tien-dmaic"
+    repo: admatrixorg/Company-suite-os
+    duong_dan: src/skills/cai-tien-dmaic
+    mang: quan-tri
+    mo_ta_ngan: "Dự án cải tiến DMAIC 5 cổng duyệt, tự tính DPMO và mức sigma"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 10
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản đồ skill của repo ghi trạng thái: nhap. Repo chưa có manifest plugin ở gốc."
+
+  # ---- admatrixmdp/compliance-vn (1)
+  - ten: "tuan-thu-doanh-nghiep"
+    repo: admatrixmdp/compliance-vn
+    duong_dan: skills/tuan-thu-doanh-nghiep
+    mang: phap-ly
+    mo_ta_ngan: "Rà soát tuân thủ doanh nghiệp VN theo checklist 84 mục, 9 nhóm; ưu tiên rủi ro, kế hoạch 30-60-90"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 11
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Kèm 6 lệnh (ra-soat, kiem-tra-nhanh, lich, thay-doi-phap-luat, nhac, giao-viec) có thêm 30 tình huống eval riêng."
+
+  # ---- admatrixmdp/product-dev-os (9)
+  - ten: "product-dev-router"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/product-dev-router
+    mang: san-pham
+    mo_ta_ngan: "Cửa vào vòng đời phát triển sản phẩm: định tuyến khâu, tường lửa khâu 0, điều phối agent 20 bước"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 7
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "product-user-behavior"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/product-user-behavior
+    mang: san-pham
+    mo_ta_ngan: "Đặc tả hành vi phần mềm từ góc người dùng; sinh test case và bảng phân loại lỗi"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "ui-ux-pro-max"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/ui-ux-pro-max
+    mang: san-pham
+    mo_ta_ngan: "Design system: màu, chữ, khoảng cách, thành phần, khả năng tiếp cận theo ngăn xếp công nghệ"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "ui-icon-motion"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/ui-icon-motion
+    mang: san-pham
+    mo_ta_ngan: "Bộ định tuyến con khâu chuyển động, chỉ xuống ui-icon-dong và ui-chuyen-dong-an-toan"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "ui-icon-dong"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/ui-icon-dong
+    mang: san-pham
+    mo_ta_ngan: "Hiệu ứng cho icon SVG: họ cử chỉ, thời lượng, bốn cổng kiểm định"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "ui-chuyen-dong-an-toan"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/ui-chuyen-dong-an-toan
+    mang: san-pham
+    mo_ta_ngan: "Chuyển động an toàn toàn màn hình, xử lý prefers-reduced-motion, tránh mất nội dung"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "linear-task"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/linear-task
+    mang: san-pham
+    mo_ta_ngan: "Chẻ việc thành issue Linear chuẩn PDCA có tiêu chí nghiệm thu"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "linear-mentor"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/linear-mentor
+    mang: san-pham
+    mo_ta_ngan: "Vận hành Linear: workflow trạng thái, triage, initiative, Insights, phân quyền"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+  - ten: "orca-mentor"
+    repo: admatrixmdp/product-dev-os
+    duong_dan: plugins/product-dev-management/skills/orca-mentor
+    mang: san-pham
+    mo_ta_ngan: "Điều phối nhiều AI coding agent chạy song song trên git worktree riêng"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Bản sao cùng tên đang có trong skill tài khoản Claude (anthropic-skills) — xem mục Nghi trùng."
+
+  # ---- admatrixmdp/webmaster-suite-os (6)
+  - ten: "website-context"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/website-context
+    mang: web
+    mo_ta_ngan: "Skill nền website bán lẻ: đọc một lần mỗi dự án"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+  - ten: "01-audit-cro-ban-le"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/01-audit-cro-ban-le
+    mang: web
+    mo_ta_ngan: "Audit CRO bán lẻ 304 điểm: báo cáo, quick win, lộ trình 30-60-90, đề xuất A/B"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+  - ten: "02-brief-xay-web-ban-le"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/02-brief-xay-web-ban-le
+    mang: web
+    mo_ta_ngan: "Biến checklist thành brief xây web bán lẻ 3 tầng cho dev/agency"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 3
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+  - ten: "03-audit-seo-ky-thuat"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/03-audit-seo-ky-thuat
+    mang: web
+    mo_ta_ngan: "Audit SEO kỹ thuật 93 điểm: lỗi chặn đường, cách khắc phục, việc bàn giao"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+  - ten: "04-ke-hoach-seo-geo"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/04-ke-hoach-seo-geo
+    mang: web
+    mo_ta_ngan: "Kế hoạch SEO và GEO 3-12 tháng cho tìm kiếm truyền thống và tìm kiếm AI"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+  - ten: "05-content-chuan-semantic"
+    repo: admatrixmdp/webmaster-suite-os
+    duong_dan: plugins/retail/skills/05-content-chuan-semantic
+    mang: web
+    mo_ta_ngan: "Dựng dàn ý, viết và soát bài theo chuẩn semantic (106 điểm nội dung)"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Plugin webmaster-retail."
+
+  # ---- admatrixmdp/shopee-suite-os (2)
+  - ten: "shopee-ads-analyzer"
+    repo: admatrixmdp/shopee-suite-os
+    duong_dan: shopee-ads-analyzer
+    mang: quang-cao
+    mo_ta_ngan: "Phân tích quảng cáo Shopee 3 loại hình, ROAS Target, ngân sách, vòng đời SKU; chẩn đoán bằng đẳng thức ROAS"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 5
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nằm trên nhánh claude/shopee-suite-os-architecture-4wnuj2. Repo ghi trạng thái scaffold, tri thức phần lớn chưa kiểm chứng."
+  - ten: "shopee-shop-analyzer"
+    repo: admatrixmdp/shopee-suite-os
+    duong_dan: shopee-shop-analyzer
+    mang: thuong-mai-dien-tu
+    mo_ta_ngan: "Vận hành shop Shopee: sản phẩm, đơn, tồn kho, voucher, flash sale, phí sàn, điểm shop; checklist theo nhịp"
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: dang-dung
+    trung_voi: []
+    ghi_chu: "Skill nằm trên nhánh claude/shopee-suite-os-architecture-4wnuj2. Repo ghi trạng thái scaffold."
