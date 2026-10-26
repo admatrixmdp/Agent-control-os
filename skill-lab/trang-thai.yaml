@@ -1,0 +1,47 @@
+# Sổ trạng thái skill bên ngoài — nguồn duy nhất.
+# Skill không có trong sổ = chua-xu-ly. Luật vòng đời: luu-tru/README.md
+# ten = tên thư mục skill trong raw/.
+
+skills:
+  - ten: sales-discovery-call-template
+    lo: lo-290
+    trang_thai: luu-tru
+    ket_luan: trung
+    lo_thu: 2026-10-sale-lo1
+    phieu: luu-tru/sales-discovery-call-template.yaml
+
+  - ten: sales-lead-scoring-engine
+    lo: lo-290
+    trang_thai: cho-gop
+    nhan_truoc_thu: bo-sung (vua)
+    nhan_sau_thu: bo-sung (thap)
+    lo_thu: 2026-10-sale-lo1
+    gop_vao: 03-cham-diem-lead
+    chi_lay: "Danh sách loại cứng trước khi chấm (đối thủ, sai quy mô, sinh viên/thực tập). Không lấy ma trận Fit × Intent cộng điểm."
+
+  - ten: sales-objection-handling
+    lo: lo-290
+    trang_thai: cho-gop
+    nhan_truoc_thu: bo-sung (vua)
+    nhan_sau_thu: bo-sung (vua)
+    lo_thu: 2026-10-sale-lo1
+    gop_vao: 10-xu-ly-tu-choi
+    chi_lay: "Thư viện 20 phản đối chia 5 nhóm, viết lại câu mẫu tiếng Việt; bỏ phần Gong/Salesforce."
+
+  - ten: sales-late-stage-rescue
+    lo: lo-290
+    trang_thai: cho-gop
+    nhan_truoc_thu: bo-sung (cao)
+    nhan_sau_thu: bo-sung (vua)
+    lo_thu: 2026-10-sale-lo1
+    gop_vao: 09-chot-sale
+    chi_lay: "8 câu chẩn đoán deal kẹt, pilot dưới ngưỡng tự duyệt của trưởng phòng. Bỏ số 'cứu 40-60%', bỏ hạn chót không có lý do thật."
+
+  - ten: sales-icp-builder
+    lo: lo-290
+    trang_thai: cho-gop
+    nhan_truoc_thu: bo-sung (vua)
+    nhan_sau_thu: bo-sung (vua)
+    lo_thu: 2026-10-sale-lo1
+    gop_vao: 01-phan-khuc-chan-dung
+    chi_lay: "Trục công nghệ đang dùng, 5 sự kiện kích hoạt, danh sách cờ đỏ loại sớm. Không lấy yêu cầu 20+10 khách có NPS; scorecard 15 tiêu chí có lỗi toán (có trọng số nhưng tổng /45)."
