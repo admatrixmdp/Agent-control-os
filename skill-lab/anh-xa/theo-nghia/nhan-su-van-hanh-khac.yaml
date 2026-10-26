@@ -1,7 +1,7 @@
 nhom: nhan-su-van-hanh-khac
 mang: [nhan-su, van-hanh, mua-hang-kho-van, cong-nghe, hanh-chinh, xuat-nhap-khau]
 tong: 141
-dem: {trung: 4, bo-sung: 6, moi: 85, loai: 46}
+dem: {trung: 4, bo-sung: 5, moi: 85, loai: 47}
 ghi_chu_chung: >
   Lô 290 (tiền tố hr-/ops-/it-/log-/proc-/data-) ngắn ~100 dòng, có bảng gọn nhưng mục "Tích Hợp Web Bên Ngoài
   (MCP-first + API fallback)" là khuôn chung, chứa endpoint bịa (vd legal-log.internal) và số liệu không nguồn
@@ -979,7 +979,7 @@ skills:
   - ten: dao-tao-ky-nang-so
     lo: lo-update
     nhan: moi
-    ung_vien: [ke-hoach-dao-tao]
+    ung_vien: []
     gia_tri: vua
     ly_do: "Đánh giá năng lực số và chương trình đào tạo công cụ cho nhân viên; hữu ích khi triển khai AI cho khách."
     lay_gi: "Khung đánh giá năng lực số theo cấp + mẫu kế hoạch đào tạo công cụ"
