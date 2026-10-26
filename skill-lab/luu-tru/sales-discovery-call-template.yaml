@@ -1,0 +1,15 @@
+ten: sales-discovery-call-template
+lo: lo-290
+ket_luan: trung
+lo_thu: 2026-10-sale-lo1
+skill_noi_bo: 16-kham-pha-nhu-cau
+diem: {noi_bo: 23, ngoai: 18, khong_skill: 24}
+ly_do: >
+  Nhãn "trùng" của bước 4 được xác nhận khi chạy thử. Bản ngoài kém bản nội bộ 5 điểm: 16 câu hỏi BANT+MEDDIC
+  quá tải cho buổi 45 phút; câu đáp khi khách hỏi giá ("muốn tiết kiệm bao nhiêu thì thấy hợp lý?") phản cảm
+  với CFO kỹ tính; không cảnh báo số lệch có thể do định nghĩa chỉ số chứ không do phần mềm; bước tiếp chưa có ngày.
+  Phần tốt duy nhất (scorecard 0-3 có ngưỡng vào forecast) đã có tương đương ở 03-cham-diem-lead.
+da_lay: []
+thu_lai_khi: ""
+ngay: 2026-10-26
+nguoi_chot: Quân

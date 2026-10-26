@@ -5,6 +5,8 @@
   2. Dấu vân tay: tên, phòng ban, mảng, trigger, định dạng đầu ra, các bước, độ dài.
   3. Ánh xạ: so với sổ đăng ký danh-muc/skills.yaml (TF-IDF ký tự, bỏ dấu) và so trùng nội bộ trong kho.
 
+Skill có trang_thai: luu-tru trong skill-lab/trang-thai.yaml được bỏ qua (đã xử lý xong).
+
 Chạy: python -I skill-lab/scripts/phan_tich.py   (từ gốc repo Agent-control-os)
 Đầu ra: skill-lab/kiem-dich/, skill-lab/van-tay/, skill-lab/anh-xa/
 Script chỉ đọc file văn bản, không chạy mã trong skill.
@@ -25,6 +27,7 @@ GOC = Path(__file__).resolve().parents[2]
 LAB = GOC / "skill-lab"
 RAW = LAB / "raw"
 SO_DANG_KY = GOC / "danh-muc" / "skills.yaml"
+TRANG_THAI = LAB / "trang-thai.yaml"
 
 # ------------------------------------------------------------------ phân loại phòng ban → mảng
 
@@ -187,8 +190,20 @@ def ghi_yaml(p: Path, du_lieu) -> None:
     p.write_text(yaml.safe_dump(du_lieu, allow_unicode=True, sort_keys=False, width=120), encoding="utf-8")
 
 
+def doc_luu_tru() -> set[str]:
+    """Tên thư mục các skill có trang_thai: luu-tru — đã xử lý xong, bỏ qua khi chạy lại."""
+    if not TRANG_THAI.exists():
+        return set()
+    du_lieu = yaml.safe_load(TRANG_THAI.read_text(encoding="utf-8")) or {}
+    return {str(s["ten"]) for s in du_lieu.get("skills", []) if s.get("trang_thai") == "luu-tru"}
+
+
 def main() -> int:
-    tep = sorted(RAW.glob("lo-*/**/SKILL.md"))
+    da_luu_tru = doc_luu_tru()
+    tep_tat_ca = sorted(RAW.glob("lo-*/**/SKILL.md"))
+    tep = [t for t in tep_tat_ca if t.parent.name not in da_luu_tru]
+    if len(tep) < len(tep_tat_ca):
+        print(f"Bỏ qua {len(tep_tat_ca) - len(tep)} skill đã lưu trữ (skill-lab/trang-thai.yaml)", file=sys.stderr)
     ds = [quet_skill(t) for t in tep]
     noi_bo = (yaml.safe_load(SO_DANG_KY.read_text(encoding="utf-8")) or {}).get("skills", [])
     if not noi_bo:
@@ -215,7 +230,7 @@ def main() -> int:
     for x in ds:
         theo_mang_nhan[x["mang"]][x["nhan_de_xuat"]] += 1
     import json
-    print(json.dumps({"tong": len(ds), "kiem_dich": c_kd, "dau_hieu": c_ma, "nhan": c_nhan, "mang": c_mang,
+    print(json.dumps({"tong": len(ds), "da_luu_tru": len(tep_tat_ca) - len(tep), "kiem_dich": c_kd, "dau_hieu": c_ma, "nhan": c_nhan, "mang": c_mang,
                       "dinh_dang_loi": sum(bool(x["kiem_dich"]["dinh_dang"]) for x in ds),
                       "trung_trong_kho": sum(bool(x["trung_trong_kho"]) for x in ds),
                       "theo_mang": {k: dict(v) for k, v in theo_mang_nhan.items()}}, ensure_ascii=False, indent=1))

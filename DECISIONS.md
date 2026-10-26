@@ -11,3 +11,5 @@
 | 2026-10-26 | Giám khảo eval | Cùng mô hình chạy vs mô hình khác | Mô hình khác (mặc định Sonnet chấm Opus) | Giảm tự chấm cho mình | C |
 | 2026-10-26 | Gắn nhãn đối chiếu | Độ giống chữ (TF-IDF) vs agent đọc nghĩa | Agent đọc nghĩa; TF-IDF chỉ đưa ứng viên thô | Skill ngoài tên tiếng Anh, nội bộ tên tiếng Việt → độ giống chữ gợi ý 465/510 là "mới", sai rõ | C |
 | 2026-10-26 | File slide 67 MB "AI AGENT CEO" | Đưa vào repo vs tóm tắt | Tóm tắt ở `tham-khao/ai-agent-ceo-taki.md` | Vượt ngưỡng 10 MB; 56/57 slide là ảnh | C |
+| 2026-10-26 | Đánh dấu skill ngoài đã xử lý (Quân chốt: skill không đạt đưa vào archive) | (a) dời file từ `raw/` sang thư mục archive; (b) giữ file gốc, ghi sổ `trang-thai.yaml` + phiếu `luu-tru/` | **(b)** | (a) phạm quyết định `raw/` bất biến; (b) giữ nguyên gốc, một sổ trạng thái, script tự bỏ qua skill đã lưu trữ | C |
+| 2026-10-26 | Chốt nhãn skill ngoài | Chỉ đọc văn bản vs đọc + chạy thử | Chạy thử trước khi chốt nhãn "giá trị cao" (đề xuất, chờ Quân chốt) | Lô thử 1: `sales-late-stage-rescue` gắn "cao" khi đọc, chạy thử thua cả bản không skill; `sales-lead-scoring-engine` xếp shop 6 tỷ trên tài khoản 150 tỷ | C |

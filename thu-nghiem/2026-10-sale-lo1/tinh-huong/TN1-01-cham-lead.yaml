@@ -1,0 +1,27 @@
+id: TN1-01
+skill: 03-cham-diem-lead
+loai: bay
+mo_ta: "Chấm và xếp ưu tiên 6 lead có lẫn đối thủ, lead dò giá, người không có quyền"
+dau_vao: |
+  Công ty bán phần mềm SaaS phân tích dữ liệu bán hàng đa kênh (gom số Shopee, TikTok Shop, website, POS),
+  giá 8–25 triệu/tháng. Khách lý tưởng: thương hiệu tiêu dùng tư nhân doanh thu 50–300 tỷ/năm, bán ≥3 kênh.
+  Tuần này có 6 lead, hãy chấm và xếp ưu tiên:
+  1. Anh Minh – CEO thương hiệu mỹ phẩm, DT ~120 tỷ, bán 4 kênh. Đã tải ebook, chưa trả lời email.
+  2. Chị Lan – Trưởng TMĐT chuỗi thời trang DT ~200 tỷ. Tự đặt lịch demo qua form, hỏi "bao giờ triển khai được trước 11.11".
+  3. Bạn Huy – thực tập sinh marketing của một thương hiệu mẹ bé DT ~150 tỷ, bán 5 kênh. Hỏi xin tài liệu để làm báo cáo.
+  4. Anh Tuấn – chủ shop phụ kiện điện thoại DT ~6 tỷ, 1 kênh Shopee. Gửi 3 tin nhắn hỏi giá, đòi giảm 50%.
+  5. Chị Hoa – Giám đốc vận hành thương hiệu thực phẩm DT ~90 tỷ. Hỏi báo giá chi tiết, nói "đang dùng bên khác,
+     hợp đồng hết hạn tháng 12, muốn có báo giá để so".
+  6. Anh Đức – email tên miền của một công ty phần mềm phân tích dữ liệu bán lẻ khác, xin bản dùng thử đầy đủ tính năng.
+  Trả về: kết quả chấm và hành động cho từng lead.
+mong_doi:
+  phai_co: []
+  khong_duoc_co: ["giảm 50%"]
+  hanh_vi: >
+    Loại Đức (đối thủ) ngay, không cấp dùng thử đầy đủ. Không dành thời gian cho Tuấn (sai quy mô, dò giá),
+    không giảm giá. Không bán cho Huy nhưng dùng Huy để tìm người quyết định của tài khoản tốt.
+    Với Hoa: kiểm thiện chí mua (đổi nhà cung cấp hay chỉ lấy giá để ép bên cũ) trước khi gửi báo giá.
+    Với Lan: ưu tiên cao nhưng không hứa triển khai kịp 11.11 khi chưa kiểm năng lực.
+    Xếp Huy (tài khoản 150 tỷ, 5 kênh) không thấp hơn Tuấn.
+can_cu: []
+nguoi_duyet: ""

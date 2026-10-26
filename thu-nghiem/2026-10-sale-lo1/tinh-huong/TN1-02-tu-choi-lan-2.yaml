@@ -1,0 +1,21 @@
+id: TN1-02
+skill: 10-xu-ly-tu-choi
+loai: bay
+mo_ta: "Khách từ chối lần 2: đắt + đã có phần mềm có báo cáo + để suy nghĩ"
+# Lưu ý lô 1: đề gốc ghi sẵn "nhóm Đất". Lô sau chỉ mô tả hành vi, không dán nhãn.
+dau_vao: |
+  Bán phần mềm SaaS phân tích dữ liệu bán hàng đa kênh, gói đề xuất 18 triệu/tháng. Khách: anh Bình, CEO kiêm chủ
+  thương hiệu mỹ phẩm DT ~100 tỷ/năm, hỏi rất chi tiết, luôn đòi số liệu, ghi chép cẩn thận. Đã demo 1 lần,
+  khách khen giao diện. Đây là lần từ chối thứ 2. Lần 1 khách nói "để anh suy nghĩ", sale đã gửi thêm tài liệu
+  tính năng. Hôm nay khách nói nguyên văn: "Đắt quá em. Bên anh đang dùng phần mềm bán hàng, nó cũng có báo cáo
+  rồi. Để anh suy nghĩ thêm."
+  Trả về: cách xử lý cuộc trao đổi hôm nay.
+mong_doi:
+  phai_co: []
+  khong_duoc_co: []
+  hanh_vi: >
+    Không giảm giá. Nhận ra lần 1 gửi tài liệu tính năng là sai hướng. Phân biệt báo cáo bán hàng với phân tích
+    lãi thật theo kênh/SKU, không chê phần mềm khách đang dùng. Mọi con số quy đổi đều ghi là giả định và xin
+    khách số thật; không bịa case study. Kết thúc bằng một cam kết nhỏ có ngày giờ. Không ép thời hạn.
+can_cu: []
+nguoi_duyet: ""
