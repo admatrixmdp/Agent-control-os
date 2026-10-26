@@ -1,0 +1,1285 @@
+nhom: marketing
+mang: [marketing, thuong-mai-dien-tu]
+tong: 136
+dem: {trung: 46, bo-sung: 55, moi: 35, loai: 0}
+ghi_chu: >
+  Lô 290 (mkt-*) là khung mẫu ~80-130 dòng, cùng một khuôn 5 bước, nhiều số hứa hẹn không nguồn
+  (vd "tăng 15-30% ROAS"), đường dẫn cá nhân /Users/nguyenkiem. Lô update (ecom-*, marketing-skills, pr-skills)
+  dài 500-2000 dòng, giàu bảng/checklist/mẫu tiếng Việt nhưng đầy benchmark chưa kiểm chứng và có trích luật sai
+  (SMS). Mọi phần lấy về: bỏ số liệu không nguồn, kiểm lại căn cứ pháp lý, viết lại theo giọng MQ.
+skills:
+  # ===================== LÔ 290 (60) =====================
+  - ten: mkt-ab-test-planner
+    lo: lo-290
+    nhan: trung
+    ung_vien: [19-ab-test-setup, 19-ab-test-setup-global]
+    gia_tri: thap
+    ly_do: "Nội bộ đã có giả thuyết, cỡ mẫu, ý nghĩa thống kê; bản ngoài mỏng hơn."
+    trung_trong_kho: ["Framework A/B Testing Toàn Diện"]
+    ban_tot_hon: false
+  - ten: mkt-abandoned-cart-email
+    lo: lo-290
+    nhan: trung
+    ung_vien: [14-email-marketing]
+    gia_tri: thap
+    ly_do: "Chuỗi cứu giỏ đã nằm trong bản ecom-email-marketing tốt hơn; bản này chỉ 3 email khung."
+    trung_trong_kho: [ecom-email-marketing, "Marketing Automation Đa Kênh", "Tối Ưu Checkout & Giảm Bỏ Giỏ"]
+    ban_tot_hon: false
+  - ten: mkt-affiliate-program-design
+    lo: lo-290
+    nhan: trung
+    ung_vien: [18-referral-program, 18-referral-program-global]
+    gia_tri: thap
+    ly_do: "18-referral-program đã gồm affiliate, ưu đãi, chống gian lận."
+    trung_trong_kho: ["Affiliate Marketing & Quản Lý KOL/KOC TMĐT VN", mkt-referral-program]
+    ban_tot_hon: false
+  - ten: mkt-banner-prompt-midjourney
+    lo: lo-290
+    nhan: trung
+    ung_vien: [30-thiet-ke-master]
+    gia_tri: thap
+    ly_do: "30-thiet-ke-master đã bao visual chiến dịch; bản ngoài chỉ là khuôn prompt."
+    trung_trong_kho: [ecom-ai-prompt-master, ecom-banner-thumbnail]
+    ban_tot_hon: false
+  - ten: mkt-blog-article-writer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "Chuẩn semantic 106 điểm nội bộ sâu hơn khung EEAT chung chung này."
+    trung_trong_kho: [ecom-blog-seo, noi-dung-seo]
+    ban_tot_hon: false
+  - ten: mkt-brand-name-generator
+    lo: lo-290
+    nhan: moi
+    ung_vien: [32-nen-tang-thuong-hieu]
+    gia_tri: vua
+    ly_do: "Nội bộ chưa có skill đặt tên thương hiệu; 6 pattern đặt tên + lọc tên hữu ích."
+    lay_gi: "6 pattern sinh tên + bước lọc (domain, tra nhãn hiệu Cục SHTT) + naming checklist của ecom-brand-builder → skill đặt tên mới, gọi từ 32-nen-tang-thuong-hieu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-brand-builder]
+    ban_tot_hon: true
+  - ten: mkt-brand-voice-guide
+    lo: lo-290
+    nhan: trung
+    ung_vien: [assp-brand-voice]
+    gia_tri: thap
+    ly_do: "assp-brand-voice đã làm guideline giọng thương hiệu."
+    trung_trong_kho: [ecom-brand-builder, xay-dung-thuong-hieu]
+    ban_tot_hon: false
+  - ten: mkt-case-study-writer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [17-de-xuat-giai-phap, 07-xay-dung-niem-tin]
+    gia_tri: vua
+    ly_do: "Chưa có skill viết case study/testimonial; bản ecom-testimonial-casestudy đầy đủ hơn."
+    lay_gi: "Bước phỏng vấn khách và khung Problem→Solution→Result gộp vào skill testimonial-case study mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-testimonial-casestudy, mkt-testimonial-collector]
+    ban_tot_hon: false
+  - ten: mkt-cobranding-proposal
+    lo: lo-290
+    nhan: moi
+    ung_vien: [17-de-xuat-giai-phap]
+    gia_tri: thap
+    ly_do: "Đề xuất hợp tác co-branding chưa có; hữu ích cho hệ sinh thái nhiều thương hiệu MQ nhưng ít dùng."
+    lay_gi: "Khung value proposition 2 phía + mechanic + KPI chung → nhánh co-marketing trong 02-brief-chien-dich"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-competitor-ads-spy
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [08-nghien-cuu-doi-thu, meta-ads-analyzer]
+    gia_tri: vua
+    ly_do: "08 benchmark nội dung nhưng chưa có bước quét Ads Library; Meta MCP có ads_library_search."
+    lay_gi: "Bước quét Facebook Ads Library theo đối thủ + bảng tổng hợp creative/copy/offer/thời gian chạy → references/ của 08-nghien-cuu-doi-thu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-competitor-analysis]
+    ban_tot_hon: true
+  - ten: mkt-content-calendar-multi-channel
+    lo: lo-290
+    nhan: trung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: thap
+    ly_do: "01-lich-noi-dung đã có pillar, tỷ lệ phễu, ma trận tái sử dụng."
+    trung_trong_kho: [ecom-content-calendar, lich-noi-dung, mkt-tiktok-content-planner]
+    ban_tot_hon: false
+  - ten: mkt-content-repurpose-pipeline
+    lo: lo-290
+    nhan: trung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: thap
+    ly_do: "Ma trận tái sử dụng đã có trong 01-lich-noi-dung."
+    trung_trong_kho: [ecom-media-repurpose]
+    ban_tot_hon: false
+  - ten: mkt-content-scorer
+    lo: lo-290
+    nhan: moi
+    ung_vien: [viet-tu-nhien, social-media-os]
+    gia_tri: vua
+    ly_do: "Chưa có skill chấm nội dung trước khi đăng; bản cham-diem-noi-dung có thang 100 điểm rõ hơn."
+    lay_gi: "6 trục chấm (hook, rõ ràng, CTA, giọng, SEO) gộp vào skill chấm nội dung mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [cham-diem-noi-dung]
+    ban_tot_hon: false
+  - ten: mkt-conversion-funnel-audit
+    lo: lo-290
+    nhan: trung
+    ung_vien: [assp-funnel-strategist, 13-phan-tich-du-lieu, 01-audit-cro-ban-le]
+    gia_tri: thap
+    ly_do: "Phân tích rơi rớt từng tầng phễu đã có ở 13 và 01-audit-cro-ban-le."
+    trung_trong_kho: [ecom-funnel-builder]
+    ban_tot_hon: false
+  - ten: mkt-customer-journey-mapper
+    lo: lo-290
+    nhan: trung
+    ung_vien: [09-insight-khach-hang]
+    gia_tri: thap
+    ly_do: "09-insight-khach-hang đã có hành trình mua."
+    trung_trong_kho: [ecom-customer-journey]
+    ban_tot_hon: false
+  - ten: mkt-customer-persona-builder
+    lo: lo-290
+    nhan: trung
+    ung_vien: [09-insight-khach-hang, assp-avatar-builder, 01-phan-khuc-chan-dung]
+    gia_tri: thap
+    ly_do: "Persona, JTBD, Consumer vs Shopper đã có và sâu hơn."
+    trung_trong_kho: [khach-hang-muc-tieu]
+    ban_tot_hon: false
+  - ten: mkt-email-campaign-writer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [14-email-marketing, assp-email-closer]
+    gia_tri: thap
+    ly_do: "Chuỗi email nurture/launch/promo đã có ở 14-email-marketing."
+    trung_trong_kho: [ecom-email-marketing, email-marketing, mkt-welcome-email-flow]
+    ban_tot_hon: false
+  - ten: mkt-event-launch-plan
+    lo: lo-290
+    nhan: moi
+    ung_vien: [02-brief-chien-dich, 00-ke-hoach-mkt]
+    gia_tri: vua
+    ly_do: "Kế hoạch ra mắt sản phẩm T-30→T+30 liên phòng ban chưa có; bản checklist chi tiết hơn."
+    lay_gi: "Khung 3 giai đoạn T-30/T0/T+30 gộp vào skill ra mắt sản phẩm mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-product-launch-checklist]
+    ban_tot_hon: false
+  - ten: mkt-facebook-ads-manager
+    lo: lo-290
+    nhan: trung
+    ung_vien: [meta-ads-analyzer, 21-audit-ads-performance, 03-danh-gia-hieu-suat]
+    gia_tri: thap
+    ly_do: "meta-ads-analyzer đã đọc số, chẩn đoán, scale qua MCP và có cổng xác nhận ghi."
+    trung_trong_kho: [ecom-facebook-ads-strategy]
+    ban_tot_hon: false
+  - ten: mkt-faq-generator
+    lo: lo-290
+    nhan: trung
+    ung_vien: [12-brief-landing-page, 05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "FAQ + schema đã có trong brief landing và chuẩn semantic; bản ecom-faq-objection tốt hơn."
+    trung_trong_kho: [ecom-faq-objection]
+    ban_tot_hon: false
+  - ten: mkt-ga4-report-reader
+    lo: lo-290
+    nhan: moi
+    ung_vien: [13-phan-tich-du-lieu, measurement]
+    gia_tri: vua
+    ly_do: "Chưa có skill đọc GA4 theo nhịp tuần; measurement chỉ audit đo chuyển đổi Google Ads."
+    lay_gi: "6 khối báo cáo GA4 (traffic, nguồn, trang, sự kiện, chuyển đổi, bất thường) + mẫu insight/action tuần"
+    dat_vao: admatrixmdp/google-marketing-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-google-ads-optimizer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [analyzer, negative-keyword]
+    gia_tri: thap
+    ly_do: "Bộ google-marketing-os (analyzer, negative-keyword) sâu hơn hẳn."
+    trung_trong_kho: [ecom-google-ads-strategy]
+    ban_tot_hon: false
+  - ten: mkt-hashtag-research
+    lo: lo-290
+    nhan: trung
+    ung_vien: [social-media-os]
+    gia_tri: thap
+    ly_do: "Hashtag là chi tiết vận hành social; giá trị thấp, đã đủ ở social-media-os."
+    trung_trong_kho: ["Chiến Lược Hashtag Chuyên Sâu"]
+    ban_tot_hon: false
+  - ten: mkt-influencer-outreach
+    lo: lo-290
+    nhan: trung
+    ung_vien: [06-brief-ugc-egc]
+    gia_tri: thap
+    ly_do: "Brief KOC đã có; quy trình KOL đầy đủ nằm ở bản affiliate-KOL lô update."
+    trung_trong_kho: ["Affiliate Marketing & Quản Lý KOL/KOC TMĐT VN"]
+    ban_tot_hon: false
+  - ten: mkt-instagram-reel-script
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-script-video]
+    gia_tri: thap
+    ly_do: "04-script-video đã làm Reels/TikTok/Shorts có hook và bản A/B."
+    trung_trong_kho: [ecom-video-script]
+    ban_tot_hon: false
+  - ten: mkt-landing-page-copy
+    lo: lo-290
+    nhan: trung
+    ung_vien: [12-brief-landing-page, 02-brief-xay-web-ban-le]
+    gia_tri: thap
+    ly_do: "Brief landing 7 section, 1 CTA đã có."
+    trung_trong_kho: [ecom-landing-page]
+    ban_tot_hon: false
+  - ten: mkt-linkedin-company-page
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [31-linkedin-growth]
+    gia_tri: thap
+    ly_do: "31 chỉ làm LinkedIn cá nhân; bản này thêm trang công ty (employer brand + sản phẩm)."
+    lay_gi: "Bảng 4 dạng bài trang công ty (thought leadership, hậu trường, case study, cột mốc) → references/ của 31-linkedin-growth"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-localization-asia
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [product-marketing-context-global, 11-channel-setup-global]
+    gia_tri: thap
+    ly_do: "Cụm global có biến thể vùng nhưng chưa có TH/ID/MY; nội dung bản ngoài mỏng, cần kiểm."
+    lay_gi: "Ma trận bản địa hoá 6 yếu tố (ngôn ngữ, hình ảnh, kênh, thanh toán, lễ, pháp lý) cho TH/ID/MY → references/ của product-marketing-context-global"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-loyalty-program-design
+    lo: lo-290
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang, customer-360]
+    gia_tri: cao
+    ly_do: "Chưa có skill loyalty B2C (hạng, điểm, đổi quà); bản CRM-loyalty lô update đầy đủ hơn."
+    lay_gi: "Bước tính ROI chương trình và quy tắc điểm gộp vào skill loyalty mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: ["CRM, Chăm sóc khách hàng & Chương trình Loyalty TMĐT"]
+    ban_tot_hon: false
+  - ten: mkt-marketing-budget-planner
+    lo: lo-290
+    nhan: trung
+    ung_vien: [10-tinh-kpi-nguoc]
+    gia_tri: thap
+    ly_do: "Tính ngược ngân sách theo kênh, 3 kịch bản đã có ở 10-tinh-kpi-nguoc."
+    trung_trong_kho: [mkt-roi-calculator-campaign]
+    ban_tot_hon: false
+  - ten: mkt-meta-pixel-audit
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [meta-ads-analyzer, measurement]
+    gia_tri: cao
+    ly_do: "measurement chỉ cho Google; Meta chưa có checklist Pixel/CAPI rõ ràng."
+    lay_gi: "Checklist 10 điểm Pixel + CAPI (event_id khử trùng, EMQ, advanced matching băm SHA256, tỷ lệ browser/server) → references/ của analyzer meta-suite-os; bỏ số hứa ROAS"
+    dat_vao: admatrixmdp/meta-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-newsletter-weekly
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [14-email-marketing]
+    gia_tri: thap
+    ly_do: "14 chưa có mẫu newsletter tuần dạng tuyển chọn link + 1 insight."
+    lay_gi: "Khuôn newsletter 5-7 link + 1 insight + 1 CTA → references/ của 14-email-marketing"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-nps-analyzer
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem]
+    gia_tri: vua
+    ly_do: "13 có công thức NPS nhưng chưa có bước phân tích verbatim theo chủ đề bằng LLM."
+    lay_gi: "Bước gom verbatim theo chủ đề/cảm xúc cho promoter-passive-detractor + bảng action → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [mkt-survey-design]
+    ban_tot_hon: false
+  - ten: mkt-podcast-pitch-writer
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [25-voice-clone-podcast, 26-thought-leadership-content]
+    gia_tri: thap
+    ly_do: "Cụm personal brand chưa có bước xin làm khách mời podcast."
+    lay_gi: "Mẫu pitch khách mời + talking points + lịch follow-up → references/ của 25-voice-clone-podcast"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-podcast-show-notes]
+    ban_tot_hon: false
+  - ten: mkt-podcast-show-notes
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [25-voice-clone-podcast]
+    gia_tri: thap
+    ly_do: "Mẫu show notes có timestamp, quote, CTA; nhỏ nhưng dùng được."
+    lay_gi: "Khuôn show notes (chương + timestamp, 5-10 quote, tài nguyên, bio, CTA) → references/ của 25-voice-clone-podcast"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-podcast-pitch-writer]
+    ban_tot_hon: false
+  - ten: mkt-positioning-statement
+    lo: lo-290
+    nhan: trung
+    ung_vien: [product-marketing-context, 32-nen-tang-thuong-hieu, stp]
+    gia_tri: thap
+    ly_do: "Công thức định vị đã có ở product-marketing-context và stp."
+    trung_trong_kho: [xay-dung-thuong-hieu]
+    ban_tot_hon: false
+  - ten: mkt-pr-crisis-response
+    lo: lo-290
+    nhan: moi
+    ung_vien: [15-social-listening, 12-xu-ly-su-co]
+    gia_tri: cao
+    ly_do: "Chưa có playbook khủng hoảng truyền thông B2C; bản truyen-thong-khung-hoang tốt hơn."
+    lay_gi: "Bảng phân vai 7 vai (CEO, PR, Pháp lý, CSKH, Sản phẩm, nội bộ, giám sát) + holding statement 50-100 chữ → gộp vào skill khủng hoảng mới"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: [truyen-thong-khung-hoang]
+    ban_tot_hon: false
+  - ten: mkt-pr-pitch-writer
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Chưa có cụm quan hệ báo chí; bản quan-he-bao-chi bao quát hơn."
+    lay_gi: "Bước chọn góc câu chuyện + danh sách báo VN theo mảng → gộp vào skill quan hệ báo chí"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: [quan-he-bao-chi, mkt-press-kit-builder]
+    ban_tot_hon: false
+  - ten: mkt-press-kit-builder
+    lo: lo-290
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "Press kit là phần con của quan hệ báo chí."
+    lay_gi: "Danh mục press kit (boilerplate, fact sheet, bio, asset) → references/ của skill quan hệ báo chí"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: [quan-he-bao-chi, mkt-pr-pitch-writer]
+    ban_tot_hon: false
+  - ten: mkt-product-description-shopify
+    lo: lo-290
+    nhan: moi
+    ung_vien: [shopee-shop-analyzer]
+    gia_tri: vua
+    ly_do: "Chưa có skill viết mô tả sản phẩm cho sàn; bản ecom-product-listing chi tiết hơn."
+    lay_gi: "Khung hook-feature-benefit-spec-FAQ-CTA gộp vào skill mô tả sản phẩm mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-product-listing, mo-ta-san-pham]
+    ban_tot_hon: false
+  - ten: mkt-product-launch-checklist
+    lo: lo-290
+    nhan: moi
+    ung_vien: [02-brief-chien-dich, ke-hoach-gantt]
+    gia_tri: vua
+    ly_do: "Checklist ra mắt 100+ việc chia 5 luồng có người phụ trách; khái niệm launch chưa có."
+    lay_gi: "Checklist T-30→T0 chia luồng Sản phẩm/Marketing/Sale/CSKH/Vận hành + Gantt có owner → skill ra mắt sản phẩm mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-event-launch-plan]
+    ban_tot_hon: true
+  - ten: mkt-referral-program
+    lo: lo-290
+    nhan: trung
+    ung_vien: [18-referral-program]
+    gia_tri: thap
+    ly_do: "Give X Get Y, chống gian lận đã có ở 18-referral-program."
+    trung_trong_kho: [mkt-affiliate-program-design]
+    ban_tot_hon: false
+  - ten: mkt-review-acquisition
+    lo: lo-290
+    nhan: moi
+    ung_vien: [06-brief-ugc-egc]
+    gia_tri: vua
+    ly_do: "Xin review sau giao hàng chưa có; bản ecom-review-ugc đầy đủ hơn."
+    lay_gi: "Flow tự động sau nhận hàng (Zalo/SMS/email) + mẫu tin cá nhân hoá → gộp vào skill review-UGC; không thưởng đổi review 5 sao"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-review-ugc, mkt-ugc-collection-campaign]
+    ban_tot_hon: false
+  - ten: mkt-roi-calculator-campaign
+    lo: lo-290
+    nhan: trung
+    ung_vien: [10-tinh-kpi-nguoc, 13-phan-tich-du-lieu]
+    gia_tri: thap
+    ly_do: "ROI, hoà vốn, LTV/CAC đã có trong 10 và 13."
+    trung_trong_kho: [mkt-marketing-budget-planner]
+    ban_tot_hon: false
+  - ten: mkt-seo-backlink-prospecting
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [04-ke-hoach-seo-geo]
+    gia_tri: thap
+    ly_do: "Kế hoạch SEO có thể thiếu bước tìm backlink cụ thể."
+    lay_gi: "Bảng footprint tìm prospect theo loại link (guest post, broken link, resource page) + mẫu email outreach → references/ của 04-ke-hoach-seo-geo"
+    dat_vao: admatrixmdp/webmaster-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-seo-keyword-research
+    lo: lo-290
+    nhan: trung
+    ung_vien: [04-ke-hoach-seo-geo, 05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "Cluster keyword theo intent đã có trong kế hoạch SEO."
+    trung_trong_kho: [ecom-keyword-research]
+    ban_tot_hon: false
+  - ten: mkt-seo-on-page-audit
+    lo: lo-290
+    nhan: trung
+    ung_vien: [03-audit-seo-ky-thuat]
+    gia_tri: thap
+    ly_do: "Audit SEO kỹ thuật 93 điểm nội bộ sâu hơn."
+    trung_trong_kho: [ecom-seo-optimizer, ecom-website-audit]
+    ban_tot_hon: false
+  - ten: mkt-survey-design
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [13-do-luong-trai-nghiem, 15-social-listening]
+    gia_tri: vua
+    ly_do: "13 chỉ có NPS cho B2B; thiếu bộ câu hỏi CSAT/Brand Health chống thiên lệch."
+    lay_gi: "Bộ câu hỏi chuẩn NPS/CSAT/Brand Health + quy tắc tránh câu dẫn dắt + cỡ mẫu → references/ của 13-do-luong-trai-nghiem"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [mkt-nps-analyzer, danh-gia-thuong-hieu]
+    ban_tot_hon: false
+  - ten: mkt-tagline-generator
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [32-nen-tang-thuong-hieu]
+    gia_tri: thap
+    ly_do: "5 framework tagline có chấm điểm; nhỏ, bổ sung cho nền tảng thương hiệu."
+    lay_gi: "5 framework (lợi ích, lời hứa, hành động, cảm xúc, bí ẩn) + tiêu chí chấm → references/ của 32-nen-tang-thuong-hieu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-testimonial-collector
+    lo: lo-290
+    nhan: moi
+    ung_vien: [07-xay-dung-niem-tin]
+    gia_tri: thap
+    ly_do: "Thu testimonial là phần con của skill testimonial-case study đề xuất."
+    lay_gi: "Mẫu email + form xin testimonial → references/ của skill testimonial-case study"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-testimonial-casestudy, mkt-case-study-writer]
+    ban_tot_hon: false
+  - ten: mkt-tiktok-content-planner
+    lo: lo-290
+    nhan: trung
+    ung_vien: [01-lich-noi-dung, 04-script-video]
+    gia_tri: thap
+    ly_do: "Lịch nội dung + script video ngắn đã đủ."
+    trung_trong_kho: [mkt-content-calendar-multi-channel, ecom-tiktok-strategy]
+    ban_tot_hon: false
+  - ten: mkt-trade-show-plan
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [02-tim-kiem-lead, 29-xuat-khau-b2b]
+    gia_tri: vua
+    ly_do: "02 có khai thác hội thảo nhưng chưa có checklist hội chợ đầy đủ trước-trong-sau."
+    lay_gi: "Checklist 80-100 việc 3 giai đoạn (booth, demo, thu lead, follow-up) → references/ của 02-tim-kiem-lead"
+    dat_vao: admatrixmdp/sale-suite-os
+    trung_trong_kho: [su-kien-va-tai-tro]
+    ban_tot_hon: false
+  - ten: mkt-trend-watcher
+    lo: lo-290
+    nhan: trung
+    ung_vien: [15-social-listening]
+    gia_tri: thap
+    ly_do: "Theo dõi xu hướng đã có ở 15-social-listening."
+    trung_trong_kho: [ecom-meme-trending]
+    ban_tot_hon: false
+  - ten: mkt-twitter-thread-writer
+    lo: lo-290
+    nhan: trung
+    ung_vien: [26-thought-leadership-content]
+    gia_tri: thap
+    ly_do: "X ít dùng ở VN; cấu trúc nội dung dài đã có ở 26."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-ugc-collection-campaign
+    lo: lo-290
+    nhan: moi
+    ung_vien: [06-brief-ugc-egc]
+    gia_tri: thap
+    ly_do: "06 là brief cho creator; thu UGC từ khách là khái niệm khác, gộp vào skill review-UGC."
+    lay_gi: "Mechanic + T&C campaign thu UGC → references/ của skill review-UGC"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-review-ugc, mkt-review-acquisition]
+    ban_tot_hon: false
+  - ten: mkt-utm-builder
+    lo: lo-290
+    nhan: moi
+    ung_vien: [measurement]
+    gia_tri: vua
+    ly_do: "Chưa có quy ước đặt UTM dùng chung; nền cho đo lường đa kênh."
+    lay_gi: "Quy ước đặt tên UTM + sheet quản lý tập trung → skill nhỏ hoặc references/ của measurement"
+    dat_vao: admatrixmdp/google-marketing-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: mkt-webinar-followup-sequence
+    lo: lo-290
+    nhan: moi
+    ung_vien: [14-email-marketing, assp-follow-up-engine]
+    gia_tri: thap
+    ly_do: "Chuỗi sau webinar nên nằm chung skill webinar đề xuất."
+    lay_gi: "5 email (cảm ơn, replay, case study, FAQ, hạn chót) → references/ của skill webinar"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-webinar-script]
+    ban_tot_hon: false
+  - ten: mkt-webinar-script
+    lo: lo-290
+    nhan: moi
+    ung_vien: [assp-vsl-scriptwriter, assp-hvco-creator]
+    gia_tri: vua
+    ly_do: "Webinar 60 phút (hook-giá trị-story-pitch-Q&A) chưa có; hợp FounderX, khoá học."
+    lay_gi: "Khung 60 phút có timestamp + slide cue → skill webinar mới, kèm chuỗi follow-up"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-webinar-followup-sequence]
+    ban_tot_hon: true
+  - ten: mkt-welcome-email-flow
+    lo: lo-290
+    nhan: trung
+    ung_vien: [14-email-marketing]
+    gia_tri: thap
+    ly_do: "Welcome series đã có ở 14-email-marketing."
+    trung_trong_kho: [ecom-email-marketing, "Marketing Automation Đa Kênh"]
+    ban_tot_hon: false
+  - ten: mkt-youtube-script-writer
+    lo: lo-290
+    nhan: bo-sung
+    ung_vien: [04-script-video, 26-thought-leadership-content]
+    gia_tri: vua
+    ly_do: "04 chỉ có video ngắn; thiếu nhánh YouTube dài 8-15 phút."
+    lay_gi: "Cấu trúc long-form (hook 15s, pattern interrupt, B-roll cue, CTA giữa video) → nhánh long-form trong 04-script-video"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: ["Chiến lược YouTube & YouTube Shorts TMĐT Việt Nam"]
+    ban_tot_hon: false
+
+  # ===================== LÔ UPDATE — TMĐT (55) =====================
+  - ten: "Framework A/B Testing Toàn Diện"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [19-ab-test-setup]
+    gia_tri: vua
+    ly_do: "Có chấm ưu tiên ICE và 20 ý tưởng test riêng TMĐT mà 19 chưa có."
+    lay_gi: "Bảng ICE + 20 ý tưởng test TMĐT (ads, landing, checkout, giá, email) + lỗi thường gặp → references/ của 19-ab-test-setup"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-ab-test-planner]
+    ban_tot_hon: true
+  - ten: ecom-ad-copy
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [05-copy-quang-cao, assp-ad-copy-machine, ad-copy]
+    gia_tri: thap
+    ly_do: "Phần lớn trùng 05; riêng bảng giọng Gen Z vs chị em 25-40 đáng lấy."
+    lay_gi: "Bảng tone Gen Z vs nữ 25-40 (từ ngữ, emoji, độ dài) → references/ của 05-copy-quang-cao"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Affiliate Marketing & Quản Lý KOL/KOC TMĐT VN"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [06-brief-ugc-egc, 18-referral-program]
+    gia_tri: vua
+    ly_do: "Có setup affiliate trên Shopee/Lazada/TikTok và quy trình KOL/KOC 7 bước mà nội bộ thiếu."
+    lay_gi: "Bảng phân tầng influencer VN + quy trình hợp tác 7 bước + brief template + affiliate sàn → references/ của 06-brief-ugc-egc; bỏ bảng giá KOL không nguồn"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-influencer-outreach, mkt-affiliate-program-design]
+    ban_tot_hon: true
+  - ten: ecom-ai-prompt-master
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [30-thiet-ke-master, 24-ai-avatar-production]
+    gia_tri: thap
+    ly_do: "Nguyên tắc prompt ảnh/video hữu ích nhưng danh sách công cụ lỗi thời nhanh."
+    lay_gi: "Khung cấu trúc prompt ảnh sản phẩm + prompt chaining → references/ của 30-thiet-ke-master"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-banner-prompt-midjourney]
+    ban_tot_hon: true
+  - ten: ecom-ai-video-creator
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [24-ai-avatar-production, 04-script-video]
+    gia_tri: thap
+    ly_do: "7 loại video TMĐT và quy trình batch có ích; phần so sánh công cụ dễ cũ."
+    lay_gi: "Danh mục 7 loại video TMĐT + thông số từng nền tảng + quy trình batch → references/ của 24-ai-avatar-production"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-banner-thumbnail
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [30-thiet-ke-master]
+    gia_tri: vua
+    ly_do: "Bảng kích thước banner theo từng sàn/nền tảng là tra cứu hằng ngày."
+    lay_gi: "Bảng kích thước banner/thumbnail Shopee/Lazada/TikTok/FB + checklist banner flash sale → references/ của 30-thiet-ke-master (kiểm lại thông số hiện hành)"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-banner-prompt-midjourney]
+    ban_tot_hon: false
+  - ten: ecom-blog-seo
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "8 dạng bài blog TMĐT (review, so sánh, top list...) có template; phần còn lại trùng."
+    lay_gi: "8 template dạng bài blog TMĐT → references/ của 05-content-chuan-semantic"
+    dat_vao: admatrixmdp/webmaster-suite-os
+    trung_trong_kho: [mkt-blog-article-writer, noi-dung-seo]
+    ban_tot_hon: true
+  - ten: ecom-brand-builder
+    lo: lo-update
+    nhan: trung
+    ung_vien: [32-nen-tang-thuong-hieu, assp-brand-voice, 30-thiet-ke-master]
+    gia_tri: thap
+    ly_do: "Canvas, brand story, visual identity đã có; naming checklist dùng cho skill đặt tên."
+    trung_trong_kho: [xay-dung-thuong-hieu, mkt-brand-name-generator]
+    ban_tot_hon: false
+  - ten: ecom-carousel-slide
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [social-media-os, 30-thiet-ke-master]
+    gia_tri: thap
+    ly_do: "10 loại carousel TMĐT + công thức SOS cụ thể, dễ áp."
+    lay_gi: "10 loại carousel + cấu trúc slide SOS + kích thước → references/ của social-media-os"
+    dat_vao: mkt-team (cấp tài khoản)
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Chatbot & Bán Hàng Tự Động TMĐT"
+    lo: lo-update
+    nhan: moi
+    ung_vien: [quick-order, hot-leads]
+    gia_tri: cao
+    ly_do: "Chưa có skill thiết kế kịch bản chatbot bán lẻ; sát ZaloCRM/GoClaw/Pancake Chat."
+    lay_gi: "10 flow bắt buộc (chào, gợi ý, báo giá, lên đơn, tra vận đơn, FAQ, giỏ bỏ, kéo lại 30-60-90, feedback, upsell) + auto-tag/auto-assign + mẫu câu VN → skill kịch bản chatbot"
+    dat_vao: repo-moi:ban-hang-b2c
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Tối Ưu Checkout & Giảm Bỏ Giỏ"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [01-audit-cro-ban-le, 02-brief-xay-web-ban-le]
+    gia_tri: vua
+    ly_do: "15 lý do bỏ giỏ kèm giải pháp riêng VN (COD, phí ship, freeship) cụ thể."
+    lay_gi: "Bảng 15 lý do bỏ giỏ → giải pháp + checklist checkout mobile → references/ của 01-audit-cro-ban-le; bỏ số tỷ lệ bỏ giỏ không nguồn"
+    dat_vao: admatrixmdp/webmaster-suite-os
+    trung_trong_kho: [mkt-abandoned-cart-email]
+    ban_tot_hon: false
+  - ten: "Xây dựng Cộng đồng Khách hàng TMĐT Việt Nam"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [28-community-building]
+    gia_tri: thap
+    ly_do: "28 xoay quanh personal brand; bản này cho cộng đồng khách của shop (FB/Zalo Group)."
+    lay_gi: "Chiến lược FB Group/Zalo Group cho khách shop + bộ chỉ số cộng đồng → nhánh 'cộng đồng khách hàng' trong 28-community-building"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-competitor-analysis
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [08-nghien-cuu-doi-thu, shopee-shop-analyzer]
+    gia_tri: vua
+    ly_do: "08 chưa có phần benchmark shop đối thủ trên sàn (giá, đánh giá, lượt bán, voucher)."
+    lay_gi: "Khung phân tích shop đối thủ trên Shopee/Lazada + theo dõi giá → references/ của 08-nghien-cuu-doi-thu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [phan-tich-doi-thu, mkt-competitor-ads-spy]
+    ban_tot_hon: false
+  - ten: ecom-content-calendar
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: vua
+    ly_do: "Có lịch sự kiện TMĐT VN cả năm và tần suất đăng theo kênh mà 01 cần."
+    lay_gi: "Lịch sự kiện TMĐT VN cả năm (ngày đôi, Tết, 8/3, 20/10...) + tần suất/giờ đăng theo kênh → references/ của 01-lich-noi-dung"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-content-calendar-multi-channel, lich-noi-dung, ecom-seasonal-holiday]
+    ban_tot_hon: true
+  - ten: "Thư Viện 50+ Công Thức Copywriting"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [05-copy-quang-cao, 16-marketing-psychology, assp-ad-copy-machine]
+    gia_tri: vua
+    ly_do: "Thư viện 50+ công thức kèm ví dụ tiếng Việt và bảng 'tình huống nào dùng công thức nào'."
+    lay_gi: "Bảng quick reference công thức theo tình huống + ví dụ VN → references/ của 05-copy-quang-cao"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: ["Swipe File 200+ Headline & Hook", "Thư Viện 150+ CTA Chiến Lược"]
+    ban_tot_hon: false
+  - ten: "CRM, Chăm sóc khách hàng & Chương trình Loyalty TMĐT"
+    lo: lo-update
+    nhan: moi
+    ung_vien: [11-quan-ly-khach-hang, customer-360]
+    gia_tri: cao
+    ly_do: "Loyalty + RFM cho bán lẻ chưa có skill; sát Bluecore và các shop Pancake."
+    lay_gi: "RFM chấm 1-5 + 6 phân khúc kèm hành động + thiết kế hạng/điểm + mẫu tin chăm sóc → skill loyalty-RFM mới; bỏ % doanh thu/giữ chân bịa"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-loyalty-program-design]
+    ban_tot_hon: true
+  - ten: "Thư Viện 150+ CTA Chiến Lược"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [05-copy-quang-cao, 12-brief-landing-page]
+    gia_tri: thap
+    ly_do: "Kho CTA theo mục tiêu/kênh/giọng; tham khảo nhanh, không cần skill riêng."
+    lay_gi: "Danh mục CTA theo mục tiêu × kênh → references/ của 05-copy-quang-cao"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: ["Thư Viện 50+ Công Thức Copywriting"]
+    ban_tot_hon: false
+  - ten: ecom-customer-journey
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [09-insight-khach-hang]
+    gia_tri: thap
+    ly_do: "Thêm bảng touchpoint × cảm xúc và trigger tự động theo giai đoạn."
+    lay_gi: "Bảng touchpoint mapping 5 giai đoạn + automation trigger → references/ của 09-insight-khach-hang"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-customer-journey-mapper]
+    ban_tot_hon: true
+  - ten: "Phân Tích Dữ Liệu & Dashboard TMĐT"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [13-phan-tich-du-lieu, ke-chuyen-du-lieu, monthly]
+    gia_tri: vua
+    ly_do: "Khung KPI TMĐT và dashboard theo vai trò cụ thể; cần đối chuẩn chỉ số Bluecore."
+    lay_gi: "Cây KPI TMĐT + mẫu dashboard theo vai trò (CEO, marketing, vận hành) → references/ của 13-phan-tich-du-lieu; định nghĩa chỉ số theo chuẩn Bluecore, bỏ benchmark ngành"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-email-marketing
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [14-email-marketing]
+    gia_tri: vua
+    ly_do: "8 chuỗi tự động TMĐT (giỏ bỏ, sau mua, win-back, sinh nhật, có hàng lại, giảm giá) đầy đủ hơn 14."
+    lay_gi: "8 chuỗi automation + lịch broadcast theo mùa TMĐT VN + quy tắc subject ≤50 ký tự → references/ của 14-email-marketing"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [email-marketing, mkt-email-campaign-writer, mkt-abandoned-cart-email, mkt-welcome-email-flow]
+    ban_tot_hon: true
+  - ten: ecom-facebook-ads-strategy
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [meta-ads-analyzer, 21-audit-ads-performance]
+    gia_tri: vua
+    ly_do: "Meta có analyzer nhưng thiếu phần kiến trúc chiến dịch/tệp đối tượng như architect bên Google."
+    lay_gi: "Cấu trúc campaign theo phễu + bảng tệp đối tượng TMĐT VN + quy tắc scale ngân sách → references/ của analyzer meta-suite-os"
+    dat_vao: admatrixmdp/meta-suite-os
+    trung_trong_kho: [mkt-facebook-ads-manager]
+    ban_tot_hon: true
+  - ten: ecom-faq-objection
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [12-brief-landing-page, social-media-os, 10-xu-ly-tu-choi]
+    gia_tri: vua
+    ly_do: "20 phản đối mua hàng B2C kèm cách xử lý và trả lời comment; 10-xu-ly-tu-choi chỉ cho B2B."
+    lay_gi: "Bảng 20 phản đối TMĐT VN + khung Acknowledge→Reframe→Evidence→CTA + mẫu trả lời comment → references/ của 12-brief-landing-page"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-faq-generator]
+    ban_tot_hon: true
+  - ten: "Báo cáo Tài chính & Unit Economics cho TMĐT"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [ho-so-tai-chinh, 10-tinh-kpi-nguoc]
+    gia_tri: cao
+    ly_do: "Unit economics đơn hàng TMĐT (phí sàn, ship, hoàn, CAC) rất sát nhu cầu shop; phần thuế rủi ro."
+    lay_gi: "P&L theo đơn/SKU + bảng cấu trúc chi phí TMĐT VN + cash flow → references/ của ho-so-tai-chinh; bỏ phần thuế, kiểm lại với pháp lý gốc"
+    dat_vao: admatrixmdp/Company-finance-accountant-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-flash-sale-planner
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [shopee-shop-analyzer, 02-brief-chien-dich, stock-alert]
+    gia_tri: vua
+    ly_do: "Timeline T-30→D+7, dự trù tồn kho an toàn, phân bổ ads cho ngày sale cụ thể."
+    lay_gi: "Timeline flash sale T-30→D+7 + công thức safety stock + checklist ngày D → references/ của shopee-shop-analyzer"
+    dat_vao: admatrixmdp/shopee-suite-os
+    trung_trong_kho: [ecom-seasonal-holiday]
+    ban_tot_hon: false
+  - ten: ecom-funnel-builder
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [assp-funnel-strategist, 13-phan-tich-du-lieu]
+    gia_tri: vua
+    ly_do: "5 loại phễu TMĐT (hàng vật lý, flash sale, lead magnet, retarget, loyalty) và phễu trên sàn."
+    lay_gi: "5 mẫu phễu TMĐT + chỉ số từng tầng (bỏ benchmark) → references/ của assp-funnel-strategist"
+    dat_vao: assp (cấp tài khoản)
+    trung_trong_kho: [mkt-conversion-funnel-audit]
+    ban_tot_hon: true
+  - ten: ecom-google-ads-strategy
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [architect, measurement]
+    gia_tri: vua
+    ly_do: "Checklist setup Google Shopping/Merchant Center và PMax cho TMĐT bổ sung cho architect."
+    lay_gi: "Checklist setup Shopping (feed, Merchant Center) + cấu trúc Shopping/PMax → references/ của architect"
+    dat_vao: admatrixmdp/google-marketing-os
+    trung_trong_kho: [mkt-google-ads-optimizer]
+    ban_tot_hon: true
+  - ten: "Chiến Lược Hashtag Chuyên Sâu"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [social-media-os]
+    gia_tri: thap
+    ly_do: "Bộ hashtag theo ngành và branded hashtag; giá trị hashtag đang giảm."
+    lay_gi: "Bộ hashtag theo ngành + quy tắc branded/seasonal → references/ của social-media-os"
+    dat_vao: mkt-team (cấp tài khoản)
+    trung_trong_kho: [mkt-hashtag-research]
+    ban_tot_hon: true
+  - ten: "Swipe File 200+ Headline & Hook"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [04-script-video, 05-copy-quang-cao]
+    gia_tri: vua
+    ly_do: "200+ headline/hook tiếng Việt chia 10 nhóm tâm lý; dùng trực tiếp cho copy và script."
+    lay_gi: "Swipe file hook theo 10 nhóm (tò mò, nỗi đau, lợi ích, bằng chứng, khẩn cấp...) → references/ của 05-copy-quang-cao, link từ 04-script-video"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: ["Thư Viện 50+ Công Thức Copywriting"]
+    ban_tot_hon: true
+  - ten: "Chiến lược Instagram Marketing TMĐT Việt Nam"
+    lo: lo-update
+    nhan: trung
+    ung_vien: [11-thiet-lap-kenh, social-media-os]
+    gia_tri: thap
+    ly_do: "Instagram ưu tiên thấp ở VN; nội dung chung chung so với nội bộ."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-keyword-research
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [04-ke-hoach-seo-geo, shopee-shop-analyzer]
+    gia_tri: vua
+    ly_do: "Nghiên cứu từ khoá trên sàn (Shopee/Lazada/TikTok) và lịch từ khoá theo mùa chưa có."
+    lay_gi: "Quy trình keyword trên sàn + lịch keyword theo sự kiện năm → references/ của 04-ke-hoach-seo-geo (link sang shopee-shop-analyzer)"
+    dat_vao: admatrixmdp/webmaster-suite-os
+    trung_trong_kho: [mkt-seo-keyword-research]
+    ban_tot_hon: true
+  - ten: ecom-landing-page
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [12-brief-landing-page, 02-brief-xay-web-ban-le]
+    gia_tri: thap
+    ly_do: "Trust signals riêng VN và checklist above-the-fold đáng lấy; cấu trúc 12 section trùng."
+    lay_gi: "Danh sách trust signal VN + checklist above-the-fold → references/ của 12-brief-landing-page"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-landing-page-copy]
+    ban_tot_hon: true
+  - ten: ecom-livestream-seller
+    lo: lo-update
+    nhan: moi
+    ung_vien: [04-script-video, tiktok-ads]
+    gia_tri: cao
+    ly_do: "Livestream bán hàng là kênh lớn ở VN, nội bộ chưa có; kịch bản 2 giờ theo phút rất cụ thể."
+    lay_gi: "Kịch bản live 2 giờ theo mốc phút + câu thoại xử lý nghi ngờ/FOMO/chốt + checklist trước live 24h/1h/10' + KPI sau live → skill livestream mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Marketing Automation Đa Kênh"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [14-email-marketing, assp-follow-up-engine]
+    gia_tri: vua
+    ly_do: "15 workflow tự động đa kênh (thêm re-order, churn, lead scoring) rộng hơn 14."
+    lay_gi: "Danh mục 15 workflow (trigger, kênh, thời điểm) → references/ của 14-email-marketing; dùng chung với skill chatbot"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-email-marketing, mkt-welcome-email-flow]
+    ban_tot_hon: false
+  - ten: "Tối ưu Gian Hàng TMĐT - Shopee, Lazada, TikTok Shop"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [shopee-shop-analyzer, shopee-ads-analyzer]
+    gia_tri: cao
+    ly_do: "Checklist ngày/tuần/tháng và phần Lazada, TikTok Shop mở rộng shopee-suite ra đa sàn."
+    lay_gi: "Checklist vận hành ngày/tuần/tháng + điểm shop + đồng bộ tồn/giá đa sàn + phần Lazada/TikTok Shop → references/ của shopee-shop-analyzer"
+    dat_vao: admatrixmdp/shopee-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-media-repurpose
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: thap
+    ly_do: "Quy tắc chuyển thể theo nền tảng chi tiết hơn ma trận hiện có."
+    lay_gi: "Bảng quy tắc chuyển thể từng nền tảng (độ dài, tỷ lệ khung, CTA) → references/ của 01-lich-noi-dung"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-content-repurpose-pipeline]
+    ban_tot_hon: true
+  - ten: ecom-meme-trending
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [15-social-listening, social-media-os]
+    gia_tri: thap
+    ly_do: "Framework bắt trend + danh sách rủi ro khi dùng meme hữu ích nhỏ."
+    lay_gi: "Quy trình Phát hiện→Điều chỉnh→Sản xuất→Đăng + checklist rủi ro meme → references/ của social-media-os"
+    dat_vao: mkt-team (cấp tài khoản)
+    trung_trong_kho: [mkt-trend-watcher]
+    ban_tot_hon: true
+  - ten: ecom-minigame-interactive
+    lo: lo-update
+    nhan: moi
+    ung_vien: [social-media-os]
+    gia_tri: vua
+    ly_do: "15 loại minigame có kịch bản; nhưng thiếu căn cứ khuyến mại có thưởng (NĐ 81/2018) dù có mục pháp lý."
+    lay_gi: "15 loại minigame + kịch bản luật chơi/giải/thời lượng → skill minigame mới, bổ sung căn cứ pháp lý khuyến mại trước khi dùng"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Chiến Lược Giá cho TMĐT Việt Nam"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [dinh-gia-san-pham, 17-pricing-strategy-global]
+    gia_tri: vua
+    ly_do: "dinh-gia-san-pham chưa có phần giá trên sàn (phí sàn, voucher, lịch giá theo mùa)."
+    lay_gi: "Bảng margin/hoà vốn sau phí sàn + 10 chiến lược giá TMĐT + mẫu thông báo giá → references/ của dinh-gia-san-pham"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-product-listing
+    lo: lo-update
+    nhan: moi
+    ung_vien: [shopee-shop-analyzer]
+    gia_tri: cao
+    ly_do: "Viết listing chuẩn từng sàn chưa có skill riêng; công thức tiêu đề SEO theo sàn rất thực dụng."
+    lay_gi: "Công thức tiêu đề theo từng sàn + bullet template + cấu trúc 7 phần + power words theo ngành → skill mô tả sản phẩm mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-product-description-shopify, mo-ta-san-pham]
+    ban_tot_hon: true
+  - ten: ecom-product-photography
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [30-thiet-ke-master, shopee-shop-analyzer]
+    gia_tri: vua
+    ly_do: "Yêu cầu ảnh theo sàn + 9 loại ảnh bắt buộc + hướng dẫn chụp cho người không chuyên."
+    lay_gi: "Bảng yêu cầu ảnh từng sàn + 9 loại ảnh sản phẩm + checklist chụp → references/ của 30-thiet-ke-master"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: "Chiến Lược Retargeting Đa Kênh"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [meta-ads-analyzer, architect]
+    gia_tri: vua
+    ly_do: "Phân tệp retarget theo hành vi/thời gian và quy tắc frequency cap chưa có rõ."
+    lay_gi: "Ma trận tệp retarget × thông điệp + quy tắc frequency capping + luồng retarget đa kênh → references/ của analyzer meta-suite-os"
+    dat_vao: admatrixmdp/meta-suite-os
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-review-ugc
+    lo: lo-update
+    nhan: moi
+    ung_vien: [06-brief-ugc-egc, 07-xay-dung-niem-tin]
+    gia_tri: vua
+    ly_do: "Thu review, xử lý review xấu, tái dùng UGC chưa có; 06 chỉ brief creator."
+    lay_gi: "Chiến lược thu review + quy trình xử lý review tiêu cực + dùng UGC trong ads + phần pháp lý → skill review-UGC mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-review-acquisition, mkt-ugc-collection-campaign]
+    ban_tot_hon: true
+  - ten: ecom-seasonal-holiday
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: vua
+    ly_do: "Lịch lễ VN 365 ngày và phần Tết chi tiết; gộp với lịch sự kiện của ecom-content-calendar."
+    lay_gi: "Khung nội dung cho mỗi dịp + phần Tết → gộp vào references/lich-su-kien của 01-lich-noi-dung"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-content-calendar, ecom-flash-sale-planner]
+    ban_tot_hon: false
+  - ten: ecom-seo-optimizer
+    lo: lo-update
+    nhan: trung
+    ung_vien: [03-audit-seo-ky-thuat, 04-ke-hoach-seo-geo]
+    gia_tri: thap
+    ly_do: "Checklist SEO kỹ thuật/on-page đã có và sâu hơn ở webmaster-suite-os."
+    trung_trong_kho: [mkt-seo-on-page-audit, ecom-website-audit]
+    ban_tot_hon: false
+  - ten: "Chiến lược SMS Marketing TMĐT Việt Nam"
+    lo: lo-update
+    nhan: moi
+    ung_vien: [14-email-marketing, 11-thiet-lap-kenh]
+    gia_tri: vua
+    ly_do: "SMS/brandname chưa có; nhưng trích luật sai (thiếu NĐ 91/2020) và số liệu chuyển đổi bịa."
+    lay_gi: "Mẫu SMS ≤160 ký tự theo 4 loại + so sánh brandname/đầu số + ma trận chọn kênh SMS-email-Zalo → skill SMS mới; viết lại phần pháp lý theo NĐ 91/2020 và Luật Viễn thông 2023, bỏ số liệu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-social-content
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [social-media-os, 01-lich-noi-dung]
+    gia_tri: thap
+    ly_do: "15 dạng content và mẫu caption theo mục tiêu; còn lại trùng."
+    lay_gi: "15 dạng content + template caption theo mục tiêu → references/ của social-media-os"
+    dat_vao: mkt-team (cấp tài khoản)
+    trung_trong_kho: [noi-dung-mang-xa-hoi]
+    ban_tot_hon: true
+  - ten: "Bán Hàng Qua Chat & Inbox Chuyên Sâu"
+    lo: lo-update
+    nhan: moi
+    ung_vien: [09-chot-sale, 10-xu-ly-tu-choi, quick-order]
+    gia_tri: cao
+    ly_do: "Sale-suite chỉ B2B; bán qua inbox B2C 5 bước là việc hằng ngày của shop SME."
+    lay_gi: "Quy trình 5 bước chat (chào, hỏi nhu cầu, tư vấn, xử lý lưỡng lự, chốt) + 4 kỹ thuật chốt + upsell trong chat + follow-up → skill bán qua chat mới"
+    dat_vao: repo-moi:ban-hang-b2c
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-storytelling-sales
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [16-marketing-psychology, assp-hero-mechanism]
+    gia_tri: thap
+    ly_do: "8 dạng story bán hàng và mẫu 500/200/50 chữ có ích nhỏ."
+    lay_gi: "8 dạng story + mẫu 3 độ dài + cách biến review thành story → references/ của 16-marketing-psychology"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-testimonial-casestudy
+    lo: lo-update
+    nhan: moi
+    ung_vien: [07-xay-dung-niem-tin, 17-de-xuat-giai-phap]
+    gia_tri: vua
+    ly_do: "Testimonial/case study chưa có skill; bản này có 5 dạng, khung 5 phần, quyền sử dụng."
+    lay_gi: "5 dạng testimonial + khung Context→Challenge→Solution→Result→Lesson + mẫu theo kênh + xin phép sử dụng → skill testimonial-case study mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-case-study-writer, mkt-testimonial-collector]
+    ban_tot_hon: true
+  - ten: ecom-tiktok-strategy
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [11-thiet-lap-kenh, tiktok-ads]
+    gia_tri: vua
+    ly_do: "Phần TikTok Shop + organic + affiliate creator mở rộng cho tiktok-suite vốn chỉ có ads."
+    lay_gi: "Setup TikTok Shop + chiến lược organic + tuyển affiliate creator → references/ của 11-thiet-lap-kenh (link tiktok-ads)"
+    dat_vao: admatrixmdp/tiktok-suite-os
+    trung_trong_kho: [mkt-tiktok-content-planner]
+    ban_tot_hon: false
+  - ten: ecom-upsell-crosssell
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [assp-money-model, dinh-gia-san-pham]
+    gia_tri: vua
+    ly_do: "10 chiến thuật upsell/cross-sell, vị trí hiển thị, bundle tăng AOV cho TMĐT."
+    lay_gi: "Bảng 10 upsell + 10 cross-sell + placement (trang SP, giỏ, sau mua) → references/ của assp-money-model"
+    dat_vao: assp (cấp tài khoản)
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: ecom-video-script
+    lo: lo-update
+    nhan: trung
+    ung_vien: [04-script-video]
+    gia_tri: thap
+    ly_do: "Hook formula, template theo thời lượng đã có ở 04-script-video."
+    trung_trong_kho: [mkt-instagram-reel-script]
+    ban_tot_hon: false
+  - ten: ecom-website-audit
+    lo: lo-update
+    nhan: trung
+    ung_vien: [01-audit-cro-ban-le, 03-audit-seo-ky-thuat]
+    gia_tri: thap
+    ly_do: "Audit CRO 304 điểm + SEO 93 điểm nội bộ đã bao 8 chiều này."
+    trung_trong_kho: [ecom-seo-optimizer, mkt-seo-on-page-audit]
+    ban_tot_hon: false
+  - ten: "Chiến lược YouTube & YouTube Shorts TMĐT Việt Nam"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [11-thiet-lap-kenh, 04-script-video]
+    gia_tri: thap
+    ly_do: "11 chưa có YouTube; phần YouTube SEO + setup kênh đáng lấy."
+    lay_gi: "Checklist setup kênh YouTube + YouTube SEO (tiêu đề, mô tả, chapter) + Shorts → references/ của 11-thiet-lap-kenh"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-youtube-script-writer]
+    ban_tot_hon: true
+  - ten: "Zalo Marketing Toàn Diện cho TMĐT"
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [11-thiet-lap-kenh]
+    gia_tri: cao
+    ly_do: "11 có setup Zalo OA; bản này thêm broadcast, Zalo Ads, Mini App, Zalo B2B bán sỉ — sát ZaloCRM."
+    lay_gi: "Thiết kế menu OA + lịch/tần suất broadcast + mẫu tin + Zalo Ads/Pixel + Zalo B2B + luật nền tảng → references/ của 11-thiet-lap-kenh; kiểm lại chính sách Zalo hiện hành"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: []
+    ban_tot_hon: false
+
+  # ===================== LÔ UPDATE — marketing-skills (11) =====================
+  - ten: bao-cao-chien-dich
+    lo: lo-update
+    nhan: trung
+    ung_vien: [07-bao-cao-marketing, 03-danh-gia-hieu-suat]
+    gia_tri: thap
+    ly_do: "Báo cáo chiến dịch so KPI, ROI đã có; bản này ngắn và chung."
+    trung_trong_kho: [bao-cao-marketing-thang]
+    ban_tot_hon: false
+  - ten: bao-cao-marketing-thang
+    lo: lo-update
+    nhan: trung
+    ung_vien: [07-bao-cao-marketing]
+    gia_tri: thap
+    ly_do: "07-bao-cao-marketing (nhận định trước, đề xuất có hạn) tốt hơn."
+    trung_trong_kho: [bao-cao-chien-dich]
+    ban_tot_hon: false
+  - ten: cham-diem-noi-dung
+    lo: lo-update
+    nhan: moi
+    ung_vien: [viet-tu-nhien, social-media-os]
+    gia_tri: vua
+    ly_do: "Thang 100 điểm 4 nhóm theo loại nội dung, dùng làm cổng duyệt trước khi đăng."
+    lay_gi: "Bộ tiêu chí 100 điểm (cấu trúc-hook, giá trị, văn phong, tối ưu nền tảng) + đề xuất sửa → skill chấm nội dung mới, gọi viet-tu-nhien khi điểm văn phong thấp"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-content-scorer]
+    ban_tot_hon: true
+  - ten: email-marketing
+    lo: lo-update
+    nhan: trung
+    ung_vien: [14-email-marketing]
+    gia_tri: thap
+    ly_do: "Trùng 14-email-marketing, ngắn hơn."
+    trung_trong_kho: [ecom-email-marketing]
+    ban_tot_hon: false
+  - ten: ke-hoach-chien-dich
+    lo: lo-update
+    nhan: trung
+    ung_vien: [02-brief-chien-dich, 00-ke-hoach-mkt]
+    gia_tri: thap
+    ly_do: "Brief chiến dịch 9 phần nội bộ đầy đủ hơn."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: khach-hang-muc-tieu
+    lo: lo-update
+    nhan: trung
+    ung_vien: [09-insight-khach-hang, assp-avatar-builder]
+    gia_tri: thap
+    ly_do: "Buyer persona đã có và sâu hơn."
+    trung_trong_kho: [mkt-customer-persona-builder]
+    ban_tot_hon: false
+  - ten: lich-noi-dung
+    lo: lo-update
+    nhan: trung
+    ung_vien: [01-lich-noi-dung]
+    gia_tri: thap
+    ly_do: "Trùng 01-lich-noi-dung, mỏng hơn."
+    trung_trong_kho: [ecom-content-calendar, mkt-content-calendar-multi-channel]
+    ban_tot_hon: false
+  - ten: mo-ta-san-pham
+    lo: lo-update
+    nhan: moi
+    ung_vien: [shopee-shop-analyzer]
+    gia_tri: thap
+    ly_do: "Cùng khái niệm với ecom-product-listing nhưng ngắn; chỉ lấy nguyên tắc viết theo nền tảng."
+    lay_gi: "Nguyên tắc viết theo nền tảng (website, sàn, fanpage, catalogue) → gộp vào skill mô tả sản phẩm"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [ecom-product-listing, mkt-product-description-shopify]
+    ban_tot_hon: false
+  - ten: noi-dung-mang-xa-hoi
+    lo: lo-update
+    nhan: trung
+    ung_vien: [social-media-os, 04-script-video]
+    gia_tri: thap
+    ly_do: "Caption, bài đăng, script ngắn đã có ở social-media-os và 04."
+    trung_trong_kho: [ecom-social-content]
+    ban_tot_hon: false
+  - ten: noi-dung-seo
+    lo: lo-update
+    nhan: trung
+    ung_vien: [05-content-chuan-semantic]
+    gia_tri: thap
+    ly_do: "Checklist SEO trước khi đăng đã có trong chuẩn semantic."
+    trung_trong_kho: [ecom-blog-seo, mkt-blog-article-writer]
+    ban_tot_hon: false
+  - ten: phan-tich-doi-thu
+    lo: lo-update
+    nhan: trung
+    ung_vien: [08-nghien-cuu-doi-thu]
+    gia_tri: thap
+    ly_do: "Phân tích đối thủ 3 tầng nội bộ tốt hơn."
+    trung_trong_kho: [ecom-competitor-analysis]
+    ban_tot_hon: false
+
+  # ===================== LÔ UPDATE — pr-skills (10) =====================
+  - ten: bao-cao-pr
+    lo: lo-update
+    nhan: moi
+    ung_vien: [07-bao-cao-marketing, 15-social-listening]
+    gia_tri: vua
+    ly_do: "Đo hiệu quả PR (coverage, share of voice) chưa có; nên bỏ chỉ số AVE đã bị ngành loại."
+    lay_gi: "Bộ KPI PR + mẫu báo cáo media coverage + báo cáo quý cho BGĐ → skill báo cáo PR trong cụm PR; thay AVE bằng khung đo AMEC"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: danh-gia-thuong-hieu
+    lo: lo-update
+    nhan: bo-sung
+    ung_vien: [32-nen-tang-thuong-hieu, 15-social-listening]
+    gia_tri: vua
+    ly_do: "32 chẩn đoán bằng chỉ số tài chính; thiếu khung đo brand health (nhận biết, cân nhắc, ưa thích)."
+    lay_gi: "Framework đo brand health/brand equity + phương pháp khảo sát định kỳ + mẫu báo cáo BGĐ → references/ của 32-nen-tang-thuong-hieu"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-survey-design]
+    ban_tot_hon: false
+  - ten: mang-xa-hoi-thuong-hieu
+    lo: lo-update
+    nhan: trung
+    ung_vien: [social-media-os, 15-social-listening]
+    gia_tri: thap
+    ly_do: "Chiến lược social, quản lý comment, social listening đã có."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: noi-dung-thuong-hieu
+    lo: lo-update
+    nhan: trung
+    ung_vien: [01-lich-noi-dung, 26-thought-leadership-content]
+    gia_tri: thap
+    ly_do: "Content pillar, editorial calendar, thought leadership đã có."
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: quan-he-bao-chi
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: vua
+    ly_do: "Thông cáo báo chí, media list, họp báo, chuẩn bị phỏng vấn chưa có ở nội bộ."
+    lay_gi: "Mẫu thông cáo báo chí + xây media list + pitch + checklist họp báo/phỏng vấn → skill quan hệ báo chí (gộp pitch, press kit)"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: [mkt-pr-pitch-writer, mkt-press-kit-builder]
+    ban_tot_hon: true
+  - ten: quan-he-cong-dong
+    lo: lo-update
+    nhan: moi
+    ung_vien: []
+    gia_tri: thap
+    ly_do: "CSR/ESG cho SME hiếm khi ưu tiên; giữ ở mức tham khảo trong cụm PR."
+    lay_gi: "Khung chương trình CSR + đánh giá tác động → references/ cụm PR"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: su-kien-va-tai-tro
+    lo: lo-update
+    nhan: moi
+    ung_vien: [02-brief-chien-dich]
+    gia_tri: vua
+    ly_do: "Lập kế hoạch sự kiện, quản lý nhà cung cấp, tài trợ chưa có skill."
+    lay_gi: "Event brief + bảng ngân sách/nhà cung cấp + chiến lược tài trợ → skill sự kiện mới"
+    dat_vao: admatrixmdp/marketing-business-skill
+    trung_trong_kho: [mkt-trade-show-plan]
+    ban_tot_hon: true
+  - ten: truyen-thong-khung-hoang
+    lo: lo-update
+    nhan: moi
+    ung_vien: [15-social-listening, 12-xu-ly-su-co]
+    gia_tri: cao
+    ly_do: "Phân cấp 3 mức, giao thức 24h, thông điệp 4R, phục hồi 3 giai đoạn; nội bộ chỉ có sự cố B2B."
+    lay_gi: "Bảng phân cấp khủng hoảng + giao thức 24h + cấu trúc 4R + kế hoạch phục hồi + checklist chuẩn bị → skill khủng hoảng mới (thêm bảng phân vai của mkt-pr-crisis-response)"
+    dat_vao: repo-moi:pr-truyen-thong
+    trung_trong_kho: [mkt-pr-crisis-response]
+    ban_tot_hon: true
+  - ten: truyen-thong-noi-bo
+    lo: lo-update
+    nhan: moi
+    ung_vien: [ke-hoach-ban-do-nhan-su]
+    gia_tri: vua
+    ly_do: "Truyền thông nội bộ thuộc nhân sự/quản trị, nội bộ chưa có."
+    lay_gi: "Chiến lược kênh nội bộ + mẫu văn bản thông báo + đo hiệu quả → skill truyền thông nội bộ"
+    dat_vao: repo-moi:nhan-su
+    trung_trong_kho: []
+    ban_tot_hon: false
+  - ten: xay-dung-thuong-hieu
+    lo: lo-update
+    nhan: trung
+    ung_vien: [32-nen-tang-thuong-hieu, assp-brand-voice, product-marketing-context]
+    gia_tri: thap
+    ly_do: "Định vị, brand identity, brand voice đã có đủ."
+    trung_trong_kho: [ecom-brand-builder, mkt-brand-voice-guide]
+    ban_tot_hon: false
