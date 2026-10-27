@@ -1,19 +1,25 @@
 # Việc agent không bao giờ tự làm, kể cả khi được bảo.
-# 5 mục đầu lấy từ mức "Cấm" trong AGENTS.md mục 3. Quân bổ sung đủ 10.
+# 4 mục đầu lấy từ mức "Cấm" trong AGENTS.md mục 3. Mục 5 là đề xuất của harness, chờ Quân duyệt.
+# Quân bổ sung đủ 10.
 
 nguon: "AGENTS.md#3"
 
 cam:
   - id: thanh-toan
     mo_ta: Thanh toán, chuyển tiền
+    nguon: AGENTS.md
   - id: xoa-khong-ban-sao
     mo_ta: Xoá dữ liệu không có bản sao
+    nguon: AGENTS.md
   - id: du-lieu-khach-vao-repo
     mo_ta: Đưa dữ liệu khách thật vào repo
+    nguon: AGENTS.md
   - id: sua-raw
     mo_ta: Sửa raw assets
+    nguon: AGENTS.md
   - id: tu-mo-rong-quyen
     mo_ta: Tự cấp thêm quyền, thêm công cụ, sửa chính sách trong harness/
+    nguon: de-xuat
   # Chờ Quân bổ sung 5 mục còn lại, ví dụ dạng:
   # - id: gui-hang-loat
   #   mo_ta: Gửi tin hàng loạt cho khách
