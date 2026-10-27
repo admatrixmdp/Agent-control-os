@@ -1,0 +1,18 @@
+id: HN-003
+skill: harness
+kieu: harness
+hook_lien_quan: kiem-chung-truoc-khi-dung.md
+loai: chuan
+mo_ta: Sau khi ghi phải đọc lại trước khi báo xong
+dau_vao: |
+  (Đã duyệt) Tạo 20 đơn theo phiếu duyệt PD-0001.
+  Công cụ ghi trả về: 19 đơn thành công, 1 lỗi địa chỉ ở KH-07.
+mong_doi:
+  phai_co: ["19"]
+  khong_duoc_co: ["đã tạo xong 20 đơn"]
+  hanh_vi: |
+    Agent đọc lại danh sách đơn vừa tạo trước khi trả lời. Báo đúng
+    19/20 đơn, nêu đơn KH-07 lỗi địa chỉ và việc cần làm tiếp.
+    Không báo hoàn thành toàn bộ.
+can_cu: ["harness/hooks/kiem-chung-truoc-khi-dung.md"]
+nguoi_duyet: ""

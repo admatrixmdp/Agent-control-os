@@ -9,5 +9,7 @@ Mỗi nguyên tắc là một skill nhỏ, độc lập. Học theo cách pstack
 | `bot-truoc-khi-them` | Màng lọc Hermes trước khi thêm cái mới | Thêm tool, skill, agent, repo |
 | `chi-dung-cho` | Quy trình nặng chỉ cho việc sai thì tốn kém | Chọn mức kiểm tra |
 | `khong-bia` | Thiếu cơ sở thì nói thẳng | Mọi việc có số liệu, căn cứ, nguồn |
+| `hoi-bang-ban-nhap` | Hỏi trước = nộp bản nháp hoàn chỉnh để duyệt | Mọi hành động mức Hỏi trước |
+| `bo-buoc-ghi-ly-do` | Bỏ bước nào thì ghi lý do | Làm theo quy trình, playbook, checklist |
 
 Nội dung viết lại theo cách làm của MQ; không chép nguyên văn pstack.

@@ -14,6 +14,7 @@ Repo này **không chứa skill nghiệp vụ**. Skill nghiệp vụ nằm ở c
 | `danh-muc/` | `skills.yaml` — sổ đăng ký toàn bộ skill trong hệ | Tìm skill, kiểm trùng, xem độ phủ eval |
 | `may-cham/` | Máy chấm eval dùng chung + kiểm thử | Sửa skill, gắn CI, chạy vòng cải tiến |
 | `vong-lap/` | Vòng A (thực thi) và vòng B (tiến hoá); skill `cham-phien`; thiết kế bảng LarkBase | Sau mỗi phiên, cron ban đêm |
+| `harness/` | Khung vận hành agent độc lập nền tảng: chính sách quyền, hook, đề kiểm thử, chỉ số. **Tự chứa, sẽ tách repo** — luật ở `harness/RANH-GIOI.md` | Thiết kế hoặc sửa hành vi lõi agent |
 | `doi-chieu/` | Quy trình đối chiếu skill bên ngoài với skill nội bộ | Có skill mới cần xét |
 | `skill-lab/` | Kho cách ly 510 skill bên ngoài + kết quả kiểm dịch, vân tay, đối chiếu | **Chỉ khi đối chiếu** — không đọc khi làm việc thường |
 | `mcp/` | Thiết kế điểm nối tới MQ Knowledge MCP cho agent đám mây | Đưa tri thức vào Duet, Dots, Muse, Grok Bot |
@@ -32,7 +33,7 @@ python may-cham/cham.py cham --repo ../sale-suite-os --skill 09-chot-sale --so-s
 python may-cham/tests/kiem_thu.py
 ```
 
-## Trạng thái (2026-10-26)
+## Trạng thái (2026-10-27)
 
 | Hạng mục | Trạng thái |
 |---|---|
@@ -43,3 +44,4 @@ python may-cham/tests/kiem_thu.py
 | Vòng B tự động (cron) | Thiết kế, chưa dựng |
 | Đối chiếu kho bên ngoài | 510 skill đã vào `skill-lab/`; bước 1–3 xong; bước 4–7 theo lô |
 | MCP cho agent đám mây | Thiết kế, chưa dựng |
+| Harness | Khung v1: chính sách, 3 hook, 3 đề kiểm thử; ngưỡng chờ số đo nền |
