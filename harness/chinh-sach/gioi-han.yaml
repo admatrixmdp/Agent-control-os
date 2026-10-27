@@ -1,0 +1,15 @@
+# Giới hạn vòng lặp. null = chưa đặt; đặt sau 2 tuần số đo nền (harness/DECISIONS.md).
+
+moi_luot:
+  so_vong_toi_da: null
+  so_lan_goi_cong_cu_toi_da: null
+
+moi_phien:
+  token_toi_da: null
+  chi_phi_toi_da_vnd: null
+
+moi_khach_moi_ngay:
+  chi_phi_toi_da_vnd: null
+  so_phien_toi_da: null
+
+khi_cham_gioi_han: dung_va_bao   # dừng, báo người dùng đã chạm giới hạn nào; không âm thầm cắt

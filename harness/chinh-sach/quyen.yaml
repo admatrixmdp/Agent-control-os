@@ -1,0 +1,36 @@
+# Ánh xạ 3 mức quyền sang hành động cụ thể và ngưỡng duyệt.
+# Nguồn gốc 3 mức: AGENTS.md mục 3 (điểm nối, xem RANH-GIOI.md). File này không định nghĩa lại, chỉ ánh xạ.
+
+nguon_muc_quyen: "AGENTS.md#3"
+
+# Loại hành động -> mức mặc định
+hanh_dong:
+  doc_du_lieu: tu_lam
+  soan_nhap: tu_lam
+  phan_tich: tu_lam
+  gui_tin_ra_ngoai: hoi_truoc
+  dang_noi_dung: hoi_truoc
+  thay_doi_ngan_sach_quang_cao: hoi_truoc
+  ghi_vao_he_thong_that: hoi_truoc   # tạo/sửa đơn, khách, sản phẩm, cấu hình shop
+  xuat_hoa_don: hoi_truoc
+  thanh_toan_chuyen_tien: cam
+  xoa_du_lieu_khong_ban_sao: cam
+
+# Nâng mức theo quy mô: hành động "tu_lam" chạm ngưỡng thì thành "hoi_truoc".
+# Để null đến khi có 2 tuần số đo nền (harness/DECISIONS.md).
+nang_muc_khi:
+  so_tien_vnd: null
+  so_nguoi_nhan: null
+  so_ban_ghi: null
+
+# Thẻ duyệt gửi người: viết bằng ngôn ngữ nghiệp vụ.
+the_duyet:
+  kenh: null               # zalo | lark — chờ Quân chốt
+  truong_bat_buoc:
+    - hanh_dong            # vd "Tạo đơn hàng"
+    - so_ban_ghi           # vd 20 đơn
+    - so_tien_vnd
+    - so_khach_bi_anh_huong
+    - hoan_tac_duoc        # có / không
+  het_han_phut: null
+  khi_het_han: tu_choi     # không trả lời = từ chối
