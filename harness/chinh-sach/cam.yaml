@@ -1,6 +1,9 @@
-# Việc agent không bao giờ tự làm, kể cả khi được bảo.
+# Việc agent không bao giờ tự làm, kể cả khi được bảo. Không có lối ngoại lệ.
 # 4 mục đầu lấy từ mức "Cấm" trong AGENTS.md mục 3. Mục 5 là đề xuất của harness, chờ Quân duyệt.
 # Quân bổ sung đủ 10.
+#
+# Thực thi: ưu tiên KHÔNG CẤP CÔNG CỤ cho việc cấm; hook chỉ là lớp phụ.
+# Luật cấm xét trước mọi luật khác; không luật cho phép nào khoét được ngoại lệ.
 
 nguon: "AGENTS.md#3"
 
@@ -8,18 +11,29 @@ cam:
   - id: thanh-toan
     mo_ta: Thanh toán, chuyển tiền
     nguon: AGENTS.md
+    thuc_thi: khong_cap_cong_cu   # không agent nào có công cụ thanh toán
+    agent_duoc_lam: Soạn đề nghị chi (người nhận, số tiền, lý do, chứng từ) để Quân tự chi
+    xem_lai_khi: Có thẻ ảo hoặc ví có hạn mức và mã dùng một lần theo giao dịch
   - id: xoa-khong-ban-sao
     mo_ta: Xoá dữ liệu không có bản sao
     nguon: AGENTS.md
+    thuc_thi: hook_chan
+    agent_duoc_lam: Tạo bản sao trước; có bản sao thì xoá thuộc mức Hỏi trước
   - id: du-lieu-khach-vao-repo
     mo_ta: Đưa dữ liệu khách thật vào repo
     nguon: AGENTS.md
+    thuc_thi: hook_chan
+    agent_duoc_lam: Dùng dữ liệu giả lập
   - id: sua-raw
     mo_ta: Sửa raw assets
     nguon: AGENTS.md
+    thuc_thi: quyen_chi_doc   # thư mục raw chỉ đọc với mọi agent
+    agent_duoc_lam: Tạo phiên bản mới cạnh bản gốc, hoặc ghi đề xuất sửa để Quân tự sửa
   - id: tu-mo-rong-quyen
     mo_ta: Tự cấp thêm quyền, thêm công cụ, sửa chính sách trong harness/
     nguon: de-xuat
+    thuc_thi: hook_chan
+    agent_duoc_lam: Mở PR đề xuất để Quân duyệt
   # Chờ Quân bổ sung 5 mục còn lại, ví dụ dạng:
   # - id: gui-hang-loat
   #   mo_ta: Gửi tin hàng loạt cho khách

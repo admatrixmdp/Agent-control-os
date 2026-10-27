@@ -3,13 +3,13 @@
 | Mục | Nội dung |
 |---|---|
 | Sự kiện | `pre_tool_use` |
-| Khớp | Công cụ thuộc nhóm `hoi_truoc` trong `../chinh-sach/quyen.yaml`, hoặc chạm `nang_muc_khi` |
+| Khớp | Công cụ thuộc nhóm `hoi_truoc` trong `../chinh-sach/quyen.yaml`, chạm `nang_muc_khi`, hoặc rơi vào `bo_ba` |
 | Kết quả | Chặn, trừ khi đầu vào có mã duyệt hợp lệ |
 
 ## Luồng
 
 1. Agent gọi công cụ ghi (vd tạo 20 đơn).
-2. Hook không thấy mã duyệt → **chặn**, tạo phiếu duyệt với các trường trong `the_duyet`, gửi qua kênh duyệt.
+2. Hook không thấy mã duyệt → **chặn**, tạo phiếu duyệt với các trường trong `the_duyet`, **kèm bản nháp đầy đủ** (nguyên tắc `hoi-bang-ban-nhap`), gửi qua kênh duyệt.
 3. Hook trả lời agent: "Đang chờ duyệt, mã phiếu …". Agent báo người dùng và **dừng lượt**, không thử lại.
 4. Người duyệt bấm Duyệt → hệ thống chạy lại lệnh, kèm mã duyệt.
 5. Hook thấy mã hợp lệ → cho qua.
@@ -23,6 +23,10 @@ Hook thường bị giới hạn thời gian chạy rất ngắn, không đủ c
 - Dùng **một lần**.
 - Gắn với **dấu băm của đầu vào công cụ**: duyệt "20 đơn" không dùng được cho "200 đơn".
 - Hết hạn theo `het_han_phut`; hết hạn = từ chối.
+
+## Không dùng hook này cho việc Cấm
+
+Việc mức Cấm không có phiếu duyệt. Chặn bằng cách không cấp công cụ hoặc quyền chỉ đọc (`../chinh-sach/cam.yaml`).
 
 ## Đề kiểm thử
 

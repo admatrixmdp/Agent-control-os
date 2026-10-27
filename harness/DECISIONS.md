@@ -10,3 +10,4 @@ Quyết định riêng của harness. Đi theo thư mục khi tách repo.
 | 2026-10-27 | Bản đồ chi tiết nền tảng lõi ↔ 7 phân hệ | Đưa vào repo / giữ ngoài repo | **Không đưa vào repo** (Quân chốt) | — | C |
 | 2026-10-27 | Cách truy xuất | Tìm theo vector / truy xuất tất định | **Tất định cho dữ liệu có cấu trúc** (đơn, khách, sản phẩm); vector chỉ cho văn bản tự do | 11/11 harness trong bài không dùng vector để tìm mã; truy vấn có cấu trúc chính xác hơn với dữ liệu nghiệp vụ | C |
 | 2026-10-27 | Ngưỡng giới hạn và duyệt | Đặt số ngay / đo trước | **Đo 2 tuần mức nền rồi mới đặt** | Đặt trước thì đoán; luật quá chặt làm agent hỏi liên tục | C |
+| 2026-10-27 | Cách thực thi việc Cấm | Hook chặn / không cấp công cụ | **Không cấp công cụ hoặc quyền chỉ đọc trước; hook là lớp phụ.** Việc Cấm không có phiếu duyệt | Chuyên gia thống nhất: cấm xét trước, không có lối ngoại lệ; chặn ngoài mô hình mới là ranh giới (Claude Code docs, WorkOS, Auth0) | C |
