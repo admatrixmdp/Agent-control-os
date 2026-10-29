@@ -14,5 +14,6 @@
 | Không giao | Việc cần chạy liên tục nhiều giờ không người xem mà không có điều kiện dừng |
 | Eval | `python may-cham/cham.py cham ...` (dùng Claude API) |
 | Ghi chú | Lệnh `claude plugin eval` (cấu hình `experimental.evals`) là cơ chế thử nghiệm; `may-cham` không phụ thuộc vào nó |
+| Liên kết giữa repo | Một marketplace trỏ plugin ở repo khác: được. Phụ thuộc chéo marketplace: được nếu khai cho phép. Dùng chung file: không — xem [claude-code-lien-repo](claude-code-lien-repo.md) |
 
 Xác nhận: 2026-10-26.
