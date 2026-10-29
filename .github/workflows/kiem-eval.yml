@@ -1,0 +1,36 @@
+name: Kiểm định dạng eval (dùng lại được)
+
+on:
+  workflow_call:
+    inputs:
+      nghiem:
+        description: "Coi cảnh báo độ phủ là lỗi"
+        type: boolean
+        default: false
+      loc:
+        description: "Mẫu glob file eval"
+        type: string
+        default: "evals/**/*.yaml"
+
+jobs:
+  kiem:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy repo skill
+        uses: actions/checkout@v4
+        with:
+          path: repo-skill
+      - name: Lấy máy chấm
+        uses: actions/checkout@v4
+        with:
+          repository: admatrixmdp/Agent-control-os
+          path: agent-control-os
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml
+      - name: Kiểm
+        run: |
+          FLAG=""
+          if [ "${{ inputs.nghiem }}" = "true" ]; then FLAG="--nghiem"; fi
+          python agent-control-os/may-cham/cham.py kiem --repo repo-skill --loc "${{ inputs.loc }}" $FLAG

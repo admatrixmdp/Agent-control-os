@@ -1,0 +1,11 @@
+id: MAU-001
+skill: chot-sale-mau
+loai: chuan
+mo_ta: "Tình huống chuẩn mẫu"
+dau_vao: "Soạn câu chốt cho khách đã đồng ý giá."
+mong_doi:
+  phai_co: ["cam kết"]
+  khong_duoc_co: []
+  hanh_vi: "Đưa câu chốt kèm một cam kết bước tiếp theo."
+can_cu: []
+nguoi_duyet: ""

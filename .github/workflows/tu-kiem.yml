@@ -1,0 +1,33 @@
+name: Tự kiểm máy chấm
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  kiem-thu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml
+      - name: Kiểm thử máy chấm
+        run: python may-cham/tests/kiem_thu.py
+      - name: Kiểm YAML trong repo này
+        run: |
+          python - <<'PY'
+          import pathlib, sys, yaml
+          bad = []
+          for p in pathlib.Path(".").rglob("*.y*ml"):
+              if ".git" in p.parts or ".github" in p.parts:
+                  continue
+              try:
+                  yaml.safe_load(p.read_text(encoding="utf-8"))
+              except yaml.YAMLError as e:
+                  bad.append(f"{p}: {str(e).splitlines()[0]}")
+          print("\n".join(bad) or "Mọi file YAML đọc được")
+          sys.exit(1 if bad else 0)
+          PY

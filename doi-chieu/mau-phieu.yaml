@@ -1,0 +1,26 @@
+# Mẫu phiếu đối chiếu — một file cho một skill bên ngoài
+nguon:
+  ten: pricing-psychology-playbook
+  repo_hoac_link: ""
+  giay_phep: ""           # MIT, Apache-2.0, không rõ...
+  ngay_lay: 2026-10-26
+kiem_dich:
+  chi_dan_an: false       # có câu lệnh ẩn yêu cầu agent bỏ qua luật, gửi dữ liệu ra ngoài...
+  lenh_nguy_hiem: false   # rm -rf, curl | sh, ghi ngoài thư mục...
+  goi_mang_la: false
+  ket_luan: qua           # qua | loai
+van_tay:
+  mang: marketing
+  mo_ta: ""
+  trigger: []
+  dau_ra: ""              # cấu trúc đầu ra skill hứa hẹn
+  references: []
+anh_xa: []                # tên skill nội bộ cùng khái niệm (theo danh-muc/skills.yaml)
+nhan: ""                  # trung | bo-sung | moi | loai
+ly_do: ""
+delta: ""                 # với bo-sung: đoạn nào đáng lấy, đặt vào đâu
+pr: ""
+diem_truoc: null
+diem_sau: null
+nguoi_chot: ""            # Quân
+tang_tri_thuc: thu-thap-chua-kiem-chung   # → thu-thap-da-kiem-chung sau bước 6
