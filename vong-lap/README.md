@@ -37,6 +37,8 @@ Vì sao chỉ thêm: viết lại toàn bộ làm bối cảnh thoái hoá dần
 
 Dòng mới sinh bằng `vong-lap/so-bai-hoc/ledger.py playbook export --skill <tên>` từ bài `durable` đã `accepted`. Lệnh chỉ thêm một dòng `[Pnn]`, không sửa dòng cũ và không sửa `SKILL.md`. Bộ đếm sống nằm trong sổ; dòng playbook chụp số tại lúc xuất.
 
+Agent Claude tên **Agent Evolution** (slug `agent-evolution`) rà phiên và ghi bài vào sổ này. Định nghĩa ở `.claude/agents/agent-evolution.md`. Cài và lịch ví dụ ở `vong-lap/so-bai-hoc/claude/`. Hook và cron không bật sẵn.
+
 ## Mức tự động theo loại tài sản
 
 | Tài sản | Mức tự động |

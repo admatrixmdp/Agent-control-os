@@ -278,12 +278,28 @@ class T(unittest.TestCase):
         self.run_cli("wiki", "build", "--include-sensitive")
         self.assertIn("An bai sensitive", rd(os.path.join(self.root, "wiki", "bi-mat.md")))
 
+    def test_uid_khong_tao_trung(self):
+        a = self.j(
+            "add", "--bot", "agent-evolution", "--title", "Phien can ra",
+            "--text", "Bai gia lap, khong co du lieu khach.",
+            "--tier", "scratch", "--sensitivity", "user", "--uid", "phien-gia-lap-001",
+            "-e", "transcript:phien-gia-lap-001")
+        self.assertFalse(a["skipped"])
+        b = self.j(
+            "add", "--bot", "agent-evolution", "--title", "Tieu de khac",
+            "--text", "Khong duoc ghi de.", "--uid", "phien-gia-lap-001")
+        self.assertTrue(b["skipped"])
+        self.assertEqual(a["id"], b["id"])
+        self.assertEqual(len(self.j("list")), 1)
+        self.assertEqual(self.j("show", str(a["id"]))["title"], "Phien can ra")
+
     def test_gitignore_blocks_runtime(self):
         text = rd(os.path.join(ROOT, ".gitignore"))
         for line in ("*.db", "*.db-wal", "*.db-shm",
                      "vong-lap/so-bai-hoc/wiki/",
                      "vong-lap/so-bai-hoc/staging/",
-                     "vong-lap/so-bai-hoc/proposals/"):
+                     "vong-lap/so-bai-hoc/proposals/",
+                     "vong-lap/so-bai-hoc/bao-cao/"):
             self.assertIn(line, text)
 
 

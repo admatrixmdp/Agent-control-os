@@ -68,6 +68,19 @@ alias sbh='python3 vong-lap/so-bai-hoc/ledger.py --actor ten-bot'
 
 ```bash
 python3 vong-lap/so-bai-hoc/tests/test_ledger.py
+python3 vong-lap/so-bai-hoc/tests/test_cai_dat.py
 ```
 
 Chạy trên DB tạm. Nếu `ledger.db` cạnh CLI đã tồn tại, cuối buổi kiểm tra kích thước không đổi.
+
+## Agent Evolution
+
+Tên hiển thị **Agent Evolution**, slug `agent-evolution`. Đây là agent Claude Code: đọc phiên và bộ nhớ của agent khác, ghi bài `scratch` có bằng chứng, đề xuất skill hoặc wiki. Định nghĩa đủ để dán sang một agent Claude tạo riêng cùng tên: `.claude/agents/agent-evolution.md`. Phần thân (dưới frontmatter) là prompt.
+
+```bash
+bash vong-lap/so-bai-hoc/claude/cai-dat.sh
+```
+
+Mặc định chép CLI vào `~/.agent-evolution/ledger.py`, tạo `ledger.db` trống ở đó, cài skill và file agent dưới `~/.claude/`, và thêm một khối có mốc `AGENT-EVOLUTION` vào `~/.claude/CLAUDE.md`. Chạy lại thì ghi đè khối đó, không thêm lần thứ hai. Không chép `settings.json`, không đăng ký cron.
+
+Hook ví dụ (Stop và SessionEnd, chỉ ghi một bài scratch theo mã phiên): `.claude/settings.vi-du.json`. Lịch 09:00 thứ Hai và thứ Năm, `CRON_TZ=Asia/Saigon`, lệnh `0 9 * * 1,4`: `vong-lap/so-bai-hoc/claude/lich.vi-du.md`. Lượt không người xem chỉ được ghi `scratch`. Bài `user` / `finance` / `sensitive` đưa vào báo cáo chờ Dat và Quân, không tự nâng.

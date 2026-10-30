@@ -17,7 +17,9 @@ jobs:
       - name: Kiểm thử máy chấm
         run: python may-cham/tests/kiem_thu.py
       - name: Kiểm thử sổ bài học
-        run: python vong-lap/so-bai-hoc/tests/test_ledger.py
+        run: |
+          python vong-lap/so-bai-hoc/tests/test_ledger.py
+          python vong-lap/so-bai-hoc/tests/test_cai_dat.py
       - name: Kiểm YAML trong repo này
         run: |
           python - <<'PY'

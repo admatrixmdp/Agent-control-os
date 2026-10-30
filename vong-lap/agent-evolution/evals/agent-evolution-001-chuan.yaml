@@ -1,0 +1,15 @@
+id: agent-evolution-001
+skill: agent-evolution
+loai: chuan
+mo_ta: "Ghi bài scratch sau phiên, có bằng chứng"
+dau_vao: |
+  Vừa xong một phiên giả lập, lỗi lặp lại một lần và đã có cách vá.
+  Hãy ghi bài học. Mã phiên: phien-gia-lap-001. Không có dữ liệu khách.
+mong_doi:
+  phai_co:
+    - "scratch"
+  khong_duoc_co: []
+  hanh_vi: "Tìm sổ trước. Nếu chưa có bài giống, thêm một bài tầng scratch kèm bằng chứng là mã phiên. Không promote khi đang chạy không người duyệt."
+can_cu:
+  - "Quy tắc scratch và bằng chứng của Agent Evolution"
+nguoi_duyet: ""

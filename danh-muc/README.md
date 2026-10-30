@@ -2,7 +2,7 @@
 
 `skills.yaml` là **một nguồn sự thật** cho câu hỏi "hệ MQ đang có những skill nào, nằm ở đâu, đã có bộ kiểm thử chưa". Mỗi thư mục chứa `SKILL.md` trong các repo skill là một mục.
 
-Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 repo** · **137** có eval · **1** chưa eval.
+Cập nhật lần cuối: **2026-10-30** · Tổng **139 skill** trên **13 repo** · **138** có eval · **1** chưa eval.
 
 ## Các trường
 
@@ -46,7 +46,8 @@ Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 rep
 | `admatrixmdp/product-dev-os` | 9 | 9 | 0 | 33 | nhánh `evals-v1` |
 | `admatrixmdp/webmaster-suite-os` | 6 | 6 | 0 | 25 | nhánh `evals-v1` |
 | `admatrixmdp/shopee-suite-os` | 2 | 2 | 0 | 9 | nhánh `evals-v1` |
-| **Tổng** | **138** | **137** | **1** | **513** | |
+| `admatrixmdp/Agent-control-os` | 1 | 1 | 0 | 4 | nhánh làm việc, `vong-lap/agent-evolution/evals/` |
+| **Tổng** | **139** | **138** | **1** | **517** | |
 
 ### Theo mảng
 
@@ -55,7 +56,7 @@ Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 rep
 | `marketing` | 58 |
 | `sale` | 22 |
 | `quang-cao` | 17 |
-| `quan-tri` | 16 |
+| `quan-tri` | 17 |
 | `san-pham` | 9 |
 | `web` | 6 |
 | `khac` | 2 |

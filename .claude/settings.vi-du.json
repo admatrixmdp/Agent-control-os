@@ -1,0 +1,27 @@
+{
+  "_vi_du": "Không phải settings.json. Claude Code không nạp file này. Bộ cài không chép nó vào settings.json.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/.agent-evolution/ghi-nhap-phien.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/.agent-evolution/ghi-nhap-phien.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

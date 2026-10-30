@@ -21,6 +21,26 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DB = os.environ.get("SELF_EVO_DB", os.path.join(HERE, "ledger.db"))
 DEFAULT_ROOT = os.environ.get("SELF_EVO_ROOT", HERE)
 DEFAULT_CATALOG = os.path.abspath(os.path.join(HERE, "..", "..", "danh-muc", "skills.yaml"))
+
+
+def resolve_catalog(explicit=None):
+    """Ưu tiên file có thật: --catalog, $SO_BAI_HOC_CATALOG, sổ cạnh repo, rồi nguon.txt do bộ cài ghi."""
+    ordered = []
+    if explicit:
+        ordered.append(explicit)
+    env = os.environ.get("SO_BAI_HOC_CATALOG")
+    if env:
+        ordered.append(env)
+    ordered.append(DEFAULT_CATALOG)
+    note = os.path.join(HERE, "nguon.txt")
+    if os.path.isfile(note):
+        root = open(note, encoding="utf-8").read().strip()
+        if root:
+            ordered.append(os.path.join(root, "danh-muc", "skills.yaml"))
+    for cand in ordered:
+        if cand and os.path.isfile(cand):
+            return os.path.abspath(cand)
+    return os.path.abspath(ordered[0]) if ordered[0] else DEFAULT_CATALOG
 TIERS = ["scratch", "working", "durable"]
 STATUSES = ["proposed", "accepted", "retired"]
 SENS = ["none", "user", "finance", "sensitive"]
@@ -233,7 +253,8 @@ def screened_evidence(evidence):
 class Ledger:
     def __init__(self, path, actor, catalog=None):
         self.path, self.actor = path, actor
-        self.catalog = os.path.abspath(catalog or DEFAULT_CATALOG)
+        self.catalog = resolve_catalog(catalog or DEFAULT_CATALOG)
+        self.skipped_uid = False
         d = os.path.dirname(os.path.abspath(path))
         os.makedirs(d, exist_ok=True)
         self.db = sqlite3.connect(path)
@@ -280,6 +301,13 @@ class Ledger:
             sensitivity="none", status="proposed", uid=None, created_at=None, updated_at=None,
             owner_approval=None, skill="", repo="", nen_tang="", nhan_loi="", tenant="",
             giup=0, hai=0, playbook_ma=None, log=True):
+        self.skipped_uid = False
+        if uid:
+            cam_bi_mat(uid, "uid")
+            old = self.db.execute("SELECT id FROM lessons WHERE uid=?", (uid,)).fetchone()
+            if old:
+                self.skipped_uid = True
+                return old["id"]
         if tier not in TIERS or status not in STATUSES or sensitivity not in SENS:
             raise SystemExit("tầng, trạng thái hoặc sensitivity không hợp lệ")
         if not 0 <= float(confidence) <= 1:
@@ -923,6 +951,7 @@ def main(argv=None):
     a.add_argument("--tenant", default="")
     a.add_argument("--giup", type=int, default=0)
     a.add_argument("--hai", type=int, default=0)
+    a.add_argument("--uid", default=None, help="mã ổn định; gọi lại cùng mã thì không tạo bài mới")
 
     s = sp.add_parser("search", help="tìm BM25, không phân biệt dấu")
     s.add_argument("query")
@@ -1029,8 +1058,9 @@ def main(argv=None):
         lid = L.add(args.bot, args.title, text, args.tags, args.tier, args.evidence, args.confidence,
                     args.sensitivity, args.status, owner_approval=args.owner_approved, skill=args.skill,
                     repo=args.repo, nen_tang=args.nen_tang, nhan_loi=args.nhan_loi, tenant=args.tenant,
-                    giup=args.giup, hai=args.hai)
-        emit(args, {"id": lid}, "đã thêm bài #%d" % lid)
+                    giup=args.giup, hai=args.hai, uid=args.uid)
+        emit(args, {"id": lid, "skipped": L.skipped_uid},
+             ("đã có bài #%d" % lid) if L.skipped_uid else ("đã thêm bài #%d" % lid))
     elif c == "search":
         rs = L.search(args.query, args.bot, args.tag, args.tier, args.status, args.limit,
                       "and" if args.all_terms else "or", args.include_retired, args.skill, args.repo,
