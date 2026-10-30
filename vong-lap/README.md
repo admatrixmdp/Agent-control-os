@@ -13,11 +13,11 @@ Hai vòng tách rời: **vòng A** chạy trong mỗi phiên làm việc, **vòn
 | A5 | Sensor kiểm đầu ra | Chưa — để sau, lỗi lặp lại sẽ chỉ ra sensor nào đáng viết |
 | A6 | Ghi dấu: trace (GoClaw có sẵn) + **`cham-phien`** (mọi nền tảng) | `cham-phien` có ở `vong-lap/cham-phien/` |
 
-## Vòng B — tiến hoá (cron đêm)
+## Vòng B — tiến hoá (Agent Evolution, 9:00 thứ Hai và thứ Năm)
 
 | Bước | Việc | Ở đâu | Trạng thái |
 |---|---|---|---|
-| B1 | Gom dòng chấm phiên vào sổ (skill, repo, nen_tang, nhan_loi, tenant) | `vong-lap/so-bai-hoc/` — `ledger.py add` | Có CLI. Cron đêm vẫn để sau |
+| B1 | Gom bài học vào sổ: mọi agent nộp vào hộp thư (`hop_thu.py nop`), Agent Evolution nhập (`hop_thu.py nhap`) | `vong-lap/so-bai-hoc/` | Có. Lịch: Agent Evolution 9:00 thứ Hai, thứ Năm |
 | B2 | Đề xuất **một** dòng bài học vào `playbook.md` (chỉ thêm, không viết lại skill) | `ledger.py playbook export --skill <tên>` | Có |
 | B3 | Tra tiền lệ: đề xuất tương tự từng bị từ chối chưa | `ledger.py search` trong `vong-lap/so-bai-hoc/` (kể cả `--status retired`). LarkBase là bản sync tuỳ chọn | Có ở sổ. Sync LarkBase chưa nối |
 | B4 | Chạy `may-cham` có sửa vs không sửa | `may-cham/cham.py` | **Có** |

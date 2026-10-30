@@ -15,6 +15,7 @@ Repo này **không chứa skill nghiệp vụ**. Skill nghiệp vụ nằm ở c
 | `may-cham/` | Máy chấm eval dùng chung + kiểm thử | Sửa skill, gắn CI, chạy vòng cải tiến |
 | `vong-lap/` | Vòng A (thực thi) và vòng B (tiến hoá); skill `cham-phien`; thiết kế bảng LarkBase | Sau mỗi phiên, cron ban đêm |
 | `harness/` | Khung vận hành agent độc lập nền tảng: chính sách quyền, hook, đề kiểm thử, chỉ số. **Tự chứa, sẽ tách repo** — luật ở `harness/RANH-GIOI.md` | Thiết kế hoặc sửa hành vi lõi agent |
+| `plugins/agent-evolution/` | **Agent Evolution** — thợ tiến hoá duy nhất: rà bài học 9:00 thứ Hai và thứ Năm, chấm trước/sau, mở PR | Cài agent, hỏi "tuần này sửa được gì" |
 | `doi-chieu/` | Quy trình đối chiếu skill bên ngoài với skill nội bộ | Có skill mới cần xét |
 | `skill-lab/` | Kho cách ly 510 skill bên ngoài + kết quả kiểm dịch, vân tay, đối chiếu | **Chỉ khi đối chiếu** — không đọc khi làm việc thường |
 | `mcp/` | Thiết kế điểm nối tới MQ Knowledge MCP cho agent đám mây | Đưa tri thức vào Duet, Dots, Muse, Grok Bot |
@@ -41,7 +42,7 @@ python may-cham/tests/kiem_thu.py
 | Máy chấm `kiem` + `cham` | v1, kiểm thử 7/7 đạt; chưa chạy thật với API |
 | Sổ đăng ký skill | v1 |
 | Eval trong các repo skill | 12 repo có eval; 7 PR `evals-v1` đang chờ duyệt |
-| Vòng B tự động (cron) | Thiết kế, chưa dựng |
+| Vòng B tự động | Agent Evolution v0.1 (bản mô tả + hộp thư); chạy trên Grok Bot, chờ cài |
 | Đối chiếu kho bên ngoài | 510 skill đã vào `skill-lab/`; bước 1–3 xong; bước 4–7 theo lô |
 | MCP cho agent đám mây | Thiết kế, chưa dựng |
 | Harness | Khung v1: chính sách, 3 hook, 3 đề kiểm thử; ngưỡng chờ số đo nền |
