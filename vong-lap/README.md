@@ -8,7 +8,7 @@ Hai vòng tách rời: **vòng A** chạy trong mỗi phiên làm việc, **vòn
 |---|---|---|
 | A1 | Gọi skill | Có |
 | A2 | Đọc luật: `AGENTS.md`, `SKILL.md` | Có |
-| A3 | Đọc bài học cũ: `playbook.md` cạnh skill | **Chưa có** — tạo khi skill có bài học đầu tiên |
+| A3 | Đọc bài học cũ: `ledger.py search` trong `vong-lap/so-bai-hoc/` (ưu tiên tầng `durable`) và `playbook.md` cạnh skill | Có sổ. `playbook.md` cạnh skill được tạo khi `playbook export` thêm dòng đầu |
 | A4 | Làm việc, lấy số từ nguồn (MCP) | Có |
 | A5 | Sensor kiểm đầu ra | Chưa — để sau, lỗi lặp lại sẽ chỉ ra sensor nào đáng viết |
 | A6 | Ghi dấu: trace (GoClaw có sẵn) + **`cham-phien`** (mọi nền tảng) | `cham-phien` có ở `vong-lap/cham-phien/` |
@@ -17,12 +17,12 @@ Hai vòng tách rời: **vòng A** chạy trong mỗi phiên làm việc, **vòn
 
 | Bước | Việc | Ở đâu | Trạng thái |
 |---|---|---|---|
-| B1 | Gom dòng chấm phiên + trace mới, gắn nhãn tầng lỗi | GoClaw cron / Claude scheduled task | Thiết kế |
-| B2 | Đề xuất **một** dòng bài học vào `playbook.md` (chỉ thêm, không viết lại) | PR vào repo skill | Thiết kế |
-| B3 | Tra tiền lệ: đề xuất tương tự từng bị từ chối chưa | LarkBase `Skill_Change_Log` | Thiết kế |
+| B1 | Gom dòng chấm phiên vào sổ (skill, repo, nen_tang, nhan_loi, tenant) | `vong-lap/so-bai-hoc/` — `ledger.py add` | Có CLI. Cron đêm vẫn để sau |
+| B2 | Đề xuất **một** dòng bài học vào `playbook.md` (chỉ thêm, không viết lại skill) | `ledger.py playbook export --skill <tên>` | Có |
+| B3 | Tra tiền lệ: đề xuất tương tự từng bị từ chối chưa | `ledger.py search` trong `vong-lap/so-bai-hoc/` (kể cả `--status retired`). LarkBase là bản sync tuỳ chọn | Có ở sổ. Sync LarkBase chưa nối |
 | B4 | Chạy `may-cham` có sửa vs không sửa | `may-cham/cham.py` | **Có** |
 | B5 | Tốt hơn → để PR chờ duyệt; kém hơn → đóng PR | GitHub | Thiết kế |
-| B6 | Ghi tiền lệ chấp nhận / từ chối | LarkBase | Thiết kế |
+| B6 | Ghi tiền lệ chấp nhận / từ chối | `vong-lap/so-bai-hoc/` (audit, `accept` / `retire`). Sync tuỳ chọn sang LarkBase `Skill_Change_Log` | Có ở sổ. Sync LarkBase chưa nối |
 
 ## Định dạng `playbook.md` (đặt cạnh SKILL.md trong repo skill)
 
@@ -34,6 +34,8 @@ Hai vòng tách rời: **vòng A** chạy trong mỗi phiên làm việc, **vòn
 ```
 
 Vì sao chỉ thêm: viết lại toàn bộ làm bối cảnh thoái hoá dần thành đoạn mơ hồ (lỗi "sập bối cảnh" mà ACE mô tả).
+
+Dòng mới sinh bằng `vong-lap/so-bai-hoc/ledger.py playbook export --skill <tên>` từ bài `durable` đã `accepted`. Lệnh chỉ thêm một dòng `[Pnn]`, không sửa dòng cũ và không sửa `SKILL.md`. Bộ đếm sống nằm trong sổ; dòng playbook chụp số tại lúc xuất.
 
 ## Mức tự động theo loại tài sản
 

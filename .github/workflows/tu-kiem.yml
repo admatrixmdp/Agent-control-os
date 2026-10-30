@@ -16,6 +16,8 @@ jobs:
       - run: pip install --quiet pyyaml
       - name: Kiểm thử máy chấm
         run: python may-cham/tests/kiem_thu.py
+      - name: Kiểm thử sổ bài học
+        run: python vong-lap/so-bai-hoc/tests/test_ledger.py
       - name: Kiểm YAML trong repo này
         run: |
           python - <<'PY'
