@@ -1,0 +1,6 @@
+{
+  "name": "agent-evolution",
+  "description": "Thợ tiến hoá của hệ MQ: đọc sổ bài học, chấm trước và sau, mở PR cải tiến skill. Cần bản clone Agent-control-os để chạy sổ bài học và máy chấm.",
+  "version": "0.1.0",
+  "author": { "name": "admatrixmdp" }
+}

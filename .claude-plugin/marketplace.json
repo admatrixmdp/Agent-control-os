@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agent-control-os",
+  "description": "Plugin điều phối của hệ MQ.",
+  "owner": { "name": "admatrixmdp" },
+  "plugins": [
+    {
+      "name": "agent-evolution",
+      "source": "./plugins/agent-evolution",
+      "description": "Thợ tiến hoá: rà bài học 9:00 thứ Hai và thứ Năm, chấm trước/sau, mở PR cải tiến skill.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}

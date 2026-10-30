@@ -61,6 +61,10 @@ Tri thức bên ngoài mặc định ở tầng **"thu thập, chưa kiểm ch�
 
 Chạy skill `vong-lap/cham-phien` (1 dòng: skill, điểm 1–5, nhãn lỗi). Chi tiết vòng lặp: `vong-lap/README.md`.
 
+**Bị sửa hoặc gặp lỗi đáng nhớ → nộp một bài học vào hộp thư**, mọi nền tảng:
+`python3 vong-lap/so-bai-hoc/hop_thu.py nop --bot <ten> --title "<mot cau lenh>" --text "<lam gi, vi sao>" --skill <ten> --nen-tang <ten> --nhan-loi <tang> -e transcript:<ma-phien>`.
+Không tự sửa skill. Việc tiến hoá chỉ do **Agent Evolution** làm (`plugins/agent-evolution/`). Trước việc giống việc cũ, tra sổ: `ledger.py search`.
+
 ## 8. Ngôn ngữ và đặt tên
 
 - Tiếng Việt, câu ngắn, thẳng việc. Thuật ngữ tiếng Anh chỉ khi không có từ thay thế.
