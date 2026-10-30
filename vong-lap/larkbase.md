@@ -1,5 +1,7 @@
 # Thiết kế 2 bảng LarkBase cho vòng lặp
 
+Sổ gốc là SQLite ở `vong-lap/so-bai-hoc/` (máy riêng, không commit). Hai bảng dưới đây là bản sync tuỳ chọn, chưa nối.
+
 Tên trường và loại trường theo giao diện LarkBase.
 
 ## Bảng 1: `Session_Scorecard` (sổ chấm phiên)

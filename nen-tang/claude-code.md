@@ -13,6 +13,6 @@
 | Nên giao | Sửa repo skill, chạy `may-cham`, phân tích dữ liệu qua MCP, đối chiếu skill, mở PR |
 | Không giao | Việc cần chạy liên tục nhiều giờ không người xem mà không có điều kiện dừng |
 | Eval | `python may-cham/cham.py cham ...` (dùng Claude API) |
-| Ghi chú | Lệnh `claude plugin eval` (cấu hình `experimental.evals`) là cơ chế thử nghiệm; `may-cham` không phụ thuộc vào nó |
+| Ghi chú | Lệnh `claude plugin eval` (cấu hình `experimental.evals`) là cơ chế thử nghiệm; `may-cham` không phụ thuộc vào nó. Agent Evolution (`agent-evolution`) nằm ở `.claude/agents/agent-evolution.md`; lịch thứ Hai và thứ Năm chỉ là ví dụ trong `vong-lap/so-bai-hoc/claude/lich.vi-du.md` |
 
 Xác nhận: 2026-10-26.

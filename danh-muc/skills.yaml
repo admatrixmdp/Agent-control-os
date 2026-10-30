@@ -1,6 +1,6 @@
 # Sổ đăng ký skill của hệ MQ — xem danh-muc/README.md để biết ý nghĩa từng trường
-cap_nhat: 2026-10-26
-tong_skill: 138
+cap_nhat: 2026-10-30
+tong_skill: 139
 theo_repo:
   admatrixmdp/marketing-business-skill: 69
   admatrixmdp/sale-suite-os: 22
@@ -14,7 +14,8 @@ theo_repo:
   admatrixmdp/product-dev-os: 9
   admatrixmdp/webmaster-suite-os: 6
   admatrixmdp/shopee-suite-os: 2
-co_eval: 137
+  admatrixmdp/Agent-control-os: 1
+co_eval: 138
 chua_eval: 1
 skills:
 
@@ -1697,3 +1698,17 @@ skills:
     trang_thai: dang-dung
     trung_voi: []
     ghi_chu: "Skill nằm trên nhánh claude/shopee-suite-os-architecture-4wnuj2. Repo ghi trạng thái scaffold."
+
+  # ---- admatrixmdp/Agent-control-os (1)
+  - ten: "agent-evolution"
+    repo: admatrixmdp/Agent-control-os
+    duong_dan: vong-lap/agent-evolution
+    mang: quan-tri
+    mo_ta_ngan: "Agent Evolution: rà phiên agent khác, ghi bài scratch có bằng chứng, đề xuất skill. Không tự nâng bài nhạy."
+    ngon_ngu: vi
+    nen_tang: [claude-code]
+    co_eval: true
+    so_tinh_huong: 4
+    trang_thai: thu-nghiem
+    trung_voi: []
+    ghi_chu: "Tên hiển thị Agent Evolution. Định nghĩa Claude Code ở .claude/agents/agent-evolution.md. Sổ SQLite máy riêng ~/.agent-evolution/, không commit. Quân chốt khi nào chuyển dang-dung."

@@ -22,8 +22,10 @@ Vậy repo này không "cài" skill vào agent đám mây; nó **phục vụ** t
 | `doc_tham_chieu` | Trả một file references | |
 | `luat_mq` | Trả luật giao việc (`dieu-phoi/quy-tac-giao-viec.md` mục 2) | Agent đám mây gọi lúc bắt đầu việc |
 | `ghi_cham_phien` | Ghi một dòng vào `Session_Scorecard` | Thu ngược dữ liệu chất lượng từ lớp B |
+| `tim_bai_hoc` | Tìm bài học BM25 trong sổ `vong-lap/so-bai-hoc/` | Chỉ đọc. MCP công khai chỉ trả bài `sensitivity: none` đã `accepted`. Không trả trích dẫn nhạy cảm |
+| `ghi_bai_hoc` | Ghi bài học mới | Chỉ tầng `scratch`. Không promote, không accept, không nhận duyệt. Không nhận dữ liệu khách |
 
-Chỉ đọc + một tool ghi có phạm vi hẹp. Không có tool ghi vào repo.
+Chỉ đọc + tool ghi có phạm vi hẹp. Không có tool ghi vào repo. `tim_bai_hoc` và `ghi_bai_hoc` mới là ghi chú thiết kế, chưa có mã server. Duyệt lên `durable` vẫn chỉ qua CLI trên máy riêng, đủ chữ ký Dat và Quân.
 
 ## Bài học từ pstack
 

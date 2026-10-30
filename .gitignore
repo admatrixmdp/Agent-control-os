@@ -2,3 +2,13 @@ __pycache__/
 *.pyc
 ket-qua-eval/
 .env
+
+# Sổ bài học: DB và đầu ra chạy nằm trên máy riêng. Repo public, không commit.
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+vong-lap/so-bai-hoc/wiki/
+vong-lap/so-bai-hoc/staging/
+vong-lap/so-bai-hoc/proposals/
+vong-lap/so-bai-hoc/bao-cao/
