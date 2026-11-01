@@ -18,6 +18,10 @@ jobs:
         run: python may-cham/tests/kiem_thu.py
       - name: Kiểm thử sổ bài học
         run: python vong-lap/so-bai-hoc/tests/test_ledger.py
+      - name: Kiểm thử hộp thư bài học
+        run: python vong-lap/so-bai-hoc/tests/test_hop_thu.py
+      - name: Kiểm thử liên kết skill
+        run: python scripts/tests/test_lien_ket.py
       - name: Kiểm YAML trong repo này
         run: |
           python - <<'PY'

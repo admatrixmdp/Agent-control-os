@@ -1,0 +1,19 @@
+# Thư mục skill của từng công cụ — script scripts/lien_ket_skill.py đọc file này.
+# du_an: tương đối với thư mục dự án (--dich). may: thư mục cá nhân trên máy (~).
+# Đổi đường dẫn ở đây, không sửa trong script.
+cap_nhat: 2026-11-01
+cong_cu:
+  claude-code:
+    du_an: .claude/skills
+    may: ~/.claude/skills
+    kiem_chung: "Tài liệu Claude Code"
+  codex:
+    du_an: .agents/skills
+    may: ~/.agents/skills
+    kiem_chung: "nen-tang/codex.md (2026-10-26); bản cũ dùng ~/.codex/skills"
+  cursor:
+    du_an: .cursor/skills
+    may: ~/.cursor/skills
+    kiem_chung: "Diễn đàn Cursor (2026-11-01). Chưa thấy xác nhận Cursor đọc .agents/skills"
+# GoClaw, Goso và agent đám mây (Duet, Dots, Muse, Grok Bot) không đọc thư mục trên máy.
+# GoClaw: tải skill lên qua API (goclaw_skill_*). Agent đám mây: qua MCP hoặc luật — xem nen-tang/<ten>.md.

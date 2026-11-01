@@ -10,7 +10,8 @@ Repo này **không chứa skill nghiệp vụ**. Skill nghiệp vụ nằm ở c
 |---|---|---|
 | `AGENTS.md` | Luật tối cao cho mọi agent | Luôn đọc trước |
 | `dieu-phoi/` | Bảng định tuyến việc → nền tảng → skill; luật giao việc; nguyên tắc dạng skill | Chọn ai làm, làm theo luật nào |
-| `nen-tang/` | Hồ sơ điều khiển từng nền tảng (3 lớp A/B/C) | Giao việc cho một nền tảng cụ thể |
+| `nen-tang/` | Hồ sơ điều khiển từng nền tảng (3 lớp A/B/C); luật cài skill `cai-skill.md` | Giao việc cho một nền tảng cụ thể; cài skill vào Claude Code, Codex, Cursor |
+| `scripts/` | `lien_ket_skill.py` — liên kết skill từ repo gốc vào thư mục từng công cụ, không đè bản đã sửa | Cài hoặc kiểm skill trên máy |
 | `danh-muc/` | `skills.yaml` — sổ đăng ký toàn bộ skill trong hệ | Tìm skill, kiểm trùng, xem độ phủ eval |
 | `may-cham/` | Máy chấm eval dùng chung + kiểm thử | Sửa skill, gắn CI, chạy vòng cải tiến |
 | `vong-lap/` | Vòng A (thực thi) và vòng B (tiến hoá); skill `cham-phien`; thiết kế bảng LarkBase | Sau mỗi phiên, cron ban đêm |

@@ -51,6 +51,8 @@ Mỗi nguyên tắc là một skill nhỏ trong `dieu-phoi/nguyen-tac/`. Bắt b
 2. Chạy `python may-cham/cham.py cham --repo <repo> --skill <ten> --so-sanh` trước và sau khi sửa.
 3. Chỉ mở PR khi điểm sau ≥ điểm trước. Ghi kết quả vào mô tả PR.
 
+**Cài skill vào công cụ:** liên kết từ repo gốc bằng `scripts/lien_ket_skill.py`, không chép. Gặp bản đã sửa tại máy thì giữ nguyên, nộp phần khác làm bài học (`nen-tang/cai-skill.md`).
+
 ## 6. Khi gặp skill mới từ bên ngoài
 
 Không cài thẳng. Đưa vào `skill-lab/raw/`, rồi theo `doi-chieu/quy-trinh.md`: kiểm dịch → đối chiếu với `danh-muc/skills.yaml` → gắn nhãn Trùng / Bổ sung / Mới / Loại → chấm trước/sau.
