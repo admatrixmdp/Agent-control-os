@@ -16,6 +16,13 @@ theo_repo:
   admatrixmdp/shopee-suite-os: 2
 co_eval: 137
 chua_eval: 1
+# Cách cài vào từng công cụ (scripts/lien_ket_skill.py). Mặc định: liên kết từ repo gốc.
+# Repo đã cài vào Claude Code bằng plugin thì ghi plugin, để không hiện hai bản cùng skill.
+cach_cai_mac_dinh: lien-ket
+cach_cai_theo_repo:
+  admatrixmdp/marketing-business-skill: {claude-code: plugin}
+  admatrixmdp/sale-suite-os: {claude-code: plugin}
+  admatrixmdp/google-marketing-os: {claude-code: plugin}
 skills:
 
   # ---- admatrixmdp/marketing-business-skill (69)
@@ -1116,6 +1123,7 @@ skills:
 
   # ---- admatrixmdp/meta-suite-os (1)
   - ten: "analyzer"
+    ten_lien_ket: "meta-ads-analyzer"
     repo: admatrixmdp/meta-suite-os
     duong_dan: claude/meta-ads/skills/analyzer
     mang: quang-cao
@@ -1142,6 +1150,7 @@ skills:
     trung_voi: []
     ghi_chu: ""
   - ten: "analyzer"
+    ten_lien_ket: "google-ads-analyzer"
     repo: admatrixmdp/google-marketing-os
     duong_dan: claude/google-ads/skills/analyzer
     mang: quang-cao

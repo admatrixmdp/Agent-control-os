@@ -20,6 +20,11 @@ Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 rep
 | `trang_thai` | Trạng thái sử dụng | `dang-dung` · `dong-bang` · `loai` · `thu-nghiem`. **Quân quyết** — mặc định `dang-dung` khi mới nhập sổ |
 | `trung_voi` | Skill khác trong sổ cùng khái niệm | Chỉ ghi khi rõ ràng; ghi ở cả hai phía |
 | `ghi_chu` | Ghi chú tự do | Nguồn sửa thật, nhánh đặc biệt, trạng thái repo ghi |
+| `ten_lien_ket` | Tên thư mục khi liên kết vào công cụ (tuỳ chọn) | Chỉ điền khi hai repo trùng `ten`; mặc định bằng `ten` |
+
+Đầu file có thêm `cach_cai_mac_dinh` và `cach_cai_theo_repo`: repo nào cài vào công cụ nào bằng plugin. Luật cài skill: `nen-tang/cai-skill.md`.
+
+**`ten` là khoá cố định.** Chuyển skill sang repo khác thì chỉ sửa `repo` và `duong_dan`; đổi `ten` làm đứt liên kết với sổ bài học và lịch sử điểm eval.
 
 ## Quy tắc cập nhật
 

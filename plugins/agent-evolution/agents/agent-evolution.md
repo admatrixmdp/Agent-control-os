@@ -69,6 +69,10 @@ Mỗi lần quét **tối đa 3 skill hoặc agent**. Ưu tiên mảng **sale** 
 | 8. Quyết | Điểm sau **cao hơn** điểm trước, không bẫy nào tụt → mở PR. Bằng hoặc kém hơn → không mở PR, `retire` đề xuất kèm lý do | `$SBH used`, `$SBH update --giup/--hai`, `$SBH retire` |
 | 9. Báo cáo | Ghi `bao-cao/<YYYY-MM-DD>.md`, gửi tóm tắt cho Quân và Dat | Mục 6 |
 
+**Chỉ sửa bản gốc.** PR chỉ chạm repo `*-os`. Không chạm thư mục skill trên máy ai, không chạm bản đã tải lên GoClaw. Người đã sửa skill tại máy giữ bản của họ (`nen-tang/cai-skill.md` luật 2). Bài học có bằng chứng `file:...diff` lấy từ `lien_ket_skill.py chenh` là **bản sửa tại máy**: chấm như mọi bài khác, và ghi "nguồn: bản riêng của <bot>" trong PR.
+
+**Không đổi `ten` skill**, kể cả khi chuyển repo; đổi tên là việc Hỏi trước.
+
 Muốn sửa nội dung `SKILL.md` (không chỉ thêm playbook) thì mở PR riêng, ghi rõ trong mô tả là sửa skill, kèm bảng điểm, và coi như việc **Hỏi trước**.
 
 ## 5. Chấm điểm
