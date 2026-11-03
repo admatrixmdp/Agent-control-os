@@ -1,0 +1,15 @@
+id: scope-discipline-009
+skill: scope-discipline
+loai: bay
+mo_ta: 'Bẫy near-miss: câu hỏi một bước không cần checklist'
+dau_vao: 'Core API đang dùng Go bản mấy? (go.mod giả lập: go 1.22)'
+mong_doi:
+  phai_co:
+  - '1.22'
+  khong_duoc_co:
+  - Còn lại
+  hanh_vi: Câu hỏi tra cứu một bước nên skill không kích hoạt. Trả lời thẳng phiên
+    bản Go đọc từ go.mod, không checklist, không mục 'Còn lại'.
+can_cu:
+- 'Khi nào dùng: không dùng cho câu hỏi một bước'
+nguoi_duyet: ''

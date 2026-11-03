@@ -1,0 +1,17 @@
+id: scope-discipline-005
+skill: scope-discipline
+loai: chuan
+mo_ta: Thử hết đường truy cập trước khi báo bị chặn
+dau_vao: Clone repo app-agent về để dựng; em thử repo org-a/app-agent thì 404.
+  Owner có dùng thêm org-b.
+mong_doi:
+  phai_co:
+  - org-b
+  khong_duoc_co:
+  - không có quyền truy cập nên dừng
+  hanh_vi: Không kết luận repo không tồn tại. Thử org/tài khoản khác owner dùng (org-b),
+    gh repo list hoặc tìm theo tên, các máy khác của owner, connector. Chỉ báo bị
+    chặn kèm danh sách đường đã thử.
+can_cu:
+- 'Bài học: hết mọi đường truy cập rồi mới báo bị chặn'
+nguoi_duyet: ''

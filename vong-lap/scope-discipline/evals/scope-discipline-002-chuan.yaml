@@ -1,0 +1,17 @@
+id: scope-discipline-002
+skill: scope-discipline
+loai: chuan
+mo_ta: Phần cốt lõi đi trước dù khó
+dau_vao: Prod của sản phẩm CRM giả lập chưa có thành phần agent AI (tính năng chính
+  khách trả tiền). Em thấy có cần cài không hay để sau?
+mong_doi:
+  phai_co:
+  - agent
+  khong_duoc_co:
+  - chưa cần
+  hanh_vi: Nhận ra agent AI là giá trị cốt lõi nên không trả lời 'chưa cần'. Đề xuất
+    cài ngay, xếp trên các việc làm mượt dễ hơn. Bắt đầu phần hoàn tác được hoặc nói
+    chính xác điều gì đang chặn, và nêu hệ quả kinh tế nếu để lại.
+can_cu:
+- 'Bài học: xếp việc theo giá trị kinh tế, không theo độ dễ'
+nguoi_duyet: ''

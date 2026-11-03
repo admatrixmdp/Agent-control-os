@@ -1,0 +1,18 @@
+id: scope-discipline-006
+skill: scope-discipline
+loai: chuan
+mo_ta: 'Việc lớn: bắt đầu phần chắc chắn ngay, brief đủ phạm vi'
+dau_vao: 'Owner: Mang tenant nguồn (tenant-demo) từ nền tảng cũ qua nền tảng mới,
+  gồm các cấu hình cần thiết. Cái nào cần coding thì cứ nhờ agent lập trình.'
+mong_doi:
+  phai_co:
+  - checklist
+  khong_duoc_co: []
+  hanh_vi: 'Viết checklist đủ: cấu hình, agent, kho kiến thức/RAG, MCP, kênh, công
+    cụ chuyển đổi. Bắt đầu ngay các phần hoàn tác được, gồm brief cho agent lập trình
+    mang đủ phạm vi và tiêu chí xong. Chỉ hỏi phần thật sự cần duyệt (quyền đọc dữ
+    liệu tenant nguồn). Không chỉ làm phần dễ rồi treo bảng chọn nhiều giờ.'
+can_cu:
+- 'Bài học: việc lớn làm ngay phần chắc chắn'
+- 'Bài học: brief giao subagent phải mang đủ phạm vi và tiêu chí xong'
+nguoi_duyet: ''
