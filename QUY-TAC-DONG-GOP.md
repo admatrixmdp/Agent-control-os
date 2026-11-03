@@ -16,7 +16,9 @@ Mọi thay đổi vào repo này **qua đủ 6 cổng, theo đúng thứ tự**.
 - `cong-kiem-thu`: `python3 may-cham/tests/kiem_thu.py` và `python3 danh-muc/kiem_so.py --base <nhánh gốc>`. Sửa một `SKILL.md` trong repo mà không cập nhật `sha256` trong `danh-muc/skills.yaml` thì trượt.
 - `cong-gitleaks`: quét các commit của PR theo `.gitleaks.toml` (bộ luật mặc định cộng số điện thoại, email thật, link phiên agent, domain/org nội bộ).
 - `cong-ve-sinh`: `python3 .github/ve_sinh.py --base <nhánh gốc>`. Chặn file `.db`, `.sqlite`, `.env`; số điện thoại, email, IP, đường dẫn cá nhân, domain/org nội bộ trong dòng thêm mới; link phiên agent trong commit message và thân PR; footer công cụ trong thân PR.
-- `cong-cto`: như cổng 4 ở bảng trên.
+- `cong-cto`: như cổng 4 ở bảng trên. Lưu ý vận hành:
+  - **Cách duyệt chính là nhãn `cto-dat`.** Trigger `issue_comment` chỉ chạy khi workflow có trên nhánh mặc định, mà `main` gần như trống. Nếu duyệt bằng comment `CTO-KET-LUAN: DAT @<head_sha>`, check không tự cập nhật: phải chạy lại job `cong-cto` hoặc sửa thân PR (sự kiện `edited`) để nó đọc lại comment.
+  - **`DANH_SACH_CTO` chỉ chứa login người thật, khác tài khoản bot.** Đưa `admatrixmdp` (tài khoản bot dùng chung) vào danh sách thì bot tự gắn nhãn cho mình và cổng 4 mất tác dụng.
 
 Chạy cả 4 tại chỗ trước khi mở PR, dán kết quả vào thân PR (lệnh có trong mẫu PR).
 
