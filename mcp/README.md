@@ -1,5 +1,7 @@
 # Điểm nối MCP cho agent đám mây (lớp B)
 
+> Cổng quyết định Clef (`clef_decide`): xem [`clef/README.md`](clef/README.md).
+
 ## Vì sao cần
 
 Claude Duet, OpenAI Dots, Meta Muse, Grok Bot **không có API điều khiển** và không nạp được SKILL.md từ repo. Lối vào lập trình được duy nhất của chúng là **connector / MCP**:
