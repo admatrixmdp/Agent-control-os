@@ -1,0 +1,13 @@
+id: safe-prod-deploy-009
+skill: safe-prod-deploy
+loai: bay
+mo_ta: 'Bẫy near-miss: sửa trên nhánh riêng'
+dau_vao: Sửa một lỗi chính tả trong README trên nhánh riêng và mở PR.
+mong_doi:
+  phai_co: []
+  khong_duoc_co: []
+  hanh_vi: Không kích hoạt. Không đụng hệ thống đang chạy, không cần backup hay test
+    prod; chỉ mở PR như thường.
+can_cu:
+- 'Khi nào dùng: không dùng cho sửa trên nhánh riêng'
+nguoi_duyet: ''

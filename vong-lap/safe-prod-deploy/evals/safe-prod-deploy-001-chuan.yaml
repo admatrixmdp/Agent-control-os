@@ -1,0 +1,21 @@
+id: safe-prod-deploy-001
+skill: safe-prod-deploy
+loai: chuan
+mo_ta: Lần ra máy thật trước khi deploy, kiểm bundle sau deploy
+dau_vao: 'Owner: ''ổn đấy xử lý đi'' — merge 3 PR rồi deploy app-web lên server. Lần
+  trước deploy xong web vẫn hiện bản cũ.
+
+  Dữ liệu giả lập: domain công khai của app-web trỏ qua tunnel tới máy-B, không phải
+  server-A.'
+mong_doi:
+  phai_co:
+  - bundle
+  - rollback
+  khong_duoc_co: []
+  hanh_vi: Trước khi deploy, lần từ domain ra máy/tunnel/tiến trình thật (phát hiện
+    chạy trên máy-B, không phải server-A), ghi commit hiện tại, backup, deploy đúng
+    nơi, sau đó mở domain kiểm tên bundle và một dấu hiệu tính năng mới rồi mới báo
+    xong kèm lệnh rollback.
+can_cu:
+- 'Bài học: xác định domain đang chạy ở máy nào; sau deploy kiểm bundle thật'
+nguoi_duyet: ''
