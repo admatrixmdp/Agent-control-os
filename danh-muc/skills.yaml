@@ -1,4 +1,6 @@
 # Sổ đăng ký skill của hệ MQ — xem danh-muc/README.md để biết ý nghĩa từng trường
+# Kiểm sổ: python3 danh-muc/kiem_so.py
+schema: 2
 cap_nhat: 2026-10-26
 tong_skill: 138
 theo_repo:
