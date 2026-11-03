@@ -23,7 +23,10 @@ Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 rep
 
 ### Trường schema 2 (`schema: 2` ở đầu file)
 
-Tương thích ngược: mục cũ không có các trường dưới vẫn hợp lệ. Có trường nào thì phải đúng kiểu. Skill nằm trong chính repo này (`repo: admatrixmdp/Agent-control-os`) **bắt buộc** có `sha256`.
+Tương thích ngược: mục cũ không cần thêm dòng nào. Khối `mac_dinh:` ở đầu sổ khai một lần `nguon`, `phien_ban`, `eval_bay`, `cto_verdict` cho mọi mục không ghi trường đó (`sha256` không có mặc định). Có trường nào thì phải đúng kiểu.
+
+- Skill nằm trong chính repo này (`repo: admatrixmdp/Agent-control-os`): **bắt buộc** ghi `sha256` (khớp file) và `cto_verdict` ngay trong mục. Thiếu thì chặn.
+- Skill ở repo khác: thiếu trường chỉ in `CẢNH BÁO`, không chặn.
 
 | Trường | Ý nghĩa | Cách điền |
 |---|---|---|
@@ -33,7 +36,7 @@ Tương thích ngược: mục cũ không có các trường dưới vẫn hợp
 | `eval_bay` | Số tình huống bẫy (`loai: bay`) | Số nguyên, 0 ≤ `eval_bay` ≤ `so_tinh_huong` |
 | `cto_verdict` | Kết luận của CTO ở cổng 4 | `chua-duyet` · `dat` · `truot` |
 
-Kiểm sổ: `python3 danh-muc/kiem_so.py` (số tổng, trường bắt buộc, kiểu trường schema 2, sha256). Trong CI thêm `--base <nhánh gốc>` để bắt `SKILL.md` đổi mà sổ không có `sha256` mới.
+Kiểm sổ: `python3 danh-muc/kiem_so.py` (số tổng, trường bắt buộc, kiểu trường schema 2, sha256; cảnh báo không làm thoát lỗi). Trong CI thêm `--base <nhánh gốc>` để bắt `SKILL.md` đổi mà sổ không có `sha256` mới.
 
 ## Quy tắc cập nhật
 

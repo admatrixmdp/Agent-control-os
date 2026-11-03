@@ -21,6 +21,8 @@ MANG = {"sale", "marketing", "quang-cao", "tai-chinh", "ke-toan", "dau-tu", "qua
         "phap-ly", "san-pham", "web", "thuong-mai-dien-tu", "khac"}
 TRANG_THAI = {"dang-dung", "dong-bang", "loai", "thu-nghiem"}
 CTO_VERDICT = {"chua-duyet", "dat", "truot"}
+TRUONG_2 = ["nguon", "phien_ban", "sha256", "eval_bay", "cto_verdict"]
+BAT_BUOC_REPO_NAY = ["sha256", "cto_verdict"]  # phải ghi ngay trong mục, không lấy mặc định
 BO_QUA = ("skill-lab/", "may-cham/tests/mau/")  # SKILL.md mẫu hoặc đang cách ly, không đăng ký sổ
 
 
@@ -28,13 +30,17 @@ def sha256(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def kiem_so(so, loi):
+def kiem_so(so, loi, canh_bao):
     ds = so.get("skills") or []
     schema = so.get("schema", 1)
     if schema not in (1, 2):
         loi.append(f"schema={schema!r}: chỉ nhận 1 hoặc 2")
-    da_thay = set()
-    for i, s in enumerate(ds):
+    mac_dinh = so.get("mac_dinh") or {}
+    for k in set(mac_dinh) - set(TRUONG_2) | ({"sha256"} & set(mac_dinh)):
+        loi.append(f"mac_dinh.{k}: không được đặt mặc định")
+    da_thay, thieu_ngoai = set(), Counter()
+    for i, goc in enumerate(ds):
+        s = {**mac_dinh, **goc}
         ma = f"skills[{i}] {s.get('ten', '?')}"
         for k in BAT_BUOC:
             if k not in s:
@@ -60,13 +66,18 @@ def kiem_so(so, loi):
         if "cto_verdict" in s and s["cto_verdict"] not in CTO_VERDICT:
             loi.append(f"{ma}: cto_verdict phải là một trong {sorted(CTO_VERDICT)}")
         if s.get("repo") == REPO_NAY:
+            for k in BAT_BUOC_REPO_NAY:
+                if k not in goc:
+                    loi.append(f"{ma}: skill trong repo này phải ghi {k} trong mục (schema 2)")
             f = GOC / str(s.get("duong_dan", "")) / "SKILL.md"
             if not f.is_file():
                 loi.append(f"{ma}: không thấy {f.relative_to(GOC)}")
-            elif "sha256" not in s:
-                loi.append(f"{ma}: skill trong repo này phải có sha256 (schema 2)")
-            elif sha256(f) != s["sha256"]:
+            elif "sha256" in s and sha256(f) != s["sha256"]:
                 loi.append(f"{ma}: sha256 trong sổ không khớp {f.relative_to(GOC)} (thực tế {sha256(f)})")
+        else:
+            thieu_ngoai.update(k for k in TRUONG_2 if k not in s)
+    for k, n in sorted(thieu_ngoai.items()):
+        canh_bao.append(f"{n} mục repo ngoài chưa có {k} (không chặn)")
     # Số tổng ở đầu file
     if so.get("tong_skill") != len(ds):
         loi.append(f"tong_skill={so.get('tong_skill')} nhưng sổ có {len(ds)} mục")
@@ -95,10 +106,12 @@ def main():
     ap.add_argument("--base", help="git ref để so SKILL.md thay đổi (dùng trong CI)")
     a = ap.parse_args()
     so = yaml.safe_load(Path(a.so).read_text(encoding="utf-8"))
-    loi = []
-    ds = kiem_so(so, loi)
+    loi, canh_bao = [], []
+    ds = kiem_so(so, loi, canh_bao)
     if a.base:
         kiem_thay_doi(ds, a.base, loi)
+    for x in canh_bao:
+        print("CẢNH BÁO  " + x)
     for x in loi:
         print("LỖI  " + x)
     print(f"{len(ds)} mục, schema {so.get('schema', 1)}: " + ("sổ đạt" if not loi else f"{len(loi)} lỗi"))
