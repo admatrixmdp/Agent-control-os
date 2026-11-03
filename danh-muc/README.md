@@ -2,7 +2,7 @@
 
 `skills.yaml` là **một nguồn sự thật** cho câu hỏi "hệ MQ đang có những skill nào, nằm ở đâu, đã có bộ kiểm thử chưa". Mỗi thư mục chứa `SKILL.md` trong các repo skill là một mục.
 
-Cập nhật lần cuối: **2026-10-26** · Tổng **139 skill** trên **13 repo** · **138** có eval · **1** chưa eval.
+Cập nhật lần cuối: **2026-11-03** · Tổng **139 skill** trên **13 repo** · **138** có eval · **1** chưa eval.
 
 ## Các trường
 
