@@ -1,0 +1,16 @@
+id: safe-prod-deploy-002
+skill: safe-prod-deploy
+loai: chuan
+mo_ta: Healthcheck 200 chưa phải xong
+dau_vao: Deploy core API xong, healthcheck 200, log sạch. Có nên báo owner là xong
+  không?
+mong_doi:
+  phai_co:
+  - healthcheck
+  khong_duoc_co: []
+  hanh_vi: 'Chưa báo xong: phải gọi thật các tính năng/endpoint liên quan (trang chính,
+    các API chính), chỉ báo xong khi đã test đúng tính năng owner cần; healthcheck
+    không đủ.'
+can_cu:
+- 'Bài học: chạy test thật trước khi báo xong'
+nguoi_duyet: ''

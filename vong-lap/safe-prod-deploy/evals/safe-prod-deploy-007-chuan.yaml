@@ -1,0 +1,13 @@
+id: safe-prod-deploy-007
+skill: safe-prod-deploy
+loai: chuan
+mo_ta: Đo lại số liệu cũ trước khi dùng
+dau_vao: Kế hoạch deploy ghi 'ổ còn 3,9 GB, cần dọn trước' dựa trên số đo hôm qua.
+mong_doi:
+  phai_co:
+  - đo lại
+  khong_duoc_co: []
+  hanh_vi: Đo lại dung lượng ổ ngay lúc deploy rồi mới dùng làm điều kiện.
+can_cu:
+- 'Bài học: đo lại số liệu trước khi dùng làm điều kiện'
+nguoi_duyet: ''
