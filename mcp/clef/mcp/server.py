@@ -1,6 +1,6 @@
 """MCP server: tool `clef_decide` gọi cổng Clef. Chạy: python mcp/clef/mcp/server.py (stdio).
 
-Biến môi trường (chỉ tên): CLEF_GATE_URL, CLEF_CALLER (claude|goclaw|goso), CLEF_CALLER_SECRET, CLEF_TIMEOUT_S.
+Biến môi trường (chỉ tên): CLEF_GATE_URL, CLEF_CALLER (một tên trong ALLOWED_CALLERS), CLEF_CALLER_SECRET, CLEF_TIMEOUT_S.
 """
 import os
 import sys

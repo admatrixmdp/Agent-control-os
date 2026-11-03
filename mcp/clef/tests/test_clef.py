@@ -78,7 +78,7 @@ class TestMcp(unittest.TestCase):
         s.bind(("127.0.0.1", 0))
         cong = s.getsockname()[1]
         s.close()  # cổng đóng -> ConnectionRefused, không ra mạng ngoài
-        os.environ.update(CLEF_GATE_URL=f"http://127.0.0.1:{cong}", CLEF_CALLER="claude",
+        os.environ.update(CLEF_GATE_URL=f"http://127.0.0.1:{cong}", CLEF_CALLER="caller-a",
                           CLEF_CALLER_SECRET="test-secret-a", CLEF_TIMEOUT_S="1")
         r = server.clef_decide(cau(1, "choice"), qset_version="mcp-1")
         self.assertTrue(r["fallback"])

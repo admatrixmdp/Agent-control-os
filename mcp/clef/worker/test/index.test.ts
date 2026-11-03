@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { handle, maskText, type Env } from "../src/index.ts";
 
 console.log = () => {}; // tắt log JSON khi chạy test; test che dữ liệu tự bắt log riêng
-const KEYS = { CALLER_SECRET_CLAUDE: "test-secret-a", CALLER_SECRET_GOCLAW: "test-secret-b", CALLER_SECRET_GOSO: "test-secret-c" };
+const KEYS = { ALLOWED_CALLERS: "caller-a, caller-b", CALLER_SECRET_CALLER_A: "test-secret-a", CALLER_SECRET_CALLER_B: "test-secret-b" };
 
 // Mock Workers AI: chọn phương án ĐẦU TIÊN (thiên vị vị trí) để thử tính ổn định khi xáo phương án.
 function mockEnv(extra: Partial<Env> = {}) {
@@ -29,7 +29,7 @@ const QS = {
   kenh: { type: "choice", instructions: "Chuyển cho ai?", criteria: { sale: "bán hàng", ke_toan: "hoá đơn", bo_qua: "rác" } },
 };
 
-function req(body: unknown, caller = "claude", secret = "test-secret-a") {
+function req(body: unknown, caller = "caller-a", secret = "test-secret-a") {
   const h: Record<string, string> = { "content-type": "application/json", "x-caller": caller };
   if (secret) h.authorization = `Bearer ${secret}`;
   return new Request("https://clef.example.com/v1/systemone", { method: "POST", headers: h, body: JSON.stringify(body) });
@@ -38,11 +38,11 @@ const body = (extra: object = {}) => ({ model: "clef", context_version: "ctx-1",
 
 test("không có secret -> 401; secret của bên gọi khác -> 401", async () => {
   const { env, sent } = mockEnv();
-  assert.equal((await handle(req(body(), "claude", ""), env)).status, 401);
-  assert.equal((await handle(req(body(), "claude", "test-secret-b"), env)).status, 401);
-  assert.equal((await handle(req(body(), "la-hoac", "test-secret-a"), env)).status, 401);
+  assert.equal((await handle(req(body(), "caller-a", ""), env)).status, 401);
+  assert.equal((await handle(req(body(), "caller-a", "test-secret-b"), env)).status, 401);
+  assert.equal((await handle(req(body(), "caller-c", "test-secret-a"), env)).status, 401); // ngoài ALLOWED_CALLERS
   assert.equal(sent.length, 0);
-  assert.equal((await handle(req(body(), "goclaw", "test-secret-b"), env)).status, 200);
+  assert.equal((await handle(req(body(), "caller-b", "test-secret-b"), env)).status, 200);
 });
 
 test("đủ 3 loại câu hỏi trả đúng kiểu", async () => {
@@ -90,7 +90,8 @@ test("mất mạng / timeout -> fallback=true, không chặn", async () => {
   assert.equal((await (await handle(req(body()), slow)).json()).reason, "timeout");
 });
 
-test("xáo thứ tự phương án choice -> cùng quyết định, cùng cache key", async () => {
+// Chỉ kiểm payload ổn định khi xáo phương án; đo thiên vị vị trí của Clef thật nằm ở bộ eval chạy thật.
+test("payload ổn định: xáo thứ tự phương án choice -> cùng payload, cùng cache key", async () => {
   const { env, sent } = mockEnv();
   const xao = { ...QS, kenh: { ...QS.kenh, criteria: { bo_qua: "rác", sale: "bán hàng", ke_toan: "hoá đơn" } } };
   const a = await (await handle(req(body()), env)).json();
@@ -118,7 +119,16 @@ test("cache: cùng text+ctx+qset+model không gọi lại; đổi qset thì gọ
 });
 
 test("rate limit theo bên gọi", async () => {
-  const { env } = mockEnv({ RATE_PER_MIN: "1", CALLER_SECRET_GOSO: "test-secret-c" });
-  assert.equal((await handle(req(body(), "goso", "test-secret-c"), env)).status, 200);
-  assert.equal((await handle(req(body(), "goso", "test-secret-c"), env)).status, 429);
+  const { env } = mockEnv({ RATE_PER_MIN: "1", ALLOWED_CALLERS: "caller-r", CALLER_SECRET_CALLER_R: "test-secret-r" });
+  assert.equal((await handle(req(body(), "caller-r", "test-secret-r"), env)).status, 200);
+  assert.equal((await handle(req(body(), "caller-r", "test-secret-r"), env)).status, 429);
+});
+
+test("che tên không đụng câu thường (không cờ i)", () => {
+  for (const s of ["em muốn hủy đơn hàng", "anh cần báo giá sỉ", "khách hàng hỏi giá", "bạn ơi ship tối nay nhé",
+    "Em muốn đặt hàng", "Hồ sơ đã gửi"])
+    assert.equal(maskText(s), s);
+  assert.equal(maskText("chị Lan đặt 2 thùng"), "chị [TEN] đặt 2 thùng");
+  assert.equal(maskText("Chị Lan Anh gọi lại"), "Chị [TEN] gọi lại");
+  assert.equal(maskText("Lê Văn Tám mua"), "[TEN] mua");
 });

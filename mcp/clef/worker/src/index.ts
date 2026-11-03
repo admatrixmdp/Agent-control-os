@@ -5,10 +5,12 @@ export interface Env {
   AI: { run(model: string, body: unknown, opts?: unknown): Promise<any> };
   CACHE?: { get(k: string): Promise<string | null>; put(k: string, v: string, o?: unknown): Promise<void> };
   RATE_LIMITER?: { limit(o: { key: string }): Promise<{ success: boolean }> };
-  [k: string]: unknown; // CALLER_SECRET_<TEN>, CLEF_TIMEOUT_MS, RATE_PER_MIN, COST_PER_M_TOKENS, AI_GATEWAY_ID
+  [k: string]: unknown; // ALLOWED_CALLERS, CALLER_SECRET_<TEN>, CLEF_TIMEOUT_MS, RATE_PER_MIN, COST_PER_M_TOKENS, AI_GATEWAY_ID
 }
 
-export const CALLERS = ["claude", "goclaw", "goso"] as const;
+/** Bên gọi hợp lệ lấy từ var ALLOWED_CALLERS ("caller-a,caller-b"); secret: CALLER_SECRET_CALLER_A, ... */
+export const callers = (env: Env) => String(env.ALLOWED_CALLERS ?? "").split(",").map((x) => x.trim()).filter(Boolean);
+export const secretName = (caller: string) => `CALLER_SECRET_${caller.toUpperCase().replace(/[^A-Z0-9]/g, "_")}`;
 export const MAX_QUESTIONS = 64;
 // Mỗi model một đích riêng. clef-flash từng trả 422 khi thử: giữ cấu hình nhưng mặc định là clef.
 export const MODELS: Record<string, { id: string; body_model: string }> = {
@@ -18,10 +20,12 @@ export const MODELS: Record<string, { id: string; body_model: string }> = {
 
 const PHONE = /(?<![\w.])(?:\+?84[ .-]?|0)[35789](?:[ .-]?\d){8}(?!\w)/g;
 const EMAIL = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g;
-const TEN = "\\p{Lu}\\p{Ll}*";
+const TEN = "\\p{Lu}[\\p{Ll}\\p{M}]*"; // \\p{M}: chịu được chữ Việt dạng NFD
 const HO = "Nguyễn|Trần|Lê|Phạm|Hoàng|Huỳnh|Phan|Vũ|Võ|Đặng|Bùi|Đỗ|Hồ|Ngô|Dương|Lý";
-const FULLNAME = new RegExp(`(?<!\\p{L})(?:${HO})(?:\\s+${TEN}){1,3}`, "gu");
-const XUNG_HO = new RegExp(`(?<!\\p{L})(anh|chị|em|cô|chú|bác|ông|bà|bạn|khách|tên)\\s+${TEN}(?:\\s+${TEN}){0,2}`, "giu");
+const FULLNAME = new RegExp(`(?<!\\p{L})(?:${HO})(?:\\s+${TEN}){1,3}(?!\\p{L})`, "gu"); // không cờ `i`
+// Không dùng cờ `i`: với `i`, \p{Lu} khớp cả chữ thường và che nhầm nội dung ("em muốn hủy" -> "em [TEN]").
+// Từ xưng hô nhận chữ hoa đầu câu bằng lớp ký tự; tên phía sau bắt buộc viết hoa.
+const XUNG_HO = new RegExp(`(?<!\\p{L})([Aa]nh|[Cc]hị|[Ee]m|[Cc]ô|[Cc]hú|[Bb]ác|[Ôô]ng|[Bb]à|[Bb]ạn|[Kk]hách|[Tt]ên)\\s+${TEN}(?:\\s+${TEN}){0,2}(?!\\p{L})`, "gu");
 
 export function maskText(s: string): string {
   return s.replace(PHONE, "[SDT]").replace(EMAIL, "[EMAIL]").replace(FULLNAME, "[TEN]")
@@ -73,8 +77,8 @@ export async function handle(req: Request, env: Env): Promise<Response> {
   if (req.method !== "POST" || url.pathname !== "/v1/systemone") return json({ error: "not_found" }, 404);
   const caller = req.headers.get("x-caller") ?? "";
   const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\s+/i, "");
-  const secret = String(env[`CALLER_SECRET_${caller.toUpperCase()}`] ?? "");
-  if (!(CALLERS as readonly string[]).includes(caller) || !sameSecret(token, secret)) return json({ error: "unauthorized" }, 401);
+  const secret = String(env[secretName(caller)] ?? "");
+  if (!callers(env).includes(caller) || !sameSecret(token, secret)) return json({ error: "unauthorized" }, 401);
   if (!(await allow(env, caller))) { log({ caller, rate_limited: true }); return json({ error: "rate_limited" }, 429); }
 
   let b: any;
