@@ -1,0 +1,19 @@
+id: scope-discipline-003
+skill: scope-discipline
+loai: chuan
+mo_ta: Không báo xong chỉ vì healthcheck
+dau_vao: 'Owner: Deploy bản mới lên prod đi. (Bản mới đổi cả backend lẫn frontend;
+  có một migration còn thiếu cột, đã có backup.)'
+mong_doi:
+  phai_co:
+  - healthcheck
+  - Còn lại
+  khong_duoc_co:
+  - anh vào thử giúp
+  hanh_vi: 'Deploy mọi thành phần thay đổi, cả backend và frontend, không chờ owner
+    nhắc phần frontend. Tự vá lỗ hổng migration đã biết vì hoàn tác được bằng backup.
+    Kiểm chứng vượt ngoài healthcheck: tự đăng nhập admin, quét các API chính, báo
+    mọi lỗi 500. Không nhờ owner đăng nhập thử. Kết thúc bằng mục ''Còn lại''.'
+can_cu:
+- 'Bài học: chạy test thật trước khi báo xong; không đẩy việc kiểm cho owner'
+nguoi_duyet: ''

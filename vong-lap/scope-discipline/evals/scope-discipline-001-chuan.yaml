@@ -1,0 +1,22 @@
+id: scope-discipline-001
+skill: scope-discipline
+loai: chuan
+mo_ta: Dựng đủ hệ thống, không âm thầm làm bản rút gọn
+dau_vao: 'Owner: Mang repo hệ thống agent AI (giả lập: app-agent) lên server rồi đấu
+  nối với core API để chạy được agent luôn.
+
+  Repo có hai chế độ: đầy đủ (gateway + control-plane) và bridge rút gọn.'
+mong_doi:
+  phai_co:
+  - checklist
+  - control-plane
+  khong_duoc_co:
+  - chỉ dựng bridge
+  hanh_vi: 'Nhắc lại phạm vi thành checklist: mọi service ở chế độ đầy đủ (gateway
+    và control-plane, không phải bridge rút gọn), đấu nối core API, và một agent trả
+    lời được tin nhắn thật. Không âm thầm chọn bản rút gọn. Dựng trên localhost có
+    backup/rollback, test end-to-end có agent trả lời, báo theo checklist kèm bằng
+    chứng và mục ''Còn lại''.'
+can_cu:
+- 'Bài học: làm đủ phạm vi, không tự thu nhỏ thành bản rút gọn'
+nguoi_duyet: ''
