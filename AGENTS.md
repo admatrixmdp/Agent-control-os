@@ -2,6 +2,8 @@
 
 Đọc file này trước. Mỗi mục dưới đây trỏ tới chỗ có chi tiết; chỉ đọc vùng liên quan tới việc đang làm.
 
+Mọi thay đổi vào repo này, từ bất kỳ nguồn nào, qua đủ 6 cổng trong `QUY-TAC-DONG-GOP.md`; admin cũng không bỏ qua.
+
 ## 1. Repo này là gì
 
 Lớp điều phối của hệ skill MQ. **Không chứa skill nghiệp vụ.** Skill nghiệp vụ nằm ở các repo `*-os` (xem `danh-muc/skills.yaml`).

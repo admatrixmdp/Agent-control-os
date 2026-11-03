@@ -1,4 +1,11 @@
 # Sổ đăng ký skill của hệ MQ — xem danh-muc/README.md để biết ý nghĩa từng trường
+# Kiểm sổ: python3 danh-muc/kiem_so.py
+schema: 2
+mac_dinh:  # schema 2: áp cho mục không ghi trường đó; sha256 không có mặc định
+  nguon: noi-bo
+  phien_ban: "1.0"
+  eval_bay: 0  # 0 = chưa đếm
+  cto_verdict: chua-duyet
 cap_nhat: 2026-10-26
 tong_skill: 138
 theo_repo:

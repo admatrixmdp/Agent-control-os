@@ -1,0 +1,45 @@
+# Cấu hình gitleaks cho Agent-control-os: bộ luật mặc định + luật riêng của hệ MQ.
+# Chạy tại chỗ: gitleaks git --log-opts="origin/harness-v1..HEAD" --config .gitleaks.toml --redact -v
+title = "Agent-control-os"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "sdt-viet-nam"
+description = "Số điện thoại di động Việt Nam"
+regex = '''(?:^|[^\w.])((?:\+?84[ .-]?|0)[35789](?:[ .-]?\d){8})(?:[^\w]|$)'''
+secretGroup = 1
+keywords = ["0", "84"]
+
+[[rules]]
+id = "link-phien-agent"
+description = "Link phiên agent (claude.ai, cursor.com agents, chatgpt share)"
+regex = '''(?i)(claude\.ai/(?:code/session_|chat/|share/)[\w-]+|cursor\.com/(?:agents|background-agent)[/?][\w=?&-]+|chatgpt\.com/(?:share|c)/[\w-]+)'''
+keywords = ["claude.ai", "cursor.com", "chatgpt.com"]
+
+[[rules]]
+id = "domain-org-noi-bo"
+description = "Domain hoặc org thật của hệ thống nội bộ"
+regex = '''(?i)(\badmatrix(?:org|mdp)?\.(?:vn|com|io|net)\b|github\.com/admatrix(?:org|mdp)\b)'''
+keywords = ["admatrix"]
+
+[[rules]]
+id = "email-that"
+description = "Địa chỉ email ngoài domain giữ chỗ"
+regex = '''\b[\w.%+-]+@(?:[\w-]+\.)+[A-Za-z]{2,}\b'''
+keywords = ["@"]
+
+# Giữ chỗ công khai được phép (xem QUY-TAC-DONG-GOP.md): example.com, example.vn, org-a, org-b, app-agent, tenant-demo
+[allowlist]
+description = "Giữ chỗ giả công khai"
+regexTarget = "match"
+regexes = [
+  '''(?i)@(?:[\w-]+\.)*example\.(?:com|vn)\b''',
+  '''(?i)\b(?:[\w-]+\.)*example\.(?:com|vn)\b''',
+  '''(?i)\borg-[ab]\b''',
+  '''(?i)\bapp-agent\b''',
+  '''(?i)\btenant-demo\b''',
+  '''@users\.noreply\.github\.com''',
+]
+paths = ['''^\.gitleaks\.toml$''', '''^\.github/ve_sinh\.py$''']

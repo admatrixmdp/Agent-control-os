@@ -21,9 +21,26 @@ Cập nhật lần cuối: **2026-10-26** · Tổng **138 skill** trên **12 rep
 | `trung_voi` | Skill khác trong sổ cùng khái niệm | Chỉ ghi khi rõ ràng; ghi ở cả hai phía |
 | `ghi_chu` | Ghi chú tự do | Nguồn sửa thật, nhánh đặc biệt, trạng thái repo ghi |
 
+### Trường schema 2 (`schema: 2` ở đầu file)
+
+Tương thích ngược: mục cũ không cần thêm dòng nào. Khối `mac_dinh:` ở đầu sổ khai một lần `nguon`, `phien_ban`, `eval_bay`, `cto_verdict` cho mọi mục không ghi trường đó (`sha256` không có mặc định). Có trường nào thì phải đúng kiểu.
+
+- Skill nằm trong chính repo này (`repo: admatrixmdp/Agent-control-os`): **bắt buộc** ghi `sha256` (khớp file) và `cto_verdict` ngay trong mục. Thiếu thì chặn.
+- Skill ở repo khác: thiếu trường chỉ in `CẢNH BÁO`, không chặn.
+
+| Trường | Ý nghĩa | Cách điền |
+|---|---|---|
+| `nguon` | Gói hoặc nơi skill được đưa vào | Ví dụ `self-evolution/upstream/<slug>`, `noi-bo`, `ben-ngoai` |
+| `phien_ban` | Phiên bản skill | `1.0` hoặc `1.0.0`; tăng khi sửa `SKILL.md` |
+| `sha256` | Băm của `<duong_dan>/SKILL.md` | `sha256sum <duong_dan>/SKILL.md`, 64 ký tự hex thường. Sửa `SKILL.md` mà không cập nhật thì CI trượt |
+| `eval_bay` | Số tình huống bẫy (`loai: bay`) | Số nguyên, 0 ≤ `eval_bay` ≤ `so_tinh_huong` |
+| `cto_verdict` | Kết luận của CTO ở cổng 4 | `chua-duyet` · `dat` · `truot` |
+
+Kiểm sổ: `python3 danh-muc/kiem_so.py` (số tổng, trường bắt buộc, kiểu trường schema 2, sha256; cảnh báo không làm thoát lỗi). Trong CI thêm `--base <nhánh gốc>` để bắt `SKILL.md` đổi mà sổ không có `sha256` mới.
+
 ## Quy tắc cập nhật
 
-1. **Thêm, xoá, đổi tên skill ở repo nào thì sửa sổ trong cùng đợt** — thêm/xoá mục, cập nhật `tong_skill`, `theo_repo`, `co_eval`, `chua_eval` ở đầu file và bảng tổng bên dưới.
+1. **Thêm, xoá, đổi tên skill ở repo nào thì sửa sổ trong cùng đợt** — thêm/xoá mục, cập nhật `tong_skill`, `theo_repo`, `co_eval`, `chua_eval` ở đầu file và bảng tổng bên dưới. Chạy `kiem_so.py` trước khi mở PR.
 2. **Thêm tình huống eval** thì cập nhật `co_eval`, `so_tinh_huong` của skill đó. Khi nhánh `evals-v1` được gộp vào nhánh mặc định, sửa cột "Nguồn eval".
 3. **`trang_thai` do Quân quyết.** Agent không tự chuyển skill sang `dong-bang` hay `loai`; chỉ đề xuất trong ghi chú hoặc PR.
 4. **Phát hiện trùng** thì ghi `trung_voi` ở cả hai mục và thêm dòng vào mục "Nghi trùng" bên dưới.
